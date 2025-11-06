@@ -1,0 +1,43 @@
+@use "../../App.scss" as g;
+
+
+
+header {
+    background: rgba($color: #ffffff, $alpha: 0.5);
+    height: 7rem;
+    align-items: center;
+
+    .wide-inner {
+        height: inherit;
+
+
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            @include g.myFlex();
+            height: inherit;
+
+            .header-left {
+                @include g.myFlex($gap: 60px);
+
+                .main-menu {
+                    @include g.myFlex($gap: 20px);
+                    font-size: 1.4rem;
+
+                    .logo {
+                        img {
+                            align-items: center;
+                        }
+                    }
+                }
+            }
+
+            .header-right {
+
+                .gnb-list {
+                    @include g.myFlex($gap: 20px);
+                }
+            }
+        }
+    }
+}

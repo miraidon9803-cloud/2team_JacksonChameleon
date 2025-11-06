@@ -1,0 +1,105 @@
+
+.inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  // padding: 50px;
+
+  h1 {
+    width: 388px;
+  }
+}
+
+.footer-top {
+  display: flex;
+  gap: 248px;
+  padding: 40px 0;
+
+  .footer-left {
+
+    .icon-wrap {
+      display: flex;
+      margin-top: 24px;
+      gap: 30px;
+
+      img {
+        cursor: pointer;
+      }
+    }
+  }
+
+  .footer-right {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px; 
+    
+
+    .show-room,
+    .customer-center {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+     
+
+      .room-text,
+      .customer-text {
+        display: flex;
+        flex-direction: column; 
+         line-height: 1;
+          
+        .day{
+          font-size: 12px;
+        }
+
+        span {
+          display: block;
+          font-size: 14px;
+          color: #333;
+          white-space: nowrap;
+
+          strong {
+            font-weight: 600;
+          }
+        }
+
+        .call {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 1;
+        }
+      }
+    }
+  }
+   .room-btn,
+      .online-btn {
+        display: inline-block;
+        margin-top: 22px;
+        width: fit-content;
+        padding: 12px 24px;
+        border: 1px solid #575757;
+        border-radius: 4px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+          background-color: #575757;
+          color: #ffffff;
+        }
+      }
+}
+
+.footer-bottom {
+  font-size: 12px;
+
+  .footer-menu {
+    display: flex;
+    gap: 16px;
+    text-decoration: underline;
+    margin-bottom: 12px;
+  }
+
+  address {
+    color: #8a8a8a;
+  }
+}
+
