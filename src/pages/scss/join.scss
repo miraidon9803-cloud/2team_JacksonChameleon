@@ -1,0 +1,90 @@
+@use "../../App.scss" as j;
+
+.sub-page {
+  .inner {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1200px;
+
+    .join-btn {
+     
+
+      
+    }
+
+    form {
+      // background-color: blue;
+    }
+
+    h2 {
+      @include j.myTitle24();
+      margin-bottom: 24px;
+    }
+
+    .join-wrap {
+      @include j.myTitle16();
+      text-align: left;
+      display: flex;
+      // background: pink;
+      width: 88.2rem;
+      height: 60.3rem;
+      gap: 40px;
+
+
+
+
+
+
+
+      input {
+        width: 38rem;
+        height: 46px;
+        padding: 24px 12px;
+        border-radius: 8px;
+        // width: 100%;
+        border: 1px solid #ccc;
+        @include j.myTitle16();
+        color: j.$text1;
+        text-align: left;
+        background: j.$BG;
+      }
+    }
+
+    .join-right {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      input {
+        // margin-bottom: 8px;
+      }
+    }
+
+    .address-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+
+      .addressnum {
+        display: flex;
+        gap: 10px;
+
+        input {
+          width: 24.4rem;
+          height: 4.6rem;
+        }
+      }
+
+      button {
+        padding: 12px;
+        // display: flex;
+        width: 12.4rem;
+        height: 4.6rem;
+
+        // justify-content: center;
+        // align-items: center;
+      }
+    }
+  }
+}

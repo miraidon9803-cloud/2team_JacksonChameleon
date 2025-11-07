@@ -8,7 +8,7 @@ const LogJoin = () => {
   const { isLogin } = useLogJoinStore();
 
   return (
-    <div className="sub-page">
+    <div>
       {isLogin ? <Login /> : <Join/>}
     </div>
   );

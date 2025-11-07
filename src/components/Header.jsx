@@ -4,6 +4,7 @@ import "./scss/header.scss"
 
 
 
+//메인 메뉴
 const menus = [
     { key: "shop", label: "SHOP" },
     { key: "collections", label: "COLLECTIONS" },
