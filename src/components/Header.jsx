@@ -8,7 +8,7 @@ const menus = [
         sub: [
             { key: 'all', label: 'All' },
             {
-                key: 'sofas', label: 'Sofas',
+                key: 'sofa', label: 'Sofas',
                 sub: [
                     { key: "fabric", label: 'Sofas/Fabric' },
                     { key: "leather", label: 'Sofas/Leather' }
