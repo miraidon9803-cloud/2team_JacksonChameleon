@@ -1,0 +1,101 @@
+@import "../../App.scss";
+
+.shop-wrap {
+    position: relative;
+
+
+    .filter-wrap {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        width: 38.4rem;
+        height: auto;
+        border-radius: 0.8rem;
+        padding: 1.6rem;
+        position: absolute;
+        top: 500px;
+        right: 0;
+        z-index: 999;
+
+        .filter-title {
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 4rem;
+
+            h3 {
+                font-size: 1.6rem;
+                font-weight: 500;
+
+            }
+
+            p {
+                cursor: pointer;
+            }
+        }
+
+        .sort-wrap {
+            padding-bottom: 3.2rem;
+
+            .btn-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.2rem;
+
+            }
+        }
+
+        .sort-title,
+        .collection-title {
+            font-size: 1.6rem;
+            font-weight: 400;
+            padding-bottom: 1.2rem;
+        }
+
+        .collection-wrap {
+            padding-bottom: 15rem;
+
+            .btn-wrap {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.2rem;
+
+            }
+        }
+
+        button {
+            // display: flex;
+            background-color: #fff;
+            border: 1px solid $text8;
+            border-radius: 0.4rem;
+            padding: 0.8rem 1.6rem;
+            color: $text4;
+
+            &:hover {
+                background-color: $BG;
+            }
+
+            &.active {
+                background-color: $text6;
+                color: $text10;
+            }
+
+        }
+
+        .apply-btn {
+            border-radius: 0.4rem;
+            background-color: $text6;
+            // padding: 2.3rem 17rem;
+            width: 35rem;
+            height: 4.6rem;
+            text-align: center;
+            line-height: 4.6rem;
+            font-size: 1.6rem;
+            font-weight: 400;
+            color: $text10;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+}

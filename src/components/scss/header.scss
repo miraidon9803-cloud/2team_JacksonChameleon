@@ -1,43 +1,122 @@
-@use "../../App.scss" as g;
-
-
+@use '../../App.scss' as g;
 
 header {
-    background: rgba($color: #ffffff, $alpha: 0.5);
-    height: 7rem;
-    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height, 70px);
+    z-index: 1000;
 
-    .wide-inner {
-        height: inherit;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+    transition: All 0.3s ease-in-out;
+
+    .header-wrap {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        line-height: 70px;
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+
+        img {
+            height: 22px;
+        }
+    }
+
+    .main-menu {
+        display: flex;
+        gap: 4px;
+        font-size: 1.4rem;
+
+        >li {
+
+            >a {
+                display: block;
+                padding: 0 8px;
+                line-height: 70px;
+            }
+
+            &:first-child a {
+                padding-left: 0px;
+            }
+
+            .sub-menu-depth {
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%) translateY(-10px);
+                width: 100%;
+                padding: 16px 0;
+
+                opacity: 0;
+                visibility: hidden;
 
 
-        .inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            @include g.myFlex();
-            height: inherit;
+                >ul {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    display: flex;
+                    gap: 100px;
 
-            .header-left {
-                @include g.myFlex($gap: 60px);
+                    line-height: 100%;
 
-                .main-menu {
-                    @include g.myFlex($gap: 20px);
-                    font-size: 1.4rem;
+                    li>a {
+                        transition: All 0.3s ease-in-out;
+                    }
+                }
 
-                    .logo {
-                        img {
-                            align-items: center;
+                .sub-sub-menu-depth {
+                    >ul {
+                        display: flex;
+                        flex-direction: column;
+                        line-height: 100%;
+
+                        font-size: 1.3rem;
+                        font-weight: 400;
+
+                        li {
+                            padding-top: 16px;
                         }
+
+                        li>a {
+                            padding-top: 16px;
+                            color: g.$text3;
+
+                            &:hover {
+                                color: g.$text1;
+                            }
+                        }
+
                     }
                 }
             }
 
-            .header-right {
-
-                .gnb-list {
-                    @include g.myFlex($gap: 20px);
-                }
+            &:hover .sub-menu-depth {
+                visibility: visible;
+                opacity: 1;
             }
+        }
+    }
+
+    .gnb-list {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+
+        img {
+            height: 18px;
         }
     }
 }

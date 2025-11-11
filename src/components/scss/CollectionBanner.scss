@@ -1,0 +1,37 @@
+@use "../../App.scss" as g;
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+.collection-banner-wrap {
+    position: relative;
+
+    .img-box {
+        width: 100%;
+    }
+
+    .text-box {
+        position: absolute;
+        bottom: 15%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        .title {
+            @include g.myTitle24($co: #fff);
+        }
+
+        .sub-title {
+            font-family: "Playfair Display", serif;
+            font-size: 4.8rem;
+            font-weight: 400;
+            line-height: 140%;
+            color: g.$text10;
+            text-align: center;
+            padding-bottom: 18px;
+        }
+
+        .des {
+            @include g.myTitle16($co: #fff);
+            width: 64rem;
+            font-weight: 300;
+        }
+    }
+}

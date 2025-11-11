@@ -1,0 +1,223 @@
+@use "../../App.scss" as g;
+
+.shopping-cart-wrap {
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+    padding: 8rem 0;
+    margin: 0 2%;
+
+    .inner {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+
+        .title {
+            font-size: 2.4rem;
+            font-weight: 500;
+            margin: 2.4rem 0;
+        }
+
+        .content-wrap {
+            display: flex;
+
+            .cart-list {
+                flex: 1;
+                background: #f4f4f4;
+                border-radius: 8px 0 0 8px;
+
+
+                .choose-del-wrap {
+                    display: flex;
+                    justify-content: space-between;
+                    border-bottom: 1px solid g.$text8;
+                    margin: 24px;
+                    padding-bottom: 10px;
+
+                    input {
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid g.$text6;
+                        border-radius: 8px;
+                    }
+
+                    button {
+                        background: g.$text10;
+                        border: 1px solid g.$text8;
+                        padding: 4px 8px;
+                        border-radius: 4px;
+                        @include g.myTitle16();
+                    }
+                }
+
+                .item-wrap {
+                    position: relative;
+
+                    .selected-wrap {
+                        position: absolute;
+                        width: 100%;
+                        padding: 0 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        margin: 0 0 10px 0;
+
+
+                        input {
+                            width: 24px;
+                            height: 24px;
+                            border: 1px solid g.$text6;
+                            border-radius: 8px;
+                        }
+
+                        .close-btn {
+                            background: none;
+                            border: none;
+                        }
+                    }
+
+                    .item-box {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        // padding: 0 0 16px 0;
+                        border-bottom: 1px solid g.$text8;
+                        margin: 0 24px 24px;
+
+                        .item-img img {
+                            width: 180px;
+                            // height: 180px;
+                            border-radius: 0.4rem;
+                        }
+
+                        .item-info {
+                            .item-title {
+                                font-size: 1.6rem;
+                                font-weight: 500;
+                                margin-bottom: 16px;
+                            }
+
+                            .item-option {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                color: g.$text1;
+                                margin-bottom: 4px;
+                            }
+
+                            .btn-option {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                color: g.$text6;
+                                background: none;
+                                border: none;
+
+                                span {
+                                    border-bottom: 1px solid g.$text6;
+                                    margin: 1px 0;
+                                }
+
+                            }
+                        }
+
+                        .count-price-wrap {
+                            text-align: right;
+                            display: flex;
+                            gap: 4.5rem;
+
+                            .count-wrap {
+                                display: flex;
+                                gap: 1rem;
+                                align-items: center;
+
+
+                                span {
+                                    font-size: 1.6rem;
+                                    text-align: center;
+                                }
+
+                                button {
+                                    width: 24px;
+                                    height: 24px;
+                                    font-size: 2rem;
+                                    background: none;
+                                    border: none;
+                                    color: g.$text6;
+                                }
+                            }
+
+                            .price {
+                                font-weight: 400;
+                                font-size: 1.6rem;
+                                margin-top: .4rem;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+            .total-wrap {
+                width: 36rem;
+                height: auto;
+                padding: 2.4rem;
+                background-color: g.$text9;
+                display: flex;
+                flex-direction: column;
+                position: relative;
+                border-radius: 0 8px 8px 0;
+
+                h4 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    margin-bottom: 2rem;
+                }
+
+                ul {
+                    li {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 8px 0;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                    }
+                }
+
+                .total-price {
+                    display: flex;
+                    justify-content: space-between;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    margin-top: 46px;
+                    align-items: center;
+
+                    strong {
+                        font-size: 2.4rem;
+                        font-weight: 500;
+                    }
+                }
+
+                .pay-btn {
+                    width: 90%;
+                    height: 4.6rem;
+                    border-radius: 4px;
+                    border: none;
+                    background-color: g.$text4;
+                    position: absolute;
+                    bottom: 30%;
+                    left: 50%;
+                    transform: translateX(-50%);
+
+                    span {
+                        color: #fff;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                    }
+
+                }
+            }
+        }
+    }
+}

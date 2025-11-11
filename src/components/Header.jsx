@@ -1,42 +1,150 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import "./scss/header.scss"
+import React, { useEffect, useRef, useState } from 'react';
+import { Link } from 'react-router-dom';
+import './scss/Header.scss'
 
-
-
-//메인 메뉴
 const menus = [
-    { key: "shop", label: "SHOP" },
-    { key: "collections", label: "COLLECTIONS" },
-    { key: "service", label: "SERVICE" },
-    { key: "about", label: "ABOUT" },
-    { key: "community", label: "COMMUNITY" }
-]
+    {
+        key: "shop", label: "SHOP",
+        sub: [
+            { key: 'all', label: 'All' },
+            {
+                key: 'sofas', label: 'Sofas',
+                sub: [
+                    { key: "fabric", label: 'Sofas/Fabric' },
+                    { key: "leather", label: 'Sofas/Leather' }
+                ]
+            },
+            {
+                key: 'Tables', label: 'Tables',
+                sub: [
+                    { key: "Dining", label: 'Tables/Dining' },
+                    { key: 'Side', label: 'Tables/Side' },
+                    { key: 'Sofa', label: 'Tables/Sofa' }
+                ]
+            },
+            {
+                key: 'Chairs', label: 'Chairs',
+                sub: [
+                    { key: 'Dining', label: 'Chairs/Dining' },
+                    { key: 'Lounge', label: 'Chairs/Lounge' },
+                    { key: 'Bench', label: 'Chairs/Bench' }
+                ]
+            },
+            {
+                key: 'Lighting', label: 'Lighting',
+                sub: [
+                    { key: 'Table Lamp', label: 'Lighting/Table Lamp' },
+                    { key: 'Floor Lamp', label: 'Lighting/Floor Lamp' }
+                ]
+            }
+        ]
+    },
+    {
+        key: "collections", label: "COLLECTIONS",
+        sub: [
+            { key: 'ink', label: 'Ink' },
+            { key: 'pebble', label: 'Pebble' },
+            { key: 'clay', label: 'Clay' },
+            { key: 'round', label: 'Round' },
+            { key: 'plato', label: 'Plato' }
+        ]
+    },
+    { key: "Service", label: "SERVICE" },
+    {
+        key: "About", label: "ABOUT",
+        sub: [
+            { key: 'Brand', label: 'Brand' },
+            { key: 'Stories', label: 'Stories' }
+        ]
+    },
+    {
+        key: "Community", label: "COMMUNITY",
+        sub: [
+            { key: 'Notice', label: 'Notice' },
+            { key: 'Customer Service', label: 'Customer Service' },
+            { key: 'Store', label: 'Store' },
+        ]
+    }
+];
 
 const Header = () => {
-    return (
-        <header>
-            <div className="wide-inner">
-                <div className="inner">
-                    <div className="header-left">
-                        <ul className="main-menu">
-                            {menus.map((menu, id) => (
-                                <li key={id}> <Link to={`/${menu.key}`}> {menu.label}</Link></li>
-                            ))}
-                        </ul>
-                        <h1 className="logo"><Link to="/"><img src="./images/logo.png" alt="" /> </Link></h1>
-                    </div>
-                    <div className="header-right">
-                        <ul className="gnb-list">
-                            <li><Link to="/Search"><img src="./images/search-icon.png" alt="" /></Link></li>
-                            <li><Link to="/logjoin"><img src="./images/user-icon.png" alt="" /></Link></li>
-                            <li><Link to="/shoppingbags"><img src="./images/shopping-bag-icon.png" alt="" /></Link></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </header>
-    )
-}
+    const [activeMenu, setActiveMenu] = useState(false);
+    const [height, setHeight] = useState(70);
+    const headerRef = useRef(null);
+    const submenuRef = useRef({});
 
-export default Header
+    useEffect(() => {
+        if (activeMenu && submenuRef.current[activeMenu]) {
+            const subMenu = submenuRef.current[activeMenu];
+            const subMenuHeight = subMenu.scrollHeight;
+            setHeight(70 + subMenuHeight);
+        } else {
+            setHeight(70);
+        }
+    }, [activeMenu]);
+
+
+
+    return (
+        <header ref={headerRef}
+        className={activeMenu ? 'active' : ''}
+
+        style={{'--header-height' : `${height}px`}}>
+
+            <div className="header-wrap">
+
+                <ul className="main-menu">
+                    {menus.map((menu) => (
+                        <li key={menu.key}
+                            onMouseEnter={() => menu.sub && setActiveMenu(menu.key)}
+                            onMouseLeave={() => menu.sub && setActiveMenu(null)} >
+
+                            <Link to={`/${menu.key}`}>{menu.label}</Link>
+
+                            {menu.sub && (
+                                <div className="sub-menu-depth"
+                                 ref={el => (submenuRef.current[menu.key] = el)}>
+                                    <ul>
+                                        {menu.sub.map(sub => (
+                                            <li key={sub.key}>
+                                                <Link to={`/${menu.key}/${sub.key}`}>{sub.label}</Link>
+
+                                                {sub.sub && (
+                                                    <div className="sub-sub-menu-depth">
+                                                        <ul>
+                                                            {sub.sub.map(third => (
+                                                                <li key={third.key}>
+                                                                    <Link to={`/${menu.key}/${sub.key}/${third.key}`}>
+                                                                        {third.key}
+                                                                    </Link>
+                                                                </li>
+                                                            ))}
+                                                        </ul>
+                                                    </div>
+                                                )}
+
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )}
+
+                        </li>
+                    ))}
+                </ul>
+
+                <h1 className="logo">
+                    <Link to="/"><img src="/images/logo.png" alt="logo" /></Link>
+                </h1>
+
+                <ul className="gnb-list">
+                    <li><Link to="/Search"><img src="/images/search-icon.png" alt="search" /></Link></li>
+                    <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
+                    <li><Link to="/ShoppingBag"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
+                </ul>
+            </div>
+        </header >
+    );
+};
+
+export default Header;

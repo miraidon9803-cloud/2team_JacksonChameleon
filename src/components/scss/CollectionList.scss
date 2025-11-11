@@ -1,0 +1,114 @@
+@import "../../App.scss";
+
+.collection-product-wrap {
+    margin: 0 2%;
+
+    .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+
+        .collection-sort {
+            @include myFlex($gap: 20px, $jc: flex-start);
+            padding: 80px 0 40px;
+            // border: 1px solid black;
+
+            p {
+                @include myTitle16($co: #8a8a8a);
+                // margin: 0.5rem 0;
+                // background-color: #8a8a8a;
+
+                &.active {
+                    span {
+                        border-bottom: 1px solid $text1;
+                        color: $text1;
+                    }
+                }
+            }
+        }
+
+        .product-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            row-gap: 5.6rem;
+            column-gap: 2.4rem;
+
+            .product {
+                position: relative;
+                // border: 1px solid black;
+
+                .new {
+                    position: absolute;
+                    top: 2.4rem;
+                    left: 2.4rem;
+                    z-index: 10;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                }
+
+                .img-box {
+                    border-radius: 0.8rem;
+                    position: relative;
+                    background: #f4f4f4;
+
+
+                    .hover-img {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        opacity: 0;
+                        transition: 0.3s;
+                        border-radius: 0.8rem;
+                        overflow: hidden;
+                    }
+
+                    &:hover .hover-img {
+                        opacity: 1;
+                    }
+                }
+
+                .text-box {
+                    padding-top: 1.2rem;
+
+                    .title {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        padding-bottom: 0.4rem;
+                    }
+
+                    .price-wrap {
+                        position: relative;
+
+                        .sale {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            color: $point2;
+                            font-size: 1.6rem;
+                            font-weight: 400;
+                        }
+
+                        .price {
+                            display: flex;
+                            // gap: 1.2rem;
+                            align-items: center;
+
+                            strong {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                            }
+
+                            span {
+                                font-size: 1.4rem;
+                                font-weight: 400;
+                                text-decoration: line-through;
+                                color: $text6;
+                                padding-right: 1.2rem;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

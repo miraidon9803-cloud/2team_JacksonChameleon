@@ -1,105 +1,116 @@
+@use '../../App.scss' as app;
+
+footer{
+  background: app.$text9;
+}
+
+.footer-inner{
+  padding: 40px 0;
+}
 
 .inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  // padding: 50px;
 
-  h1 {
-    width: 388px;
-  }
-}
-
-.footer-top {
-  display: flex;
-  gap: 248px;
-  padding: 40px 0;
-
-  .footer-left {
-
-    .icon-wrap {
-      display: flex;
-      margin-top: 24px;
-      gap: 30px;
-
-      img {
-        cursor: pointer;
-      }
-    }
-  }
-
-  .footer-right {
+  .footer-top {
+    @include app.myTitle14();
+    text-align: left;
+    color:app.$text3;
     display: flex;
     justify-content: space-between;
-    gap: 40px; 
-    
+    margin-bottom: 40px;
+    height: 162px;
 
-    .show-room,
-    .customer-center {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-     
+    .footer-left {
+      .logo {
+        width:300px;
 
-      .room-text,
-      .customer-text {
+        img{
+          width:100%;
+        }
+      }
+      
+      .icon-wrap {
         display: flex;
-        flex-direction: column; 
-         line-height: 1;
-          
-        .day{
-          font-size: 12px;
+        margin-top: 24px;
+        gap: 30px;
+
+        img {
+          cursor: pointer;
         }
+      }
 
-        span {
-          display: block;
-          font-size: 14px;
-          color: #333;
-          white-space: nowrap;
+    }
 
-          strong {
-            font-weight: 600;
-          }
-        }
+    .footer-right {
+      display: flex;
+      gap: 60px;
 
+      >div{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .footer-title {
+        margin-bottom: 16px;
+        font-weight: 600;
+        color:app.$text1;
+      }
+
+      strong {
+        font-weight: 600;
+        color:app.$text1;
+      }
+
+      .customer-center {
         .call {
-          font-weight: 600;
           font-size: 18px;
-          line-height: 1;
+          font-weight: 600;
+          margin-bottom:4px;
+        }
+
+        .day {
+          font-size: 12px;
         }
       }
     }
   }
-   .room-btn,
-      .online-btn {
-        display: inline-block;
-        margin-top: 22px;
-        width: fit-content;
-        padding: 12px 24px;
-        border: 1px solid #575757;
-        border-radius: 4px;
-        font-size: 14px;
-        cursor: pointer;
-        transition: all 0.2s ease;
 
-        &:hover {
-          background-color: #575757;
-          color: #ffffff;
-        }
-      }
-}
+  .room-btn,
+  .online-btn {
+    display: inline-block;
 
-.footer-bottom {
-  font-size: 12px;
+    width: fit-content;
+    padding: 12px 24px;
 
-  .footer-menu {
-    display: flex;
-    gap: 16px;
-    text-decoration: underline;
-    margin-bottom: 12px;
+    background:none;
+    color: app.$text4;
+    vertical-align: middle;
+
+    border: 1px solid app.$text4;
+    border-radius: 4px;
+
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #575757;
+      color: #ffffff;
+    }
   }
 
-  address {
-    color: #8a8a8a;
+  .footer-bottom {
+    font-size: 12px;
+
+    .footer-menu {
+      display: flex;
+      gap: 16px;
+      text-decoration: underline;
+      margin-bottom: 12px;
+      color: app.$text4;
+      cursor: pointer;
+    }
+
+    address {
+      color: app.$text6;
+    }
   }
 }
-

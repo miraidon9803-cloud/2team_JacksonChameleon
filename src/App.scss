@@ -1,3 +1,25 @@
+@mixin myFlex ($gap: 10px, $jc: space-between, $ai: center) {
+    display: flex;
+    gap: $gap;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+
+
+// main {
+//     height: 10rem;
+//     font-size: 2rem;
+// }
+
+// // footer
+// footer {
+//     background-color: #222;
+//     color: #fff;
+//     height: 10rem;
+//     font-size: 2rem;
+// }
+
 //컬러
 $text1: #000;
 $text2: #1c1c1c;
@@ -13,37 +35,39 @@ $BG: #f4f4f4;
 $point: #008180;
 $point2: #d0071b;
 
+
+
 //타이틀
-@mixin myTitle32 () {
+@mixin myTitle32 ($co: $text1) {
     font-size: 32px;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
-    color: $text1;
+    color: $co;
 }
 
-@mixin myTitle24 () {
+@mixin myTitle24 ($co: $text1) {
     font-size: 24px;
     font-weight: 500;
     line-height: 140%;
     text-align: center;
-    color: $text1;
+    color: $co;
 }
 
-@mixin myTitle16 () {
+@mixin myTitle16 ($co: $text1) {
     font-size: 16px;
     font-weight: 400;
     line-height: 140%;
     text-align: center;
-    color: $text1;
+    color: $co;
 }
 
-@mixin myTitle14 () {
+@mixin myTitle14 ($co: $text1) {
     font-size: 14px;
     font-weight: 400;
     line-height: 140%;
     text-align: center;
-    color: $text1;
+    color: $co;
 }
 
 //
@@ -53,5 +77,3 @@ $point2: #d0071b;
     justify-content: $jc;
     align-items: $ai;
 }
-
-
