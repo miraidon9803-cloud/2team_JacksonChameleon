@@ -33,6 +33,7 @@ import PlatoCollection from './pages/PlatoCollection';
 import ShoppingCart from './pages/ShoppingCart';
 import LogJoin from './pages/LogJoin';
 import Customer from './pages/Customer';
+import Shop from './pages/Shop';
 
 function App() {
   return (
@@ -46,7 +47,7 @@ function App() {
         <Route path="/shop/table" element={<ShopTable />} />
         <Route path="/shop/sofa" element={<ShopSofa />} />
         <Route path="/shop/lighting" element={<ShopLighting />} />
-       
+        <Route path="/shop" element={<Shop/>}/>
         
 
         <Route path="/collections/ink" element={<InkCollection />} />
