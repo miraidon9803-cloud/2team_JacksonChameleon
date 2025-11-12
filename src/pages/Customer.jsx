@@ -1,5 +1,5 @@
 import React from "react";
-// import "./scss/customer.scss"
+// import "../components/scss/Chatbot.scss"
 import Chatbot from "../components/Chatbot";
 
 

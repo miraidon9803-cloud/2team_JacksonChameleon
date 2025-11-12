@@ -51,7 +51,7 @@ const menus = [
     },
     { key: "Service", label: "SERVICE" },
     {
-        key: "About", label: "ABOUT",
+        key: "about", label: "ABOUT",
         sub: [
             { key: 'Brand', label: 'Brand' },
             { key: 'Stories', label: 'Stories' }
@@ -62,7 +62,7 @@ const menus = [
         sub: [
             { key: 'Notice', label: 'Notice' },
             { key: 'Customer Service', label: 'Customer Service' },
-            { key: 'Store', label: 'Store' },
+            { key: 'store', label: 'Store' },
         ]
     }
 ];

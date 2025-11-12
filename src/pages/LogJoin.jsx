@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import DaumPostcode from "react-daum-postcode";
 import { useAuthStore } from "../store/authStore";
 import { useLogJoinStore } from "../store/LogJoinStore";
-import "./scss/logjoin.scss";
+import "./scss/Logjoin.scss";
 
 const LogJoin = () => {
   const navigate = useNavigate();
@@ -263,7 +263,7 @@ const LogJoin = () => {
         </div>
       )}
 
-     
+
       {isPostOpen && (
         <div className="post_wrapper">
           <div
@@ -277,6 +277,7 @@ const LogJoin = () => {
         </div>
       )}
     </div>
+
   );
 };
 

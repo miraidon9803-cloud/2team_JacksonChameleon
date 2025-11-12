@@ -34,6 +34,7 @@ import ShoppingCart from './pages/ShoppingCart';
 import LogJoin from './pages/LogJoin';
 import Customer from './pages/Customer';
 import Shop from './pages/Shop';
+import Store from './pages/Store';
 
 
 function App() {
@@ -63,6 +64,8 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/community" element={<Community />} />
         <Route path="/customer" element={<Customer/>}/>
+        <Route path='/store' element={<Store/>}/>
+
         <Route path="/shoppingbags" element={<ShopingBags />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
 
