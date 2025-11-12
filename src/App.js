@@ -35,6 +35,7 @@ import LogJoin from './pages/LogJoin';
 import Customer from './pages/Customer';
 import Shop from './pages/Shop';
 
+
 function App() {
   return (
     <Routes>
@@ -42,15 +43,16 @@ function App() {
         <Route index element={<Main />} />
         <Route path="/main" element={<Main />} />
 
+        <Route path='/shop' element={<Shop/>}/>
          <Route path="/shop/all" element={<ShopAll />} />
         <Route path="/shop/chair" element={<ShopChair />} />
         <Route path="/shop/table" element={<ShopTable />} />
         <Route path="/shop/sofa" element={<ShopSofa />} />
         <Route path="/shop/lighting" element={<ShopLighting />} />
-        <Route path="/shop" element={<Shop/>}/>
+  
         
 
-        <Route path="/collections/ink" element={<InkCollection />} />
+        <Route path="/Collections/Ink" element={<InkCollection />} />
         <Route path="/collections/pebble" element={<PebbleCollection />} />
         <Route path="/collections/clay" element={<ClayCollection />} />
         <Route path="/collections/round" element={<RoundCollection />} />

@@ -1,10 +1,15 @@
 @use '../../App.scss' as app;
 
 footer{
-  background: app.$text9;
+  margin-top: 120px;
 }
 
+.footer-wrap{
+  background: app.$text9;
+
+}
 .footer-inner{
+  // padding-top: 120px;
   padding: 40px 0;
 }
 

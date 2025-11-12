@@ -15,7 +15,7 @@ const menus = [
                 ]
             },
             {
-                key: 'Tables', label: 'Tables',
+                key: 'table', label: 'Tables',
                 sub: [
                     { key: "Dining", label: 'Tables/Dining' },
                     { key: 'Side', label: 'Tables/Side' },
@@ -23,7 +23,7 @@ const menus = [
                 ]
             },
             {
-                key: 'Chairs', label: 'Chairs',
+                key: 'chair', label: 'Chairs',
                 sub: [
                     { key: 'Dining', label: 'Chairs/Dining' },
                     { key: 'Lounge', label: 'Chairs/Lounge' },
@@ -31,7 +31,7 @@ const menus = [
                 ]
             },
             {
-                key: 'Lighting', label: 'Lighting',
+                key: 'lighting', label: 'Lighting',
                 sub: [
                     { key: 'Table Lamp', label: 'Lighting/Table Lamp' },
                     { key: 'Floor Lamp', label: 'Lighting/Floor Lamp' }
@@ -40,7 +40,7 @@ const menus = [
         ]
     },
     {
-        key: "collections", label: "COLLECTIONS",
+        key: "Collections", label: "COLLECTIONS",
         sub: [
             { key: 'ink', label: 'Ink' },
             { key: 'pebble', label: 'Pebble' },

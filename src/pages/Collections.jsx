@@ -1,8 +1,9 @@
 import React from 'react'
+import InkCollection from './InkCollection'
 
 const Collections = () => {
   return (
-    <div>Collections</div>
+    <div><InkCollection/></div>
   )
 }
 

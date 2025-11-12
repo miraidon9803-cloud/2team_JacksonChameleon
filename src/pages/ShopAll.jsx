@@ -4,7 +4,7 @@ import "./scss/product.scss";
 import "../components/scss/filterPopup.scss";
 import ShopTop from "../components/ShopTop.jsx";
 
-const ShopSofa = () => {
+const ShopAll = () => {
     // const [selectedCategory, setSelectedCategory] = useState("All");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [tempSortOption, setTempSortOption] = useState(null);
@@ -199,4 +199,4 @@ const ShopSofa = () => {
     );
 };
 
-export default ShopSofa;
+export default ShopAll;
