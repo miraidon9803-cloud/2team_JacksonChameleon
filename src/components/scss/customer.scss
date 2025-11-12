@@ -2,7 +2,7 @@
 
 
 .customer {
-  height: 940px;
+  // height: 940px;
   display: flex;
   justify-content: center;
   background-color: cu.$BG;
@@ -20,12 +20,13 @@
     animation: zoomOut 2s ease-out forwards;
     z-index: 0;
     border-radius: 8px;
+    margin-top: 100px;
     
   }
 }
 
 .cus-text {
-  // margin-top: 100px;
+  margin-top: 100px;
   text-align: center;
   animation: slideUp 1s ease-out forwards;
   opacity: 0;

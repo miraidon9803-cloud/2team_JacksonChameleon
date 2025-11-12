@@ -5,9 +5,9 @@ const Chatbot = () => {
     const [message, setMessage] = useState("");
     const chatEndRef = useRef(null);
 
-    useEffect(() => {
-        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages]);
+    // useEffect(() => {
+    //     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    // }, [messages]);
 
     const pushBot = (text) =>
         setMessages((prev) => [...prev, { from: "bot", text }]);
