@@ -3,6 +3,7 @@ import jacksonProduct from "../data/jacksonproduct.js";
 import "./scss/Product.scss";
 import "../components/scss/filterPopup.scss";
 import ShopTop from "../components/ShopTop.jsx";
+import { Link } from "react-router-dom";
 
 const ShopAll = () => {
     // const [selectedCategory, setSelectedCategory] = useState("All");
@@ -115,9 +116,9 @@ const ShopAll = () => {
                     </div>
                 </div>
 
-                <div className="product-list">
+              <div className="product-list">
                     {currentItem.map((item, index) => (
-                        <div className="product" key={index}>
+                        <Link to={`/shop/${item.id}`} className="product" key={item.id}>
                             <span className='new'>{item.badges}</span>
                             <div className="img-box">
                                 <p className="default-img"><img src={item.img_url} alt={item.title} /></p>
@@ -135,7 +136,7 @@ const ShopAll = () => {
                                     <p className="sale">{item.sale}</p>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
                 <div className="pager-wrap">

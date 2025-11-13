@@ -49,12 +49,12 @@ const menus = [
             { key: 'plato', label: 'Plato' }
         ]
     },
-    { key: "Service", label: "SERVICE" },
+    { key: "service", label: "SERVICE" },
     {
-        key: "About", label: "ABOUT",
+        key: "about", label: "ABOUT",
         sub: [
-            { key: 'Brand', label: 'Brand' },
-            { key: 'Stories', label: 'Stories' }
+            { key: 'brand', label: 'Brand' },
+            { key: 'story', label: 'Stories' }
         ]
     },
     {
