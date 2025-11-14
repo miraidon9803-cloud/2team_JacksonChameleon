@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import DaumPostcode from "react-daum-postcode";
 import { useAuthStore } from "../store/authStore";
@@ -14,19 +14,19 @@ const LogJoin = () => {
     terms, toggleTerm, toggleDetail, handleAllTerms,
     isPostOpen, setIsPostOpen,
     formData, setFormData,
-    handleComplete,
+    handleComplete, resetForm
   } = useLogJoinStore();
+
+  useEffect(() => {
+  setStep("login");  // LogJoin 들어올 때마다 로그인 페이지로 초기화
+}, []);
 
   // 로그인 처리
   const handleLogin = async (e) => {
     e.preventDefault();
-    try {
       await onLogin(formData.email, formData.password);
-      alert("로그인 성공!");
+      console.log("전송")
       navigate("/mypage");
-    } catch (err) {
-      alert("로그인 실패: " + err.message);
-    }
   };
 
   // 약관 다음단계
@@ -47,6 +47,7 @@ const LogJoin = () => {
     }
     try {
       await onMember(formData);
+      resetForm();
       alert("회원가입 성공!");
       navigate("/");
     } catch (err) {
@@ -189,6 +190,7 @@ const LogJoin = () => {
                       onChange={(e) =>
                         setFormData({ ...formData, password: e.target.value })
                       }
+                      required
                     />
                   </div>
 
@@ -205,6 +207,7 @@ const LogJoin = () => {
                           passwordConfirm: e.target.value,
                         })
                       }
+                      required
                     />
                   </div>
 

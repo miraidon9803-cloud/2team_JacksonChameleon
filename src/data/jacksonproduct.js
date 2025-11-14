@@ -735,7 +735,7 @@ const jacksonproduct = [
   },
   {
     id: 67,
-    brand: "Ink ",
+    brand: "Ink",
     title: "Ink Lounge Chair",
     price: "990,000원 ~",
     img_url: "/defaultimages/Ink_Chair_Lounge.png",

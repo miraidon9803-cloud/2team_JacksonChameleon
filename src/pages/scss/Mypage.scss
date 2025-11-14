@@ -1,0 +1,390 @@
+@use "../../App.scss" as g;
+
+.maypage-wrap {
+    width: 100%;
+    height: 114rem;
+    background: url(../../../public/images/mypage-bg.png) no-repeat center center;
+    background-size: cover;
+
+    .inner-wrap {
+        .inner {
+
+            //공통사항
+            h2 {
+                padding-top: 11rem;
+                @include g.myTitle24();
+                text-align: left;
+            }
+
+            h3 {
+                @include g.myTitle16();
+                text-align: left;
+
+            }
+
+            .box-style {
+                border-radius: 8px;
+                border: 1px solid #fff;
+                background: linear-gradient(90deg, rgba(244, 244, 244, 0.70) 0%, rgba(217, 217, 217, 0.70) 100%);
+                backdrop-filter: blur(25px);
+            }
+
+            button {
+                background: none;
+                border: none;
+                outline: none;
+                appearance: none; //브라우저 기본 스타일 제거
+            }
+
+            .change-btn {
+                width: 100%;
+                border-radius: 4px;
+                padding: 12px 0;
+                background: g.$text4;
+                @include g.myTitle16();
+                color: g.$text10 ;
+            }
+
+
+            .name-box {
+                width: 100%;
+                height: 7rem;
+                padding: 0 2.4rem;
+                @include g.myFlex($gap : 0);
+                margin-bottom: 2.4rem;
+                margin-top: 2rem;
+
+                p {
+                    @include g.myTitle24();
+                    font-size: 20px;
+                }
+
+                button {
+                    text-decoration: underline;
+                    @include g.myTitle16();
+                }
+            }
+
+            .bottom-box {
+                display: flex;
+                gap: 2.4rem;
+
+
+                .left-box {
+                    .level-box {
+                        width: 38.4rem;
+                        height: 45rem;
+                        padding: 1.2rem;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                        margin-bottom: 2.4rem;
+
+                        .box {
+                            width: 100%;
+                            padding: 2.4rem;
+                            border-radius: 4px;
+                            background: g.$BG;
+                        }
+
+                        .box1 {
+                            height: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 20px;
+
+                            .level {
+                                display: flex;
+                                align-items: center;
+                                gap: 12px;
+
+                                p {
+                                    @include g.myTitle24();
+                                }
+                            }
+
+                            p {
+                                @include g.myTitle14();
+                                text-align: left;
+                            }
+
+                            .gauge {
+                                height: 10px;
+                                border-radius: 5px;
+                                background: g.$text8;
+                                text-indent: -9999px;
+                            }
+                        }
+
+                        .box2,
+                        .box3 {
+                            height: 15rem;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+
+                            p {
+                                @include g.myTitle24();
+                                width: 25rem;
+                            }
+                        }
+
+                    }
+
+                    .cs-box {
+                        height: 29rem;
+                        width: 38.4rem;
+                        padding: 2.4rem;
+
+                        .cs-menu {
+                            display: flex;
+                            gap: 4.8rem;
+                            justify-content: center;
+                            margin-top: 4.8rem;
+
+                            div {
+                                a {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 2rem;
+                                      @include g.myTitle16();
+                                }
+
+                            }
+                        }
+
+
+                    }
+                }
+
+                .right-box {
+                    width: 100%;
+
+                    .deliver-box {
+                        height: 18rem;
+                        padding: 2.4rem;
+                        margin-bottom: 2.4rem;
+
+                        .Sequence-wrap {
+                            width: 100%;
+                            display: flex;
+                            gap: 2rem;
+                            align-items: center;
+                            justify-content: center;
+                            margin-top: 2rem;
+
+                            .Sequence {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 1rem;
+                                align-items: center;
+
+
+                                p {
+                                    @include g.myTitle16();
+                                    color: g.$text6;
+                                }
+
+                                p:first-child {
+                                    font-size: 36px;
+                                }
+
+                            }
+
+                            .active {
+                                p {
+                                    color: g.$text1;
+                                }
+
+                            }
+
+                            .line {
+                                width: 2px;
+                                height: 80px;
+                                background: #a3a3a3;
+                                text-indent: -99999px;
+                                margin: 0 20px;
+                            }
+
+                            img {
+                                width: 36px;
+                                height: 36px;
+                            }
+                        }
+                    }
+
+                    .info-box {
+                        padding: 1.2rem;
+                        height: 56rem;
+                        position: relative;
+
+                        h3 {
+                            padding: 1.2rem;
+                            margin-bottom: 2.4rem;
+                        }
+
+                        .info-menu {
+                            padding: 1.2rem;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 2.4rem;
+                            cursor: pointer;
+
+                            li {
+                                @include g.myTitle16();
+                                text-align: left;
+                                color: g.$text4;
+
+                                span {
+                                    display: none;
+                                }
+                            }
+
+                            .active {
+                                display: flex;
+                                gap: 0.4rem;
+                                color: g.$text1;
+
+                                span {
+                                    display: flex;
+                                }
+
+                            }
+
+
+                        }
+
+                        .tab {
+                            position: absolute;
+                            right: 12px;
+                            top: 12px;
+                            width: 56.8rem;
+                            height: 53.6rem;
+                            padding: 2.4rem;
+                            background: g.$BG;
+                            border-radius: 4px;
+                            display: none;
+                            flex-direction: column;
+                            justify-content: space-between;
+
+                            p {
+                                @include g.myTitle16();
+                                text-align: left;
+                            }
+
+                            input {
+                                padding: 12px 24px;
+                                background: g.$text10;
+                                border-radius: 4px;
+                                border: none;
+                                @include g.myTitle16();
+                                text-align: left;
+                                color: g.$text6;
+                            }
+
+                        }
+
+                        .tab1 {
+                            .input-wrap {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 16px;
+
+                                .input {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 8px;
+                                }
+
+                                .del-btn {
+                                    text-decoration: underline;
+                                    @include g.myTitle16();
+                                    text-align: right;
+                                    color: g.$text6;
+                                }
+                            }
+                        }
+
+                        .tab2 {
+                            .input-wrap {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                gap: 8px;
+
+                                .input12 {
+                                    display: flex;
+                                    flex-direction: column;
+                                    gap: 12px;
+
+                                    .addnum-box {
+                                        display: flex;
+                                        justify-content: space-between;
+                                        gap: 12px;
+
+                                        input {
+                                            width: 100%;
+                                        }
+
+                                        button {
+                                            width: 12.4rem;
+                                            border-radius: 4px;
+                                            padding: 12px 0;
+                                            background: g.$text4;
+                                            @include g.myTitle16();
+                                            color: g.$text10 ;
+
+                                        }
+
+
+                                    }
+                                }
+
+                            }
+                        }
+
+                        .tab3 {
+                            .input-wrap {
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: space-between;
+                                gap: 16px;
+
+                                .input {
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: space-between;
+                                    gap: 8px;
+
+                                    ul {
+                                        width: 100%;
+                                        padding: 12px 24px;
+                                        background: g.$text10;
+                                        border-radius: 4px;
+
+                                        li {
+                                            @include g.myTitle16();
+                                            text-align: left;
+                                            color: g.$text6;
+                                        }
+
+                                    }
+
+                                }
+                            }
+
+                        }
+
+                        .active {
+                            display: flex;
+                        }
+
+                    }
+                }
+            }
+
+
+
+        }
+    }
+}
