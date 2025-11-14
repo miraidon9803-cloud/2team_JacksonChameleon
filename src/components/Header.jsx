@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './scss/Header.scss'
-import { useAuthStore } from '../store/authStore';
+import { useProductStore } from '../store/ProductStore';
 
 const menus = [
     {
@@ -74,8 +74,7 @@ const Header = () => {
     const [height, setHeight] = useState(70);
     const headerRef = useRef(null);
     const submenuRef = useRef({});
-    const { user } = useAuthStore();
-
+    const { openSearch } = useProductStore();
 
     useEffect(() => {
         if (activeMenu && submenuRef.current[activeMenu]) {
@@ -161,6 +160,10 @@ const Header = () => {
                         {/* <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li> */}
                         <li><Link to="/shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
                     </ul>
+                    <li><button onClick={openSearch} className="search-btn"><img src="/images/search-icon.png" alt="search" /></button></li>
+                    <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
+                    <li><Link to="/ShoppingBag"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
+                </ul>
             </div>
         </header >
     );

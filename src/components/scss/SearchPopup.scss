@@ -1,0 +1,131 @@
+@use "../../App.scss" as g;
+
+.Search-wrap {
+    z-index: 800;
+    position: relative;
+
+    .inner-wrap {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: g.$text10;
+        .inner {
+            max-width: 790px;
+
+            button {
+                background: none;
+                border: none;
+                outline: none;
+                appearance: none; //브라우저 기본 스타일 제거
+            }
+
+            h2 {
+                @include g.myTitle24();
+                text-align: left;
+                padding-top: 11rem;
+            }
+
+            .search-box {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid g.$text8;
+                margin-top: 2.4rem;
+                margin-bottom: 4rem;
+
+                input {
+                    width: 100%;
+                    background: none;
+                    padding: 12px 12px;
+                    border: none;
+                    @include g.myTitle16();
+                    text-align: left;
+                    color: g.$text6;
+                }
+
+                input:focus {
+                    outline: none;
+                    border: none;
+                }
+
+                img {
+                    padding: 0 12px;
+                }
+
+                img:hover {
+                    filter: brightness(0) saturate(100%); // 검정색
+                }
+
+            }
+            .search-box:hover{
+                border-bottom: 1px solid g.$text6;
+            }
+
+            .search-word {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 2.4rem;
+
+                p {
+                    @include g.myTitle16();
+                }
+
+                button {
+                    @include g.myTitle16();
+                    color: g.$text6;
+                }
+                button:hover{
+                    color: g.$text1;
+                }
+            }
+
+            .search-history {
+                display: flex;
+                flex-direction: column;
+                gap: 12px;
+
+                p{
+                    @include g.myTitle16();
+                    color: g.$text6;
+                }
+
+                .word {
+                    display: flex;
+                    justify-content: space-between;
+
+                    p {
+                        @include g.myTitle16();
+                    }
+                    img:hover{
+                        filter: brightness(0) saturate(100%); // 검정색
+                    }
+                }
+
+            }
+
+            .close-wrap {
+                display: flex;
+                justify-content: center;
+
+                .close-btn {
+                    margin: 6rem 0 2rem;
+                    @include g.myTitle16();
+                    color: g.$text6;
+
+                    
+                }
+                .close-btn:hover{
+                    color: g.$text1;
+                    img {
+                        filter: brightness(0) saturate(100%); // 검정색
+                    }
+                }
+            }
+
+
+        }
+
+    }
+
+}
