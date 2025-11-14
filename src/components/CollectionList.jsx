@@ -1,7 +1,7 @@
 import React from 'react'
 import jacksonproduct from '../data/jacksonproduct'
 import "./scss/CollectionList.scss"
-import { Link } from 'react-router-dom'
+
 
 const CollectionList = ({ brand }) => {
     // brand prop이 있으면 필터링, 없으면 전체 표시
@@ -11,23 +11,12 @@ const CollectionList = ({ brand }) => {
         )
         : jacksonproduct
 
-    const collections = ["Ink", "Pebble", "Clay", "Round", "Plato"];
+    
 
     return (
         <div className="collection-product-wrap">
             <div className="inner">
-                <div className="collection-sort">
-                    {collections.map((collection) => (
-                        <Link
-                            key={collection}
-                            to={`/collections/${collection}`}
-                        >
-                            <p className={brand?.toLowerCase() === collection.toLowerCase() ? 'active' : ''}>
-                                <span>{collection}</span>
-                            </p>
-                        </Link>
-                    ))}
-                </div>
+                
                 <div className="product-list">
                     {filteredProducts.length > 0 ? (
                         filteredProducts.map((item, index) => (
