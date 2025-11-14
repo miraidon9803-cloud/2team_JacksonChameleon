@@ -13,15 +13,51 @@ export const useProductStore = create((set, get) => ({
     set({ items: products });
   },
 
-calculateTotalPrice: () => {
-  const { size, addOption, quantity } = get().selectedOptions;
+  // 검색어
+  searchWord: "",
+  setSearchWord: (word) => set({ searchWord: word }),
+  clearSearch: () => set({ searchWord: "" }),
 
-  const sizePrice = size?.price || 0;     
-  const addPrice = addOption?.price || 0;
+  // 검색창 ON/OFF
+  isSearchOpen: false,
+  openSearch: () => set({ isSearchOpen: true, searchWord: "" }),
+  closeSearch: () => set({ isSearchOpen: false }),
 
-  const total = (sizePrice + addPrice) * quantity;
-  return total;
-},
+  // 최근 검색어 기능 추가
+  recentSearch: JSON.parse(localStorage.getItem("recentSearch") || "[]"),
+
+  addRecentSearch: (word) =>
+    set((state) => {
+      const updated = [
+        word,
+        ...state.recentSearch.filter((w) => w !== word)
+      ].slice(0, 5); // 최대 5개 유지
+
+      localStorage.setItem("recentSearch", JSON.stringify(updated));
+      return { recentSearch: updated };
+    }),
+
+  clearRecentSearch: () => {
+    localStorage.removeItem("recentSearch");
+    set({ recentSearch: [] });
+  },
+
+  deleteOne: (word) =>
+    set((state) => {
+      const updated = state.recentSearch.filter((w) => w !== word);
+      localStorage.setItem("recentSearch", JSON.stringify(updated));
+      return { recentSearch: updated };
+    }),
+
+  calculateTotalPrice: () => {
+    const { size, addOption, quantity } = get().selectedOptions;
+
+    const sizePrice = size?.price || 0;
+    const addPrice = addOption?.price || 0;
+
+    const total = (sizePrice + addPrice) * quantity;
+    return total;
+  },
 
 
   selectedOptions: {
