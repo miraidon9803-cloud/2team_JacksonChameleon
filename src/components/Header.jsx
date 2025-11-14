@@ -58,11 +58,11 @@ const menus = [
         ]
     },
     {
-        key: "Community", label: "COMMUNITY",
+        key: "community", label: "COMMUNITY",
         sub: [
             { key: 'Notice', label: 'Notice' },
             { key: 'Customer Service', label: 'Customer Service' },
-            { key: 'Store', label: 'Store' },
+            { key: 'store', label: 'Store' },
         ]
     }
 ];
@@ -141,6 +141,7 @@ const Header = () => {
                     <li><Link to="/Search"><img src="/images/search-icon.png" alt="search" /></Link></li>
                     <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
                     <li><Link to="/Shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
+
                 </ul>
             </div>
         </header >

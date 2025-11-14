@@ -1,6 +1,7 @@
 @use "../../App.scss" as g;
 
 .about-wrap {
+    overflow: hidden;
     .inner-wrap {
         .inner {
             margin-top: 110px;

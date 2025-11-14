@@ -8,7 +8,7 @@ const Community = () => {
         <div className="inner">
         <div className="com-grid">
             <div className="com-card com-customer">
-                <Link to='/Customer'> 
+                <Link to='/community/customer'> 
                 <div className="com-text">Customer Service</div>                  
                     <img src="./images/cs_bg.png" alt="Customer Service" className="community" />
                 </Link>
@@ -26,7 +26,7 @@ const Community = () => {
             </div>
 
             <div className="com-card com-store">
-                <Link to="/store">
+                <Link to="/community/store">
                  <div className="com-text">Store</div>
                     <img src="./images/store_bg.png" alt="Store" className="community" />
                 </Link>

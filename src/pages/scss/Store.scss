@@ -1,0 +1,158 @@
+@use "../../App.scss" as st;
+
+
+
+.store {
+    padding: 40px 20px;
+
+
+
+    .store-tap-wrap {
+        padding: 4px;
+        background: st.$text9;
+        margin-bottom: 12px;
+        border-radius: 8px;
+    }
+
+    .store-tabs {
+        display: flex;
+        border-radius: 8px;
+        overflow: hidden;
+
+
+        .tab-button {
+            flex: 1;
+            padding: 15px 30px;
+            background: st.$text9;
+            border: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: st.$text7;
+            cursor: pointer;
+            transition: all 0.8s ease;
+            border-radius: 8px;
+
+            &.active {
+                background-color: st.$text10;
+                color: st.$text1;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .story-title-wrap {
+        display: flex;
+        justify-content: space-between;
+    }
+
+
+    .store-list {
+        max-width: 486px;
+        gap: 30px;
+    }
+
+    .store-card {
+        margin-bottom: 12px;
+    }
+
+    .store-header {
+        background: st.$text10;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 24px;
+        cursor: pointer;
+
+
+        .store-title {
+            font-size: 24px;
+            font-weight: bold;
+            color: st.$text1;
+        }
+
+        .store-arrow {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+        }
+
+        .store-subtitle {
+            margin-top: 24px;
+            font-size: 16px;
+            color: st.$text4;
+            line-height: 1.6;
+        }
+    }
+
+    .store-card.open .store-arrow {
+        transform: rotate(180deg);
+    }
+
+    .store-content {
+        margin-top: 12px;
+        padding: 24px;
+        background: st.$text10;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+
+        .store-info {
+            margin-bottom: 12px;
+
+            .info-row {
+                display: flex;
+                margin-bottom: 12px;
+                font-size: 16px;
+
+                .info-label {
+                    font-weight: bold;
+                    color: st.$text1;
+                    min-width: 80px;
+                }
+
+                .info-text {
+                    color: st.$text1;
+                    flex: 1;
+                }
+            }
+        }
+
+        .store-image {
+            width: 100%;
+            margin: 32px 0;
+
+            img {
+                width: 100%;
+                height: auto;
+                display: block;
+                border-radius: 8px;
+            }
+        }
+
+        .store-notice {
+            border-radius: 8px;
+            margin-top: 24px;
+
+            p {
+                font-size: 16px;
+                color: st.$text4;
+                line-height: 1.5;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.store-list.scroll-mode {
+    max-height: 700px;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.store-list.scroll-mode::-webkit-scrollbar {
+    display: none;
+}
+
+.store-list.scroll-mode {
+    scrollbar-width: none;
+}
