@@ -5,7 +5,7 @@ import "./scss/Service.scss"
 const Service = () => {
   return (
     <div className='service-wrap'>
-      <video className='video-bg' src="/images/service_main.mp4" autoPlay muted playsInline loop></video>
+      <video className='video-bg' src="/video/service_main.mp4" autoPlay muted playsInline loop></video>
       <div className="inner">
         <div className="margin-wrap">
           <div className='service-text-box'>

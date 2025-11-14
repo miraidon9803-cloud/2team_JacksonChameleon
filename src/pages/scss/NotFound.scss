@@ -1,0 +1,57 @@
+@use "../../App.scss" as nf;
+
+.notfound-wrap {
+    
+    background: nf.$BG;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.notfound-title {
+    margin-top: 130px;
+    margin-bottom: 60px;
+    font-size: 32px;
+}
+
+.notfound-list {
+    li {
+
+        .first-four {
+            margin-right: 37px;
+        }
+
+        &:first-child {
+            margin-bottom: 60px;
+        }
+
+        &:nth-child(2) {
+            font-size: 18px;
+            color: nf.$text1;
+            margin-bottom: 12px;
+        }
+
+        &:nth-child(3) {
+            font-size: 16px;
+            color: nf.$text6;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+.notfound-home {
+    width: 320px;
+    height: 46px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    background: nf.$text4;
+    font-size: 16px;
+    color: nf.$text10;
+    margin-bottom: 120px;
+
+    &:hover{
+        background-color: nf.$text1;
+    }
+}
+

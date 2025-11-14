@@ -1,0 +1,56 @@
+@use "../../App.scss" as g;
+
+.main-swiper-wrap {
+    position: relative;
+    margin-top: 80px;
+    margin-bottom: 120px;
+
+    .main-swiper-title {
+        font-size: 24px;
+        font-weight: 550;
+        line-height: 140%;
+        letter-spacing: -0.6px;
+    }
+
+    .mySwiper1 {
+        overflow: hidden;
+    }
+
+
+    .mySwiper2 {
+        max-width: 1200px;
+        margin: 0 auto 120px;
+        position: relative;
+        padding-top: 12px;
+        cursor: pointer;
+
+
+
+        .swiper-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .swiper-slide {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px !important;
+                height: 150px;
+
+                &.swiper-slide-thumb-active {
+                    background: #f0f0f0; 
+                    border-radius: 4px;
+                }
+
+
+                img {
+                    height: auto;
+                }
+            }
+        }
+    }
+
+
+}
