@@ -24,6 +24,7 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
+    letter-spacing: -0.8px
 }
 
 @mixin myTitle24 ($fw:600, $ta:center, $color:$text1) {
@@ -32,6 +33,7 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
+    letter-spacing: -0.6px;
 }
 
 @mixin myTitle16 ($fw:400, $ta:center, $color:$text1) {
@@ -40,6 +42,8 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
+     letter-spacing: -0.4px;
+
 }
 
 @mixin myTitle14 ($fw:400, $ta:center, $color:$text1) {
@@ -48,6 +52,7 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
+      letter-spacing: -0.35px;
 }
 
 //
