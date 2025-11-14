@@ -152,49 +152,51 @@ const ShopAll = () => {
                 </div>
             </div>
             {isFilterOpen && (
-                <div className="filter-wrap">
-                    <div className="filter-title">
-                        <h3>Filter</h3>
-                        <p className="close-btn"><img src="/images/close-icon.png" alt="" /></p>
-                    </div>
+               <div className="filter-popup" onClick={() => setIsFilterOpen(false)}>
+          <div className="filter-wrap" onClick={(e) => e.stopPropagation()}>
+            <div className="filter-title">
+              <h3>Filter</h3>
+              <p className="close-btn" onClick={() => setIsFilterOpen(false)}><img src="/images/close-icon.png" alt="" /></p>
+            </div>
 
-                    <div className="sort-wrap">
-                        <p className="sort-title">정렬</p>
-                        <div className="btn-wrap">
-                            <button
-                                onClick={() => setTempSortOption("best")}
-                                className={tempSortOption === "best" ? "active" : ""}>
-                                추천순
-                            </button>
+            <div className="sort-wrap">
+              <p className="sort-title">정렬</p>
+              <div className="btn-wrap">
+                <button
+                  onClick={() => setTempSortOption("best")}
+                  className={tempSortOption === "best" ? "active" : ""}>
+                  추천순
+                </button>
 
-                            <button
-                                onClick={() => setTempSortOption("new")}
-                                className={tempSortOption === "new" ? "active" : ""}>
-                                최신순
-                            </button>
+                <button
+                  onClick={() => setTempSortOption("new")}
+                  className={tempSortOption === "new" ? "active" : ""}>
+                  최신순
+                </button>
 
-                            <button
-                                onClick={() => setTempSortOption("asc")}
-                                className={tempSortOption === "asc" ? "active" : ""}>
-                                가격 낮은순
-                            </button>
+                <button
+                  onClick={() => setTempSortOption("asc")}
+                  className={tempSortOption === "asc" ? "active" : ""}>
+                  가격 낮은순
+                </button>
 
-                            <button
-                                onClick={() => setTempSortOption("desc")}
-                                className={tempSortOption === "desc" ? "active" : ""}>
-                                가격 높은순
-                            </button>
-                        </div>
-                    </div>
+                <button
+                  onClick={() => setTempSortOption("desc")}
+                  className={tempSortOption === "desc" ? "active" : ""}>
+                  가격 높은순
+                </button>
+              </div>
+            </div>
 
-                    <p className='apply-btn'
-                        onClick={() => {
-                            setSortOption(tempSortOption);
-                            setIsFilterOpen(false);
-                        }}>
-                        적용하기
-                    </p>
-                </div>
+            <p className='apply-btn'
+              onClick={() => {
+                setSortOption(tempSortOption);
+                setIsFilterOpen(false);
+              }}>
+              적용하기
+            </p>
+          </div>
+        </div>
             )}
         </div>
     );

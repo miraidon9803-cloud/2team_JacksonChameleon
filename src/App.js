@@ -38,6 +38,7 @@ import About from './pages/About';
 import AboutStory from './pages/AboutStory';
 import Brand from './pages/Brand';
 import ShopDetailTop from './pages/ShopDetailTop';
+import Store from './pages/Store';
 
 
 function App() {
@@ -66,7 +67,7 @@ function App() {
 
         <Route path="/service" element={<Service />} />
         <Route path="/community" element={<Community />} />
-        <Route path="/customer" element={<Customer/>}/>
+        <Route path="/community/customer" element={<Customer/>}/>
         <Route path="/shoppingbags" element={<ShopingBags />} />
         <Route path="/shoppingcart" element={<ShoppingCart />} />
 
@@ -74,13 +75,14 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/about/story" element={<AboutStory/>}/>
 
+        <Route path='/map' element={<Store/>}/>
 
   
         <Route path="/logjoin" element={<LogJoin/>}/>
         <Route path="/productdetails" element={<ProductDetails />} />
         <Route path="/samplingservice" element={<SamplingService />} />
         <Route path="/mypage" element={<MyPage />} />
-        <Route path="/map" element={<Map />} />
+        <Route path="/community/store" element={<Map />} />
         <Route path="/careservice" element={<CareService />} />
         <Route path="/cs" element={<CS />} />
         <Route path="/notice" element={<Notice />} />
