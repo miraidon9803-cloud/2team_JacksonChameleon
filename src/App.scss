@@ -24,10 +24,8 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
-<<<<<<< HEAD
-=======
     letter-spacing: -0.8px
->>>>>>> 4cadd09ad4c92299684322a8a527bb4945eb752d
+
 }
 
 @mixin myTitle24 ($fw:600, $ta:center, $color:$text1) {
@@ -36,10 +34,8 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
-<<<<<<< HEAD
-=======
     letter-spacing: -0.6px;
->>>>>>> 4cadd09ad4c92299684322a8a527bb4945eb752d
+
 }
 
 @mixin myTitle16 ($fw:400, $ta:center, $color:$text1) {
@@ -48,11 +44,9 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
-<<<<<<< HEAD
-=======
-     letter-spacing: -0.4px;
+    letter-spacing: -0.4px;
 
->>>>>>> 4cadd09ad4c92299684322a8a527bb4945eb752d
+
 }
 
 @mixin myTitle14 ($fw:400, $ta:center, $color:$text1) {
@@ -61,10 +55,8 @@ html{
     line-height: 140%;
     text-align: $ta;
     color: $color;
-<<<<<<< HEAD
-=======
-      letter-spacing: -0.35px;
->>>>>>> 4cadd09ad4c92299684322a8a527bb4945eb752d
+    letter-spacing: -0.35px;
+
 }
 
 //

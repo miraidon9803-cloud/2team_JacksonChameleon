@@ -34,14 +34,12 @@ import ShoppingCart from './pages/ShoppingCart';
 import LogJoin from './pages/LogJoin';
 import Customer from './pages/Customer';
 import Shop from './pages/Shop';
-<<<<<<< HEAD
 import Store from './pages/Store';
-=======
 import About from './pages/About';
 import AboutStory from './pages/AboutStory';
 import Brand from './pages/Brand';
 import ShopDetailTop from './pages/ShopDetailTop';
->>>>>>> 4cadd09ad4c92299684322a8a527bb4945eb752d
+
 
 
 function App() {
@@ -59,7 +57,7 @@ function App() {
         <Route path="/shop/lighting" element={<ShopLighting />} />
         <Route path="/shop/:id" element={<ShopDetailTop/>}/>
   
-        
+      
 
         <Route path="/Collections/Ink" element={<InkCollection />} />
         <Route path="/collections/pebble" element={<PebbleCollection />} />
