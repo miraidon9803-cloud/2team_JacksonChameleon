@@ -68,7 +68,7 @@ const menus = [
     }
 ];
 
-   
+
 const Header = () => {
     const [activeMenu, setActiveMenu] = useState(false);
     const [height, setHeight] = useState(70);
@@ -143,31 +143,13 @@ const Header = () => {
 
                 <ul className="gnb-list">
                     <li><Link to="/Search"><img src="/images/search-icon.png" alt="search" /></Link></li>
-<<<<<<< HEAD
+
                     <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
                     <li><Link to="/Shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
 
                 </ul>
-=======
-                    {user ? (<>
-                        <li>
-                            <Link to="/mypage">
-                                <img src="/images/user-icon.png" alt="" />
-                                {/* <span>MyPage</span> */}
-                            </Link>
-                        </li>
-                    </>) : (<>
-                        <li>
-                            <Link to="/logjoin">
-                                <img src="/images/user-icon.png" alt="" />
-                                {/* <span>LOGIN</span> */}
-                            </Link>
-                        </li>
-                            </>)}
-                        {/* <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li> */}
-                        <li><Link to="/shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
-                    </ul>
->>>>>>> 1378a957cc91c3d376e416f7634fc1a7ab70d297
+
+
             </div>
         </header >
     );
