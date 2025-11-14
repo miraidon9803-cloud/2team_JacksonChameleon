@@ -1,0 +1,269 @@
+@use "../../App.scss" as cu;
+
+
+.customer {
+  height: 940px;
+  display: flex;
+  justify-content: center;
+  background-color: cu.$BG;
+  position: relative;
+  overflow: hidden;
+
+  .cus-background {
+    height: 700px;
+    position: absolute;
+    inset: 0;
+    background: url("../../../public/images/costomer-backgroud-unscreen.gif");
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: scale(1.5);
+    animation: zoomOut 2s ease-out forwards;
+    z-index: 0;
+    border-radius: 8px;
+    margin-top: 100px;
+    
+  }
+}
+
+.cus-text {
+  margin-top: 100px;
+  text-align: center;
+  animation: slideUp 1s ease-out forwards;
+  opacity: 0;
+  animation-delay: 2s;
+
+  h2 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+}
+
+.qa-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 2.5s;
+
+  button {
+    background-color: cu.$text10;
+    border: 1px solid cu.$text10;
+    border-radius: 8px;
+    padding: 24px;
+    text-align: left;
+    margin-top: 33px;
+    color: cu.$text6;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    &:hover {
+      color: cu.$text1;
+    }
+
+    .q {
+      margin-top: 10px;
+      font-size: 24px;
+      padding-bottom: 10px;
+    }
+
+    .q-text {
+      font-size: 16px;
+    }
+  }
+}
+
+.chat-box {
+  height: 500px;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-box {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 6px;
+  scrollbar-gutter: stable;
+}
+
+/* 스크롤바*/
+.chat-box::-webkit-scrollbar {
+  width: 6px;                  
+}
+
+
+.chat-box::-webkit-scrollbar-track {
+  background: transparent;      
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: cu.$text8;           
+  border-radius: 20px;           
+}
+
+.chat-box::-webkit-scrollbar-thumb:hover {
+  background: cu.$text7;
+}
+
+.message {
+  display: flex;
+
+  &.user {
+    justify-content: flex-end;
+  }
+
+  &.bot {
+    justify-content: flex-start;
+  }
+
+  .bubble {
+    max-width: 70%;
+    padding: 10px 14px;
+    border-radius: 16px;
+    font-size: 15px;
+    line-height: 1.4;
+    animation: fadeIn 0.25s ease;
+  }
+
+  &.user .bubble {
+    background:cu.$text10;
+    color: cu.$text1;
+    border-bottom-right-radius: 4px;
+  }
+
+  &.bot .bubble {
+    background: cu.$text9;
+    color: cu.$text6;
+    border-bottom-left-radius: 4px;
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+@keyframes scale {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(2);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.chat-input {
+  display: flex;
+  align-items: center;
+  background: cu.$text10;
+  border-radius: 8px;
+  padding: 6px;
+  width: 100%;
+  width: 1200px;
+  opacity: 0;
+  animation: slideUp 1s ease-out forwards;
+  animation-delay: 3s;
+
+  .input-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background: cu.$text10;
+    border-radius: 8px 0 0 8px;
+    padding: 10px 14px;
+
+    .cus-link-img {
+      cursor: pointer;
+      margin: 0 14px 0 4px;
+
+      img {
+        width: 20px;
+        padding-bottom: 3px;
+      }
+    }
+
+    .middle {
+      font-size:14px;
+      font-weight: 700;
+      color: cu.$text1;
+      margin-top: 3 px;
+    }
+  }
+
+  input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: cu.$text1;
+    background: transparent;
+    padding-left: 14px;
+
+    &::placeholder {
+      align-items: center;
+      color: cu.$text6;
+    }
+  }
+
+  .send-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: cu.$BG;
+    color: cu.$text4;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 16px;
+    cursor: pointer;
+
+    .cus-send-img {
+      margin-right: 8px;
+    }
+
+    .cus-send-text {
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

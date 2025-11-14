@@ -3,7 +3,11 @@ import { useNavigate } from "react-router-dom";
 import DaumPostcode from "react-daum-postcode";
 import { useAuthStore } from "../store/authStore";
 import { useLogJoinStore } from "../store/LogJoinStore";
+<<<<<<< HEAD
 import "./scss/Logjoin.scss";
+=======
+import "./scss/Logjoin1.scss";
+>>>>>>> 4cadd09ad4c92299684322a8a527bb4945eb752d
 
 const LogJoin = () => {
   const navigate = useNavigate();

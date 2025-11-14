@@ -1,0 +1,63 @@
+@use "../../App.scss" as g;
+
+.service-wrap {
+    position: relative;
+
+    .video-bg {
+        width: 100%;
+        height: 1080px;
+        object-fit: cover;
+    }
+
+    .inner {
+        .margin-wrap {
+            // margin: 0 2%;
+            .service-text-box {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                max-width: 1200px;
+                width: 100%;
+
+
+
+                .service-title {
+                    @include g.myTitle24();
+                    color: g.$text10;
+                    margin-bottom: 28px;
+                    text-align: left;
+                }
+
+                .service-btn {
+                    @include g.myTitle16();
+                    color: g.$text10;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+
+                    p {
+                        width: 300px;
+                        padding: 12px 0;
+                        border-radius: 8px;
+                        border: 1px solid #FFF;
+                        background: rgba(255, 255, 255, 0.10);
+                        backdrop-filter: blur(10px);
+
+                        &:hover {
+                            background: rgba(255, 255, 255, 0.40);
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+
+    }
+
+
+
+
+}
