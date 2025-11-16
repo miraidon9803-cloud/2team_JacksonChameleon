@@ -14,6 +14,13 @@ header {
 
     transition: All 0.3s ease-in-out;
 
+     button {
+                background: none;
+                border: none;
+                outline: none;
+                appearance: none; //브라우저 기본 스타일 제거
+            }
+
     .header-wrap {
         max-width: 1200px;
         margin: 0 auto;
