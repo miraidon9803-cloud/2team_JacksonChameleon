@@ -1,9 +1,47 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
 
 const ShoppingCart = () => {
-    const { cartItems, totalPrice } = useProductStore();
+    const { cartItems, totalPrice, onRemoveCart, onItemPlus, onItemMinus } = useProductStore();
+
+    const [selectedItems, setSelectedItems] = useState([]);
+    const [isAllSelected, setIsAllSelected] = useState(false);
+
+    useEffect(() => {
+        if (cartItems.length > 0) {
+            setIsAllSelected(selectedItems.length === cartItems.length);
+        } else {
+            setIsAllSelected(false)
+        }
+    }, [selectedItems, cartItems]);
+
+    const handleSelectAll = () => {
+        if (isAllSelected) {
+            setSelectedItems([]);
+        } else {
+            setSelectedItems(cartItems);
+        }
+    };
+
+    const handleSelectItem = (item) => {
+        if (selectedItems.includes(item)) {
+            setSelectedItems(selectedItems.filter(selected => selected !== item));
+        } else {
+            setSelectedItems([...selectedItems, item]);
+        }
+    }
+
+    const handleDeleteSelected = () => {
+        if (selectedItems.length === 0) {
+            alert("삭제할 상품을 선택해주세요");
+            return;
+        }
+        selectedItems.forEach(item => {
+            onRemoveCart(item);
+        });
+        setSelectedItems([]);
+    }
 
     return (
         <div className='shopping-cart-wrap'>
@@ -13,19 +51,29 @@ const ShoppingCart = () => {
                     <div className="cart-list">
 
                         <div className="choose-del-wrap">
-                            <input type="checkbox" />
-                            <button>선택삭제</button>
+                            <input
+                                type="checkbox"
+                                checked={isAllSelected}
+                                onChange={handleSelectAll}
+                            />
+                            <button onClick={handleDeleteSelected}>선택삭제</button>
                         </div>
 
                         {cartItems.length === 0 ? (
-                            <p>장바구니가 비어있습니다.</p>
+                            <div className="empty-wrap">
+                                <p>장바구니가 비어있습니다.</p>
+                            </div>
                         ) : (
                             cartItems.map((item, index) => (
 
-                                <div className="item-wrap">
+                                <div className="item-wrap" key={index}>
                                     <div className="selected-wrap">
-                                        <input type="checkbox" />
-                                        <button className='close-btn'><img src="/images/close-icon.png" alt="삭제버튼" /></button>
+                                        <input
+                                            type="checkbox"
+                                            checked={selectedItems.includes(item)}
+                                            onChange={() => handleSelectItem(item)}
+                                        />
+                                        <button className='close-btn' onClick={() => onRemoveCart(item)}><img src="/images/close-icon.png" alt="삭제버튼" /></button>
                                     </div>
 
                                     <div className="item-box">
@@ -40,9 +88,9 @@ const ShoppingCart = () => {
 
                                         <div className="count-price-wrap">
                                             <div className="count-wrap">
-                                                <button>-</button>
+                                                <button onClick={() => onItemMinus(item)}>-</button>
                                                 <span>{item.qty}</span>
-                                                <button>+</button>
+                                                <button onClick={() => onItemPlus(item)}>+</button>
                                             </div>
                                             <p className='price'>
                                                 {((item.size?.price || 0) + (item.add?.price || 0)).toLocaleString()}원
