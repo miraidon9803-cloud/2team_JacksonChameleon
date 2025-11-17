@@ -84,4 +84,54 @@ export const useProductStore = create((set, get) => ({
         addOption: null,
       },
     }),
+
+  //장바구니 
+  cartItems: [],
+  totalPrice: 0,
+
+  //메서드
+  // onAddToCart 메서드 수정
+  onAddToCart: (product) => {
+    const cart = get().cartItems;
+
+    const existing = cart.find((item) =>
+      item.id === product.id &&
+      item.sheet?.title === product.sheet?.title &&
+      item.size?.id === product.size?.id &&
+      item.color?.id === product.color?.id &&
+      item.add?.id === product.add?.id
+    );
+
+    let updateCart;
+    if (existing) {
+      updateCart = cart.map((item) =>
+        item.id === product.id &&
+          item.sheet?.title === product.sheet?.title &&
+          item.size?.id === product.size?.id &&
+          item.color?.id === product.color?.id &&
+          item.add?.id === product.add?.id
+          ? { ...item, qty: item.qty + product.qty }
+          : item
+      );
+    } else {
+      updateCart = [...cart, { ...product }];
+    }
+
+
+    alert('장바구니에 추가되었습니다!');
+
+    //총금액
+    let total = 0;
+    updateCart.forEach((item) => {
+      const sizePrice = item.size?.price || 0;
+      const addPrice = item.add?.price || 0;
+      const itemTotal = (sizePrice + addPrice) * item.qty;
+      total += itemTotal;
+    });
+
+    set({
+      cartItems: updateCart,
+      totalPrice: total
+    });
+  }
 }));
