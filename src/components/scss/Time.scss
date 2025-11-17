@@ -1,0 +1,42 @@
+@use "../../App.scss" as time;
+
+.time-section {
+    margin-top: 53px;
+  display: flex;
+  flex-direction: column;
+  
+
+  p {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .morning{
+    margin-bottom: 40px;
+  }
+
+  .time-buttons {
+    display: flex;
+    flex-wrap: wrap;       
+    gap: 10px;             
+  }
+
+  button {
+    width: 88px;  
+    height: 44px;
+    border: 1px solid time.$text8;
+    border-radius: 8px;
+    background: time.$text10;
+    font-size: 16px;
+    cursor: pointer;
+
+       &:hover {
+      background: time.$BG;
+    }
+
+    &.active {
+      color: time.$text10;
+      background: time.$text6;
+    }
+  }
+}

@@ -1,0 +1,69 @@
+@use "../../App.scss" as cals;
+
+.process-wrap {
+    display: flex;
+}
+
+.calender-process {
+    flex: 0 0 408px;
+    font-size: 24px;
+}
+
+.process-main {
+    color: cals.$text8;
+
+    p:nth-child(1) {
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 12px;
+
+    }
+
+    p:nth-child(2) {
+        font-size: 20px;
+        margin-bottom: 12px;
+
+    }
+
+    p:nth-child(3) {
+        font-size: 16px;
+
+    }
+}
+
+.process-sub {
+    font-size: 16px;
+    color: cals.$text8;
+
+}
+
+.swiper-slide {
+    cursor: pointer;
+    font-size: 18px;
+    background: cals.$text10;
+    height: 250px;
+    align-items: center;
+}
+
+.mySwiper .swiper-slide-active {
+    .process-main {
+        color: cals.$text1;
+    }
+
+    .process-sub {
+        color: cals.$text4
+    }
+}
+
+.mySwiper .swiper-pagination-bullet {
+    background-color: cals.$text8;
+    width: 40px;
+    border-radius: 4px;
+    
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+    background-color:cals.$text1;
+    width: 80px;
+    border-radius: 4px;
+}
