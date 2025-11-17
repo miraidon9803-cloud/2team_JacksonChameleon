@@ -1,0 +1,171 @@
+@use "../../App.scss" as sa;
+
+.sample-title {
+  margin-top: 100px;
+    text-align: center;
+
+    h2 {
+        font-size: 24px;
+        margin-top: 40px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-top: 20px;
+    }
+}
+
+.gif-file {
+    background: url(../../../public/images/sample.gif);
+    height: 560px;
+    margin-top: 80px;
+    margin-bottom: 86px;
+}
+
+.sample-caution1 {
+    display: flex;
+
+
+    .caution-left1 {
+        font-size: 24px;
+        flex: 0 0 408px;
+    }
+
+    .caution-des1 {
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .caution-des2 {
+        font-size: 16px;
+    }
+}
+
+.sample-caution2 {
+    display: flex;
+    margin-top: 162px;
+
+    .caution-left2 {
+        font-size: 24px;
+        flex: 0 0 408px;
+    }
+
+    .caution-right2 {
+        font-size: 20px;
+        margin-bottom: 20px;
+
+        .right2-des {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.sample-img-box {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 80px;
+}
+
+.sample-last {
+    p {
+        font-size: 16px;
+        margin-bottom: 40px;
+    }
+
+    button {
+        width: 792px;
+        height: 46px;
+        border-radius: 4px;
+        border: none;
+        cursor: pointer;
+        background: sa.$text4;
+        font-size: 16px;
+        color: sa.$text10;
+        margin-bottom: 120px;
+
+        &:hover {
+            background-color: sa.$text1;
+        }
+    }
+}
+
+.circle-check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  position: relative;
+
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    position: absolute;
+  }
+
+  .checkmark {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid sa.$text10;
+    outline: 1px solid sa.$text8;
+    outline-offset: 2px;  
+    background: sa.$text8;
+    position: relative;
+    flex-shrink: 0;
+  }
+
+  input:checked + .checkmark::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: sa.$text1;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: sa.$text1;
+    line-height: 1.3;
+  }
+}
+
+.sample-last {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sample-img-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+
+  .img-box {
+    position: relative;
+    overflow: hidden;
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0,0,0,0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+      opacity: 0;
+      transition: .25s ease;
+    }
+
+    &.active .overlay {
+      opacity: 1;
+    }
+  }
+}
