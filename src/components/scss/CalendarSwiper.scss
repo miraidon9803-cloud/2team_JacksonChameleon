@@ -1,0 +1,91 @@
+@use "../../App.scss" as g;
+
+.process-wrap {
+    display: flex;
+
+    .calender-process {
+        flex: 0 0 408px;
+        @include g.myTitle24();
+        text-align: left;
+    }
+
+        position: relative;
+        .process-main {
+            p:nth-child(1) {
+                @include g.myTitle24();
+                font-size: 18px;
+                text-align: left;
+                margin-bottom: 12px;
+
+            }
+
+            p:nth-child(2) {
+                @include g.myTitle16();
+                font-size: 20px;
+                text-align: left;
+                margin-bottom: 12px;
+
+            }
+
+            p:nth-child(3) {
+                @include g.myTitle16();
+                text-align: left;
+                height: 86px;
+
+            }
+        }
+
+        .process-sub {
+            @include g.myTitle16();
+            color: g.$text4;
+            text-align: left;
+        }
+
+        .mySwiper .swiper-slide {
+            height: 250px;
+            align-items: center;
+            opacity: 50%;
+        }
+
+        .mySwiper .swiper-slide-active {
+            opacity: 100%;
+        }
+
+        .swiper-pagination {
+            display: flex;
+        }
+
+        .mySwiper .swiper-pagination-bullet {
+            background-color: g.$text6;
+            width: 20px;
+            height: 4px;
+            border-radius: 4px;
+        }
+
+        .mySwiper .swiper-pagination-bullet-active {
+            background-color: g.$text4;
+            width: 80px;
+        }
+
+        .custom-prev {
+            position: absolute;
+            left: 365px;
+            z-index: 10;
+            cursor: pointer;
+
+        }
+
+        .custom-next {
+            position: absolute;
+            right: -40px;
+            z-index: 10;
+            cursor: pointer;
+        }
+
+        .swiper-navigation-icon{
+            display: none;
+        }
+    
+
+
+}
