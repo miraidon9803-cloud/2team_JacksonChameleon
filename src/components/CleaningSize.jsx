@@ -3,7 +3,7 @@ import './scss/CleaningSize.scss'
 
 const CleaningSize = ({ size, setSize, sizes }) => {
     return (
-        <section className='cleaningsize'>
+        <section className='cleaningsize-wrap'>
             <div className='inner'>
                 <div className="size-select">
                     <p>사이즈를 선택해주세요</p>

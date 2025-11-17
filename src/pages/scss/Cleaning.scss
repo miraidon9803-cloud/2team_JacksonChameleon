@@ -1,5 +1,7 @@
 @use "../../App.scss" as cle;
 
+.cleaning-wrap{
+
 .calendar-top{
   margin-top: 100px;
   text-align: center;
@@ -95,4 +97,4 @@
     background: cle.$text1;
   }
 
-}
+}}
