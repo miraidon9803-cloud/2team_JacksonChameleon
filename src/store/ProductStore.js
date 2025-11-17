@@ -88,9 +88,10 @@ export const useProductStore = create((set, get) => ({
   //장바구니 
   cartItems: [],
   totalPrice: 0,
+  cartCount: 0,
 
   //메서드
-  // onAddToCart 메서드 수정
+  //장바구니에 추가
   onAddToCart: (product) => {
     const cart = get().cartItems;
 
@@ -131,7 +132,73 @@ export const useProductStore = create((set, get) => ({
 
     set({
       cartItems: updateCart,
+      cartCount: updateCart.length,
       totalPrice: total
     });
+  },
+
+  //장바구니삭제
+  onRemoveCart: (product) => {
+    const cart = get().cartItems;
+    const updateCart = cart.filter((item) => !
+      (item.id === product.id &&
+        item.sheet?.title === product.sheet?.title &&
+        item.size?.id === product.size?.id &&
+        item.color?.id === product.color?.id &&
+        item.add?.id === product.add?.id
+      ));
+    let total = 0;
+    updateCart.forEach((item) => {
+      total += (item.size?.price + item.add?.price) * item.qty
+    })
+    set({
+      cartItems: updateCart,
+      cartCount: updateCart.length,
+      totalPrice: total
+    })
+  },
+
+  //장바구니 수량추가
+  onItemPlus: (product) => {
+    const cart = get().cartItems;
+    const updateCart = cart.map((item) => (
+      item.id === product.id &&
+        item.sheet?.title === product.sheet?.title &&
+        item.size?.id === product.size?.id &&
+        item.color?.id === product.color?.id &&
+        item.add?.id === product.add?.id ?
+        { ...item, qty: item.qty + 1 } : item
+    ));
+    let total = 0;
+    updateCart.forEach((item) => {
+      total += (item.size?.price + item.add?.price) * item.qty
+    })
+    set({
+      cartItems: updateCart,
+      cartCount: updateCart.length,
+      totalPrice: total
+    })
+  },
+
+  //장바구니 수량제거
+  onItemMinus: (product) => {
+    const cart = get().cartItems;
+    const updateCart = cart.map((item) => (
+      item.id === product.id &&
+        item.sheet?.title === product.sheet?.title &&
+        item.size?.id === product.size?.id &&
+        item.color?.id === product.color?.id &&
+        item.add?.id === product.add?.id ?
+        { ...item, qty: Math.max(1, item.qty - 1) } : item
+    ));
+    let total = 0;
+    updateCart.forEach((item) => {
+      total += (item.size?.price + item.add?.price) * item.qty
+    })
+    set({
+      cartItems: updateCart,
+      cartCount: updateCart.length,
+      totalPrice: total
+    })
   }
 }));
