@@ -3,6 +3,46 @@
 
 .collection-banner-wrap {
     position: relative;
+    margin: 70px 0 80px;
+
+
+    .header-text-wrap {
+        height: 70px;
+        background: rgba($color: #f4f4f4, $alpha: 1);
+        backdrop-filter: blur(100px);
+        -webkit-backdrop-filter: blur(100px);
+        box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+
+
+        .header-text-box {
+            max-width: 1200px;
+            margin: 0 auto;
+            @include g.myFlex();
+            height: 70px;
+
+            p {
+                font-size: 2rem;
+                line-height: 140%;
+                letter-spacing: -0.8px;
+            }
+
+            .collection-menu {
+                @include g.myFlex();
+
+                p {
+                    @include g.myTitle16($color: g.$text5);
+
+                    &.active {
+                        span {
+                            border-bottom: 1px solid g.$text1;
+                            color: g.$text1;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 
     .img-box {
         width: 100%;
@@ -34,4 +74,6 @@
             font-weight: 300;
         }
     }
+
+
 }

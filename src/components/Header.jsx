@@ -69,6 +69,7 @@ const menus = [
     }
 ];
 
+
 const Header = () => {
     const [activeMenu, setActiveMenu] = useState(false);
     const [height, setHeight] = useState(70);
@@ -142,29 +143,16 @@ const Header = () => {
                 </h1>
 
                 <ul className="gnb-list">
-                    {user ? (<>
-                        <li>
-                            <Link to="/mypage">
-                                <img src="/images/user-icon.png" alt="" />
 
-                            </Link>
-                        </li>
-                    </>) : (<>
-                        <li>
-                            <Link to="/logjoin">
-                                <img src="/images/user-icon.png" alt="" />
-                            </Link>
-                        </li>
-                        {/* <li>
-                                                    <Link to="/join"><img src="/images/loginJoin.png" alt="" />
-                                                        <span>JOIN</span>
-                                                    </Link>
-                                                </li> */}
-                    </>)}
-                    <li><button onClick={openSearch} className="search-btn"><img src="/images/search-icon.png" alt="search" /></button></li>
-                    {/* <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li> */}
-                    <li><Link to="/ShoppingBag"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
+                    <li><Link to="/Search"><img src="/images/search-icon.png" alt="search" /></Link></li>
+
+                    <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
+                    <li><Link to="/Shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
+
                 </ul>
+
+
+
             </div>
         </header >
     );

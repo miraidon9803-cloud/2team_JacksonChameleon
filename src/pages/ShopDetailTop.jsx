@@ -13,12 +13,13 @@ const ShopDetailTop = () => {
   ];
 
   const { id } = useParams();
-  const { items, onFetchItems } = useProductStore();
+  const { items, onFetchItems, onAddToCart } = useProductStore();
   const [product, setProduct] = useState(null);
 
   const [openIndex, setOpenIndex] = useState(0);
   const optionRefs = useRef([]);
   const [scrollAble, setScrollAble] = useState({});
+  const [count, setCount] = useState(1);
 
 
   const [selected, setSelected] = useState({
@@ -118,6 +119,30 @@ const ShopDetailTop = () => {
   }, [id, items]);
 
   if (!product) return <p>로딩중입니다...</p>;
+
+  // 장바구니
+  const hanleAddToCart = () => {
+    if (!selected.sheet) {
+      alert("시트타입을 선택해주세요");
+      return;
+    }
+    if (!selected.size) {
+      alert("사이즈를 선택해주세요");
+      return;
+    }
+    if (!selected.color) {
+      alert("컬러를 선택해주세요");
+      return;
+    }
+
+    const productCart = {
+      ...product,
+      ...selected
+    };
+
+    onAddToCart(productCart);
+  };
+
 
   return (
     <div className='shop-detail-banner'>
@@ -281,7 +306,7 @@ const ShopDetailTop = () => {
               </div>
 
               <div className="total-btn">
-                <div className="go-cart">장바구니</div>
+                <div className="go-cart" onClick={() => hanleAddToCart()}>장바구니</div>
                 <div className="go-pay">결제하기</div>
               </div>
             </div>
