@@ -1,8 +1,14 @@
-import React, { useEffect, useRef, useState } from "react";
-import "./scss/ShopDetailTop.scss";
-import ShopDetailSwiper from "../components/ShopDetailSwiper";
-import { useParams } from "react-router-dom";
-import { useProductStore } from "../store/ProductStore";
+import React, { useEffect, useRef, useState } from 'react';
+import './scss/ShopDetailTop.scss';
+import ShopDetailSwiper from '../components/ShopDetailSwiper';
+import { useParams } from 'react-router-dom';
+import { useProductStore } from '../store/ProductStore';
+import ShopDetailBottomNav from './ShopDetailBottomNav';
+import ShopDetailBottomIntro from './ShopDetailBottomIntro';
+import ShopDetailBottomSize from './ShopDetailBottomSize';
+import ShopDetailBottomService from './ShopDetailBottomService';
+import ShopDetailBottomReview from './ShopDetailBottomReview';
+
 
 const ShopDetailTop = () => {
   const sheetList = [
@@ -17,8 +23,10 @@ const ShopDetailTop = () => {
 
   const [product, setProduct] = useState(null);
   const [openIndex, setOpenIndex] = useState(0);
-  const [selectedList, setSelectedList] = useState([]); 
-  
+  const [selectedList, setSelectedList] = useState([]);
+
+  const [activeTap, setActiveTap] = useState(0);
+
   // 상품 데이터 로드
   useEffect(() => {
     if (items.length === 0) onFetchItems();
@@ -181,10 +189,16 @@ const ShopDetailTop = () => {
                         key={s.id}
                         onClick={() => selectSize(s)}
                       >
+
                         <div className="depth-left">
-                          <img src={s.img} alt={s.sizename} />
-                          <span>{s.sizename}</span>
+                          <div className="left-img">
+                            <img src={s.img} alt={s.sizename} />
+                          </div>
+                          <div className='left-title'>
+                            <span>{s.sizename}</span>
+                          </div>
                         </div>
+
                         <div className="depth-right">
                           <p>너비: {s.width}</p>
                           <p>높이: {s.height}</p>
@@ -206,10 +220,13 @@ const ShopDetailTop = () => {
                       <div
                         className="depth-content"
                         key={c.id}
-                        onClick={() => selectColor(c)}
-                      >
-                        <img src={c.img} alt={c.colorname} />
-                        <p>{c.colorname}</p>
+                        onClick={() => selectColor(c)}>
+                        <div className="content-dept">
+                          <div className="content-img">
+                            <img src={c.img} alt={c.colorname} />
+                            <p className='content-text'>{c.colorname}</p>
+                          </div>
+                        </div>
                       </div>
                     ))}
                   </div>
@@ -291,7 +308,16 @@ const ShopDetailTop = () => {
           </div>
         </div>
       </div>
-    </div>
+
+      <div className="detail-bottom">
+        <ShopDetailBottomNav activeTap={activeTap} setActiveTap={setActiveTap} />
+
+        {activeTap === 0 && <ShopDetailBottomIntro product={product} />}
+        {activeTap === 1 && <ShopDetailBottomSize product={product} />}
+        {activeTap === 2 && <ShopDetailBottomReview product={product} />}
+        {activeTap === 3 && <ShopDetailBottomService product={product} />}
+      </div>
+    </div >
   );
 };
 
