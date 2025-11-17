@@ -1,0 +1,45 @@
+@use "../../App.scss" as size;
+
+.cleaningsize-wrap{
+
+.size-select {
+    display: flex;
+    flex-direction: column;
+    margin-top: 32px;}
+
+    p {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .option-buttonss {
+        display: flex;
+        gap: 24px;
+        
+
+        button {
+            width: 180px;
+            height: 44px;
+            border: 1px solid size.$text8;
+            border-radius: 4px;
+            background: size.$text10;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: size.$BG;
+            }
+
+            &.active {
+                color: size.$text10;
+                background: size.$text6;
+            }
+        }
+    }
+
+    .size-des{
+        font-size: 14px;
+        color: size.$text6;
+        margin-top: 8px;
+    }}

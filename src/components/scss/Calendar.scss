@@ -1,0 +1,88 @@
+@use "../../App.scss" as cal;
+
+.calendar-container {
+  border: 1px solid cal.$text8;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  background: cal.$text10;
+
+
+.calendar-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 20px;
+  
+  margin-bottom: 10px;
+}
+
+.nav-btn {
+  border: none;
+  background-color:cal.$text10;
+  cursor: pointer;
+ transition: 0.2s;
+}
+
+.weekday-row {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 11.5px;
+}
+
+.weekday {
+  color: cal.$text1;
+  font-size: 16px;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+ 
+}
+
+.calendar-day {
+  border: none;
+  border-radius: 4px;
+  background: cal.$text10;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+
+     &:hover {
+      background: cal.$BG;
+    }
+
+    &.active {
+      color:cal.$text10;
+      background: cal.$text6;
+    }
+
+    .today-label {
+    font-size: 12px;
+    margin-top: 2px;
+    color: cal.$text1; 
+  }
+
+  .nottoday-label{
+    opacity: 0;
+  }
+}
+
+.sunday{
+    color:cal.$point2;
+}
+
+.empty-day {
+  visibility: hidden;
+}
+}

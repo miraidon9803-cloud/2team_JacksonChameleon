@@ -1,0 +1,40 @@
+@use "../../App.scss" as calf;
+
+.cleaningfebric-wrap {
+
+    .cleaning-select {
+        display: flex;
+        flex-direction: column;
+        margin-top: 32px;
+    }
+
+    p {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    .option-buttons {
+        display: flex;
+        gap: 24px;
+
+        button {
+            width: 180px;
+            height: 44px;
+            border: 1px solid calf.$text8;
+            border-radius: 4px;
+            background: calf.$text10;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.2s;
+
+            &:hover {
+                background: calf.$BG;
+            }
+
+            &.active {
+                color: calf.$text10;
+                background: calf.$text6;
+            }
+        }
+    }
+}
