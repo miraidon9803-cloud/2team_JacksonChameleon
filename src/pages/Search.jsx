@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation, Link, useNavigate } from "react-router-dom";
 import jacksonProduct from "../data/jacksonproduct.js";
 import "./scss/Search.scss";
 import "../components/scss/filterPopup.scss";
@@ -8,6 +8,14 @@ const Search = () => {
     const location = useLocation();
     const params = new URLSearchParams(location.search);
     const word = params.get("word") || "";
+    const [searchText, setSearchText] = useState(word);
+    const navigate = useNavigate();
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        navigate(`/search?word=${searchText}`);
+    };
+
 
     // 상태 정의
     const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -83,7 +91,20 @@ const Search = () => {
     return (
         <div className="search-wrap">
             <div className="inner">
-                <h2 className="search-title">검색 결과 : "{word}"</h2>
+                <h2 className="search-title">Search</h2>
+
+                <div className="search-box">
+                    <form onSubmit={handleSearch}>
+                        <input
+                            type="text"
+                            value={searchText}
+                            onChange={(e) => setSearchText(e.target.value)}
+                            placeholder="검색어를 입력하세요"
+                        />
+                        <button onClick={handleSearch}><img src="/images/search-grey.svg" alt="search" /></button>
+                    </form>
+                </div>
+
 
                 <div className="product-filter">
                     <div className="filter-title">

@@ -1,7 +1,7 @@
 import './App.scss';
 import { Route, Routes } from 'react-router-dom';
 import Layout from './components/Layout';
-import ProductDetails from './pages/ProductDetails';
+
 import MyPage from './pages/MyPage';
 import Map from './pages/Map';
 
@@ -17,7 +17,6 @@ import Payment from './pages/Payment';
 import NotFound from './pages/NotFound';
 import Sellection from './pages/Sellection';
 
-import ShopingBags from './pages/ShopingBags';
 import Community from './pages/Community';
 import Collections from './pages/Collections';
 import ShopAll from './pages/ShopAll';
@@ -68,7 +67,7 @@ function App() {
         <Route path="/service" element={<Service />} />
         <Route path="/community" element={<Community />} />
         <Route path="/community/customer" element={<Customer/>}/>
-        <Route path="/shoppingbags" element={<ShopingBags />} />
+       
         <Route path="/shoppingcart" element={<ShoppingCart />} />
 
         <Route path="/about/brand" element={<Brand/>}/>
@@ -79,7 +78,7 @@ function App() {
 
   
         <Route path="/logjoin" element={<LogJoin/>}/>
-        <Route path="/productdetails" element={<ProductDetails />} />
+
         <Route path="/samplingservice" element={<SamplingService />} />
         <Route path="/mypage" element={<MyPage />} />
         <Route path="/community/store" element={<Map />} />
@@ -89,6 +88,7 @@ function App() {
         <Route path="/noticedetails" element={<NoticeDetails />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/search" element={<Search />} />
+        
         <Route path="/notfound" element={<NotFound />} />
         <Route path="/sellection" element={<Sellection />} />
       </Route>
