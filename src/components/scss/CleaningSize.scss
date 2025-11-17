@@ -1,5 +1,7 @@
 @use "../../App.scss" as size;
 
+.cleaningsize-wrap{
+
 .size-select {
     display: flex;
     flex-direction: column;
@@ -40,4 +42,4 @@
         font-size: 14px;
         color: size.$text6;
         margin-top: 8px;
-    }
+    }}

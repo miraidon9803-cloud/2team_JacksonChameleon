@@ -29,6 +29,9 @@ const Sample = () => {
         }
 
         alert("신청이 완료되었습니다!");
+
+        window.scrollTo(0, 0);
+        window.location.reload();
     };
 
     return (

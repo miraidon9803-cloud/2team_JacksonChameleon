@@ -72,7 +72,7 @@ const Cleaning = () => {
 
 
     return (
-        <section className='calendar-wrap'>
+        <section className='cleaning-wrap'>
             <div className="inner">
                 <div className="calendar-top">
                     <h2>프리미엄 소파 클리닝 서비스</h2>
