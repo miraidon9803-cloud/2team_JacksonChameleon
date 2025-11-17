@@ -1,0 +1,224 @@
+@use '../../App.scss' as g;
+
+pre {
+    @include g.myTitle16($ta: left);
+    white-space: pre-wrap;
+    font-family: 'pretendard';
+}
+
+.bottom-review-wrap {
+
+    .inner {
+        font-size: 1.4rem;
+        padding-top:0;
+
+        .total-wrap {
+            width: 100%;
+
+            .total-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom:12px;
+
+                >p {
+                    @include g.myTitle24($ta: left);
+
+                    span {
+                        @include g.myTitle16($ta: left, $color: g.$text6);
+                        padding-left: 8px;
+                    }
+                }
+
+                button {
+                    background: none;
+                    width: 140px;
+                    height: 48px;
+                    border-radius: 4px;
+                    border: none;
+                    background: g.$BG;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 8px;
+
+                    font-size: 16px;
+                }
+            }
+
+            .total {
+                width: 100%;
+                padding: 36px 80px;
+                background: g.$BG;
+                border-radius: 8px;
+
+                display: flex;
+                gap: 80px;
+
+                .total-left {
+                    @include g.myTitle32($ta: left, );
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 12px;
+                }
+
+                .total-right {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 16px;
+
+                    >div {
+                        display: flex;
+                        align-items: center;
+                        gap: 32px;
+
+                        p:nth-of-type(1) {
+                            width: 64px;
+                        }
+
+                        >div {
+                            width: 240px;
+                            height: 8px;
+                            border-radius: 5px;
+                            background: g.$text8;
+
+                            &::after {
+                                content: '';
+                                display: block;
+                                width: var(--percent, 0%);
+                                height: 8px;
+                                border-radius: 5px;
+                                background: g.$text1;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+        }
+
+        .review-wrap {
+            @include g.myTitle16($ta: left);
+
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            .review-top {}
+
+            .review {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                .rev-item {
+                    width: 100%;
+                    height: 320px;
+                    transition: height 0.35s ease-in-out;
+
+                    display: flex;
+                    gap: 12px;
+
+                    .rev-text {
+                        background: g.$BG;
+                        border-radius: 8px;
+
+                        width: 100%;
+                        height: auto;
+                        overflow: visible;
+
+                        display: flex;
+
+                        flex: 2;
+
+                        .text-left {
+                            max-width: 205px;
+                            width: 100%;
+
+                            padding: 20px;
+
+                            display: flex;
+                            flex-direction: column;
+                            align-items: left;
+                            justify-content: space-between;
+
+                            .text-left-name {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 24px;
+                            }
+                        }
+
+                        .text-right {
+                            padding: 20px;
+                            width: 100%;
+
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: space-between;
+                            gap: 10px;
+
+                            align-items: flex-end;
+
+                            .rev-box {
+                                width: 100%;
+                                height: 236px;
+
+                                overflow: hidden;
+
+                                transition: height 0.35s ease-in-out;
+
+                                &.open {
+                                    height: auto;
+                                }
+                            }
+
+                            .rev-more {
+                                background: none;
+                                border: none;
+                                outline: none;
+
+                                display: flex;
+                                gap: 4px;
+
+                                img {
+                                    &.rotate {
+                                        transform: rotate(180deg);
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .rev-img {
+                        height: 100%;
+                        overflow: hidden;
+                        border-radius: 8px;
+                        transition: height 0.35s ease-in-out;
+
+                        flex: 1;
+
+                        &.open {
+                            height: auto; // 이제 이게 작동함!
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            display: block;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,42 @@
+@use '../../App.scss' as g;
+
+.detail-btn-wrap {
+
+    .inner {
+
+        .detail-bottom-btn {
+            display: flex;
+            gap: 24px;
+
+            margin-bottom: 40px;
+
+
+
+            button {
+                background: none;
+                border: none;
+                outline: none;
+
+                @include g.myTitle16();
+                color: g.$text6;
+
+                &.active{
+                    color: g.$text1;
+                    text-decoration: underline;
+                }
+            }
+
+            >a {
+                @include g.myTitle24();
+                color: g.$text6;
+                text-decoration: none;
+
+                &.active {
+                    color: g.$text1;
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+}
