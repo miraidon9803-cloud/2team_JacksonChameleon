@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './scss/Header.scss'
+import './scss/header.scss'
 import { useProductStore } from '../store/ProductStore';
 import { useAuthStore } from '../store/authStore';
 
@@ -144,7 +144,7 @@ const Header = () => {
 
                 <ul className="gnb-list">
 
-                    <li><Link to="/Search"><img src="/images/search-icon.png" alt="search" /></Link></li>
+                    <li><button onClick={openSearch} className="search-btn"><img src="/images/search-icon.png" alt="search" /></button></li>
 
                     <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
                     <li><Link to="/Shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>

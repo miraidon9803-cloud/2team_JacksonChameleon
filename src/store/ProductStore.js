@@ -86,7 +86,7 @@ export const useProductStore = create((set, get) => ({
     }),
 
   //장바구니 
-  cartItems: [],
+   cartItems: [],
   totalPrice: 0,
   cartCount: 0,
 
@@ -119,7 +119,7 @@ export const useProductStore = create((set, get) => ({
     }
 
 
-    alert('장바구니에 추가되었습니다!');
+    // alert('장바구니에 추가되었습니다!');
 
     //총금액
     let total = 0;

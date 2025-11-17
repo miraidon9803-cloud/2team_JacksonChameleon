@@ -36,6 +36,10 @@
   },
   "devDependencies": {
     "@craco/craco": "^7.1.0",
+<<<<<<< HEAD
+=======
+    "babel-plugin-react-compiler": "1.0.0",
+>>>>>>> 2645d8eb51689699d9abdfb523ee8a65b51a4ba8
     "eslint-plugin-react-hooks": "^7.0.1"
   }
 }
