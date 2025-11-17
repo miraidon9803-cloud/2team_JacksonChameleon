@@ -93,7 +93,7 @@ const ShoppingCart = () => {
                                                 <button onClick={() => onItemPlus(item)}>+</button>
                                             </div>
                                             <p className='price'>
-                                                {((item.size?.price || 0) + (item.add?.price || 0)).toLocaleString()}원
+                                                {totalPrice.toLocaleString()}원
                                             </p>
                                         </div>
                                     </div>
