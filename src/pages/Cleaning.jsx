@@ -66,9 +66,11 @@ const Cleaning = () => {
       원단: ${material}
     `);
 
-        window.scrollTo(0, 0);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+        setTimeout(() => {
         window.location.reload();
-    };
+        }, 200); // 0.3초 후 새로고침
+            };
 
 
     return (
