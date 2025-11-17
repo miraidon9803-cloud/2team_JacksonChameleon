@@ -22,7 +22,7 @@ export const products = [
     color: [
       { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
       { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossoa/bolson-color-벨베티20.jpg" },
+      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
       { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
       { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
       { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
@@ -176,8 +176,8 @@ https://www.instagram.com/maumee_life/`,
       { id: 4, colorname: "조야01", img: "/img/inksofa/ink-color-조야01.jpg" },
       { id: 5, colorname: "조야05", img: "/img/inksofa/ink-color-조야05.jpg" },
       { id: 6, colorname: "조야12", img: "/img/inksofa/ink-color-조야12.jpg" },
-      { id: 7, colorname: "프레스23", img: "/img/inksofa/ink-color-프레스23.jpg" },
-      { id: 8, colorname: "프레스24", img: "/img/inksofa/ink-color-프레스24.jpg" },
+      { id: 7, colorname: "포레스23", img: "/img/inksofa/ink-color-포레스23.jpg" },
+      { id: 8, colorname: "포레스24", img: "/img/inksofa/ink-color-포레스24.jpg" },
     ],
 
     add: [
