@@ -4,7 +4,7 @@ import { useProductStore } from '../store/ProductStore';
 import { useNavigate } from 'react-router-dom';
 
 const SearchPopup = () => {
-     const {
+    const {
         searchWord,
         setSearchWord,
         closeSearch,
@@ -16,14 +16,14 @@ const SearchPopup = () => {
 
     const navigate = useNavigate();
 
-   const handleSearch = () => {
-    const word = searchWord.trim();
-    if (!word) return;
+    const handleSearch = () => {
+        const word = searchWord.trim();
+        if (!word) return;
 
-    addRecentSearch(word);
-    navigate(`/search?word=${word}`);
-    closeSearch();
-};
+        addRecentSearch(word);
+        navigate(`/search?word=${word}`);
+        closeSearch();
+    };
 
     const onKeyPress = (e) => {
         if (e.key === "Enter") {
@@ -51,12 +51,23 @@ const SearchPopup = () => {
 
                         {recentSearch.map((word) => (
                             <div className="word" key={word}>
-                                <p>{word}</p>
+                                <p
+                                    onClick={() => {
+                                        navigate(`/search?word=${word}`);
+                                        setSearchWord("");
+                                        closeSearch();
+                                    }}
+                                    style={{ cursor: "pointer" }}
+                                >
+                                    {word}
+                                </p>
+
                                 <button onClick={() => deleteOne(word)}>
                                     <img src="/images/close-grey.svg" alt="delete" />
                                 </button>
                             </div>
                         ))}
+                        
                     </div>
                     <div className="close-wrap">
                         <button className='close-btn' onClick={closeSearch}>닫기<img src="/images/up-grey.svg" alt="close-btn" /></button>

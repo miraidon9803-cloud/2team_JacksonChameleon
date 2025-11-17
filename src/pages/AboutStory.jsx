@@ -7,8 +7,8 @@ const AboutStory = () => {
         <div className='stories-wrap'>
             <div className="inner">
                 <div className="about-btn">
-                    <p className='active'><Link>Brand</Link></p>
-                    <p><Link to="/about/story">Stories</Link></p>
+                    <p ><Link to="/about/brand">Brand</Link></p>
+                    <p className='active'><Link to="/about/story">Stories</Link></p>
                 </div>
                 <div className="stories-list">
                     {data.map((item) => (

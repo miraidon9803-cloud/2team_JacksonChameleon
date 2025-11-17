@@ -2,10 +2,57 @@
 
 .search-wrap {
     .inner {
-        h2 {
+               h2 {
             margin-top: 11rem;
             @include g.myTitle24();
             text-align: left;
+        }
+
+        .search-box {
+            form {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 1px solid g.$text8;
+                margin-top: 2.4rem;
+                margin-bottom: 4rem;
+                max-width: 384px;
+
+
+                button {
+                    background: none;
+                    border: none;
+                    outline: none;
+                    appearance: none; //브라우저 기본 스타일 제거
+                }
+
+                input {
+                    width: 100%;
+                    background: none;
+                    padding: 12px 12px;
+                    border: none;
+                    @include g.myTitle16();
+                    text-align: left;
+                    color: g.$text6;
+                }
+
+                input:focus {
+                    outline: none;
+                    border: none;
+                    color: g.$text1;
+                }
+
+                img {
+                    padding: 0 12px;
+                }
+
+                img:hover {
+                    filter: brightness(0) saturate(100%); // 검정색
+                }
+            }
+
+            form:hover {
+                border-bottom: 1px solid g.$text6;
+            }
         }
 
         .product-filter {
