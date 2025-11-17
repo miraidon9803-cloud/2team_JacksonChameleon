@@ -38,6 +38,8 @@ import AboutStory from './pages/AboutStory';
 import Brand from './pages/Brand';
 import ShopDetailTop from './pages/ShopDetailTop';
 import Store from './pages/Store';
+import Cleaning from './pages/Cleaning';
+import Sample from './pages/Sample';
 
 
 function App() {
@@ -65,6 +67,9 @@ function App() {
         <Route path="/collections" element={<Collections />} />
 
         <Route path="/service" element={<Service />} />
+        <Route path='/service/sample' element={<Sample/>}/>
+        <Route path='/service/cleaning' element={<Cleaning/>}/>
+
         <Route path="/community" element={<Community />} />
         <Route path="/community/customer" element={<Customer/>}/>
        
