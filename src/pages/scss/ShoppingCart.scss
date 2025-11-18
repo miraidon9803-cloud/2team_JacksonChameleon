@@ -52,6 +52,14 @@
                     }
                 }
 
+
+                .empty-wrap {
+                    p {
+                        @include g.myTitle16();
+                        line-height: 50px;
+                    }
+                }
+
                 .item-wrap {
                     position: relative;
 
@@ -205,6 +213,11 @@
                     border: none;
                     background-color: g.$text4;
                     margin-top: 20px;
+
+
+                    &:hover {
+                        background-color: #000;
+                    }
 
                     span {
                         color: #fff;
