@@ -1,0 +1,94 @@
+@use "../../App.scss" as g;
+
+.mainstory-wrap {
+    // background-color: rgb(194, 225, 238, 0.4);
+
+    .inner-wrap {
+        // height: 900px;
+        margin-bottom: 120px;
+
+        .inner {
+            padding-bottom: 40px;
+            position: relative;
+
+            h2 {
+                margin-top: 12rem;
+                @include g.myTitle24();
+                text-align: left;
+                margin-bottom: 4rem;
+            }
+
+            .mySwiper {
+                padding-bottom: 40px;
+            }
+
+            .mainstory-cards {
+                position: relative;
+                height: 350px;
+
+                div {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    z-index: 100;
+                    margin-top: 32px;
+                    transition: 0.5s ease;
+
+                
+                }
+
+                p {
+                    position: absolute;
+                    bottom: 0;
+                    @include g.myTitle16();
+                    text-align: left;
+                    margin-top: 12px;
+                }
+            }
+
+            .mainstory-cards:hover {
+                div {
+                    margin-top: 0;
+                }
+
+            }
+
+            .swiper-pagination {
+                display: flex;
+            }
+
+            .mySwiper .swiper-pagination-bullet {
+                background-color: g.$text8;
+                opacity: 100;
+                width: 4px;
+                height: 4px;
+                border-radius: 4px;
+                margin: 0 2px;
+
+            }
+
+            .mySwiper .swiper-pagination-bullet-active {
+                background-color: g.$text8;
+                width: 40px;
+                height: 4PX;
+                border-radius: 4px;
+            }
+
+            .custom-prev,
+            .custom-next {
+                z-index: 10;
+                cursor: pointer;
+                background-color: rgba(288,288,288,0.5);
+                border-radius: 50%;
+                width: 24px;
+                height: 24px;
+                align-items: center;
+
+            }
+
+            .swiper-navigation-icon {
+                display: none;
+            }
+        }
+    }
+}
