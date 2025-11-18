@@ -277,15 +277,18 @@ const ShopDetailTop = () => {
                         onClick={() => handleRemove(idx)}
                       >
                         <img src="/images/cancel.png" alt="cancel" />
+                        <img src="/images/cancel-hover.png" alt="cancel-hover" />
                       </button>
                     </div>
                     <div className="selected-box-bottom">
                       <button onClick={() => decreaseQty(idx)}>
                         <img src="/images/minus.png" alt="minus" />
+                        <img src="/images/minus-hover.png" alt="minus-hover" />
                       </button>
                       <span>{sel.qty}</span>
                       <button onClick={() => increaseQty(idx)}>
                         <img src="/images/plus.png" alt="plus" />
+                        <img src="/images/plus-hover.png" alt="plus-hover" />
                       </button>
                     </div>
                   </div>
