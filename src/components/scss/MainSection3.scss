@@ -1,0 +1,56 @@
+@use "../../App.scss" as g;
+
+.texteffect-wrap {
+    .inner-wrap {
+        margin-bottom: 12rem;
+        height: 240px;
+
+        .inner {
+
+            .text-wrap {
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+
+                >div {
+                    @include g.myTitle24();
+                    font-weight: 500;
+                    font-size: 72px;
+                }
+
+                .grey {
+                    color: g.$text6;
+                }
+
+                .grey2 {
+                    color: g.$text4;
+                }
+
+                .black {}
+
+                img {
+                    width: 0;
+                    transition: 0.5s;
+                }
+
+                &.is-active img {
+                    width: 100%;
+                }
+
+                .top-text {
+                    display: flex;
+                    justify-content: center;
+                    gap: 24px;
+                }
+
+                .bottom-text {
+                    display: flex;
+                    justify-content: center;
+                    gap: 24px;
+                    animation-delay: 0.2s;
+                }
+            }
+
+        }
+    }
+}

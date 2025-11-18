@@ -1,6 +1,8 @@
 import React from 'react'
 import "./scss/Main.scss";
 import MainSwiper from '../components/MainSwiper';
+import MainSection3 from '../components/MainSection3';
+import MainCategory from '../components/MainCategory';
 
 
 const Main = () => {
@@ -14,6 +16,9 @@ const Main = () => {
           playsInline />
       </section>
       <MainSwiper />
+      <MainSection3/>
+      <MainCategory/>
+
 
     </main>
   )
