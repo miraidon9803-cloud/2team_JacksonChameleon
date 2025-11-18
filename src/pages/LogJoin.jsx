@@ -14,16 +14,12 @@ export default function LogJoin() {
     toggleTerm,
     handleAllTerms,
     toggleDetail,
-
-    // ⬇⬇⬇ 수정된 부분
     loginForm,
     setLoginForm,
     resetLoginForm,
-
     joinForm,
     setJoinForm,
     resetJoinForm,
-
     isPostOpen,
     setIsPostOpen,
     handleComplete,
@@ -32,19 +28,19 @@ export default function LogJoin() {
   const [panel, setPanel] = useState("login");
   const [showJoinForm, setShowJoinForm] = useState(false);
 
-  /* ------------------ 로그인 입력 ------------------ */
+
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
     setLoginForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  /* ------------------ 회원가입 입력 ------------------ */
+
   const handleJoinChange = (e) => {
     const { name, value } = e.target;
     setJoinForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  /* ------------------ 로그인 ------------------ */
+
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
@@ -57,13 +53,13 @@ export default function LogJoin() {
     }
   };
 
-  /* ------------------ 약관 패널 오픈 ------------------ */
+
   const openTermsPanel = () => {
-    resetJoinForm(); // 회원가입 form 항상 초기화
+    resetJoinForm(); 
     setPanel("terms");
   };
 
-  /* ------------------ 약관 체크 후 '다음' ------------------ */
+
   const handleNextFromTerms = () => {
     if (terms.some((t) => t.required && !t.checked)) {
       alert("필수 약관에 동의해주세요.");
@@ -72,7 +68,7 @@ export default function LogJoin() {
     setShowJoinForm(true);
   };
 
-  /* ------------------ 회원가입 ------------------ */
+
   const handleJoinSubmit = async (e) => {
     e.preventDefault();
 
@@ -82,15 +78,17 @@ export default function LogJoin() {
     }
     try {
       await onMember(joinForm);
-      alert("회원가입 성공!");
+      console.log("회원가입 성공!");
 
       resetJoinForm();
       setShowJoinForm(false);
-      setPanel("login");
+      // setPanel("login");
+      setJoinComplete(true);
     } catch (err) {
       alert("회원가입 실패: " + err.message);
     }
   };
+  const [joinComplete, setJoinComplete] = useState(false);
 
   const cardClass = panel === "terms" ? "glass-card terms-active" : "glass-card";
 
@@ -320,6 +318,12 @@ export default function LogJoin() {
               </div>
             </div>
           </div>
+<<<<<<< HEAD
+=======
+          <div className="join-complete">
+            <p>회원가입 완료</p>
+          </div>
+>>>>>>> 75793d33e210c2c3be6e63c00d4655809e771f9a
         </div>
       </div>
 
