@@ -218,7 +218,11 @@ export default function LogJoin() {
                         <p className="nav-btn" onClick={() => setShowJoinForm(false)}>
                           <img src="/images/log-arrow-left.png" alt="" />
                         </p>
+                        
                         <h2 className="section-title">SIGN UP</h2>
+                          <p className="nav-btns" onClick={handleNextFromTerms}>
+                      <img src="/images/log-arrow-right.png" alt="" />
+                    </p>
                       </div>
 
                       <form onSubmit={handleJoinSubmit}>
