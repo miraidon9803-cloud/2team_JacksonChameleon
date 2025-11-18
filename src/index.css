@@ -61,3 +61,11 @@
   max-width: 1200px;
   margin:0 auto;
 }
+
+body{
+  overflow-y: scroll;
+}
+  ::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+  }
