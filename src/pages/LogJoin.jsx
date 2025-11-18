@@ -131,12 +131,16 @@ export default function LogJoin() {
               <div className={`right-side ${showJoinForm ? "show-join" : ""}`}>
                 {/* 약관 */}
                 <div className="terms-content">
-                  <h2 className="section-title">SIGN UP</h2>
+                  <div className="title-wrap">
+                    <p className="nav-btn" onClick={() => setPanel("login")}><img src="/images/log-arrow-left.png" alt="" /></p>
+                    <h2 className="section-title">SIGN UP  </h2>
+                    <p className="nav-btn" onClick={handleNextFromTerms}><img src="/images/log-arrow-right.png" alt="" /></p>
+                  </div>
                   <div className="terms-box">
-                     <p>이용약관동의</p>
-                    
+                    <p>이용약관동의</p>
+
                     <div className="term-wrap1">
-                         <label>
+                      <label>
                         <input
                           type="checkbox"
                           checked={terms.every((t) => t.checked)}
@@ -144,7 +148,7 @@ export default function LogJoin() {
                         />
                         전체 동의하기
                       </label>
-                      </div>
+                    </div>
                     {terms.map((term) => (
                       <div key={term.id} className="term-item2">
                         <div className="term-header">
@@ -168,8 +172,8 @@ export default function LogJoin() {
                         )}
                       </div>
                     ))}
-                    </div>
-               
+                  </div>
+
 
                   <button className="next-btn" onClick={handleNextFromTerms}>
                     다음
@@ -180,7 +184,11 @@ export default function LogJoin() {
                 <div className="join-form">
                   <div className="join-wrap">
                     <div className="right-side">
-                      <h2 className="section-title">SIGN UP</h2>
+                      <div className="title-wrap">
+                    <p className="nav-btn" onClick={() => setShowJoinForm(false)}><img src="/images/log-arrow-left.png" alt="" /></p>
+                    <h2 className="section-title">SIGN UP</h2>
+                    <p className="nav-btn" onClick={handleNextFromTerms}><img src="/images/log-arrow-right.png" alt="" /></p>
+                  </div>
                       <form onSubmit={handleJoinSubmit}>
                         <div className="join-flex-wrap">
                           <div className="left-inputs">
@@ -226,7 +234,7 @@ export default function LogJoin() {
                           </div>
 
                           <div className="right-address">
-                            
+
                             <div className="address-btn">
                               <p>주소</p>
                               <input
