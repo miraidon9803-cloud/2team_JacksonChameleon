@@ -42,7 +42,7 @@ const menus = [
         ]
     },
     {
-        key: "Collections", label: "COLLECTIONS",
+        key: "collections", label: "COLLECTIONS",
         sub: [
             { key: 'ink', label: 'Ink' },
             { key: 'pebble', label: 'Pebble' },
@@ -60,7 +60,7 @@ const menus = [
         ]
     },
     {
-        key: "Community", label: "COMMUNITY",
+        key: "community", label: "COMMUNITY",
         sub: [
             { key: 'Notice', label: 'Notice' },
             { key: 'Customer Service', label: 'Customer Service' },

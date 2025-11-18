@@ -59,7 +59,7 @@ function App() {
   
         
 
-        <Route path="/Collections/Ink" element={<InkCollection />} />
+        <Route path="/collections/Ink" element={<InkCollection />} />
         <Route path="/collections/pebble" element={<PebbleCollection />} />
         <Route path="/collections/clay" element={<ClayCollection />} />
         <Route path="/collections/round" element={<RoundCollection />} />
