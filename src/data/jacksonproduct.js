@@ -9,7 +9,9 @@ const jacksonproduct = [
     img_hover: "/hoverimages/Bolson_Sofa_Fabric_hover.jpg",
     date: "202504",
     subcate: "Fabric",
-    product: "sofa"
+    product: "sofa",
+    sale: "20%",
+    price_regular: "2,300,000원"
   },
   {
     id: 2,
@@ -840,7 +842,7 @@ const jacksonproduct = [
     img_url: "/defaultimages/Cone_Lamp_Table.png",
     img_hover: "/hoverimages/Cone_Lamp_Table_hover.jpg",
     date: "202311",
- subcate: "lamp",
+    subcate: "lamp",
     product: "lighting"
   },
   {
@@ -851,7 +853,7 @@ const jacksonproduct = [
     img_url: "/defaultimages/Donut_Lamp_Floor.png",
     img_hover: "/hoverimages/Donut_Lamp_Floor_hover.jpg",
     date: "202311",
-   subcate: "lamp",
+    subcate: "lamp",
     product: "lighting"
   },
   {
@@ -862,7 +864,7 @@ const jacksonproduct = [
     img_url: "/defaultimages/Layer_Lamp_Table.png",
     img_hover: "/hoverimages/Layer_Lamp_Table_hover.jpg",
     date: "202311",
-   subcate: "lamp",
+    subcate: "lamp",
     product: "lighting"
   },
   {
@@ -873,7 +875,7 @@ const jacksonproduct = [
     img_url: "/defaultimages/Pin_Lamp_Floor.png",
     img_hover: "/hoverimages/Pin_Lamp_Floor_hover.jpg",
     date: "202311",
-   subcate: "lamp",
+    subcate: "lamp",
     product: "lighting"
   },
   {
@@ -895,7 +897,7 @@ const jacksonproduct = [
     img_url: "/defaultimages/Scoop_Lamp_Floor.png",
     img_hover: "/hoverimages/Scoop_Lamp_Floor_hover.jpg",
     date: "202311",
-subcate: "lamp",
+    subcate: "lamp",
     product: "lighting"
   },
   {
@@ -906,7 +908,7 @@ subcate: "lamp",
     img_url: "/defaultimages/Scoop_Lamp_Table.png",
     img_hover: "/hoverimages/Scoop_Lamp_Table_hover.jpg",
     date: "202311",
-   subcate: "lamp",
+    subcate: "lamp",
     product: "lighting"
   },
   {

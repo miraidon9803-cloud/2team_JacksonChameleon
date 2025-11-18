@@ -43,6 +43,12 @@ const ShoppingCart = () => {
         setSelectedItems([]);
     }
 
+    const getItemTotal = (item) => {
+        const sizePrice = item.size?.price || 0;
+        const addPrice = item.add?.price || 0;
+        return (sizePrice + addPrice) * item.qty;
+    };
+
     return (
         <div className='shopping-cart-wrap'>
             <div className="inner">
@@ -88,12 +94,14 @@ const ShoppingCart = () => {
 
                                         <div className="count-price-wrap">
                                             <div className="count-wrap">
-                                                <button onClick={() => onItemMinus(item)}>-</button>
+                                                <button onClick={() => onItemMinus(item)}><img src="/images/minus.png" alt="빼기아이콘" /></button>
                                                 <span>{item.qty}</span>
-                                                <button onClick={() => onItemPlus(item)}>+</button>
+                                                <button onClick={() => onItemPlus(item)}><img src="/images/plus.png" alt="더하기아이콘" /></button>
                                             </div>
                                             <p className='price'>
-                                                {((item.size?.price || 0) + (item.add?.price || 0)).toLocaleString()}원
+                                                {/* {totalPrice.toLocaleString()}원 */}
+                                                {getItemTotal(item).toLocaleString()}원
+
                                             </p>
                                         </div>
                                     </div>
@@ -103,21 +111,22 @@ const ShoppingCart = () => {
                     </div>
 
                     <div className="total-wrap">
-                        <h4>구매 금액</h4>
+                        <div className="total-content">
+                            <h4>구매 금액</h4>
+                            <ul>
+                                <li><span>상품금액</span><span>{totalPrice.toLocaleString()}원</span></li>
+                                <li><span>할인 금액</span><span>143,000원</span></li>
+                                <li><span>적립금</span><span>7,672</span></li>
+                                <li><span>배송비</span><span>무료배송</span></li>
+                            </ul>
 
-                        <ul>
-                            <li><span>상품금액</span><span>{totalPrice.toLocaleString()}원</span></li>
-                            <li><span>할인 금액</span><span>143,000원</span></li>
-                            <li><span>적립금</span><span>7,672</span></li>
-                            <li><span>배송비</span><span>무료배송</span></li>
-                        </ul>
+                            <div className="total-price">
+                                <span>총 구매 금액</span>
+                                <strong>{totalPrice.toLocaleString()}원</strong>
+                            </div>
 
-                        <div className="total-price">
-                            <span>총 구매 금액</span>
-                            <strong>{totalPrice.toLocaleString()}원</strong>
+                            <button className='pay-btn'><span>결제하기</span></button>
                         </div>
-
-                        <button className='pay-btn'><span>결제하기</span></button>
                     </div>
                 </div>
             </div>
