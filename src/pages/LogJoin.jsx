@@ -217,20 +217,12 @@ export default function LogJoin() {
                   <div className="join-wrap">
                     <div className="right-side">
                       <div className="title-wrap">
-<<<<<<< HEAD
 
-                    <p className="nav-btn" onClick={() => setShowJoinForm(false)}><img src="/images/log-arrow-left.png" alt="" /></p>
-                    <h2 className="section-title">SIGN UP</h2>
-                    <p className="nav-btn" onClick={handleNextFromTerms}><img src="/images/log-arrow-right.png" alt="" /></p>
-                  </div>
-=======
-                        <p className="nav-btn" onClick={() => setShowJoinForm(false)}>
-                          <img src="/images/log-arrow-left.png" alt="" />
-                        </p>
+                        <p className="nav-btn" onClick={() => setShowJoinForm(false)}><img src="/images/log-arrow-left.png" alt="" /></p>
                         <h2 className="section-title">SIGN UP</h2>
+                        <p className="nav-btn" onClick={handleNextFromTerms}><img src="/images/log-arrow-right.png" alt="" /></p>
                       </div>
 
->>>>>>> 74ae123a9c93d239fe7261b5b15dc668beb21ece
                       <form onSubmit={handleJoinSubmit}>
                         <div className="join-flex-wrap">
                           <div className="left-inputs">
@@ -328,14 +320,6 @@ export default function LogJoin() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className="complete-area">
-            asdfsadfsadfsadf
-
-          </div>
-=======
-
->>>>>>> 74ae123a9c93d239fe7261b5b15dc668beb21ece
         </div>
       </div>
 
