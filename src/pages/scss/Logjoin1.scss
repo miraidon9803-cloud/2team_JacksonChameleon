@@ -71,6 +71,7 @@
           border-radius: 8px;
           cursor: pointer;
           transition: 0.3s;
+          border: none;
 
 
           &:hover {
@@ -177,7 +178,7 @@
         .section-title {
           // width: 80.0rem;
           @include l.myTitle24();
-          margin-bottom: 24px;
+
         }
 
         .terms-content {
@@ -188,106 +189,108 @@
             justify-content: center;
             width: 80rem;
             display: flex;
+            align-items: center;
             gap: 10px;
-          }
-       
-
-        .terms-box {
-          width: 800px;
-          height: 478px;
-          flex: 1;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-          display: flex;
-          flex-direction: column;
-
-          &::-webkit-scrollbar {
-            display: none;
+            margin-bottom: 24px;
           }
 
-          p {
-            @include l.myTitle16();
-            text-align: left;
-            margin-bottom: 8px;
-          }
 
-          .term-wrap1 {
-            border-radius: 8px;
-            padding: 12px 24px;
-            height: 48px;
-            background: #fff;
-            margin-bottom: 8px;
+          .terms-box {
+            width: 800px;
+            height: 478px;
+            flex: 1;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            display: flex;
+            flex-direction: column;
 
-            label {
-              display: flex;
-              gap: 8px;
-              @include l.myTitle16();
+            &::-webkit-scrollbar {
+              display: none;
             }
-          }
 
-          .term-item2 {
-            margin-bottom: 8px;
-            background-color: #fff;
-            border-radius: 8px;
+            p {
+              @include l.myTitle16();
+              text-align: left;
+              margin-bottom: 8px;
+            }
 
-            .term-header {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              height: 48px;
+            .term-wrap1 {
+              border-radius: 8px;
               padding: 12px 24px;
+              height: 48px;
+              background: #fff;
+              margin-bottom: 8px;
 
               label {
                 display: flex;
                 gap: 8px;
                 @include l.myTitle16();
               }
-
-              .term-toggle {
-                @include l.myTitle16();
-                color: #777;
-                cursor: pointer;
-              }
             }
 
-            .term-content {
-              font-size: 14px;
-              padding: 12px 24px;
-              border-radius: 4px;
-              color: #333;
-              white-space: pre-line;
-              overflow-y: auto;
-              max-height: 232px;
+            .term-item2 {
+              margin-bottom: 8px;
+              background-color: #fff;
+              border-radius: 8px;
 
-              &::-webkit-scrollbar {
-                display: none;
+              .term-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 48px;
+                padding: 12px 24px;
+
+                label {
+                  display: flex;
+                  gap: 8px;
+                  @include l.myTitle16();
+                }
+
+                .term-toggle {
+                  @include l.myTitle16();
+                  color: #777;
+                  cursor: pointer;
+                }
+              }
+
+              .term-content {
+                font-size: 14px;
+                padding: 12px 24px;
+                border-radius: 4px;
+                color: #333;
+                white-space: pre-line;
+                overflow-y: auto;
+                max-height: 232px;
+
+                &::-webkit-scrollbar {
+                  display: none;
+                }
               }
             }
           }
-        }
 
 
-        .next-btn {
-          @include l.myTitle16();
-          position: absolute;
-          left: 50%;
-          bottom: 40px;
-          transform: translateX(-50%);
-          width: 360px;
-          height: 46px;
-          border-radius: 8px;
-          border: none;
-          background: #444;
-          color: l.$text10;
-          cursor: pointer;
-          transition: background 0.3s;
+          .next-btn {
+            @include l.myTitle16();
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            width: 360px;
+            height: 46px;
+            border-radius: 8px;
+            border: none;
+            background: #444;
+            color: l.$text10;
+            cursor: pointer;
+            transition: background 0.3s;
 
 
-          &:hover {
-            background: #000;
+            &:hover {
+              background: #000;
+            }
           }
         }
-      }
 
 
         //  회원가입폼
@@ -316,15 +319,23 @@
 
               .title-wrap {
                 justify-content: center;
-                width: 100%;
+                width: 80rem;
                 display: flex;
+                align-items: center;
                 gap: 10px;
+                margin-bottom: 24px;
+                
+                  .nav-btns{
+                    opacity: 0;
+                  }
+                  
+                
               }
 
 
               .section-title {
                 @include l.myTitle24();
-                margin-bottom: 24px;
+                // margin-bottom: 24px;
 
               }
 
@@ -447,7 +458,8 @@
       height: 67.6rem;
       margin-top: 12px;
       opacity: 0.95;
-      p{
+
+      p {
         opacity: 0;
         transition: opacity 0.9s ease;
       }
