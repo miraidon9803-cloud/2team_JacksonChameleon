@@ -43,6 +43,12 @@ const ShoppingCart = () => {
         setSelectedItems([]);
     }
 
+    const getItemTotal = (item) => {
+        const sizePrice = item.size?.price || 0;
+        const addPrice = item.add?.price || 0;
+        return (sizePrice + addPrice) * item.qty;
+    };
+
     return (
         <div className='shopping-cart-wrap'>
             <div className="inner">
@@ -93,7 +99,9 @@ const ShoppingCart = () => {
                                                 <button onClick={() => onItemPlus(item)}>+</button>
                                             </div>
                                             <p className='price'>
-                                                {totalPrice.toLocaleString()}원
+                                                {/* {totalPrice.toLocaleString()}원 */}
+                                                {getItemTotal(item)}원
+
                                             </p>
                                         </div>
                                     </div>

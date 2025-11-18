@@ -94,10 +94,13 @@
                         border-bottom: 1px solid g.$text8;
                         margin: 0 24px 24px;
 
-                        .item-img img {
-                            width: 180px;
-                            // height: 180px;
-                            border-radius: 0.4rem;
+                        .item-img {
+                            height: 180px;
+                            img {
+                                width: 180px;
+                                // height: 180px;
+                                border-radius: 0.4rem;
+                            }
                         }
 
                         .item-info {
