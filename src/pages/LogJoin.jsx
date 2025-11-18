@@ -141,7 +141,7 @@ export default function LogJoin() {
           </div>
 
           {/* ---------------- 이미지 ---------------- */}
-          <div className="image-area">
+          <div className={`image-area ${joinComplete ? "hide" : ""}`}>
             <img src="/images/log-img2.png" alt="login visual" />
             <div className="text-overlay">
               <p>
@@ -152,8 +152,8 @@ export default function LogJoin() {
           </div>
 
           {/* ---------------- 약관 + 회원가입 ---------------- */}
-          <div className="term-join-area">
-            <div className={`terms-wrap ${panel === "terms" ? "show" : ""}`}>
+          <div className={`term-join-area ${joinComplete ? "hide" : ""}` }>
+            <div className={`terms-wrap ${panel === "terms" ? "show" : ""}}`}>
               <div className={`right-side ${showJoinForm ? "show-join" : ""}`}>
 
                 {/* 약관 */}
@@ -318,8 +318,14 @@ export default function LogJoin() {
               </div>
             </div>
           </div>
-          <div className="join-complete">
-            <p>회원가입 완료</p>
+          <div className={`join-complete ${joinComplete ? 'show' : ''}`}>
+            <div className="complete-wrap">
+              <p>JOIN US</p>
+              <img className='bounce' src="/images/logincomplete.png" alt="" />
+              <p>회원가입 완료</p>
+              <p>잭슨카멜레온의 회원이 되신것을 환영합니다 <br/>로그인후 서비스를 이용해주시기 바랍니다.</p>
+              <button>로그인 하러가기</button>
+            </div>
           </div>
         </div>
       </div>

@@ -190,104 +190,104 @@
             display: flex;
             gap: 10px;
           }
-       
 
-        .terms-box {
-          width: 800px;
-          height: 478px;
-          flex: 1;
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-          display: flex;
-          flex-direction: column;
 
-          &::-webkit-scrollbar {
-            display: none;
-          }
+          .terms-box {
+            width: 800px;
+            height: 478px;
+            flex: 1;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            display: flex;
+            flex-direction: column;
 
-          p {
-            @include l.myTitle16();
-            text-align: left;
-            margin-bottom: 8px;
-          }
-
-          .term-wrap1 {
-            border-radius: 8px;
-            padding: 12px 24px;
-            height: 48px;
-            background: #fff;
-            margin-bottom: 8px;
-
-            label {
-              display: flex;
-              gap: 8px;
-              @include l.myTitle16();
+            &::-webkit-scrollbar {
+              display: none;
             }
-          }
 
-          .term-item2 {
-            margin-bottom: 8px;
-            background-color: #fff;
-            border-radius: 8px;
+            p {
+              @include l.myTitle16();
+              text-align: left;
+              margin-bottom: 8px;
+            }
 
-            .term-header {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              height: 48px;
+            .term-wrap1 {
+              border-radius: 8px;
               padding: 12px 24px;
+              height: 48px;
+              background: #fff;
+              margin-bottom: 8px;
 
               label {
                 display: flex;
                 gap: 8px;
                 @include l.myTitle16();
               }
-
-              .term-toggle {
-                @include l.myTitle16();
-                color: #777;
-                cursor: pointer;
-              }
             }
 
-            .term-content {
-              font-size: 14px;
-              padding: 12px 24px;
-              border-radius: 4px;
-              color: #333;
-              white-space: pre-line;
-              overflow-y: auto;
-              max-height: 232px;
+            .term-item2 {
+              margin-bottom: 8px;
+              background-color: #fff;
+              border-radius: 8px;
 
-              &::-webkit-scrollbar {
-                display: none;
+              .term-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 48px;
+                padding: 12px 24px;
+
+                label {
+                  display: flex;
+                  gap: 8px;
+                  @include l.myTitle16();
+                }
+
+                .term-toggle {
+                  @include l.myTitle16();
+                  color: #777;
+                  cursor: pointer;
+                }
+              }
+
+              .term-content {
+                font-size: 14px;
+                padding: 12px 24px;
+                border-radius: 4px;
+                color: #333;
+                white-space: pre-line;
+                overflow-y: auto;
+                max-height: 232px;
+
+                &::-webkit-scrollbar {
+                  display: none;
+                }
               }
             }
           }
-        }
 
 
-        .next-btn {
-          @include l.myTitle16();
-          position: absolute;
-          left: 50%;
-          bottom: 40px;
-          transform: translateX(-50%);
-          width: 360px;
-          height: 46px;
-          border-radius: 8px;
-          border: none;
-          background: #444;
-          color: l.$text10;
-          cursor: pointer;
-          transition: background 0.3s;
+          .next-btn {
+            @include l.myTitle16();
+            position: absolute;
+            left: 50%;
+            bottom: 40px;
+            transform: translateX(-50%);
+            width: 360px;
+            height: 46px;
+            border-radius: 8px;
+            border: none;
+            background: #444;
+            color: l.$text10;
+            cursor: pointer;
+            transition: background 0.3s;
 
 
-          &:hover {
-            background: #000;
+            &:hover {
+              background: #000;
+            }
           }
         }
-      }
 
 
         //  회원가입폼
@@ -447,52 +447,137 @@
       height: 67.6rem;
       margin-top: 12px;
       opacity: 0.95;
-      p{
+
+      p {
         opacity: 0;
         transition: opacity 0.9s ease;
       }
     }
   }
-}
 
-/* -----------------------------------------------------------
-   주소검색 모달
------------------------------------------------------------ */
-.post_wrapper {
-  position: fixed;
-  inset: 0;
-  z-index: 50;
-
-  .post_bg {
-    background: rgba(0, 0, 0, 0.6);
-    width: 100%;
-    height: 100%;
+  /* -----------------------------------------------------------
+     회원가입 완료
+  ----------------------------------------------------------- */
+  .term-join-area.hide {
+    transform: translatex(110%);
+    opacity: 0;
   }
 
-  .post_modal {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
-    width: 500px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  .image-area.hide {
+    width: 600px;
+  }
 
-    button {
-      margin-top: 10px;
-      background: #333;
-      color: white;
+  .join-complete {
+    width: 588px;
+    padding: 12px 24px;
+
+    opacity: 0;
+    transform: translateX(0);
+    transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
+
+    .complete-wrap {
       width: 100%;
-      border: none;
-      border-radius: 8px;
-      padding: 10px 0;
-      cursor: pointer;
-      font-weight: 600;
+      height: 100%;
 
-      &:hover {
-        background: #000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      p:nth-of-type(1) {
+        @include l.myTitle24();
+        margin-bottom: 16px;
+      }
+
+      .bounce {
+        width: 170px;
+
+        animation: updown 3.6s ease-in-out infinite;
+        display:inline-block
+      }
+
+      @keyframes updown {
+        0% {transform: translateY(0);}
+        50% {transform: translateY(28px);}
+        100% {transform: translateY(0);}
+      }
+
+      P:nth-of-type(2) {
+        @include l.myTitle16($fw: 600);
+        margin: 52px 0 12px 0;
+      }
+
+      p:nth-of-type(3) {
+        @include l.myTitle16();
+      }
+
+      button {
+        width: 360px;
+        height: 46px;
+
+        background: l.$text4;
+        color: l.$text10;
+        @include l.myTitle16($color: l.$BG);
+
+        border: none;
+        outline: none;
+        border-radius: 4px;
+
+        margin-top: 32px;
+
+        &:hover {
+          background: l.$text1;
+        }
+      }
+    }
+
+    &.show {
+      transform: translateX(-152%);
+      opacity: 1;
+    }
+
+
+  }
+
+  /* -----------------------------------------------------------
+   주소검색 모달
+----------------------------------------------------------- */
+  .post_wrapper {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+
+    .post_bg {
+      background: rgba(0, 0, 0, 0.6);
+      width: 100%;
+      height: 100%;
+    }
+
+    .post_modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      width: 500px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+
+      button {
+        margin-top: 10px;
+        background: #333;
+        color: white;
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding: 10px 0;
+        cursor: pointer;
+        font-weight: 600;
+
+        &:hover {
+          background: #000;
+        }
       }
     }
   }
