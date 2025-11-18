@@ -71,6 +71,7 @@
           border-radius: 8px;
           cursor: pointer;
           transition: 0.3s;
+          border: none;
 
 
           &:hover {
@@ -177,7 +178,7 @@
         .section-title {
           // width: 80.0rem;
           @include l.myTitle24();
-          margin-bottom: 24px;
+
         }
 
         .terms-content {
@@ -188,9 +189,9 @@
             justify-content: center;
             width: 80rem;
             display: flex;
+            align-items: center;
             gap: 10px;
           }
-
 
           .terms-box {
             width: 800px;
@@ -316,15 +317,23 @@
 
               .title-wrap {
                 justify-content: center;
-                width: 100%;
+                width: 80rem;
                 display: flex;
+                align-items: center;
                 gap: 10px;
+                margin-bottom: 24px;
+                
+                  .nav-btns{
+                    opacity: 0;
+                  }
+                  
+                
               }
 
 
               .section-title {
                 @include l.myTitle24();
-                margin-bottom: 24px;
+                // margin-bottom: 24px;
 
               }
 
