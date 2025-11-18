@@ -1,11 +1,65 @@
 import { create } from "zustand";
 
 export const useLogJoinStore = create((set) => ({
-  // 현재 단계
-  step: "login",
-  setStep: (value) => set({ step: value }),
+  /* -----------------------------------
+      1) 로그인 입력 폼 (loginForm)
+  ----------------------------------- */
+  loginForm: {
+    email: "",
+    password: "",
+  },
 
-  // 약관
+  setLoginForm: (fn) =>
+    set((state) => ({
+      loginForm: fn(state.loginForm),
+    })),
+
+  resetLoginForm: () =>
+    set({
+      loginForm: {
+        email: "",
+        password: "",
+      },
+    }),
+
+
+  /* -----------------------------------
+      2) 회원가입 입력 폼 (joinForm)
+  ----------------------------------- */
+  joinForm: {
+    email: "",
+    password: "",
+    passwordConfirm: "",
+    name: "",
+    phone: "",
+    addnum: "",
+    address: "",
+    add: "",
+  },
+
+  setJoinForm: (fn) =>
+    set((state) => ({
+      joinForm: fn(state.joinForm),
+    })),
+
+  resetJoinForm: () =>
+    set({
+      joinForm: {
+        email: "",
+        password: "",
+        passwordConfirm: "",
+        name: "",
+        phone: "",
+        addnum: "",
+        address: "",
+        add: "",
+      },
+    }),
+
+
+  /* -----------------------------------
+      3) 약관동의 terms
+  ----------------------------------- */
   terms: [
     {
       id: 1,
@@ -13,7 +67,7 @@ export const useLogJoinStore = create((set) => ({
       required: true,
       checked: false,
       show: true,
-      content: ` 제1조(목적)
+      content: `제1조(목적)
 이 약관은 잭슨카멜레온 회사(전자상거래 사업자)가 운영하는 잭슨카멜레온 사이버 몰(이하 “몰”이라 한다)에서 제공하는 인터넷 관련 서비스(이하 “서비스”라 한다)를 이용함에 있어 사이버 몰과 이용자의 권리?의무 및 책임사항을 규정함을 목적으로 합니다.
 ※「PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다」
 
@@ -285,8 +339,7 @@ export const useLogJoinStore = create((set) => ({
 
 부칙
 현재 개인정보 처리방침 고지일자 : 2021년 1월 15일
-현재 개인정보 처리방침 시행일자 : 2021년 2월 15일
- `,
+현재 개인정보 처리방침 시행일자 : 2021년 2월 15일`,
     },
     {
       id: 2,
@@ -294,7 +347,7 @@ export const useLogJoinStore = create((set) => ({
       required: true,
       checked: false,
       show: false,
-      content: `회사는 ...`,
+      content: `...`,
     },
     {
       id: 3,
@@ -302,7 +355,7 @@ export const useLogJoinStore = create((set) => ({
       required: false,
       checked: false,
       show: false,
-      content: `할인 및 이벤트 정보를...`,
+      content: `...`,
     },
   ],
 
@@ -325,37 +378,12 @@ export const useLogJoinStore = create((set) => ({
       terms: state.terms.map((t) => ({ ...t, checked })),
     })),
 
-  // 주소찾기
+
+  /* -----------------------------------
+      4) 주소 API 모달 상태
+  ----------------------------------- */
   isPostOpen: false,
   setIsPostOpen: (value) => set({ isPostOpen: value }),
-
-  formData: {
-    email: "",
-    password: "",
-    passwordConfirm: "",
-    name: "",
-    phone: "",
-    addnum: "",
-    address: "",
-    add: "",
-  },
-
-  setFormData: (formData) => set({ formData }),
-  
-  resetForm: () =>
-    set({
-      formData: {
-        email: "",
-        password: "",
-        passwordConfirm: "",
-        name: "",
-        phone: "",
-        addnum: "",
-        address: "",
-        add: "",
-      },
-    }),
-
 
   handleComplete: (data) =>
     set((state) => {
@@ -373,15 +401,12 @@ export const useLogJoinStore = create((set) => ({
       }
 
       return {
-        formData: {
-          ...state.formData,
+        joinForm: {
+          ...state.joinForm,
           addnum: data.zonecode,
           address: fullAddress,
         },
         isPostOpen: false,
       };
     }),
-
-  // 
- 
 }));
