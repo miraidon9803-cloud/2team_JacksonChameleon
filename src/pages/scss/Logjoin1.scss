@@ -12,8 +12,8 @@
 // 메인카드
 .glass-card {
   position: relative;
-  width: 1200px;
-  height: 700px;
+  width: 120rem;
+  height: 70rem;
   overflow: hidden;
   border-radius: 8px;
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
@@ -23,7 +23,7 @@
   // 슬라이드
   .slider-wrapper {
     display: flex;
-    width: 3000px;
+    width: 300rem;
     background-color: rgba(244, 244, 244, 0.7);
     height: 100%;
     transition: transform 1.2s cubic-bezier(0.65, 0, 0.35, 1);
@@ -33,14 +33,14 @@
      로그인 영역
   ----------------------------------------------------------- */
   .login-area {
-    width: 600px;
+    width: 60rem;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 
     .login-box {
-      width: 360px;
+      width: 36rem;
       text-align: center;
 
       h2 {

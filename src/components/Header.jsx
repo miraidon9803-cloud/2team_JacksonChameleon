@@ -62,9 +62,9 @@ const menus = [
     {
         key: "community", label: "COMMUNITY",
         sub: [
-            { key: 'Notice', label: 'Notice' },
-            { key: 'Customer Service', label: 'Customer Service' },
-            { key: 'Store', label: 'Store' },
+            { key: 'notice', label: 'Notice' },
+            { key: 'customer Service', label: 'Customer Service' },
+            { key: 'store', label: 'Store' },
         ]
     }
 ];
