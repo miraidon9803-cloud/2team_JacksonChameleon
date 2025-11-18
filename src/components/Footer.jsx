@@ -1,5 +1,6 @@
 import React from 'react'
 import './scss/footer.scss'
+import { Link } from 'react-router-dom'
 
 const Footer = () => {
   return (
@@ -29,7 +30,7 @@ const Footer = () => {
                     <p><strong>무브먼트랩</strong> 전국 지점</p>
                   </div>
                 </div>
-                <button className='room-btn'>매장 안내 바로가기</button>
+                <button className='room-btn'><Link to="/community/store">매장 안내 바로가기</Link></button>
               </div>
 
               <div className="customer-center">
@@ -41,7 +42,7 @@ const Footer = () => {
                     <p className='day'>(*주말, 공휴일 휴무)</p>
                   </div>
                 </div>
-                <button className='online-btn'>온라인 문의 바로가기</button>
+                <button className='online-btn'><Link to="/community/customer">온라인 문의 바로가기</Link></button>
               </div>
             </div>
           </div>

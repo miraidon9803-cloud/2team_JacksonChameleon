@@ -15,7 +15,7 @@ const Community = () => {
             </div>
 
             <div className="com-card com-notice">
-                <Link to="/notice">
+                <Link to="/community/notice">
                 <div className="com-text">Notice</div>
                     <img src="./images/notice_bg.png" alt="Notice" className="community" />
                 </Link>

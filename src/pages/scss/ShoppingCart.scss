@@ -52,6 +52,14 @@
                     }
                 }
 
+
+                .empty-wrap {
+                    p {
+                        @include g.myTitle16();
+                        line-height: 50px;
+                    }
+                }
+
                 .item-wrap {
                     position: relative;
 
@@ -200,15 +208,16 @@
                 }
 
                 .pay-btn {
-                    width: 90%;
+                    // width: 90%;
                     height: 4.6rem;
                     border-radius: 4px;
                     border: none;
                     background-color: g.$text4;
-                    position: absolute;
-                    bottom: 30%;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    margin-top: 20px;
+
+                    &:hover {
+                        background-color: #000;
+                    }
 
                     span {
                         color: #fff;

@@ -441,6 +441,9 @@
                     grid-template-columns: repeat(2, 1fr);
                     gap: 12px;
 
+                    .empty{
+                        text-align: left;
+                    }
                     .selected-box {
                         width: 100%;
 
