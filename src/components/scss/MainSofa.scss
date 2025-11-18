@@ -1,0 +1,124 @@
+@use "../../App.scss" as g;
+
+.main-sofa-wrap {
+    .inner-wrap {
+        height: 800px;
+        // background-color: rgb(194, 225, 238,0.4);
+
+        .inner {
+            .sofa-wrap {
+                position: relative;
+
+                >div {
+                    position: absolute;
+                    will-change: transform;
+                }
+
+                .sofa1 {
+                    left: 231px;
+                    top: 204px;
+                }
+
+                .sofa2 {
+                    left: 448px;
+                    top: 170px;
+                }
+
+                .sofa3 {
+                    left: 614px;
+                    top: 191px;
+                }
+
+                .sofa4 {
+                    left: 307px;
+                    top: 257px;
+                }
+
+                .sofa5 {
+                    left: 559px;
+                    top: 301px;
+                }
+
+                .sofa6 {
+                    left: 739px;
+                    top: 293px;
+                }
+            }
+
+            .text-wrap {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                padding-top: 500px;
+
+                .text-box {
+                    display: flex;
+                    flex-direction: column;
+
+                    h2 {
+                        @include g.myTitle16();
+                        font-size: 18px;
+                    }
+
+                    h3 {
+                        @include g.myTitle24();
+                        font-size: 64px;
+                        font-weight: 600;
+                        animation-delay: 0.2s;
+
+                    }
+
+                    p {
+                        @include g.myTitle16();
+                        width: 488px;
+                        animation-delay: 0.4s;
+                    }
+
+                }
+
+                button {
+                    @include g.myTitle16();
+                    padding: 12px 48px;
+                    animation-delay: 0.6s;
+                    padding: 12px 48px;
+                    background: #fff;
+                    border: 1px solid g.$text6;
+                    border-radius: 4px;
+                }
+                button:hover{
+                    background: g.$text4;
+                    color: g.$text10;
+                }
+            }
+
+            .effect-box {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                margin-top: 40px;
+
+                .ellipse {
+                    width: 500px;
+                    height: 40px;
+                    background: #C3BBB5;
+                    border-radius: 60px;
+                    filter: blur(10px);
+                    opacity: 20%;
+                }
+
+                .hidden-box {
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    width: 1400px;
+                    height: 70px;
+                    z-index: 100;
+                    background: #fff;
+                }
+            }
+
+        }
+
+    }
+}
