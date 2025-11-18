@@ -100,7 +100,7 @@ const ShoppingCart = () => {
                                             </div>
                                             <p className='price'>
                                                 {/* {totalPrice.toLocaleString()}원 */}
-                                                {getItemTotal(item)}원
+                                                {getItemTotal(item).toLocaleString()}원
 
                                             </p>
                                         </div>
