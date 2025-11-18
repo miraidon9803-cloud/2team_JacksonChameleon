@@ -215,10 +215,10 @@ export default function LogJoin() {
                   <div className="join-wrap">
                     <div className="right-side">
                       <div className="title-wrap">
-
-                        <p className="nav-btn" onClick={() => setShowJoinForm(false)}><img src="/images/log-arrow-left.png" alt="" /></p>
+                        <p className="nav-btn" onClick={() => setShowJoinForm(false)}>
+                          <img src="/images/log-arrow-left.png" alt="" />
+                        </p>
                         <h2 className="section-title">SIGN UP</h2>
-                        <p className="nav-btn" onClick={handleNextFromTerms}><img src="/images/log-arrow-right.png" alt="" /></p>
                       </div>
 
                       <form onSubmit={handleJoinSubmit}>
@@ -306,7 +306,7 @@ export default function LogJoin() {
                           </div>
                         </div>
 
-                        <button type="submit" className="join-btn" onClick={handleNextFromTerms}>
+                        <button type="submit" className="join-btn">
                           회원가입 완료
                         </button>
                       </form>
@@ -318,12 +318,9 @@ export default function LogJoin() {
               </div>
             </div>
           </div>
-<<<<<<< HEAD
-=======
           <div className="join-complete">
             <p>회원가입 완료</p>
           </div>
->>>>>>> 75793d33e210c2c3be6e63c00d4655809e771f9a
         </div>
       </div>
 
