@@ -1,0 +1,148 @@
+@use "../../App.scss" as g;
+
+.main-category-wrap {
+    .inner-wrap {
+        .inner {
+            h2 {
+                @include g.myTitle24();
+                text-align: left;
+                margin-bottom: 4rem;
+            }
+
+            .categoty-wrap {
+                display: flex;
+                margin-bottom: 12rem;
+
+                .chair {
+                    width: 300px;
+                    height: 584px;
+                    background: g.$BG;
+                    position: relative;
+                    overflow: hidden;
+
+                    p {
+                        @include g.myTitle16();
+                        text-align: left;
+                        font-size: 20px;
+                        padding: 24px;
+                    }
+
+                    div {
+                        position: absolute;
+                        bottom: 0;
+                        left: -100px;
+                        width: 368px;
+
+                        img {
+                            transition: transform 0.5s ease;
+                        }
+                    }
+
+                    &:hover {
+                        div img {
+                            transform: scale(1.1);
+                        }
+                    }
+
+                }
+
+                .sofa {
+                    width: 300px;
+                    height: 584px;
+                    background: g.$text8;
+                    position: relative;
+                    overflow: hidden;
+
+                    p {
+                        @include g.myTitle16();
+                        text-align: left;
+                        font-size: 20px;
+                        padding: 24px;
+                    }
+
+                    div {
+                        position: absolute;
+                        bottom: 0;
+                        left: 30px;
+                        width: 696px;
+
+                        img {
+                            transition: transform 0.5s ease;
+                        }
+
+                    }
+
+                    &:hover {
+                        div img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .table {
+                    width: 300px;
+                    height: 584px;
+                    background: g.$BG;
+                    position: relative;
+                    overflow: hidden;
+
+                    p {
+                        @include g.myTitle16();
+                        text-align: left;
+                        font-size: 20px;
+                        padding: 24px;
+                    }
+
+                    div {
+                        position: absolute;
+                        bottom: 0;
+                        left: 30px;
+                        width: 522px;
+
+                        img {
+                            transition: transform 0.3s ease;
+                        }
+                    }
+
+                    &:hover {
+                        div img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+
+                .light {
+                    width: 300px;
+                    height: 584px;
+                    background: g.$text8;
+                    position: relative;
+                    overflow: hidden;
+
+                    p {
+                        @include g.myTitle16();
+                        text-align: left;
+                        font-size: 20px;
+                        padding: 24px;
+                    }
+
+                    div {
+                        position: absolute;
+                        bottom: 0;
+                        right: -30px;
+                        width: 237px;
+
+                        img {
+                            transition: transform 0.3s ease;
+                        }
+                    }
+
+                    &:hover {
+                        div img {
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

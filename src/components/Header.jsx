@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './scss/header.scss'
+import './scss/Header.scss'
 import { useProductStore } from '../store/ProductStore';
 import { useAuthStore } from '../store/authStore';
 
