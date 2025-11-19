@@ -89,6 +89,12 @@ export default function LogJoin() {
     }
   };
   const [joinComplete, setJoinComplete] = useState(false);
+  
+    const goLogin = () => {
+  setJoinComplete(false);     
+  setShowJoinForm(false);     
+  setPanel("login");          
+};
 
   const cardClass = panel === "terms" ? "glass-card terms-active" : "glass-card";
 
@@ -328,7 +334,7 @@ export default function LogJoin() {
               <img className='bounce' src="/images/logincomplete.png" alt="" />
               <p>회원가입 완료</p>
               <p>잭슨카멜레온의 회원이 되신것을 환영합니다 <br/>로그인후 서비스를 이용해주시기 바랍니다.</p>
-              <button>로그인 하러가기</button>
+              <button onClick={goLogin}>로그인 하러가기</button>
             </div>
           </div>
         </div>
