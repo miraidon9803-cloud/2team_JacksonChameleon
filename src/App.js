@@ -40,6 +40,7 @@ import ShopDetailTop from './pages/ShopDetailTop';
 import Store from './pages/Store';
 import Cleaning from './pages/Cleaning';
 import Sample from './pages/Sample';
+import Checkout from './pages/Checkout';
 
 
 function App() {
@@ -96,6 +97,9 @@ function App() {
         
         <Route path="/notfound" element={<NotFound />} />
         <Route path="/sellection" element={<Sellection />} />
+
+
+        <Route path='/fefefe' element={<Checkout/>}/>
       </Route>
     </Routes>
   );
