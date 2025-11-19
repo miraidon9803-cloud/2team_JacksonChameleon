@@ -18,7 +18,7 @@ export const useAuthStore = create((set) => ({
   //회원가입
   onMember: async ({ email, password, adnum, address, phone }) => {
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password, adnum, phone);
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password, adnum, address, phone);
       // set({ user: userCredential.user })
       console.log("회원가입 성공")
     }
