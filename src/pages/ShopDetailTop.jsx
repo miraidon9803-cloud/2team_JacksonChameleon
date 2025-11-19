@@ -8,6 +8,7 @@ import ShopDetailBottomIntro from './ShopDetailBottomIntro';
 import ShopDetailBottomSize from './ShopDetailBottomSize';
 import ShopDetailBottomService from './ShopDetailBottomService';
 import ShopDetailBottomReview from './ShopDetailBottomReview';
+import DetailCartPopup from '../components/DetailCartPopup';
 
 
 const ShopDetailTop = () => {
@@ -26,6 +27,7 @@ const ShopDetailTop = () => {
   const [selectedList, setSelectedList] = useState([]);
 
   const [activeTap, setActiveTap] = useState(0);
+  const [showPopup, SetShowPopup] = useState(false);
 
   // 상품 데이터 로드
   useEffect(() => {
@@ -133,11 +135,16 @@ const ShopDetailTop = () => {
     selectedList.forEach((sel) => {
       onAddToCart({ ...product, ...sel });
     });
-    alert("장바구니에 담겼습니다!");
+    SetShowPopup(true);
+    setTimeout(() => {
+      SetShowPopup(false);
+    }, 3000)
+
   };
 
   return (
     <div className="shop-detail-banner">
+      {showPopup && <DetailCartPopup />}
       <div className="inner">
         <div className="detail-banner-wrap">
           <div className="detail-top">

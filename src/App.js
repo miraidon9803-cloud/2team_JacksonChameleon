@@ -40,6 +40,7 @@ import ShopDetailTop from './pages/ShopDetailTop';
 import Store from './pages/Store';
 import Cleaning from './pages/Cleaning';
 import Sample from './pages/Sample';
+import OrderDetail from './pages/OrderDetail';
 
 
 function App() {
@@ -73,7 +74,8 @@ function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/community/customer" element={<Customer/>}/>
        
-        <Route path="/shoppingcart" element={<ShoppingCart />} />
+        {/* <Route path="/shoppingcart" element={<ShoppingCart />} /> */}
+        <Route path="/shoppingcart" element={<OrderDetail />} />
 
         <Route path="/about/brand" element={<Brand/>}/>
         <Route path="/about" element={<About/>}/>
