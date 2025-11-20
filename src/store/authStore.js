@@ -12,12 +12,12 @@ import { onAuthStateChanged } from "firebase/auth";
 
 
 export const useAuthStore = create((set) => ({
-   //1. 상태변수
+  //1. 상태변수
   user: null,
-  isJoin: false, 
+  isJoin: false,
   setIsJoin: (value) => set({ isJoin: value }),
 
-     initAuth: () => {
+  initAuth: () => {
     onAuthStateChanged(auth, async (fbUser) => {
       if (fbUser) {
         const userRef = doc(db, "users", fbUser.uid);
@@ -32,7 +32,9 @@ export const useAuthStore = create((set) => ({
             email: fbUser.email,
             name: fbUser.displayName || "",
             phone: fbUser.phoneNumber || "",
-            profile: fbUser.photoURL || ""
+            addnum: "",
+            address: "",
+            add: "",
           };
           await setDoc(userRef, basicUser);
           set({ user: basicUser });
@@ -43,25 +45,50 @@ export const useAuthStore = create((set) => ({
     });
   },
   //회원가입
-  onMember: async ({ email, password, adnum, address, phone }) => {
+  onMember: async ({ email, password, addnum, address, add, phone, name }) => {
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password, adnum, address, phone);
-      // set({ user: userCredential.user })
-      console.log("회원가입 성공")
-    }
-    catch (err) {
-      console.log(err.message)
+      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const fbUser = userCredential.user;
+
+      const userData = {
+        uid: fbUser.uid,
+        email,
+        name: name || "",
+        phone: phone || "",
+        addnum: addnum || "",
+        address: address || "",
+        add: add || "",
+        provider: "email",
+        createdAt: new Date(),
+      };
+
+      await setDoc(doc(db, "users", fbUser.uid), userData);
+      set({ user: userData });
+
+      console.log("회원가입 + Firestore 저장 성공");
+    } catch (err) {
+      console.log("회원가입 실패:", err.message);
+      throw err;
     }
   },
+
   //로그인
-  onLogin: async (email, password) => {
+onLogin: async (email, password) => {
   try {
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
-    set({ user: userCredential.user });
-    console.log("로그인성공");
-    return userCredential.user; // 성공 반환
-  }
-  catch (err) {
+    const fbUser = userCredential.user;
+
+    const userRef = doc(db, "users", fbUser.uid);
+    const userDoc = await getDoc(userRef);
+
+    if (userDoc.exists()) {
+      set({ user: userDoc.data() });  // Firestore 값으로 저장 !!!
+    } else {
+      set({ user: fbUser });
+    }
+
+    return fbUser;
+  } catch (err) {
     console.log("로그인 실패:", err.message);
     throw err;
   }
@@ -166,7 +193,7 @@ export const useAuthStore = create((set) => ({
     await signOut(auth)
     set({ user: null })
   },
-  
+
 
 
 }))

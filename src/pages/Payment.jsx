@@ -1,6 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useProductStore } from '../store/ProductStore';
 import './scss/Payment.scss';
+import { useNavigate } from 'react-router-dom';
+import { useAuthStore } from '../store/authStore';
 
 
 const Payment = () => {
@@ -12,9 +14,28 @@ const Payment = () => {
     reqOptions,
     selectedMethod, setSelectedMethod,
     selectedMethodBtn, setSelectedMethodBtn,
-    simpleOpt
+    simpleOpt, cartItems
   } = useProductStore();
 
+  const { user } = useAuthStore();
+
+  const [showPay, setShowPay] =useState(false);
+  const navigate = useNavigate();
+  const handlePayment = () => setShowPay(true);
+  const handleClosePopup = () => setShowPay(false);
+  const handleConfirm = (e) => {
+    e.preventDefault();
+    //장바구니 내용을 주문 내역에 저장
+    onAddOrder();
+    //장바구니 비우기
+    onClearCart();
+    alert("결제가 완료되었습니다");
+    //마이페이지로 이동
+    navigate("/userinfo")
+  }
+  //  useEffect(()=>{
+  //   onFinalPrice()
+  //  },[selectedCoupon, totalPrice])
   return (
     <div className='checkout-wrap'>
       <div className="inner">
@@ -27,12 +48,12 @@ const Payment = () => {
             {/* 사용자 정보 */}
             <div className="left-con1 user-info">
               <div className="user-name">
-                <p>홍길동</p>
+                <p>{user?.email}</p>
                 <button>배송지 변경</button>
               </div>
               <div className="address">
-                <p>서울시 고양이구 냥냥동 야옹대로 29길 110, 406동 708호</p>
-                <p>010-1234-5678</p>
+                <p>{user?.address}</p>
+                <p>{user?.phone}</p>
               </div>
             </div>
 
@@ -97,14 +118,13 @@ const Payment = () => {
             {/* 주문상품 */}
             <div className="left-con3 order">
               <p>주문상품</p>
-
-              {[1, 2, 3, 4].map((i) => (
-                <div className='order-item' key={i}>
-                  <div className="item-img"><img src="/images/sofa-1.png" alt="" /></div>
+              {cartItems.map((i) => (
+                <div className='order-item' key={i.id}>
+                  <div className="item-img"><img src={i.image} alt="" /></div>
                   <div className="item-info">
-                    <p className="item-title">asdfsadf</p>
-                    <p className="item-option">asdfsadf</p>
-                    <p className="item-price">asdfsadf</p>
+                    <p className="item-title">{}</p>
+                    <p className="item-option">{i.option}</p>
+                    <p className="item-price">{}</p>
                   </div>
                 </div>
               ))}
