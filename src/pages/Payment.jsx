@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 
 
+
 const Payment = () => {
 
   const {
@@ -14,7 +15,7 @@ const Payment = () => {
     reqOptions,
     selectedMethod, setSelectedMethod,
     selectedMethodBtn, setSelectedMethodBtn,
-    simpleOpt, cartItems
+    simpleOpt, cartItems, onAddOrder, orderList
   } = useProductStore();
 
   const { user } = useAuthStore();
@@ -33,9 +34,9 @@ const Payment = () => {
     //마이페이지로 이동
     navigate("/userinfo")
   }
-  //  useEffect(()=>{
-  //   onFinalPrice()
-  //  },[selectedCoupon, totalPrice])
+   useEffect(()=>{
+    onAddOrder()
+   },[])
   return (
     <div className='checkout-wrap'>
       <div className="inner">
@@ -118,12 +119,12 @@ const Payment = () => {
             {/* 주문상품 */}
             <div className="left-con3 order">
               <p>주문상품</p>
-              {cartItems.map((i) => (
+              {orderList.map((i) => (
                 <div className='order-item' key={i.id}>
-                  <div className="item-img"><img src={i.image} alt="" /></div>
+                  <div className="item-img"><img src={i.size.img} alt="" /></div>
                   <div className="item-info">
                     <p className="item-title">{}</p>
-                    <p className="item-option">{i.option}</p>
+                    <p className="item-option">{}</p>
                     <p className="item-price">{}</p>
                   </div>
                 </div>

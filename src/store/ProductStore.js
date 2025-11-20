@@ -99,10 +99,15 @@ export const useProductStore = create(
               ? { ...item, qty: item.qty + product.qty }
               : item
           );
-        } else {
-          updateCart = [...cart, { ...product, chkeck: false }];
+        } else {updateCart = [...cart, {
+            ...product,
+            checked: false,
+            cartId: `${product.id}-${product.sheet?.title}-${product.size?.id}-${product.color?.id}-${product.add?.id || "none"}`
+          }];
+          
         }
 
+        
 
         // alert('장바구니에 추가되었습니다!');
 
@@ -121,7 +126,17 @@ export const useProductStore = create(
           totalPrice: total
         });
       },
+      onCheckCart: (cartId) => {
+        const carts = get().cartItems;
 
+        //체크박스 토글
+        const updateCart = carts.map((cart) =>
+          cart.cartId === cartId ? { ...cart, checked: !cart.checked } : cart
+        );
+
+        set({ cartItems: updateCart });
+        // console.log(updateCart);
+      },
       //장바구니삭제
       onRemoveCart: (product) => {
         const cart = get().cartItems;
@@ -247,22 +262,27 @@ export const useProductStore = create(
         })
       },
 
-      //주문하기
+      orderList:[],
+  //주문하기
       onAddOrder: () => {
         const { cartItems, orderList, finalPrice } = get()
 
-        const newOrder = {
-          id: new Date().toString(),
-          date: new Date().toLocaleString(),
-          items: [...cartItems],
-          totalPrice: finalPrice,
-          status: "결제완료"
-        }
+        // const newOrder = {
+        //   id: new Date().toString(),
+        //   date: new Date().toLocaleString(),
+        //   items: [...cartItems],
+        //   totalPrice: finalPrice,
+        //   status: "결제완료"
+        // }
+        const checkItems = cartItems.filter((item)=>item.checked ===true)
         set({
-          orderList: [...orderList, newOrder],
+          orderList:checkItems,
           selectedCoupon: null
+          
         })
-      }
+        console.log("오더",checkItems,orderList);
+        console.log("카트?",cartItems);
+      }      
 
 
 
