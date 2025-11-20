@@ -7,6 +7,8 @@ import {
 import { create } from "zustand";
 import { auth, db, storage, googleProvider } from "../firebase/firebase";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
+
 
 
 export const useAuthStore = create((set) => ({
@@ -14,7 +16,18 @@ export const useAuthStore = create((set) => ({
   user: null,
   isJoin: false, 
   setIsJoin: (value) => set({ isJoin: value }),
- 
+
+  initAuth: () => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        console.log("Firebase 로그인 복구:", user);
+        set({ user });
+      } else {
+        console.log("Firebase 로그인 없음");
+        set({ user: null });
+      }
+    });
+  },
   //회원가입
   onMember: async ({ email, password, adnum, address, phone }) => {
     try {
@@ -28,16 +41,17 @@ export const useAuthStore = create((set) => ({
   },
   //로그인
   onLogin: async (email, password) => {
-    try {
-      const userCredential = await signInWithEmailAndPassword(auth, email, password);
-      set({ user: userCredential.user })
-      console.log("로그인성공");
-    }
-    catch (err) {
-      console.log(err.message)
-    }
-  },
-
+  try {
+    const userCredential = await signInWithEmailAndPassword(auth, email, password);
+    set({ user: userCredential.user });
+    console.log("로그인성공");
+    return userCredential.user; // 성공 반환
+  }
+  catch (err) {
+    console.log("로그인 실패:", err.message);
+    throw err;
+  }
+},
   onGoogleLogin: async () => {
     try {
       // 구글 로그인창을 띄워서 사용자로부터 로그인하게 라고 그 결과값 저장하기
