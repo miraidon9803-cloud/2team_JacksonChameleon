@@ -3,7 +3,7 @@ import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
 
 const ShoppingCart = () => {
-    const { cartItems, totalPrice, onRemoveCart, onItemPlus, onItemMinus } = useProductStore();
+    const { cartItems, onRemoveCart, onItemPlus, onItemMinus } = useProductStore();
 
     const [selectedItems, setSelectedItems] = useState([]);
     const [isAllSelected, setIsAllSelected] = useState(false);
@@ -22,16 +22,16 @@ const ShoppingCart = () => {
         if (isAllSelected) {
             setSelectedItems([]);
         } else {
-            setSelectedItems(cartItems);
+            setSelectedItems(cartItems.map(item => item.size?.id));
         }
     };
 
-    //아이템 삭제
-    const handleSelectItem = (item) => {
-        if (selectedItems.includes(item)) {
-            setSelectedItems(selectedItems.filter(selected => selected !== item));
+    //개별 체크
+    const handleSelectItem = (id) => {
+        if (selectedItems.includes(id)) {
+            setSelectedItems(selectedItems.filter(selected => selected !== id));
         } else {
-            setSelectedItems([...selectedItems, item]);
+            setSelectedItems([...selectedItems, id]);
         }
     }
 
@@ -41,10 +41,16 @@ const ShoppingCart = () => {
             alert("삭제할 상품을 선택해주세요");
             return;
         }
-        selectedItems.forEach(item => {
-            onRemoveCart(item);
-        });
+        cartItems.filter(item => selectedItems.includes(item.size?.id))
+            .forEach(item => {
+                onRemoveCart(item);
+            });
         setSelectedItems([]);
+    }
+
+    //선택괸 아이템 배열 구하기 
+    const getSelectedItems = () => {
+        return cartItems.filter(item => selectedItems.includes(item.size?.id));
     }
 
     //한 아이템 가격
@@ -59,23 +65,25 @@ const ShoppingCart = () => {
 
     //선택된 총 제품가격
     const getSelectedTotalPrice = () => {
-        if (selectedItems.length === 0) return 0;
+        const selected = getSelectedItems();
+        if (selected.length === 0) return 0;
 
-        return selectedItems.reduce((sum, item) => {
+        return selected.reduce((sum, item) => {
             return sum + getItemTotal(item);
         }, 0);
     };
 
     //할인금액
     const getItemSale = () => {
-        if (selectedItems.length === 0) return 0;
+        const selected = getSelectedItems();
+        if (selected.length === 0) return 0;
 
-        return selectedItems.reduce((sum, item) => {
+        return selected.reduce((sum, item) => {
             if (!item.sale) return sum;
 
-            const sizePrice = item.size?.price || 0;
-            const addPrice = item.add?.price || 0;
-            const basePrice = (sizePrice + addPrice) * item.qty;
+            // const sizePrice = item.size?.price || 0;
+            // const addPrice = item.add?.price || 0;
+            const basePrice = getItemTotal(item)
 
             const saleRate = item.sale;
             const discount = basePrice * saleRate;
@@ -113,8 +121,8 @@ const ShoppingCart = () => {
                                     <div className="selected-wrap">
                                         <input
                                             type="checkbox"
-                                            checked={selectedItems.includes(item)}
-                                            onChange={() => handleSelectItem(item)}
+                                            checked={selectedItems.includes(item.size?.id)}
+                                            onChange={() => handleSelectItem(item.size?.id)}
                                         />
                                         <button className='close-btn' onClick={() => onRemoveCart(item)}><img src="/images/close-icon.png" alt="삭제버튼" /></button>
                                     </div>
