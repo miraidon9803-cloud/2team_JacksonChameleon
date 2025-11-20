@@ -1,9 +1,10 @@
 // src/store/ProductStore.js
 import { create } from "zustand";
 import { products } from "../data/JacksonDetail";
+import { persist } from "zustand/middleware";
 
-export const useProductStore = create((set, get) => ({
-
+export const useProductStore = create(persist(
+  (set, get) => ({
   // 상품 저장
   items: [],
 
@@ -201,4 +202,6 @@ export const useProductStore = create((set, get) => ({
       totalPrice: total
     })
   }
-}));
+
+}))
+)
