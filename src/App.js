@@ -1,5 +1,6 @@
 import './App.scss';
 import { Route, Routes } from 'react-router-dom';
+import { useAuthStore } from './store/authStore';
 import Layout from './components/Layout';
 
 import MyPage from './pages/MyPage';
@@ -42,10 +43,17 @@ import Cleaning from './pages/Cleaning';
 import Sample from './pages/Sample';
 import OrderDetail from './pages/OrderDetail';
 import Checkout from './pages/Checkout';
+import { useEffect } from 'react';
 
 
-
+ 
 function App() {
+   const initAuth = useAuthStore((state) => state.initAuth);
+
+  useEffect(() => {
+    initAuth();  
+  }, []);
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
