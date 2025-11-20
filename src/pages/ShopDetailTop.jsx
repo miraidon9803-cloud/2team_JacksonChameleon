@@ -8,6 +8,7 @@ import ShopDetailBottomIntro from './ShopDetailBottomIntro';
 import ShopDetailBottomSize from './ShopDetailBottomSize';
 import ShopDetailBottomService from './ShopDetailBottomService';
 import ShopDetailBottomReview from './ShopDetailBottomReview';
+import DetailCartPopup from '../components/DetailCartPopup';
 
 
 const ShopDetailTop = () => {
@@ -26,6 +27,16 @@ const ShopDetailTop = () => {
   const [selectedList, setSelectedList] = useState([]);
 
   const [activeTap, setActiveTap] = useState(0);
+  const [showPopup, SetShowPopup] = useState(false);
+
+  const ItemPrice = (sel) => {
+    let total = 0;
+
+    if (sel.size?.price) total += sel.size.price;
+    if (sel.add) total += sel.add.price;
+
+    return (total * sel.qty).toLocaleString() + "원";
+  };
 
   // 상품 데이터 로드
   useEffect(() => {
@@ -133,11 +144,16 @@ const ShopDetailTop = () => {
     selectedList.forEach((sel) => {
       onAddToCart({ ...product, ...sel });
     });
-    alert("장바구니에 담겼습니다!");
+    SetShowPopup(true);
+    setTimeout(() => {
+      SetShowPopup(false);
+    }, 3000)
+
   };
 
   return (
     <div className="shop-detail-banner">
+      {showPopup && <DetailCartPopup />}
       <div className="inner">
         <div className="detail-banner-wrap">
           <div className="detail-top">
@@ -281,15 +297,19 @@ const ShopDetailTop = () => {
                       </button>
                     </div>
                     <div className="selected-box-bottom">
-                      <button onClick={() => decreaseQty(idx)}>
-                        <img src="/images/minus.png" alt="minus" />
-                        <img src="/images/minus-hover.png" alt="minus-hover" />
-                      </button>
-                      <span>{sel.qty}</span>
-                      <button onClick={() => increaseQty(idx)}>
-                        <img src="/images/plus.png" alt="plus" />
-                        <img src="/images/plus-hover.png" alt="plus-hover" />
-                      </button>
+                      <p className="price-total">{ItemPrice(sel)}</p>
+                      <div className="button-wrap">
+                        <button onClick={() => decreaseQty(idx)}>
+                          <img src="/images/minus.png" alt="minus" />
+                          <img src="/images/minus-hover.png" alt="minus-hover" />
+                        </button>
+
+                        <span>{sel.qty}</span>
+                        <button onClick={() => increaseQty(idx)}>
+                          <img src="/images/plus.png" alt="plus" />
+                          <img src="/images/plus-hover.png" alt="plus-hover" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))

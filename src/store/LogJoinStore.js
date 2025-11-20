@@ -1,9 +1,7 @@
 import { create } from "zustand";
 
 export const useLogJoinStore = create((set) => ({
-  /* -----------------------------------
-      1) 로그인 입력 폼 (loginForm)
-  ----------------------------------- */
+
   loginForm: {
     email: "",
     password: "",
@@ -23,9 +21,6 @@ export const useLogJoinStore = create((set) => ({
     }),
 
 
-  /* -----------------------------------
-      2) 회원가입 입력 폼 (joinForm)
-  ----------------------------------- */
   joinForm: {
     email: "",
     password: "",
@@ -34,7 +29,7 @@ export const useLogJoinStore = create((set) => ({
     phone: "",
     addnum: "",
     address: "",
-    add: "",
+    add: ""
   },
 
   setJoinForm: (fn) =>
@@ -57,9 +52,6 @@ export const useLogJoinStore = create((set) => ({
     }),
 
 
-  /* -----------------------------------
-      3) 약관동의 terms
-  ----------------------------------- */
   terms: [
     {
       id: 1,
@@ -379,9 +371,7 @@ export const useLogJoinStore = create((set) => ({
     })),
 
 
-  /* -----------------------------------
-      4) 주소 API 모달 상태
-  ----------------------------------- */
+
   isPostOpen: false,
   setIsPostOpen: (value) => set({ isPostOpen: value }),
 
