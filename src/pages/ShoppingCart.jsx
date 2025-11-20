@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
+import { Link } from 'react-router-dom';
 
 const ShoppingCart = () => {
     const { cartItems, totalPrice, onRemoveCart, onItemPlus, onItemMinus, onCheckCart } = useProductStore();
@@ -162,7 +163,7 @@ const ShoppingCart = () => {
                                 <strong>{(getSelectedTotalPrice() - getItemSale()).toLocaleString()}원</strong>
                             </div>
 
-                            <button className='pay-btn'><span>결제하기</span></button>
+                          <Link to="/payment"><div className='pay-btn'><span>결제하기</span></div></Link>
                         </div>
                     </div>
 

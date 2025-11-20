@@ -44,8 +44,8 @@ const ShopTop = ({ category }) => {
                         <ul>
                             {ShopTopCate.map((cate, id) => (
                                 <li key={id} className={selectedCate === cate.name ? "active" : ""} >
-                                    <Link to={cate.name === 'All' ? '/Shop' : `/Shop/${cate.name}`} >
-                                        {firstUpper(cate.name)}
+                                    <Link to={cate.name === 'All' ? '/shop' : `/shop/${cate.name}`} >
+                                        {(cate.name)}
                                     </Link>
                                 </li>
                             ))}

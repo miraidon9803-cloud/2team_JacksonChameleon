@@ -66,8 +66,8 @@ function App() {
         <Route path="/shop/sofa" element={<ShopSofa />} />
         <Route path="/shop/lighting" element={<ShopLighting />} />
         <Route path="/shop/:id" element={<ShopDetailTop />} />
-
-
+        
+        
 
         <Route path="/collections/Ink" element={<InkCollection />} />
         <Route path="/collections/pebble" element={<PebbleCollection />} />
