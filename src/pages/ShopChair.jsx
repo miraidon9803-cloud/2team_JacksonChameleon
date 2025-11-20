@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import jacksonProduct from "../data/jacksonproduct.js";
-import "./scss/Product.scss";
+import "../components/scss/Product.scss";
 import "../components/scss/filterPopup.scss";
 import ShopTop from "../components/ShopTop.jsx";
 

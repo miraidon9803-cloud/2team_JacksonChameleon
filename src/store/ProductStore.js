@@ -99,15 +99,16 @@ export const useProductStore = create(
               ? { ...item, qty: item.qty + product.qty }
               : item
           );
-        } else {updateCart = [...cart, {
+        } else {
+          updateCart = [...cart, {
             ...product,
             checked: false,
             cartId: `${product.id}-${product.sheet?.title}-${product.size?.id}-${product.color?.id}-${product.add?.id || "none"}`
           }];
-          
+
         }
 
-        
+
 
         // alert('장바구니에 추가되었습니다!');
 
@@ -262,8 +263,8 @@ export const useProductStore = create(
         })
       },
 
-      orderList:[],
-  //주문하기
+      orderList: [],
+      //주문하기
       onAddOrder: () => {
         const { cartItems, orderList, finalPrice } = get()
 
@@ -274,15 +275,15 @@ export const useProductStore = create(
         //   totalPrice: finalPrice,
         //   status: "결제완료"
         // }
-        const checkItems = cartItems.filter((item)=>item.checked ===true)
+        const checkItems = cartItems.filter((item) => item.checked === true)
         set({
-          orderList:checkItems,
+          orderList: checkItems,
           selectedCoupon: null
-          
+
         })
-        console.log("오더",checkItems,orderList);
-        console.log("카트?",cartItems);
-      }      
+        console.log("오더", checkItems, orderList);
+        console.log("카트?", cartItems);
+      }
 
 
 
