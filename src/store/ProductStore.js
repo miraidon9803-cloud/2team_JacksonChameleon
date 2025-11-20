@@ -127,19 +127,19 @@ export const useProductStore = create(
 
 
 
-        //총금액
-        // let total = 0;
-        // updateCart.forEach((item) => {
-        //   const sizePrice = item.size?.price || 0;
-        //   const addPrice = item.add?.price || 0;
-        //   const itemTotal = (sizePrice + addPrice) * item.qty;
-        //   total += itemTotal;
-        // });
+        // 총금액
+        let total = 0;
+        updateCart.forEach((item) => {
+          const sizePrice = item.size?.price || 0;
+          const addPrice = item.add?.price || 0;
+          const itemTotal = (sizePrice + addPrice) * item.qty;
+          total += itemTotal;
+        });
 
         set({
           cartItems: updateCart,
           cartCount: updateCart.length,
-          // totalPrice: total
+          totalPrice: total
         });
       },
 
