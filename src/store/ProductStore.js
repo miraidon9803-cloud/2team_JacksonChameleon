@@ -106,7 +106,7 @@ export const useProductStore = create(
 
         // alert('장바구니에 추가되었습니다!');
 
-        //총금액
+        // 총금액
         let total = 0;
         updateCart.forEach((item) => {
           const sizePrice = item.size?.price || 0;
