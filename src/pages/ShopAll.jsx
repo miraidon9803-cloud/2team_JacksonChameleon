@@ -58,7 +58,7 @@ const ShopAll = () => {
 
     //페이징 처리
     //한페이지에 보여질 개수
-    const itemPerPage = 21
+    const itemPerPage = 21;
     //현재 보여지는 페이지를 체크하고 변경하기
     const [currentPage, setCurrentpage] = useState(1);
     //전체 페이지수 계산하기
@@ -77,7 +77,6 @@ const ShopAll = () => {
 
     //버튼 생성하기
     const pagerButton = () => {
-        //버열을 저장할 배열
         const buttons = [];
         for (let i = 1; i <= totalPage; i++) {
             buttons.push(
@@ -99,25 +98,17 @@ const ShopAll = () => {
                 <div className="product-filter">
                     <div className="filter-title">
                         <p className='product-sort'>All</p>
-                        {/* <p className="arrow"><img src="/images/product-icon.png" alt="" /></p> */}
-                        {/* <div className="select-material">
-                            <p onClick={() => { setSelectedSubCate("Fabric"); setCurrentpage(1); }}
-                                className={selectedSubCate === "Fabric" ? "active" : ""}
-                            >Fabric</p>
-                            <p onClick={() => { setSelectedSubCate("Leather"); setCurrentpage(1); }}
-                                className={selectedSubCate === "Leather" ? "active" : ""}
-                            >Leather</p>
-                        </div> */}
                     </div>
                     <div className="filter">
                         <p className="total-product">({data.length}product)</p>
                         <p>Filter</p>
-                        <button onClick={() => setIsFilterOpen(!isFilterOpen)}><img src="/images/filter-icon.png" alt="필터아이콘" /></button>
+                        <button onClick={() => setIsFilterOpen(!isFilterOpen)}>
+                            <img src="/images/filter-icon.png" alt="필터아이콘" /></button>
                     </div>
                 </div>
 
-              <div className="product-list">
-                    {currentItem.map((item, index) => (
+                <div className="product-list">
+                    {currentItem.map((item) => (
                         <Link to={`/shop/${item.id}`} className="product" key={item.id}>
                             <span className='new'>{item.badges}</span>
                             <div className="img-box">
@@ -152,51 +143,51 @@ const ShopAll = () => {
                 </div>
             </div>
             {isFilterOpen && (
-               <div className="filter-popup" onClick={() => setIsFilterOpen(false)}>
-          <div className="filter-wrap" onClick={(e) => e.stopPropagation()}>
-            <div className="filter-title">
-              <h3>Filter</h3>
-              <p className="close-btn" onClick={() => setIsFilterOpen(false)}><img src="/images/close-icon.png" alt="" /></p>
-            </div>
+                <div className="filter-popup" onClick={() => setIsFilterOpen(false)}>
+                    <div className="filter-wrap" onClick={(e) => e.stopPropagation()}>
+                        <div className="filter-title">
+                            <h3>Filter</h3>
+                            <p className="close-btn" onClick={() => setIsFilterOpen(false)}><img src="/images/close-icon.png" alt="" /></p>
+                        </div>
 
-            <div className="sort-wrap">
-              <p className="sort-title">정렬</p>
-              <div className="btn-wrap">
-                <button
-                  onClick={() => setTempSortOption("best")}
-                  className={tempSortOption === "best" ? "active" : ""}>
-                  추천순
-                </button>
+                        <div className="sort-wrap">
+                            <p className="sort-title">정렬</p>
+                            <div className="btn-wrap">
+                                <button
+                                    onClick={() => setTempSortOption("best")}
+                                    className={tempSortOption === "best" ? "active" : ""}>
+                                    추천순
+                                </button>
 
-                <button
-                  onClick={() => setTempSortOption("new")}
-                  className={tempSortOption === "new" ? "active" : ""}>
-                  최신순
-                </button>
+                                <button
+                                    onClick={() => setTempSortOption("new")}
+                                    className={tempSortOption === "new" ? "active" : ""}>
+                                    최신순
+                                </button>
 
-                <button
-                  onClick={() => setTempSortOption("asc")}
-                  className={tempSortOption === "asc" ? "active" : ""}>
-                  가격 낮은순
-                </button>
+                                <button
+                                    onClick={() => setTempSortOption("asc")}
+                                    className={tempSortOption === "asc" ? "active" : ""}>
+                                    가격 낮은순
+                                </button>
 
-                <button
-                  onClick={() => setTempSortOption("desc")}
-                  className={tempSortOption === "desc" ? "active" : ""}>
-                  가격 높은순
-                </button>
-              </div>
-            </div>
+                                <button
+                                    onClick={() => setTempSortOption("desc")}
+                                    className={tempSortOption === "desc" ? "active" : ""}>
+                                    가격 높은순
+                                </button>
+                            </div>
+                        </div>
 
-            <p className='apply-btn'
-              onClick={() => {
-                setSortOption(tempSortOption);
-                setIsFilterOpen(false);
-              }}>
-              적용하기
-            </p>
-          </div>
-        </div>
+                        <p className='apply-btn'
+                            onClick={() => {
+                                setSortOption(tempSortOption);
+                                setIsFilterOpen(false);
+                            }}>
+                            적용하기
+                        </p>
+                    </div>
+                </div>
             )}
         </div>
     );

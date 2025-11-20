@@ -86,7 +86,7 @@ export const useProductStore = create((set, get) => ({
     }),
 
   //장바구니 
-   cartItems: [],
+  cartItems: [],
   totalPrice: 0,
   cartCount: 0,
 
