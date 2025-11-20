@@ -3,7 +3,7 @@ import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
 
 const ShoppingCart = () => {
-    const { cartItems, onRemoveCart, onItemPlus, onItemMinus, onCheckCart } = useProductStore();
+    const { cartItems, totalPrice, onRemoveCart, onItemPlus, onItemMinus, onCheckCart } = useProductStore();
     const [isAllSelected, setIsAllSelected] = useState(false);
 
 
