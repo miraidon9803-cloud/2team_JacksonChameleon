@@ -75,7 +75,7 @@ const Header = () => {
     const [height, setHeight] = useState(70);
     const headerRef = useRef(null);
     const submenuRef = useRef({});
-    const { openSearch } = useProductStore();
+    const { openSearch, cartCount } = useProductStore();
     const { user } = useAuthStore();
 
     useEffect(() => {
@@ -160,7 +160,6 @@ const Header = () => {
                         </>
                     ) : (
                         <>
-                   
                             <li>
                                 <Link to="/logjoin">
                                     <img src="/images/user-icon.png" alt="login" />
@@ -170,9 +169,10 @@ const Header = () => {
                     )}
 
                     
-                    <li>
+                    <li className='cart'>
                         <Link to="/Shoppingcart">
                             <img src="/images/shopping-bag-icon.png" alt="bag" />
+                            <span className="cart-num">{cartCount}</span>
                         </Link>
                     </li>
                 </ul>
