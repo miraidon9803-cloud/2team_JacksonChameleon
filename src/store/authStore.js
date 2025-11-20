@@ -17,13 +17,27 @@ export const useAuthStore = create((set) => ({
   isJoin: false, 
   setIsJoin: (value) => set({ isJoin: value }),
 
-  initAuth: () => {
-    onAuthStateChanged(auth, (user) => {
-      if (user) {
-        console.log("Firebase 로그인 복구:", user);
-        set({ user });
+     initAuth: () => {
+    onAuthStateChanged(auth, async (fbUser) => {
+      if (fbUser) {
+        const userRef = doc(db, "users", fbUser.uid);
+        const userDoc = await getDoc(userRef);
+
+        if (userDoc.exists()) {
+          set({ user: userDoc.data() });
+        } else {
+          // Firestore에 정보 없으면 기본 정보 저장
+          const basicUser = {
+            uid: fbUser.uid,
+            email: fbUser.email,
+            name: fbUser.displayName || "",
+            phone: fbUser.phoneNumber || "",
+            profile: fbUser.photoURL || ""
+          };
+          await setDoc(userRef, basicUser);
+          set({ user: basicUser });
+        }
       } else {
-        console.log("Firebase 로그인 없음");
         set({ user: null });
       }
     });
@@ -151,7 +165,8 @@ export const useAuthStore = create((set) => ({
   onLogout: async () => {
     await signOut(auth)
     set({ user: null })
-  }
+  },
+  
 
 
 }))

@@ -46,29 +46,28 @@ import Checkout from './pages/Checkout';
 import { useEffect } from 'react';
 
 
- 
+
 function App() {
-   const initAuth = useAuthStore((state) => state.initAuth);
-
+  const initAuth = useAuthStore((state) => state.initAuth);
   useEffect(() => {
-    initAuth();  
+    initAuth();
   }, []);
-
+  
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index element={<Main />} />
         <Route path="/main" element={<Main />} />
 
-        <Route path='/shop' element={<Shop/>}/>
-         <Route path="/shop/all" element={<ShopAll />} />
+        <Route path='/shop' element={<Shop />} />
+        <Route path="/shop/all" element={<ShopAll />} />
         <Route path="/shop/chair" element={<ShopChair />} />
         <Route path="/shop/table" element={<ShopTable />} />
         <Route path="/shop/sofa" element={<ShopSofa />} />
         <Route path="/shop/lighting" element={<ShopLighting />} />
-        <Route path="/shop/:id" element={<ShopDetailTop/>}/>
-  
-        
+        <Route path="/shop/:id" element={<ShopDetailTop />} />
+
+
 
         <Route path="/collections/Ink" element={<InkCollection />} />
         <Route path="/collections/pebble" element={<PebbleCollection />} />
@@ -78,23 +77,23 @@ function App() {
         <Route path="/collections" element={<Collections />} />
 
         <Route path="/service" element={<Service />} />
-        <Route path='/service/sample' element={<Sample/>}/>
-        <Route path='/service/cleaning' element={<Cleaning/>}/>
+        <Route path='/service/sample' element={<Sample />} />
+        <Route path='/service/cleaning' element={<Cleaning />} />
 
         <Route path="/community" element={<Community />} />
-        <Route path="/community/customer" element={<Customer/>}/>
-       
+        <Route path="/community/customer" element={<Customer />} />
+
         <Route path="/shoppingcart" element={<ShoppingCart />} />
-        {/* <Route path="/shoppingcart" element={<OrderDetail />} /> */}
+        <Route path="/orderdetail" element={<OrderDetail />} />
 
-        <Route path="/about/brand" element={<Brand/>}/>
-        <Route path="/about" element={<About/>}/>
-        <Route path="/about/story" element={<AboutStory/>}/>
+        <Route path="/about/brand" element={<Brand />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/about/story" element={<AboutStory />} />
 
-        <Route path='/map' element={<Store/>}/>
+        <Route path='/map' element={<Store />} />
 
-  
-        <Route path="/logjoin" element={<LogJoin/>}/>
+
+        <Route path="/logjoin" element={<LogJoin />} />
 
         <Route path="/samplingservice" element={<SamplingService />} />
         <Route path="/mypage" element={<MyPage />} />
@@ -105,12 +104,12 @@ function App() {
         <Route path="/noticedetails" element={<NoticeDetails />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/search" element={<Search />} />
-        
+
         <Route path="/notfound" element={<NotFound />} />
         <Route path="/sellection" element={<Sellection />} />
 
 
-        <Route path='/fefefe' element={<Checkout/>}/>
+        <Route path='/fefefe' element={<Checkout />} />
       </Route>
     </Routes>
   );
