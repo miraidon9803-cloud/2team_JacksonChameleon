@@ -29,6 +29,15 @@ const ShopDetailTop = () => {
   const [activeTap, setActiveTap] = useState(0);
   const [showPopup, SetShowPopup] = useState(false);
 
+  const ItemPrice = (sel) => {
+    let total = 0;
+
+    if (sel.size?.price) total += sel.size.price;
+    if (sel.add) total += sel.add.price;
+
+    return (total * sel.qty).toLocaleString() + "원";
+  };
+
   // 상품 데이터 로드
   useEffect(() => {
     if (items.length === 0) onFetchItems();
@@ -288,19 +297,19 @@ const ShopDetailTop = () => {
                       </button>
                     </div>
                     <div className="selected-box-bottom">
-                        <p className="price-total">{getTotalPrice()}</p>
-                        <div className="button-wrap">
-                      <button onClick={() => decreaseQty(idx)}>
-                        <img src="/images/minus.png" alt="minus" />
-                        <img src="/images/minus-hover.png" alt="minus-hover" />
-                      </button>
-                      
-                      <span>{sel.qty}</span>
-                      <button onClick={() => increaseQty(idx)}>
-                        <img src="/images/plus.png" alt="plus" />
-                        <img src="/images/plus-hover.png" alt="plus-hover" />
-                      </button>
-                    </div>
+                      <p className="price-total">{ItemPrice(sel)}</p>
+                      <div className="button-wrap">
+                        <button onClick={() => decreaseQty(idx)}>
+                          <img src="/images/minus.png" alt="minus" />
+                          <img src="/images/minus-hover.png" alt="minus-hover" />
+                        </button>
+
+                        <span>{sel.qty}</span>
+                        <button onClick={() => increaseQty(idx)}>
+                          <img src="/images/plus.png" alt="plus" />
+                          <img src="/images/plus-hover.png" alt="plus-hover" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))
