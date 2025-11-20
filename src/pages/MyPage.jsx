@@ -8,9 +8,10 @@ import DaumPostcode from "react-daum-postcode";
 
 const MyPage = () => {
   const { user, onLogout } = useAuthStore();
-  const {isPostOpen, setIsPostOpen, formData, setFormData,handleComplete} = useLogJoinStore();
+  const { isPostOpen, setIsPostOpen, handleComplete, joinForm,
+    setJoinForm, } = useLogJoinStore();
   const navigate = useNavigate();
-  
+
 
 
   const [activeTab, setActiveTab] = useState(0);
@@ -27,7 +28,7 @@ const MyPage = () => {
 
           <h2>My Page</h2>
 
-    
+
           <div className="name-box box-style">
             <p>{user?.email} 님, 안녕하세요</p>
             <button onClick={handleLogout}><span>로그아웃</span></button>
@@ -35,7 +36,7 @@ const MyPage = () => {
 
           <div className="bottom-box">
 
-      
+
             <div className="left-box">
 
               <div className="level-box box-style">
@@ -70,12 +71,15 @@ const MyPage = () => {
 
             </div>
 
-    
+
             <div className="right-box">
 
-            
+
               <div className="deliver-box box-style">
+                <div className="del">
                 <h3>최근 주문 내역</h3>
+                <p> <Link to="/orderdetail">자세히 보기</Link></p>
+                </div>
                 <div className="Sequence-wrap">
                   <div className="Sequence active"><p>1</p><p>주문접수</p></div>
                   <img src="/images/mypage-Arrow.png" alt="arrow" />
@@ -89,51 +93,51 @@ const MyPage = () => {
                 </div>
               </div>
 
-             
+
               <div className="info-box box-style">
                 <h3>나의 정보관리</h3>
 
                 <ul className='info-menu'>
-                  <li 
-                    className={activeTab === 0 ? "active" : ""} 
+                  <li
+                    className={activeTab === 0 ? "active" : ""}
                     onClick={() => setActiveTab(0)}
                   >
                     회원정보 수정 <span>●</span>
                   </li>
 
-                  <li 
-                    className={activeTab === 1 ? "active" : ""} 
+                  <li
+                    className={activeTab === 1 ? "active" : ""}
                     onClick={() => setActiveTab(1)}
                   >
                     배송 주소록 관리 <span>●</span>
                   </li>
 
-                  <li 
-                    className={activeTab === 2 ? "active" : ""} 
+                  <li
+                    className={activeTab === 2 ? "active" : ""}
                     onClick={() => setActiveTab(2)}
                   >
                     게시물 관리 <span>●</span>
                   </li>
                 </ul>
 
- 
+
                 <div className={`tab tab1 ${activeTab === 0 ? "active" : ""}`}>
                   <div className="input-wrap">
                     <div className="input">
                       <p>이메일 주소</p>
-                      <input type="email" placeholder='abcd@naver.com' />
+                      <input type="email" placeholder={user?.email} />
                     </div>
                     <div className="input">
                       <p>비밀번호</p>
-                      <input type="password" placeholder='********' />
+                      <input type="password" placeholder={user?.password} />
                     </div>
                     <div className="input">
                       <p>비밀번호 확인</p>
-                      <input type="password" placeholder='********' />
+                      <input type="password" placeholder={user?.password} />
                     </div>
                     <div className="input">
                       <p>휴대폰번호</p>
-                      <input type="text" placeholder='010-1234-5678' />
+                      <input type="text" placeholder={user?.phone} />
                     </div>
 
                     <button className='del-btn'>탈퇴하기</button>
@@ -149,20 +153,20 @@ const MyPage = () => {
                     <div className="input12">
                       <div className="addnum-box">
                         <input type="text" placeholder='우편번호'
-                        value={formData.addnum} 
-                        readOnly/>
-                        <button onClick={()=>setIsPostOpen(true)}>주소찾기</button>
+                          value={joinForm.addnum}
+                          readOnly />
+                        <button onClick={() => setIsPostOpen(true)}>주소찾기</button>
                       </div>
-                      <input type="text" placeholder='기본주소' value={formData.address}/>
-                      <input type="text" placeholder='상세주소' value={formData.add}
-                      onChange={(e)=>setFormData({...formData, add:e.target.value})} />
+                      <input type="text" placeholder='기본주소' value={joinForm.address} />
+                      <input type="text" placeholder='상세주소' value={joinForm.addnum}
+                        onChange={(e) => setJoinForm({ ...joinForm, add: e.target.value })} />
                     </div>
                   </div>
 
                   <button className='change-btn'>배송정보 수정</button>
                 </div>
 
-          
+
                 <div className={`tab tab3 ${activeTab === 2 ? "active" : ""}`}>
                   <div className="input-wrap">
                     <div className="input">
@@ -183,21 +187,21 @@ const MyPage = () => {
 
           </div>
           {isPostOpen && (
-        <div className="post_wrapper">
-          <div
-            className="post_bg"
-            onClick={() => setIsPostOpen(false)}
-          ></div>
-          <div className="post_modal">
-            <DaumPostcode onComplete={handleComplete} />
-            <button onClick={() => setIsPostOpen(false)}>닫기</button>
-          </div>
-        </div>
-      )}
-    </div>
+            <div className="post_wrapper">
+              <div
+                className="post_bg"
+                onClick={() => setIsPostOpen(false)}
+              ></div>
+              <div className="post_modal">
+                <DaumPostcode onComplete={handleComplete} />
+                <button onClick={() => setIsPostOpen(false)}>닫기</button>
+              </div>
+            </div>
+          )}
         </div>
       </div>
-   
+    </div>
+
   );
 };
 
