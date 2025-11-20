@@ -1,27 +1,19 @@
-import React, { useState } from 'react'
-import './scss/Payment.scss'
+import React from 'react';
+import { useProductStore } from '../store/ProductStore';
+import './scss/Payment.scss';
+
 
 const Payment = () => {
 
-  const [isReqOpen, setIsReqeqOpen] = useState('');
-  const [isCustomInput, setIsCustomInput] = useState(false);
-  const [reqText, setReqText] = useState('');
-  const reqOptions = [
-    { id: 'opt1', label: '부재 시 경비실에 맡겨주세요', type: 'preset' },
-    { id: 'opt2', label: '부재 시 택배함에 놓아주세요', type: 'preset' },
-    { id: 'opt3', label: '배송 전에 연락 부탁드립니다', type: 'preset' },
-  ];
-
-
-  const [selectedMethod, setSelectedMethod] = useState('');
-  const [selectedMethodBtn, setSelectedMethodBtn] = useState(null);
-  const simpleOpt = [
-    { id: 'naver', label: '네이버페이', img: '/images/pay-naver.png', activeimg: '/images/pay-naver-active.png' },
-    { id: 'kakao', label: '카카오페이', img: '/images/pay-kakao.png', activeimg: '/images/pay-kakao-active.png' },
-    { id: 'samsung', label: '삼성페이', img: '/images/pay-samsung.png', activeimg: '/images/pay-samsung-active.png' },
-    { id: 'toss', label: '토스페이', img: '/images/pay-toss.png', activeimg: '/images/pay-toss-active.png' }
-  ]
-
+  const {
+    isReqOpen, setIsReqOpen,
+    isCustomInput, setIsCustomInput,
+    reqText, setReqText,
+    reqOptions,
+    selectedMethod, setSelectedMethod,
+    selectedMethodBtn, setSelectedMethodBtn,
+    simpleOpt
+  } = useProductStore();
 
   return (
     <div className='checkout-wrap'>
@@ -29,8 +21,10 @@ const Payment = () => {
         <h3 className='title'>CHECKOUT</h3>
         <div className="content-wrap">
 
+
           <div className="left">
 
+            {/* 사용자 정보 */}
             <div className="left-con1 user-info">
               <div className="user-name">
                 <p>홍길동</p>
@@ -42,11 +36,12 @@ const Payment = () => {
               </div>
             </div>
 
+            {/* 요청사항 */}
             <div className="left-con2 req">
               <p>요청사항</p>
 
               <div className='req-list-wrap'
-                onClick={() => setIsReqeqOpen(prev => !prev)}>
+                onClick={() => setIsReqOpen()}>
                 <div className="req-list">
                   {isCustomInput ? (
                     <input
@@ -74,12 +69,13 @@ const Payment = () => {
 
                   {reqOptions.map((opt) => (
                     <div
+                      key={opt.id}
                       className={`req-item ${reqText === opt.label ? 'selected' : ''}`}
                       onClick={(e) => {
                         e.stopPropagation();
                         setIsCustomInput(false);
                         setReqText(opt.label);
-                        setIsReqeqOpen(false);
+                        setIsReqOpen();
                       }}>
                       {opt.label}
                     </div>
@@ -90,54 +86,32 @@ const Payment = () => {
                       e.stopPropagation();
                       setIsCustomInput(true);
                       setReqText('');
-                      setIsReqeqOpen(false);
+                      setIsReqOpen();
                     }}>
                     요청사항 직접 입력하기
                   </div>
                 </div>
-
               )}
-
-
             </div>
 
+            {/* 주문상품 */}
             <div className="left-con3 order">
               <p>주문상품</p>
 
-              <div className='order-item'>
-                <div className="item-img"><img src="/images/sofa-1.png" alt="" /></div>
-                <div className="item-info">
-                  <p className="item-title">asdfsadf</p>
-                  <p className="item-option">asdfsadf</p>
-                  <p className="item-price">asdfsadf</p>
+              {[1, 2, 3, 4].map((i) => (
+                <div className='order-item' key={i}>
+                  <div className="item-img"><img src="/images/sofa-1.png" alt="" /></div>
+                  <div className="item-info">
+                    <p className="item-title">asdfsadf</p>
+                    <p className="item-option">asdfsadf</p>
+                    <p className="item-price">asdfsadf</p>
+                  </div>
                 </div>
-              </div>
-              <div className='order-item'>
-                <div className="item-img"><img src="/images/sofa-1.png" alt="" /></div>
-                <div className="item-info">
-                  <p className="item-title">asdfsadf</p>
-                  <p className="item-option">asdfsadf</p>
-                  <p className="item-price">asdfsadf</p>
-                </div>
-              </div>
-              <div className='order-item'>
-                <div className="item-img"><img src="/images/sofa-1.png" alt="" /></div>
-                <div className="item-info">
-                  <p className="item-title">asdfsadf</p>
-                  <p className="item-option">asdfsadf</p>
-                  <p className="item-price">asdfsadf</p>
-                </div>
-              </div>
-              <div className='order-item'>
-                <div className="item-img"><img src="/images/sofa-1.png" alt="" /></div>
-                <div className="item-info">
-                  <p className="item-title">asdfsadf</p>
-                  <p className="item-option">asdfsadf</p>
-                  <p className="item-price">asdfsadf</p>
-                </div>
-              </div>
+              ))}
+
             </div>
 
+            {/* 적립금 */}
             <div className="left-con4 acc">
               <p>적립금 사용</p>
               <div className="use-acc">
@@ -146,17 +120,22 @@ const Payment = () => {
               </div>
             </div>
 
+            {/* 쿠폰 */}
             <div className="left-con5 cupon">
               <p>쿠폰 사용</p>
               <button>쿠폰사용</button>
             </div>
 
+            {/* 결제수단 */}
             <div className="left-con6 payment">
               <p>결제수단</p>
               <form>
+                {/* 간편결제 */}
                 <label>
-                  <input type="radio" name='method' value='simple' onChange={() => setSelectedMethod('simple')} />
+                  <input type="radio" name='method' value='simple'
+                    onChange={() => setSelectedMethod('simple')} />
                   간편결제
+
                   <div className={`selected-method ${selectedMethod === 'simple' ? 'active' : ''}`}>
                     {simpleOpt.map((btn) => (
                       <button
@@ -173,16 +152,23 @@ const Payment = () => {
                     ))}
                   </div>
                 </label>
+
+                {/* 일반결제 */}
                 <label>
-                  <input type="radio" name='method' value='general' onChange={() => setSelectedMethod('general')} />
+                  <input type="radio" name='method' value='general'
+                    onChange={() => setSelectedMethod('general')} />
                   일반결제
+
                   <div className={`selected-method ${selectedMethod === 'general' ? 'active' : ''}`}>
                     {['무통장 입금', '카드결제', '가상계좌', '실시간 입금'].map((btn) => (
                       <button
                         type='button'
                         key={btn}
                         className={selectedMethodBtn === btn ? 'active' : ''}
-                        onClick={() => setSelectedMethodBtn(btn)}>{btn}</button>
+                        onClick={() => setSelectedMethodBtn(btn)}
+                      >
+                        {btn}
+                      </button>
                     ))}
                   </div>
                 </label>
@@ -191,7 +177,7 @@ const Payment = () => {
           </div>
 
 
-
+          {/* ------------------- RIGHT ------------------- */}
           <div className="right">
             <div className="total-wrap">
               <div className="total-content">
@@ -212,11 +198,12 @@ const Payment = () => {
               </div>
             </div>
           </div>
+
         </div>
       </div>
 
     </div>
-  )
-}
+  );
+};
 
 export default Payment;
