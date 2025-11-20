@@ -74,8 +74,8 @@ function App() {
         <Route path="/community" element={<Community />} />
         <Route path="/community/customer" element={<Customer/>}/>
        
-        {/* <Route path="/shoppingcart" element={<ShoppingCart />} /> */}
-        <Route path="/shoppingcart" element={<OrderDetail />} />
+        <Route path="/shoppingcart" element={<ShoppingCart />} />
+        {/* <Route path="/shoppingcart" element={<OrderDetail />} /> */}
 
         <Route path="/about/brand" element={<Brand/>}/>
         <Route path="/about" element={<About/>}/>
