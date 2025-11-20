@@ -98,9 +98,10 @@ const ShoppingCart = () => {
         <div className='shopping-cart-wrap'>
             <div className="inner">
                 <h3 className='title'>SHOPPING CART</h3>
-                <div className="content-wrap">
-                    <div className="cart-list">
 
+                <div className="content-wrap">
+
+                    <div className="cart-list">
                         <div className="choose-del-wrap">
                             <input
                                 type="checkbox"
@@ -171,6 +172,7 @@ const ShoppingCart = () => {
                             <button className='pay-btn'><span>결제하기</span></button>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div >
