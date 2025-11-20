@@ -101,7 +101,7 @@ export const useProductStore = create(persist(
       item.sheet?.title === product.sheet?.title &&
       item.size?.id === product.size?.id &&
       item.color?.id === product.color?.id &&
-      item.add?.id === product.add?.id
+      item.add?.id === product.add?.id 
     );
 
     let updateCart;
@@ -116,7 +116,7 @@ export const useProductStore = create(persist(
           : item
       );
     } else {
-      updateCart = [...cart, { ...product }];
+      updateCart = [...cart, { ...product,chkeck: false }];
     }
 
 
@@ -235,5 +235,54 @@ export const useProductStore = create(persist(
     { id: 'toss',    label: '토스페이',   img: '/images/pay-toss.png', activeimg: '/images/pay-toss-active.png' },
   ],
 
+
+  //쿠폰을 저장할 변수
+  coupons:[
+    {
+      id:"Welcome",
+      text:"Welcome 신규 회원 축하 쿠폰",
+      type: "number",
+      price: 10000
+    }
+  ],
+
+  //
+  finalPrice: 0,
+  //선택된 쿠폰체크
+  selectedCoupon:null,
+   selectedCoupon: null,
+        onSelectCoupon: (coupon) => set({ selectedCoupon: coupon }),
+        onFinalPrice: () => {
+            const { totalPrice, selectedCoupon } = get();
+            let final = totalPrice;
+            if (selectedCoupon) {
+                final =(totalPrice - selectedCoupon.price)
+            }
+            set({
+                finalPrice: final
+            })
+        },
+        
+  //주문하기
+  onAddOrder: () =>{
+    const {cartItems, orderList, finalPrice} =get()
+
+    const newOrder = {
+      id: new Date().toString(),
+      date: new Date().toLocaleString(),
+      items:[...cartItems],
+      totalPrice:finalPrice,
+      status:"결제완료"
+    }
+    set({
+      orderList: [...orderList, newOrder],
+      selectedCoupon: null
+    })
+  }
+
+
+
 }))
+
+
 )
