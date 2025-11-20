@@ -42,7 +42,7 @@ const ShopDetailBottomReview = () => {
     reviewList.forEach((_, idx) => {
       const el = boxRefs.current[idx];
       if (!el) return;
-      overflowList[idx] = el.scrollHeight > 360;
+      overflowList[idx] = el.scrollHeight > 246;
     });
     setOverflowList([...overflowList]);
   }, [product]);
@@ -64,11 +64,11 @@ const ShopDetailBottomReview = () => {
 
     requestAnimationFrame(() => {
       if (open) {
-        item.style.height = itemStart + (boxFull - boxStart) + 70 + 'px';
+        item.style.height = itemStart + (boxFull - boxStart) + 40 + 'px';
         box.style.height = boxFull + 'px';
       } else {
         item.style.height = '320px';
-        box.style.height = '236px';
+        box.style.height = '246px';
       }
     });
   };
@@ -134,7 +134,7 @@ const ShopDetailBottomReview = () => {
                     <div
                       className="rev-box"
                       ref={(el) => (boxRefs.current[index] = el)}
-                      style={{ height: openList[index] ? "auto" : "236px" }}
+                      style={{ height: openList[index] ? "auto" : "246px" }}
                     >
                       <pre>{rev.text}</pre>
                     </div>
