@@ -103,7 +103,7 @@ export default function LogJoin() {
       <div className={cardClass}>
         <div className="slider-wrapper">
 
-          {/* ---------------- 로그인 ---------------- */}
+          {/* 로그인 */}
           <div className="login-area">
             <div className="login-box">
               <h2>LOGIN</h2>
@@ -146,7 +146,7 @@ export default function LogJoin() {
             </div>
           </div>
 
-          {/* ---------------- 이미지 ---------------- */}
+          {/* 이미지 */}
           <div className={`image-area ${joinComplete ? "hide" : ""}`}>
             <img src="/images/log-img2.png" alt="login visual" />
             <div className="text-overlay">
@@ -157,7 +157,7 @@ export default function LogJoin() {
             </div>
           </div>
 
-          {/* ---------------- 약관 + 회원가입 ---------------- */}
+         {/* 약관 회원가입 */}
           <div className={`term-join-area ${joinComplete ? "hide" : ""}` }>
             <div className={`terms-wrap ${panel === "terms" ? "show" : ""}}`}>
               <div className={`right-side ${showJoinForm ? "show-join" : ""}`}>
@@ -340,7 +340,7 @@ export default function LogJoin() {
         </div>
       </div>
 
-      {/* 주소검색 모달 */}
+      {/* 주소검색 */}
       {isPostOpen && (
         <div className="post_wrapper">
           <div className="post_bg" onClick={() => setIsPostOpen(false)} />
