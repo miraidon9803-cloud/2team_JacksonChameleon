@@ -76,7 +76,10 @@ const MyPage = () => {
 
 
               <div className="deliver-box box-style">
+                <div className="del">
                 <h3>최근 주문 내역</h3>
+                <p> <Link to="/orderdetail">자세히 보기</Link></p>
+                </div>
                 <div className="Sequence-wrap">
                   <div className="Sequence active"><p>1</p><p>주문접수</p></div>
                   <img src="/images/mypage-Arrow.png" alt="arrow" />

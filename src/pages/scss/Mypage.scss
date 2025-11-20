@@ -159,11 +159,20 @@
 
                 .right-box {
                     width: 100%;
+                    
 
                     .deliver-box {
                         height: 18rem;
                         padding: 2.4rem;
                         margin-bottom: 2.4rem;
+
+                        .del{
+                            @include g.myTitle16();
+                            color:g.$text4;
+                            display: flex;
+                            justify-content: space-between;
+                            text-decoration: underline;
+                        }
 
                         .Sequence-wrap {
                             width: 100%;
