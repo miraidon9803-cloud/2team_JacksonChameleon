@@ -117,7 +117,11 @@ export const useProductStore = create(
               : item
           );
         } else {
-          updateCart = [...cart, { ...product }];
+          updateCart = [...cart, {
+            ...product,
+            checked: false,
+            cartId: `${product.id}-${product.sheet?.title}-${product.size?.id}-${product.color?.id}-${product.add?.id || "none"}`
+          }];
         }
 
 
@@ -137,6 +141,18 @@ export const useProductStore = create(
           cartCount: updateCart.length,
           // totalPrice: total
         });
+      },
+
+      onCheckCart: (cartId) => {
+        const carts = get().cartItems;
+
+        //체크박스 토글
+        const updateCart = carts.map((cart) =>
+          cart.cartId === cartId ? { ...cart, checked: !cart.checked } : cart
+        );
+
+        set({ cartItems: updateCart });
+        // console.log(updateCart);
       },
 
       //장바구니삭제
