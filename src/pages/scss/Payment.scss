@@ -1,23 +1,24 @@
 @use '../../App.scss' as g;
 
-input {
-    font-family: 'pretendard';
-}
-
-button {
-    background: g.$text10;
-    border: 1px solid g.$text8;
-    outline: none;
-    border-radius: 4px;
-
-    &:hover {
-        background: g.$text6;
-        border: 1px solid g.$text6;
-        color: g.$text10;
-    }
-}
 
 .checkout-wrap {
+    input {
+        font-family: 'pretendard';
+    }
+
+    button {
+        background: g.$text10;
+        border: 1px solid g.$text8;
+        outline: none;
+        border-radius: 4px;
+
+        &:hover {
+            background: g.$text6;
+            border: 1px solid g.$text6;
+            color: g.$text10;
+        }
+    }
+
     padding:120px 0;
     margin:0 2%;
 
@@ -33,7 +34,7 @@ button {
             display: flex;
 
             .left {
-                flex: 2.125;
+                width:68%;
                 background: g.$BG;
                 border-radius: 8px 0 0 8px;
 
@@ -267,15 +268,15 @@ button {
             }
 
             .right {
-                flex: 1;
+                width:32%;
+                height: auto;
                 background: g.$text9;
                 border-radius: 0 8px 8px 0;
+                padding:24px;
 
                 .total-wrap {
-
                     width: 100%;
                     height: auto;
-                    padding: 2.4rem;
                     background-color: g.$text9;
                     display: flex;
                     flex-direction: column;
