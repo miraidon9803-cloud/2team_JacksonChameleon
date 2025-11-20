@@ -3,6 +3,8 @@ import { useProductStore } from '../store/ProductStore';
 import './scss/Payment.scss';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
+import Coupon from '../components/Coupon';
+
 
 
 
@@ -15,15 +17,17 @@ const Payment = () => {
     reqOptions,
     selectedMethod, setSelectedMethod,
     selectedMethodBtn, setSelectedMethodBtn,
-    simpleOpt, cartItems, onAddOrder, orderList
+    simpleOpt, cartItems, onAddOrder, orderList,
+    finalPrice, onFinalPrice,
+    totalPrice, selectedCoupon
   } = useProductStore();
 
   const { user } = useAuthStore();
-
-  const [showPay, setShowPay] =useState(false);
+  const discountPrice = selectedCoupon ? selectedCoupon.price : 0;
+  const [showCoupon, setShowCoupon] = useState(false);
   const navigate = useNavigate();
-  const handlePayment = () => setShowPay(true);
-  const handleClosePopup = () => setShowPay(false);
+  const handleCoupon = () => setShowCoupon(true);
+  const handleCloseCoupon = () => setShowCoupon(false);
   const handleConfirm = (e) => {
     e.preventDefault();
     //장바구니 내용을 주문 내역에 저장
@@ -34,12 +38,17 @@ const Payment = () => {
     //마이페이지로 이동
     navigate("/userinfo")
   }
-   useEffect(()=>{
+  useEffect(() => {
+    onFinalPrice(); // 선택 변경 or 쿠폰 변경 시 실행
+  }, [selectedCoupon, cartItems]);
+
+  useEffect(() => {
     onAddOrder()
-   },[])
+  }, [])
   return (
     <div className='checkout-wrap'>
       <div className="inner">
+
         <h3 className='title'>CHECKOUT</h3>
         <div className="content-wrap">
 
@@ -53,7 +62,7 @@ const Payment = () => {
                 <button>배송지 변경</button>
               </div>
               <div className="address">
-                <p>{user?.address}</p>
+                <p>{user?.addnum} {user?.address} {user?.add}</p>
                 <p>{user?.phone}</p>
               </div>
             </div>
@@ -121,11 +130,13 @@ const Payment = () => {
               <p>주문상품</p>
               {orderList.map((i) => (
                 <div className='order-item' key={i.id}>
-                  <div className="item-img"><img src={i.size.img} alt="" /></div>
+                  <div className="item-img"><img src={i.size?.img} alt="" /></div>
                   <div className="item-info">
-                    <p className="item-title">{}</p>
-                    <p className="item-option">{}</p>
-                    <p className="item-price">{}</p>
+                    <p className="item-title">{i.title}</p>
+                    <p className="item-option">{i.sheet?.text} / {i.size?.sizename} / {i.color?.colorname}/ {i.add ? i.add.cushion : '선택안함'}</p>
+                    <p className="item-price">{((i.size?.price || 0) + (i.add?.price || 0)).toLocaleString("ko-KR")}원</p>
+
+
                   </div>
                 </div>
               ))}
@@ -144,8 +155,10 @@ const Payment = () => {
             {/* 쿠폰 */}
             <div className="left-con5 cupon">
               <p>쿠폰 사용</p>
-              <button>쿠폰사용</button>
+              <button onClick={handleCoupon}>쿠폰사용</button>
             </div>
+
+           
 
             {/* 결제수단 */}
             <div className="left-con6 payment">
@@ -204,15 +217,17 @@ const Payment = () => {
               <div className="total-content">
                 <h4>구매 금액</h4>
                 <ul>
-                  <li><span>상품금액</span><span>0000원</span></li>
-                  <li><span>할인 금액</span><span>143,000원</span></li>
-                  <li><span>적립금</span><span>7,672</span></li>
+                  <li><span>상품금액</span><span><p>{totalPrice.toLocaleString("ko-KR")}원</p></span></li>
+                  <li><span>할인 금액</span><span>{selectedCoupon
+                    ? `-${selectedCoupon.price.toLocaleString("ko-KR")}원`
+                    : "0원"}</span></li>
+                  <li><span>적립금</span><span></span></li>
                   <li><span>배송비</span><span>무료배송</span></li>
                 </ul>
 
                 <div className="total-price">
                   <span>총 구매 금액</span>
-                  <strong>000원</strong>
+                  <strong>{finalPrice.toLocaleString("ko-KR")}원</strong>
                 </div>
 
                 <button className='pay-btn'><span>결제하기</span></button>
@@ -221,8 +236,10 @@ const Payment = () => {
           </div>
 
         </div>
+         {showCoupon ? <Coupon
+              onClose={handleCloseCoupon} /> : ""}
       </div>
-
+                    
     </div>
   );
 };
