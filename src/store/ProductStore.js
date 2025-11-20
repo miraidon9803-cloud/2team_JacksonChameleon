@@ -201,7 +201,39 @@ export const useProductStore = create(persist(
       cartCount: updateCart.length,
       totalPrice: total
     })
-  }
+  },
+
+  isReqOpen: false,
+  setIsReqOpen: () =>
+  set((state) => ({
+    isReqOpen: !state.isReqOpen
+  })),
+
+  isCustomInput: false,
+  setIsCustomInput: (v) => set({ isCustomInput: v }),
+
+  reqText: '',
+  setReqText: (v) => set({ reqText: v }),
+
+  reqOptions: [
+    { id: 'opt1', label: '부재 시 경비실에 맡겨주세요', type: 'preset' },
+    { id: 'opt2', label: '부재 시 택배함에 놓아주세요', type: 'preset' },
+    { id: 'opt3', label: '배송 전에 연락 부탁드립니다', type: 'preset' },
+  ],
+
+
+  selectedMethod: '',
+  setSelectedMethod: (m) => set({ selectedMethod: m }),
+
+  selectedMethodBtn: null,
+  setSelectedMethodBtn: (btn) => set({ selectedMethodBtn: btn }),
+
+  simpleOpt: [
+    { id: 'naver',   label: '네이버페이', img: '/images/pay-naver.png', activeimg: '/images/pay-naver-active.png' },
+    { id: 'kakao',   label: '카카오페이', img: '/images/pay-kakao.png', activeimg: '/images/pay-kakao-active.png' },
+    { id: 'samsung', label: '삼성페이',   img: '/images/pay-samsung.png', activeimg: '/images/pay-samsung-active.png' },
+    { id: 'toss',    label: '토스페이',   img: '/images/pay-toss.png', activeimg: '/images/pay-toss-active.png' },
+  ],
 
 }))
 )
