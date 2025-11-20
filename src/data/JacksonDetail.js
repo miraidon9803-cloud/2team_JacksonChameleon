@@ -3,7 +3,8 @@ export const products = [
     id: 1,
     title: "Bolso Sofa",
     price: "1,056,000원",
-
+    sale: "0.2",
+    price_regular: "2,300,000원",
     size: [
       { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
       { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
