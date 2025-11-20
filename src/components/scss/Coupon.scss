@@ -1,0 +1,29 @@
+.coupon-wrap {
+  width: 58.8rem;
+
+  .inner {
+    margin: 0 auto;
+
+    .coupon-title {
+      width:54rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .coupon-list {
+      flex-direction: column;
+      align-items: center; 
+     
+      
+
+      .coupon-item {
+        width: 54rem;
+        height: 15.2rem;
+        border: 1px solid black;
+         margin-bottom: 10px;
+      }
+
+      input {}
+    }
+  }
+}
