@@ -1,13 +1,18 @@
 @use "../../App.scss" as cu;
 
 
-.customer {
+.customer-wrap {
+
+  
   // height: 940px;
   display: flex;
   justify-content: center;
   background-color: cu.$BG;
   position: relative;
   overflow: hidden;
+
+  body{overflow: hidden;}
+  
 
   .cus-background {
     height: 700px;
@@ -21,6 +26,9 @@
     z-index: 0;
     border-radius: 8px;
     margin-top: 100px;
+    pointer-events: none;
+    
+    
     
   }
 }
@@ -60,6 +68,9 @@
     justify-content: flex-start;
 
     &:hover {
+      
+      border: 1px solid cu.$text10;
+      background-color: cu.$text10;
       color: cu.$text1;
     }
 
@@ -75,8 +86,9 @@
   }
 }
 
+
 .chat-box {
-  height: 500px;
+  height: 400px;
   margin-top: 20px;
   border-radius: 8px;
   padding: 20px;
@@ -85,6 +97,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  pointer-events: auto !important; 
 }
 
 .chat-box {
@@ -115,6 +128,7 @@
 
 .message {
   display: flex;
+  align-items: center;
 
   &.user {
     justify-content: flex-end;
@@ -123,6 +137,14 @@
   &.bot {
     justify-content: flex-start;
   }
+
+  .user-time{
+    margin-right: 10px;
+  }
+.bot-time{
+  margin-left: 10px;
+}
+
 
   .bubble {
     max-width: 70%;
@@ -191,6 +213,7 @@
   opacity: 0;
   animation: slideUp 1s ease-out forwards;
   animation-delay: 3s;
+  margin-bottom: 120px;
 
   .input-box {
     flex: 1;
@@ -199,6 +222,7 @@
     background: cu.$text10;
     border-radius: 8px 0 0 8px;
     padding: 10px 14px;
+    
 
     .cus-link-img {
       cursor: pointer;
