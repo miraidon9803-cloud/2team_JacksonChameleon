@@ -8,9 +8,11 @@ pre {
 
 .bottom-review-wrap {
 
+    margin-bottom:120px;
+
     .inner {
         font-size: 1.4rem;
-        padding-top:0;
+        padding-top: 0;
 
         .total-wrap {
             width: 100%;
@@ -19,7 +21,7 @@ pre {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                margin-bottom:12px;
+                margin-bottom: 12px;
 
                 >p {
                     @include g.myTitle24($ta: left);
@@ -184,7 +186,11 @@ pre {
                                 display: flex;
                                 gap: 4px;
 
+
                                 img {
+                                    width: 22px;
+                                    aspect-ratio: 1;
+
                                     &.rotate {
                                         transform: rotate(180deg);
                                     }
@@ -203,6 +209,7 @@ pre {
 
                         &.open {
                             height: auto; // 이제 이게 작동함!
+
                         }
 
                         img {
