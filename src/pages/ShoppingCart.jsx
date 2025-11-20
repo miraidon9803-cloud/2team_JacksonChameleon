@@ -3,55 +3,50 @@ import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
 
 const ShoppingCart = () => {
-    const { cartItems, onRemoveCart, onItemPlus, onItemMinus } = useProductStore();
-
-    const [selectedItems, setSelectedItems] = useState([]);
+    const { cartItems, onRemoveCart, onItemPlus, onItemMinus, onCheckCart } = useProductStore();
     const [isAllSelected, setIsAllSelected] = useState(false);
 
 
     useEffect(() => {
         if (cartItems.length > 0) {
-            setIsAllSelected(selectedItems.length === cartItems.length);
+            const checkedItems = cartItems.filter(item => item.checked);
+            setIsAllSelected(checkedItems.length === cartItems.length);
         } else {
             setIsAllSelected(false)
         }
-    }, [selectedItems, cartItems]);
+    }, [cartItems]);
 
     //전체선택
     const handleSelectAll = () => {
-        if (isAllSelected) {
-            setSelectedItems([]);
-        } else {
-            setSelectedItems(cartItems.map(item => item.size?.id));
-        }
+        cartItems.forEach(item => {
+            if (item.checked !== !isAllSelected) {
+                onCheckCart(item.cartId);
+            }
+        })
     };
 
     //개별 체크
-    const handleSelectItem = (id) => {
-        if (selectedItems.includes(id)) {
-            setSelectedItems(selectedItems.filter(selected => selected !== id));
-        } else {
-            setSelectedItems([...selectedItems, id]);
-        }
+    const handleSelectItem = (cartId) => {
+        onCheckCart(cartId);
     }
 
     //선택삭제
     const handleDeleteSelected = () => {
-        if (selectedItems.length === 0) {
+        const checkedItems = cartItems.filter(item => item.checked);
+        if (checkedItems.length === 0) {
             alert("삭제할 상품을 선택해주세요");
             return;
         }
-        cartItems.filter(item => selectedItems.includes(item.size?.id))
-            .forEach(item => {
-                onRemoveCart(item);
-            });
-        setSelectedItems([]);
-    }
 
-    //선택괸 아이템 배열 구하기 
+        checkedItems.forEach(item => {
+            onRemoveCart(item);
+        });
+    };
+
+    //선택된 아이템 배열 구하기 
     const getSelectedItems = () => {
-        return cartItems.filter(item => selectedItems.includes(item.size?.id));
-    }
+        return cartItems.filter(item => item.checked);
+    };
 
     //한 아이템 가격
     const getItemTotal = (item) => {
@@ -81,8 +76,6 @@ const ShoppingCart = () => {
         return selected.reduce((sum, item) => {
             if (!item.sale) return sum;
 
-            // const sizePrice = item.size?.price || 0;
-            // const addPrice = item.add?.price || 0;
             const basePrice = getItemTotal(item)
 
             const saleRate = item.sale;
@@ -122,8 +115,8 @@ const ShoppingCart = () => {
                                     <div className="selected-wrap">
                                         <input
                                             type="checkbox"
-                                            checked={selectedItems.includes(item.size?.id)}
-                                            onChange={() => handleSelectItem(item.size?.id)}
+                                            checked={item.checked}
+                                            onChange={() => handleSelectItem(item.cartId)}
                                         />
                                         <button className='close-btn' onClick={() => onRemoveCart(item)}><img src="/images/close-icon.png" alt="삭제버튼" /></button>
                                     </div>
@@ -172,7 +165,7 @@ const ShoppingCart = () => {
                             <button className='pay-btn'><span>결제하기</span></button>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
         </div >
