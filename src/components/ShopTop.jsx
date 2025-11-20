@@ -14,9 +14,9 @@ const ShopTop = ({ category }) => {
 
     const [selectedCate, setselectedCate] = useState(getCurrentCate());
 
-    // useEffect(() => {
-    //     setselectedCate(getCurrentCate());
-    // }, [category, location.pathname]);
+    useEffect(() => {
+        setselectedCate(getCurrentCate());
+    }, [category]);
 
     const currentCate = ShopTopCate.find(cate => cate.name === selectedCate);
 
@@ -46,6 +46,7 @@ const ShopTop = ({ category }) => {
                                 <li key={id} className={selectedCate === cate.name ? "active" : ""} >
                                     <Link to={cate.name === 'All' ? '/shop' : `/shop/${cate.name}`} >
                                         {(cate.name)}
+                                        
                                     </Link>
                                 </li>
                             ))}
