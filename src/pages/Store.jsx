@@ -71,7 +71,6 @@ const Store = ({ moveToStore }) => {
                 onClick={() => {
                   toggleStore(index);
 
-                  // ✅ 지도 이동 기능 (lat/lon 있는 경우에만)
                   if (store.lat && store.lon && typeof moveToStore === "function") {
                     moveToStore(store.lat, store.lon);
                   }
