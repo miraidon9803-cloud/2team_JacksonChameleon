@@ -3,7 +3,7 @@ import { useProductStore } from '../store/ProductStore';
 import "./scss/OrderDetail.scss";
 
 const OrderDetail = () => {
-    const { cartItems, totalPrice } = useProductStore();
+    const { cartItems, totalPrice, orderList } = useProductStore();
 
     const getItemTotal = (item) => {
         const sizePrice = item.size?.price || 0;
@@ -21,25 +21,25 @@ const OrderDetail = () => {
                 <div className="order-bottom">
                     <div className="order-bottom-left">
                         <div className="order-date-wrap">
-                            <p className="order-date">2025-11-20 ({cartItems.length}건)</p>
+                            <p className="order-date">2025-11-20 ({orderList.length}건)</p>
                             <p>주문번호 20251120-12345678</p>
                         </div>
-                        {cartItems.length === 0 ? (
+                        {orderList.length === 0 ? (
                             <div className="empty-wrap">
                                 <p> 주문내역이 없습니다.</p>
                             </div>
                         ) : (
-                            cartItems.map((item, index) => (
+                            orderList.map((item, index) => (
 
                                 <div className="item-wrap" key={index}>
                                     <p className='order'>배송중</p>
 
                                     <div className="item-box">
-                                        <div className="item-img"><img src={item.size.img} alt={item.title} /></div>
+                                        <div className="item-img"><img src={item.size?.img} alt={item?.title} /></div>
 
                                         <div className="item-info">
-                                            <h4 className='item-title'>{item.title}</h4>
-                                            <p className='item-option'>{item.sheet.text} / {item.size.sizename} / {item.color.colorname} / {item.add ? item.add.cushion : '선택안함'} / {item.qty}
+                                            <h4 className='item-title'>{item?.title}</h4>
+                                            <p className='item-option'>{item.sheet?.text} / {item.size?.sizename} / {item.color?.colorname} / {item.add ? item.add?.cushion : '선택안함'} / {item.qty}
                                             </p>
                                             <p className="item-price">1,222,000원</p>
                                             <button className='btn-return'><span>반품신청</span></button>

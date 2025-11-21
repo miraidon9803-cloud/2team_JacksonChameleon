@@ -33,14 +33,14 @@ const Payment = () => {
   const extraDiscount = getItemSalePrice("ko-KR");   // 함수 결과
   const totalDiscount = couponDiscount + extraDiscount;
   const handleConfirm = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     //장바구니 내용을 주문 내역에 저장
     onAddOrder();
     //장바구니 비우기
-    onClearCart();
+    // onClearCart();
     alert("결제가 완료되었습니다");
     //마이페이지로 이동
-    navigate("/userinfo")
+    navigate("/mypage")
   }
   useEffect(() => {
     onFinalPrice(); // 선택 변경 or 쿠폰 변경 시 실행
@@ -234,7 +234,7 @@ const Payment = () => {
                   <strong>{finalPrice.toLocaleString("ko-KR")}원</strong>
                 </div>
 
-                <button className='pay-btn'><span>결제하기</span></button>
+                <button className='pay-btn' onClick={handleConfirm()}><span>결제하기</span></button>
               </div>
             </div>
           </div>
