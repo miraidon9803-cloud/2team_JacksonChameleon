@@ -107,12 +107,6 @@ export const useProductStore = create(
           }];
 
         }
-        
-
-
-
-
-        // alert('장바구니에 추가되었습니다!');
 
         // 총금액
         let total = 0;
@@ -130,9 +124,61 @@ export const useProductStore = create(
         });
       },
 
+      //장바구니 금액
+      //선택된 아이템 배열 구하기
+      getSelectedItems: () => {
+        const { cartItems } = get();
+        return cartItems.filter(item => item.checked);
+      },
+
+      //한 아이템 가격
+      getItemTotal: (item) => {
+        if (!item) return 0;
+
+        const sizePrice = item.size?.price || 0;
+        const addPrice = item.add?.price || 0;
+        return (sizePrice + addPrice) * item.qty;
+      },
+
+      //선택된 총 제품가격
+      getSelectedTotalPrice: () => {
+        const { getSelectedItems, getItemTotal } = get();
+        const selected = getSelectedItems();
+        if (selected.length === 0) return 0;
+
+        return selected.reduce((sum, item) => {
+          return sum + getItemTotal(item);
+        }, 0)
+      },
+
+      //선택된 제품 기준 할인된 금액
+      getItemSalePrice: () => {
+        const { getSelectedItems, getItemTotal } = get();
+        const selected = getSelectedItems();
+        if (selected.length === 0) return 0;
+
+        return selected.reduce((sum, item) => {
+          if (!item.sale) return sum;
+
+          const basePrice = getItemTotal(item)
+
+          const saleRate = item.sale;
+          const discount = basePrice * saleRate;
+
+          return sum + discount;
+        }, 0);
+      },
+
+      //적립금
+      getsavePoint: () =>{
+        const {getSelectedTotalPrice} = get();
+        const totalPrice = getSelectedTotalPrice();
+        return totalPrice* 0.001
+      },
+
       //옵션 변경하기
       selectedOptions: { sheetType: null, size: null, color: null, addOption: null },
-    
+
       onOptionChange: (cartId, newColor, newSize, newOption) => {
         let updatedCart = get().cartItems.map((item) => {
           if (item.cartId !== cartId) return item;
@@ -152,7 +198,7 @@ export const useProductStore = create(
         // 중복 옵션 병합
         const mergedCart = [];
         updatedCart.forEach((item) => {
-          const id= mergedCart.findIndex(
+          const id = mergedCart.findIndex(
             (m) =>
               m.id === item.id &&
               m.sheet?.title === item.sheet?.title &&
@@ -288,34 +334,50 @@ export const useProductStore = create(
           text: "Welcome 신규 회원 축하 쿠폰",
           type: "number",
           price: 10000,
-          status:"사용가능"
+          status: "사용가능"
         },
         {
           id: "2",
           text: "겨울맞이 이벤트 쿠폰",
           type: "number",
           price: 20000,
-          status:"사용가능"
+          status: "사용가능"
         },
-        
+
       ],
 
+      //쿠폰선택
+      selectedCoupon: null,     // 최종 적용된 쿠폰
+      tempCoupon: null,         // 팝업에서 임시 선택된 쿠폰
+
+      onSelectTempCoupon: (coupon) => set({ tempCoupon: coupon }),
+
+      applyCoupon: () =>
+        set((state) => ({
+          selectedCoupon: state.tempCoupon,
+        })),
+
+      cancelCoupon: () =>
+        set({
+          selectedCoupon: null,
+          tempCoupon: null,
+        }),
       //
       finalPrice: 0,
 
-       selectedCoupon: null,
-        onSelectCoupon: (coupon) => set({ selectedCoupon: coupon }),
+      selectedCoupon: null,
+      onSelectCoupon: (coupon) => set({ selectedCoupon: coupon }),
 
-        onFinalPrice: () => {
-            const { totalPrice, selectedCoupon,  } = get();
-            let final = totalPrice;
-            if (selectedCoupon) {
-                final = (totalPrice - selectedCoupon.price)
-            }
-            set({
-                finalPrice: final
-            })
-        },
+      onFinalPrice: () => {
+        const { totalPrice, selectedCoupon, } = get();
+        let final = totalPrice;
+        if (selectedCoupon) {
+          final = (totalPrice - selectedCoupon.price)
+        }
+        set({
+          finalPrice: final
+        })
+      },
 
 
       finPrice: () => {
@@ -337,7 +399,7 @@ export const useProductStore = create(
       onFinalPrice: () => {
         const { selectedCoupon, finPrice } = get();
 
-        const selectedTotal = finPrice(); 
+        const selectedTotal = finPrice();
 
         let final = selectedTotal;
 
