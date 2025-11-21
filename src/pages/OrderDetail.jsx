@@ -3,13 +3,13 @@ import { useProductStore } from '../store/ProductStore';
 import "./scss/OrderDetail.scss";
 
 const OrderDetail = () => {
-    const { cartItems, totalPrice, orderList } = useProductStore();
+    const { orderList, getItemTotal, getSelectedTotalPrice,
+        getItemSalePrice, getsavePoint } = useProductStore();
 
-    const getItemTotal = (item) => {
-        const sizePrice = item.size?.price || 0;
-        const addPrice = item.add?.price || 0;
-        return (sizePrice + addPrice) * item.qty;
-    };
+    const selectedTotal = getSelectedTotalPrice();
+    const saleTotal = getItemSalePrice();
+    const savePoint = getsavePoint();
+    const finalTotal = selectedTotal - saleTotal;
 
     return (
         <div className="order-detail-wrap">
@@ -63,16 +63,16 @@ const OrderDetail = () => {
                             <div className="pay-info">
                                 <h5>결제 정보</h5>
                                 <ul>
-                                    <li><span>상품금액</span><span>{totalPrice.toLocaleString()}원</span></li>
+                                    <li><span>상품금액</span><span>{selectedTotal.toLocaleString()}원</span></li>
                                     <li><span>할인 금액</span><span>143,000원</span></li>
-                                    <li><span>적립금</span><span>7,672</span></li>
+                                    <li><span>적립금</span><span>{savePoint.toLocaleString()}</span></li>
                                     <li><span>배송비</span><span>무료배송</span></li>
                                     <li><span>결제 수단</span><span>삼성페이</span></li>
                                 </ul>
                             </div>
                             <div className="total-price">
                                 <span>총 구매 금액</span>
-                                <strong>{totalPrice.toLocaleString()}원</strong>
+                                <strong>{finalTotal.toLocaleString()}원</strong>
                             </div>
                         </div>
                     </div>

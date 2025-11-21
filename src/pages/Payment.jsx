@@ -230,7 +230,7 @@ const Payment = () => {
                   <strong>{finalPrice.toLocaleString("ko-KR")}원</strong>
                 </div>
 
-                <button className='pay-btn' onClick={handleConfirm()}><span>결제하기</span></button>
+                <button className='pay-btn'><span>결제하기</span></button>
               </div>
             </div>
           </div>
