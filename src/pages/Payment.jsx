@@ -19,7 +19,8 @@ const Payment = () => {
     selectedMethodBtn, setSelectedMethodBtn,
     simpleOpt, cartItems, onAddOrder, orderList,
     finalPrice, onFinalPrice,
-    totalPrice, selectedCoupon
+    totalPrice, selectedCoupon,
+    getItemSalePrice
   } = useProductStore();
 
   const { user } = useAuthStore();
@@ -28,6 +29,9 @@ const Payment = () => {
   const navigate = useNavigate();
   const handleCoupon = () => setShowCoupon(true);
   const handleCloseCoupon = () => setShowCoupon(false);
+  const couponDiscount = selectedCoupon ? selectedCoupon.price : 0;
+  const extraDiscount = getItemSalePrice("ko-KR");   // 함수 결과
+  const totalDiscount = couponDiscount + extraDiscount;
   const handleConfirm = (e) => {
     // e.preventDefault();
     //장바구니 내용을 주문 내역에 저장
@@ -158,7 +162,7 @@ const Payment = () => {
               <button onClick={handleCoupon}>쿠폰사용</button>
             </div>
 
-           
+
 
             {/* 결제수단 */}
             <div className="left-con6 payment">
@@ -218,9 +222,9 @@ const Payment = () => {
                 <h4>구매 금액</h4>
                 <ul>
                   <li><span>상품금액</span><span><p>{totalPrice.toLocaleString("ko-KR")}원</p></span></li>
-                  <li><span>할인 금액</span><span>{selectedCoupon
-                    ? `-${selectedCoupon.price.toLocaleString("ko-KR")}원`
-                    : "0원"}</span></li>
+                  <li><span>할인 금액</span> {totalDiscount > 0
+                    ? `-${totalDiscount.toLocaleString("ko-KR")}원`
+                    : "0원"}</li>
                   <li><span>적립금</span><span></span></li>
                   <li><span>배송비</span><span>무료배송</span></li>
                 </ul>
@@ -236,10 +240,10 @@ const Payment = () => {
           </div>
 
         </div>
-         {showCoupon ? <Coupon
-              onClose={handleCloseCoupon} /> : ""}
+        {showCoupon ? <Coupon
+          onClose={handleCloseCoupon} /> : ""}
       </div>
-                    
+
     </div>
   );
 };
