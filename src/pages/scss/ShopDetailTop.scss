@@ -508,16 +508,18 @@
                             }
                         }
 
-                        .selected-box-bottom {
+                        .selected-box-bottom{
+                            display: flex;
+                            justify-content: space-between;
+                            white-space: nowrap;
+                        .button-wrap {
                             width: 100%;
-
                             display: flex;
                             align-items: flex-end;
                             justify-content: flex-end;
-
                             gap: 12px;
                         }
-
+                    }
                     }
                 }
 
