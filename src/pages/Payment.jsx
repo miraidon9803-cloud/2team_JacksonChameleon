@@ -14,12 +14,11 @@ const Payment = () => {
     isReqOpen, setIsReqOpen,
     isCustomInput, setIsCustomInput,
     reqText, setReqText,
-    reqOptions,
-    selectedMethod, setSelectedMethod,
+    reqOptions, selectedMethod, setSelectedMethod,
     selectedMethodBtn, setSelectedMethodBtn,
     simpleOpt, cartItems, onAddOrder, orderList,
-    finalPrice, onFinalPrice,
-    totalPrice, selectedCoupon, getsavePoint,
+    onFinalPrice, getSelectedTotalPrice,
+    selectedCoupon, getsavePoint, myPoint,
     getItemSalePrice, usedPoint, setUsedPoint, resetUsedPoint
   } = useProductStore();
 
@@ -29,23 +28,32 @@ const Payment = () => {
   const navigate = useNavigate();
   const handleCoupon = () => setShowCoupon(true);
   const handleCloseCoupon = () => setShowCoupon(false);
+  const saleTotal = getItemSalePrice();
+  const selectedTotal = getSelectedTotalPrice();
+  const savePoint = getsavePoint();
+  const finalTotal = selectedTotal - saleTotal;
   const couponDiscount = selectedCoupon ? selectedCoupon.price : 0;
+  const userPoint = getsavePoint("ko-KR");
+  const totalPoint = userPoint + saveMoney;
   const extraDiscount = getItemSalePrice("ko-KR");
   const totalDiscount = couponDiscount + extraDiscount;
-  const saviongPoint = getsavePoint("ko-KR");
   // const finalPayment = finalPrice - saviongPoint;
-  const finalPayment = finalPrice - usedPoint;
-  const userPoint = getsavePoint("ko-KR");
-  const handleConfirm = (e) => {
-    // e.preventDefault();
-    //장바구니 내용을 주문 내역에 저장
-    onAddOrder();
-    //장바구니 비우기
-    // onClearCart();
-    alert("결제가 완료되었습니다");
-    //마이페이지로 이동
-    navigate("/mypage")
-  }
+  const finalPayment = finalTotal - totalDiscount - usedPoint;
+  const [inputPoint, setInputPoint] = useState("");
+  
+ const handleConfirm = () => {
+   // 사용한 적립금
+  const used = usedPoint;   
+  // 이번 결제에서 적립될 포인트    
+  const saved = savePoint;       
+  // 1) 포인트 업데이트
+  updateMyPoint(used, saved);
+  // 2) 주문 처리
+  onAddOrder();
+  alert("결제가 완료되었습니다");
+  // 3) 페이지 이동
+  navigate("/mypage");
+};
   useEffect(() => {
     onFinalPrice(); // 선택 변경 or 쿠폰 변경 시 실행
   }, [selectedCoupon, cartItems]);
@@ -158,15 +166,40 @@ const Payment = () => {
                 <input
                   type="text"
                   placeholder="최소 1000포인트 이상 보유시 사용 가능"
-                  value={usedPoint === 0 ? "" : usedPoint}
+                  value={inputPoint}
                   onChange={(e) => {
-                    let raw = Number(e.target.value.replace(/[^0-9]/g, ""));
-                    if (raw > userPoint) raw = userPoint;
-                    setUsedPoint(raw);
+                    let raw = e.target.value.replace(/[^0-9]/g, "");
+                    setInputPoint(raw);   // 입력은 그대로 보인다
+                  }}
+                  onBlur={() => {
+                    let num = Number(inputPoint);
+
+
+                    if (!num) {
+                      setInputPoint("");
+                      setUsedPoint(0);
+                      return;
+                    }
+
+                    if (num > myPoint) num = myPoint;
+
+                    // 최소 1000 미만 → 사용 불가
+                    if (num < 1000) {
+                      setInputPoint("");    // 입력창 비우기
+                      setUsedPoint(0);      // 실제 사용 금액 0
+                      return;
+                    }
+
+                    // 최종 정상 입력
+                    setInputPoint(num.toString());
+                    setUsedPoint(num);
                   }}
                 />
-
-                <button onClick={resetUsedPoint}>사용취소</button>
+                <p>보유적립금:{myPoint}</p>
+                <button onClick={() => {
+                  resetUsedPoint();  
+                  setInputPoint(""); 
+                }}>사용취소</button>
               </div>
             </div>
 
@@ -235,13 +268,21 @@ const Payment = () => {
               <div className="total-content">
                 <h4>구매 금액</h4>
                 <ul>
-                  <li><span>상품금액</span><span><p>{totalPrice.toLocaleString("ko-KR")}원</p></span></li>
+                  <li><span>상품금액</span><span><p>{finalTotal.toLocaleString("ko-KR")}원</p></span></li>
                   <li><span>할인 금액</span> {totalDiscount > 0
                     ? `-${totalDiscount.toLocaleString("ko-KR")}원`
                     : "0원"}</li>
-                  <li><span>적립금</span><span>{usedPoint === 0 ? "" : usedPoint}</span></li>
+                  <li>
+                    <span>적립금사용</span>
+                    <span>{usedPoint === 0 ? "0원" : `${usedPoint.toLocaleString("ko-KR")}원`}</span>
+                  </li>
                   <li><span>배송비</span><span>무료배송</span></li>
                 </ul>
+
+                <h4>적립혜택</h4>
+                <p>예상적립금{savePoint}</p>
+
+
 
                 <div className="total-price">
                   <span>총 구매 금액</span>
