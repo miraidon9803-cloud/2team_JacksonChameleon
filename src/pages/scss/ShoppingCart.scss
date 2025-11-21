@@ -1,16 +1,23 @@
 @use "../../App.scss" as g;
 
 .shopping-cart-wrap {
-    padding: 120px 0;
+    // width: 100%;
+    // display: flex;
+    // justify-content: center;
+    padding: 8rem 0;
     margin: 0 2%;
 
-    @include g.myTitle16($ta: left);
-
-
     .inner {
+        display: flex;
+        flex-direction: column;
+        max-width: 1200px;
+        width: 100%;
+        margin: 0 auto;
+
         .title {
-            @include g.myTitle24($ta: left);
-            margin-bottom: 20px;
+            font-size: 2.4rem;
+            font-weight: 500;
+            margin: 2.4rem 0;
         }
 
         .check-box {
@@ -29,7 +36,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                
+
                 width: 22px;
                 height: 22px;
                 border: 1px solid g.$text6;
@@ -37,299 +44,254 @@
                 background: g.$text10;
             }
 
-            .icon{
-                width:14px;
-                height:14px;
-                opacity:0
+            .icon {
+                width: 14px;
+                height: 14px;
+                opacity: 0
             }
 
-            .fake::after{
-                content:'';
-                position:absolute;
-                left:0;
-                top:0;
-                width:22px;
-                height:22px;
+            .fake::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 22px;
+                height: 22px;
                 background-image: var(--check-img);
-                opacity:0
-
+                opacity: 0
             }
-            .real:checked + .fake .icon {
-                opacity:1;
+
+            .real:checked+.fake .icon {
+                opacity: 1;
             }
         }
+
 
         .content-wrap {
             display: flex;
 
             .cart-list {
-                width: 68%;
-                background: g.$BG;
+                flex: 1;
+                background: #f4f4f4;
                 border-radius: 8px 0 0 8px;
 
-                padding: 24px;
-
-                display: flex;
-                flex-direction: column;
 
                 .choose-del-wrap {
                     display: flex;
                     justify-content: space-between;
-                    align-items: center;
-
-                    margin-bottom: 12px;
-                    // margin: 24px;
-                    // padding-bottom: 10px;
+                    border-bottom: 1px solid g.$text8;
+                    margin: 24px 24px 0 24px;
+                    padding-bottom: 10px;
 
                     input {
-                        width: 22px;
-                        height: 22px;
-                        // border: 1px solid g.$text6;
-                        // border-radius: 8px;
+                        width: 24px;
+                        height: 24px;
+                        border: 1px solid g.$text6;
+                        border-radius: 8px;
                     }
 
                     button {
-                        width: 74px;
-                        height: 30px;
-
                         background: g.$text10;
                         border: 1px solid g.$text8;
-                        outline: none;
+                        padding: 4px 8px;
                         border-radius: 4px;
-
-                        &:hover {
-                            background: g.$text6;
-                            border: 1px solid g.$text6;
-                            color: g.$text10;
-                        }
+                        @include g.myTitle16();
                     }
                 }
 
+
                 .empty-wrap {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    @include g.myTitle16();
+                    p {
+                        @include g.myTitle16();
+                        line-height: 50px;
+                    }
                 }
 
-                .item-list {
-                    .item-wrap {
+                .item-wrap {
+                    position: relative;
+
+                    .selected-wrap {
+                        position: absolute;
                         width: 100%;
-                        padding: 24px 24px 24px 34px;
-
-                        position: relative;
-
+                        padding: 24px;
                         display: flex;
                         align-items: center;
+                        justify-content: space-between;
+                        margin: 0 0 10px 0;
 
-                        border-bottom: 1px solid g.$text8;
 
-                        &:first-of-type {
-                            border-top: 1px solid g.$text8;
+                        input {
+                            width: 24px;
+                            height: 24px;
+                            border: 1px solid g.$text6;
+                            border-radius: 8px;
                         }
 
-                        .selected-wrap {
-                            position: absolute;
-                            width: 100%;
-                            // padding: 0 24px;
-                            top: 20px;
-                            left: 0;
+                        .close-btn {
+                            background: none;
+                            border: none;
+                        }
+                    }
 
+                    .item-box {
+                        display: flex;
+                        gap: 35px;
+                        border-bottom: 1px solid g.$text8;
+                        margin: 0 24px 24px;
+                        align-items: center;
+
+                        .item-img {
+                            height: 180px;
+                            width: 180px;
+                            object-fit: contain;
                             display: flex;
                             align-items: center;
-                            justify-content: space-between;
-                            margin: 0 0 10px 0;
+                            justify-content: center;
 
-                            input {
-                                width: 22px;
-                                height: 22px;
-                                cursor: pointer;
-                                // border: 1px solid g.$text6;
-                                // border-radius: 8px;
+                            img {
+                                width: 100%;
+                                border-radius: 0.4rem;
+                            }
+                        }
+
+                        .item-info {
+                            width: 300px;
+
+                            .item-title {
+                                font-size: 1.6rem;
+                                font-weight: 500;
+                                margin-bottom: 16px;
                             }
 
-                            .close-btn {
+                            .item-option {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                color: g.$text1;
+                                margin-bottom: 4px;
+                            }
+
+                            .btn-option {
+                                font-size: 1.6rem;
+                                font-weight: 400;
+                                color: g.$text6;
                                 background: none;
                                 border: none;
+
+                                span {
+                                    border-bottom: 1px solid g.$text6;
+                                    margin: 1px 0;
+                                }
+
                             }
                         }
 
-                        .item-box {
-                            width: 100%;
+                        .count-price-wrap {
+                            text-align: right;
                             display: flex;
                             align-items: center;
+                            gap: 4.5rem;
+                            white-space: nowrap;
 
-                            .item-img {
-                                height: 180px;
-                                width: 180px;
-                                object-fit: contain;
+                            .count-wrap {
                                 display: flex;
+                                gap: 1rem;
                                 align-items: center;
-                                justify-content: center;
 
-                                img {
-                                    width: 100%;
-                                    border-radius: 0.4rem;
+
+                                span {
+                                    font-size: 1.6rem;
+                                    text-align: center;
+                                }
+
+                                button {
+                                    width: 24px;
+                                    height: 24px;
+                                    font-size: 2rem;
+                                    background: none;
+                                    border: none;
+                                    color: g.$text6;
                                 }
                             }
 
-                            .item-sel {
-                                width: 530px;
-
-                                display: flex;
-                                align-items: center;
-
-                                gap: 28px;
-
-                                .item-info {
-                                    margin-left: 12px;
-
-                                    width: 268px;
-
-                                    .item-title {
-                                        font-size: 1.6rem;
-                                        font-weight: 500;
-                                        margin-bottom: 16px;
-                                    }
-
-                                    .item-option {
-                                        font-size: 1.6rem;
-                                        font-weight: 400;
-                                        color: g.$text1;
-                                        margin-bottom: 4px;
-                                        word-break: keep-all;
-                                    }
-
-                                    .btn-option {
-                                        font-size: 1.6rem;
-                                        font-weight: 400;
-                                        color: g.$text6;
-                                        background: none;
-                                        border: none;
-
-                                        span {
-                                            border-bottom: 1px solid g.$text6;
-                                            margin: 1px 0;
-                                        }
-
-                                    }
-                                }
-
-                                .count-wrap {
-                                    width: 84px;
-                                    display: flex;
-                                    align-items: center;
-                                    justify-content: space-between;
-
-
-                                    span {
-                                        font-size: 1.6rem;
-                                        text-align: center;
-                                    }
-
-                                    button {
-                                        width: 24px;
-                                        height: 24px;
-                                        font-size: 2rem;
-                                        background: none;
-                                        border: none;
-                                        color: g.$text6;
-                                    }
-                                }
-
-                                .price {
-                                    text-align: right;
-                                    width: 108px;
-                                    font-weight: 400;
-                                    font-size: 1.6rem;
-                                }
+                            .price {
+                                font-weight: 400;
+                                font-size: 1.6rem;
                             }
                         }
+
+
                     }
                 }
             }
 
-            .total {
-                width: 32%;
+            .total-wrap {
+                width: 36rem;
                 height: auto;
-                background: g.$text9;
+                padding: 2.4rem;
+                background-color: g.$text9;
+                display: flex;
+                flex-direction: column;
+                position: relative;
                 border-radius: 0 8px 8px 0;
-                padding: 24px;
 
-                .total-wrap {
-                    width: 100%;
-                    height: auto;
-                    background-color: g.$text9;
-                    display: flex;
-                    flex-direction: column;
-                    border-radius: 0 8px 8px 0;
-
+                .total-content {
                     position: sticky;
                     top: 100px;
+                    // min-height: 1000px;
+                    height: auto;
+                    display: flex;
+                    flex-direction: column;
 
 
+                    h4 {
+                        font-size: 2rem;
+                        font-weight: 500;
+                        margin-bottom: 2rem;
+                    }
 
-                    .total-content {
-                        height: auto;
-                        display: flex;
-                        flex-direction: column;
-
-
-                        h4 {
-                            font-size: 2rem;
-                            font-weight: 500;
-                            margin-bottom: 2rem;
-                        }
-
-                        ul {
-                            li {
-                                display: flex;
-                                justify-content: space-between;
-                                padding: 8px 0;
-                                font-size: 1.6rem;
-                                font-weight: 400;
-                            }
-                        }
-
-                        .total-price {
+                    ul {
+                        li {
                             display: flex;
                             justify-content: space-between;
+                            padding: 8px 0;
                             font-size: 1.6rem;
                             font-weight: 400;
-                            margin-top: 46px;
-                            align-items: center;
-
-                            strong {
-                                font-size: 2.4rem;
-                                font-weight: 500;
-                            }
                         }
+                    }
+
+                    .total-price {
+                        display: flex;
+                        justify-content: space-between;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        margin-top: 46px;
+                        align-items: center;
+
+                        strong {
+                            font-size: 2.4rem;
+                            font-weight: 500;
+                        }
+                    }
 
                     .pay-btn {
-                         align-items: center;
+                        align-items: center;
                         height: 4.6rem;
                         border-radius: 4px;
                         border: none;
                         background-color: g.$text4;
                         margin-top: 20px;
-                          span {
+
+                        span {
                             display: block;
                             @include g.myTitle16();
                             align-items: center;
                             color: #fff
                         }
 
-                            &:hover {
-                                background-color: #000;
-                            }
-
-                        span {
-                            color: #fff;
-                            font-size: 1.6rem;
-                            font-weight: 400;
+                        &:hover {
+                            background-color: #000;
                         }
+
 
                     }
                 }

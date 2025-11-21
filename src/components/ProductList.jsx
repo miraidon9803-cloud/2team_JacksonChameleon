@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import jacksonProduct from "../data/jacksonproduct.js";
-import "./scss/product.scss";
+import "./scss/Product.scss";
 import "../components/scss/filterPopup.scss";
 import ShopTop from "./ShopTop.jsx";
 import { Link, useParams } from "react-router-dom";
