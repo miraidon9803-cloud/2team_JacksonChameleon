@@ -1,10 +1,15 @@
 import React from 'react'
-import ShopAll from './ShopAll'
+import ShopTop from '../components/ShopTop'
+import ProductList from '../components/ProductList'
+import { useParams } from 'react-router-dom'
 
 const Shop = () => {
+  const { category, subcate } = useParams();
+
   return (
     <div>
-      <ShopAll/>
+      <ShopTop key={category} category={category || "All"} />
+      <ProductList />
     </div>
   )
 }
