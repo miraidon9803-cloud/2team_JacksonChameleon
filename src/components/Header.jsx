@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import './scss/header.scss'
+import './scss/Header.scss'
 import { useProductStore } from '../store/ProductStore';
 import { useAuthStore } from '../store/authStore';
 
@@ -75,7 +75,7 @@ const Header = () => {
     const [height, setHeight] = useState(70);
     const headerRef = useRef(null);
     const submenuRef = useRef({});
-    const { openSearch } = useProductStore();
+    const { openSearch, cartCount } = useProductStore();
     const { user } = useAuthStore();
 
     useEffect(() => {
@@ -143,16 +143,39 @@ const Header = () => {
                 </h1>
 
                 <ul className="gnb-list">
+                    <li>
+                        <button onClick={openSearch} className="search-btn">
+                            <img src="/images/search-icon.png" alt="search" />
+                        </button>
+                    </li>
 
-                    <li><button onClick={openSearch} className="search-btn"><img src="/images/search-icon.png" alt="search" /></button></li>
+       
+                    {user ? (
+                        <>
+                            <li>
+                                <Link to="/mypage">
+                                    <img src="/images/user-icon.png" alt="mypage" />
+                                </Link>
+                            </li>
+                        </>
+                    ) : (
+                        <>
+                            <li>
+                                <Link to="/logjoin">
+                                    <img src="/images/user-icon.png" alt="login" />
+                                </Link>
+                            </li>
+                        </>
+                    )}
 
-                    <li><Link to="/logjoin"><img src="/images/user-icon.png" alt="user" /></Link></li>
-                    <li><Link to="/Shoppingcart"><img src="/images/shopping-bag-icon.png" alt="bag" /></Link></li>
-
+                    
+                    <li className='cart'>
+                        <Link to="/Shoppingcart">
+                            <img src="/images/shopping-bag-icon.png" alt="bag" />
+                            <span className="cart-num">{cartCount}</span>
+                        </Link>
+                    </li>
                 </ul>
-
-
-
             </div>
         </header >
     );

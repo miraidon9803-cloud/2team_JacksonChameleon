@@ -14,12 +14,12 @@ header {
 
     transition: All 0.3s ease-in-out;
 
-     button {
-                background: none;
-                border: none;
-                outline: none;
-                appearance: none; //브라우저 기본 스타일 제거
-            }
+    button {
+        background: none;
+        border: none;
+        outline: none;
+        appearance: none; //브라우저 기본 스타일 제거
+    }
 
     .header-wrap {
         max-width: 1200px;
@@ -117,13 +117,32 @@ header {
         }
     }
 
-    .gnb-list {
-        display: flex;
-        gap: 20px;
-        align-items: center;
+  .gnb-list {
+    display: flex;
+    gap: 20px;
+    align-items: center;
 
-        img {
-            height: 18px;
+    li.cart {
+        position: relative;
+
+        .cart-num {
+            position: absolute;
+            left: 12px;
+            top: 25px;
+            background: rgb(70, 69, 58);
+            color: #fff;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            font-size: 9px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
     }
+
+    img {
+        height: 18px;
+    }
+}
 }
