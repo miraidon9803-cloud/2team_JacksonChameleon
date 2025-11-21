@@ -59,10 +59,10 @@ function App() {
         <Route index element={<Main />} />
         <Route path="/main" element={<Main />} />
 
-        <Route path='/shop' element={<ShopAll />} />
-        <Route path="/shop/all" element={<ShopAll />} />
-        <Route path="/shop/:category" element={<ShopAll />} />
-        <Route path='/shop/:category/:subcate' element={<ShopAll />} />
+        <Route path='/shop' element={<Shop />} />
+        <Route path="/shop/all" element={<Shop />} />
+        <Route path="/shop/:category" element={<Shop />} />
+        <Route path='/shop/:category/:subcate' element={<Shop />} />
         {/* <Route path="/shop/chair" element={<ShopAll />} /> */}
         {/* <Route path="/shop/table" element={<ShopTable />} /> */}
         {/* <Route path="/shop/sofa" element={<ShopSofa />} /> */}

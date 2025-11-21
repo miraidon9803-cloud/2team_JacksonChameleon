@@ -12,8 +12,8 @@ const menus = [
             {
                 key: 'sofa', label: 'Sofas',
                 sub: [
-                    { key: "fabric", label: 'Sofas/Fabric' },
-                    { key: "leather", label: 'Sofas/Leather' }
+                    { key: "Fabric", label: 'Sofas/Fabric' },
+                    { key: "Leather", label: 'Sofas/Leather' }
                 ]
             },
             {
