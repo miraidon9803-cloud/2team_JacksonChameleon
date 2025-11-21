@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
 import { Link } from 'react-router-dom';
+import OptionChange from '../components/OptionChange';
 
 const ShoppingCart = () => {
     const { cartItems, totalPrice, onRemoveCart, onItemPlus, onItemMinus, onCheckCart } = useProductStore();
@@ -129,7 +130,8 @@ const ShoppingCart = () => {
                                             <h4 className='item-title'>{item.title}</h4>
                                             <p className='item-option'>{item.sheet.text} / {item.size.sizename} / {item.color.colorname} / {item.add ? item.add.cushion : '선택안함'}
                                             </p>
-                                            <button className='btn-option'><span>옵션변경</span></button>
+                                                  <button className='btn-option'><span>옵션변경</span></button>
+                                             <OptionChange item={item} />
                                         </div>
 
                                         <div className="count-price-wrap">

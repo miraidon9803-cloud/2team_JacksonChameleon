@@ -26,7 +26,8 @@ export const products = [
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 }
+      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -132,7 +133,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/doughsofa/dough-cushion.png", price: 209000 }
+      { id: 1, cushion: "쿠션", img: "/img/doughsofa/dough-cushion.png", price: 209000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -225,7 +227,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/inksofa/inkcushion.png", price: 165000 }
+      { id: 1, cushion: "쿠션", img: "/img/inksofa/inkcushion.png", price: 165000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -339,7 +342,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/pebblesofa/pebblecushion.png", price: 165000 }
+      { id: 1, cushion: "쿠션", img: "/img/pebblesofa/pebblecushion.png", price: 165000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -426,7 +430,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/tartesofa/tartecushion.png", price: 231000 }
+      { id: 1, cushion: "쿠션", img: "/img/tartesofa/tartecushion.png", price: 231000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
