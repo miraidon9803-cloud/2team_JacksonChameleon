@@ -18,7 +18,7 @@ html{
 }
 
 //타이틀
-@mixin myTitle32 ($fw:600, $ta:center, $color:$text1) {
+@mixin myTitle32 ($fw:500, $ta:center, $color:$text1) {
     font-size: 32px;
     font-weight: $fw;
     line-height: 140%;
@@ -27,7 +27,7 @@ html{
     letter-spacing: -0.8px
 }
 
-@mixin myTitle24 ($fw:600, $ta:center, $color:$text1) {
+@mixin myTitle24 ($fw:500, $ta:center, $color:$text1) {
     font-size: 24px;
     font-weight: $fw;
     line-height: 140%;

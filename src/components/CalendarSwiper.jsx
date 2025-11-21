@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import './scss/CalendarSwiper.scss'
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination } from "swiper/modules";
 
 const CalendarSwiper = () => {
     return (
@@ -14,21 +14,15 @@ const CalendarSwiper = () => {
                     소파클리닝 진행 프로세스
                 </div>
 
-                <div className="swiper-button-prev custom-prev"><img src="/images/Arrow-left.png" alt="left" /></div>
-                <div className="swiper-button-next custom-next"><img src="/images/Arrow-right.png" alt="right" /></div>
 
                 <Swiper
-                navigation={{
-                        nextEl: '.custom-next',
-                        prevEl: '.custom-prev',
-                    }}
-
+             
                     slidesPerView={2}
                     spaceBetween={30}
                     pagination={{
                         clickable: true,
                     }}
-                    modules={[Pagination,Navigation]}
+                    modules={[Pagination]}
 
                     className="mySwiper"
                 >

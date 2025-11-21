@@ -1,13 +1,13 @@
 import React from 'react'
 import './scss/PaymentDelivery.scss'
 
-const PaymentDelivery = ({onClose}) => {
+const PaymentDelivery = ({ onClose }) => {
     return (
         <div className='delivery-popup-wrap'>
             <div className="delivery-inner">
                 <div className="top">
                     <h2>배송지 변경</h2>
-                  <div onClick={() => onClose()}><img src="/images/close-grey.svg" alt="close" /></div>
+                    <div onClick={() => onClose()}><img src="/images/close-grey.svg" alt="close" /></div>
                 </div>
                 <div className="input-list">
 
@@ -34,11 +34,11 @@ const PaymentDelivery = ({onClose}) => {
                     </div>
 
                 </div>
-               
+
             </div>
-             <div className="btn">
-                    <button>적용하기</button>
-                </div>
+            <div className="btn">
+                <button>적용하기</button>
+            </div>
         </div>
     )
 }

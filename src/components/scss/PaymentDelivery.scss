@@ -102,6 +102,25 @@
           }
 
 
+
+
+      }
+
+      .btn{
+        button{
+            width:100%;
+            height:46px;
+            background:g.$text4;
+            border:none;
+            outline:none;
+            font-size:16px;
+
+            &:hover{
+                background:g.$text1;
+            }
+        }
+
+        
       }
 
   }

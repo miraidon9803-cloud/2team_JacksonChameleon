@@ -57,12 +57,12 @@
 
   button {
     background-color: cu.$text10;
-    border: 1px solid cu.$text10;
+    border: none;
     border-radius: 8px;
     padding: 24px;
     text-align: left;
     margin-top: 33px;
-    color: cu.$text6;
+    color: cu.$text1;
     height: 150px;
     display: flex;
     flex-direction: column;
@@ -70,8 +70,8 @@
 
     &:hover {
 
-      border: 1px solid cu.$text10;
-      background-color: cu.$text10;
+      // border: 2px solid cu.$text2;
+      background-color: cu.$text9;
       color: cu.$text1;
     }
 
@@ -129,7 +129,7 @@
 
 .message {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 
   &.user {
     justify-content: flex-end;
@@ -141,17 +141,19 @@
 
   .user-time {
     margin-right: 10px;
+    margin-bottom:4px;
   }
 
   .bot-time {
     margin-left: 10px;
+    margin-bottom:4px;
   }
 
 
   .bubble {
     max-width: 70%;
     padding: 10px 14px;
-    border-radius: 16px;
+    border-radius: 8px;
     font-size: 15px;
     line-height: 1.4;
     animation: fadeIn 0.25s ease;
