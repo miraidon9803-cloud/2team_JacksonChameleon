@@ -154,7 +154,7 @@ const jacksonproduct = [
     img_url: "/defaultimages/Flare_Table_Dining.png",
     img_hover: "/hoverimages/Flare_Table_Dining_hover.jpg",
     date: "202510",
-    subcate: "Dining",
+    subcate: "Side",
     product: "table",
     badges: "New"
   },

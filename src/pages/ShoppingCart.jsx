@@ -1,52 +1,58 @@
 import React, { useEffect, useState } from 'react';
 import "./scss/ShoppingCart.scss";
 import { useProductStore } from '../store/ProductStore';
+import { Link } from 'react-router-dom';
+import OptionChange from '../components/OptionChange';
 
 const ShoppingCart = () => {
-    const { cartItems, totalPrice, onRemoveCart, onItemPlus, onItemMinus } = useProductStore();
+    const { cartItems, totalPrice,
+        onRemoveCart, onItemPlus,
+        onItemMinus, onCheckCart,
+        getItemTotal, getSelectedTotalPrice,
+        getItemSalePrice, getsavePoint } = useProductStore();
 
-    const [selectedItems, setSelectedItems] = useState([]);
+    const selectedTotal = getSelectedTotalPrice();
+    const saleTotal = getItemSalePrice();
+    const savePoint = getsavePoint();
+    const finalTotal = selectedTotal - saleTotal;
+
     const [isAllSelected, setIsAllSelected] = useState(false);
 
     useEffect(() => {
         if (cartItems.length > 0) {
-            setIsAllSelected(selectedItems.length === cartItems.length);
+            const checkedItems = cartItems.filter(item => item.checked);
+            setIsAllSelected(checkedItems.length === cartItems.length);
+            console.log(totalPrice);
         } else {
             setIsAllSelected(false)
         }
-    }, [selectedItems, cartItems]);
+    }, [cartItems,]);
 
+    //전체선택
     const handleSelectAll = () => {
-        if (isAllSelected) {
-            setSelectedItems([]);
-        } else {
-            setSelectedItems(cartItems);
-        }
+        cartItems.forEach(item => {
+            if (item.checked !== !isAllSelected) {
+                onCheckCart(item.cartId);
+            }
+        })
     };
 
-    const handleSelectItem = (item) => {
-        if (selectedItems.includes(item)) {
-            setSelectedItems(selectedItems.filter(selected => selected !== item));
-        } else {
-            setSelectedItems([...selectedItems, item]);
-        }
+    //개별 체크
+    const handleSelectItem = (cartId) => {
+        onCheckCart(cartId);
     }
 
+    //선택삭제
     const handleDeleteSelected = () => {
-        if (selectedItems.length === 0) {
+        const checkedItems = cartItems.filter(item => item.checked);
+        if (checkedItems.length === 0) {
             alert("삭제할 상품을 선택해주세요");
             return;
         }
-        selectedItems.forEach(item => {
+
+        checkedItems.forEach(item => {
             onRemoveCart(item);
         });
-        setSelectedItems([]);
-    }
-
-    const getItemTotal = (item) => {
-        const sizePrice = item.size?.price || 0;
-        const addPrice = item.add?.price || 0;
-        return (sizePrice + addPrice) * item.qty;
     };
 
     return (
@@ -104,6 +110,13 @@ const ShoppingCart = () => {
                                                         </p>
                                                         <button className='btn-option'><span>옵션변경</span></button>
                                                     </div>
+                                        <div className="item-info">
+                                            <h4 className='item-title'>{item.title}</h4>
+                                            <p className='item-option'>{item.sheet.text} / {item.size.sizename} / {item.color.colorname} / {item.add ? item.add.cushion : '선택안함'}
+                                            </p>
+                                            <button className='btn-option'><span>옵션변경</span></button>
+                                            <OptionChange item={item} />
+                                        </div>
 
 
                                                     <div className="count-wrap">
@@ -137,16 +150,31 @@ const ShoppingCart = () => {
                                     <li><span>적립금</span><span>7,672</span></li>
                                     <li><span>배송비</span><span>무료배송</span></li>
                                 </ul>
+                    <div className="total-wrap">
+                        <div className="total-content">
+                            <h4>구매 금액</h4>
+                            <ul>
+                                <li><span>상품금액</span><span>{selectedTotal.toLocaleString()}원</span></li>
+                                <li><span>할인 금액</span><span>{saleTotal.toLocaleString()}</span></li>
+                                <li><span>적립금</span><span>{savePoint.toLocaleString()}원</span></li>
+                                <li><span>배송비</span><span>무료배송</span></li>
+                            </ul>
 
                                 <div className="total-price">
                                     <span>총 구매 금액</span>
                                     <strong>{totalPrice.toLocaleString()}원</strong>
                                 </div>
-
-                                <button className='pay-btn'><span>결제하기</span></button>
+                            <div className="total-price">
+                                <span>총 구매 금액</span>
+                                <strong>
+                                    {finalTotal.toLocaleString()}원
+                                </strong>
                             </div>
+
+                            <Link to="/payment"><div className='pay-btn'><span>결제하기</span></div></Link>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div >

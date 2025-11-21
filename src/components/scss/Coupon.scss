@@ -1,0 +1,130 @@
+@use "../../App.scss" as g;
+
+.coupon-wrap {
+  width: 58.8rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  .inner {
+    margin: 0 auto;
+
+    .coupon-title {
+      @include g.myTitle24();
+      width: 54rem;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+
+
+
+    .coupon-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+
+      .coupon-item {
+        width: 54rem;
+        height: 15.2rem;
+        border: 1px solid g.$text8;
+        margin-bottom: 10px;
+        padding: 12px 12px 12px 24px;
+
+        &.active {
+          border: 1px solid g.$text6;
+        }
+
+
+        .coupons {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+        }
+
+
+        .coupon-right {
+          align-items: center;
+          height: 100%;
+          display: flex;
+          justify-content: space-between;
+          cursor: pointer;
+
+
+
+          .coupon-title1 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .coupon-title2 {
+              display: flex;
+              flex-direction: column;
+
+            }
+
+            .disprice {
+              font-size: 20px;
+              font-weight: 500;
+              line-height: 140%;
+              letter-spacing: -0.5px;
+              text-align: left;
+              margin-bottom: 8px;
+
+            }
+
+            .coupon-text {
+              @include g.myTitle16();
+              text-align: left;
+              margin-bottom: 24px;
+            }
+
+            .coupon-date {
+              @include g.myTitle16();
+              text-align: left;
+              color: g.$text4;
+            }
+          }
+
+          .coupon-true {
+            display: flex;
+            align-items: center; // 텍스트 수직 가운데 정렬
+            justify-content: center; // 수평 가운데 정렬
+            padding: 0 36px;
+            border-left: 1px dashed g.$text6;
+            height: 100%;
+
+          }
+        }
+
+      }
+    }
+
+    .con-btn {
+      @include g.myTitle16();
+      color:g.$text10;
+      display: flex;
+      padding: 12px 0;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      align-self: stretch;
+      border-radius: 4px;
+      background: g.$text4;
+      width: 100%;
+    }
+    .coupon-close{
+      width: 24px;
+      height: 24px;
+      cursor: pointer;
+    }
+  }
+}

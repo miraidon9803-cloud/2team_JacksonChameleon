@@ -153,12 +153,12 @@ const MyPage = () => {
                     <div className="input12">
                       <div className="addnum-box">
                         <input type="text" placeholder='우편번호'
-                          value={joinForm.addnum}
+                          value={user?.addnum}
                           readOnly />
                         <button onClick={() => setIsPostOpen(true)}>주소찾기</button>
                       </div>
-                      <input type="text" placeholder='기본주소' value={joinForm.address} />
-                      <input type="text" placeholder='상세주소' value={joinForm.addnum}
+                      <input type="text" placeholder='기본주소' value={user?.address} />
+                      <input type="text" placeholder='상세주소' value={user?.addnum}
                         onChange={(e) => setJoinForm({ ...joinForm, add: e.target.value })} />
                     </div>
                   </div>
