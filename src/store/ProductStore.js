@@ -110,6 +110,8 @@ export const useProductStore = create(
 
 
 
+
+
         // alert('장바구니에 추가되었습니다!');
 
         // 총금액
@@ -235,46 +237,79 @@ export const useProductStore = create(
         { id: 'toss', label: '토스페이', img: '/images/pay-toss.png', activeimg: '/images/pay-toss-active.png' },
       ],
 
-
       //쿠폰을 저장할 변수
       coupons: [
         {
-          id: "Welcome",
+          id: "1",
           text: "Welcome 신규 회원 축하 쿠폰",
           type: "number",
-          price: 10000
-        }
+          price: 10000,
+          status:"사용가능"
+        },
+        {
+          id: "2",
+          text: "겨울맞이 이벤트 쿠폰",
+          type: "number",
+          price: 20000,
+          status:"사용가능"
+        },
+        
       ],
 
       //
       finalPrice: 0,
-      //선택된 쿠폰체크
-      selectedCoupon: null,
-      selectedCoupon: null,
-      onSelectCoupon: (coupon) => set({ selectedCoupon: coupon }),
-      onFinalPrice: () => {
-        const { totalPrice, selectedCoupon } = get();
-        let final = totalPrice;
-        if (selectedCoupon) {
-          final = (totalPrice - selectedCoupon.price)
-        }
-        set({
-          finalPrice: final
-        })
+
+       selectedCoupon: null,
+        onSelectCoupon: (coupon) => set({ selectedCoupon: coupon }),
+
+        onFinalPrice: () => {
+            const { totalPrice, selectedCoupon,  } = get();
+            let final = totalPrice;
+            if (selectedCoupon) {
+                final = (totalPrice - selectedCoupon.price)
+            }
+            set({
+                finalPrice: final
+            })
+        },
+
+
+      finPrice: () => {
+        const carts = get().cartItems;
+        const selected = carts.filter((item) => item.checked);
+
+        if (selected.length === 0) return 0;
+
+        return selected.reduce((sum, item) => {
+          const sizePrice = item.size?.price || 0;
+          const addPrice = item.add?.price || 0;
+          const itemTotal = (sizePrice + addPrice) * item.qty;
+          return sum + itemTotal;
+        }, 0);
       },
 
+
+
+      onFinalPrice: () => {
+        const { selectedCoupon, finPrice } = get();
+
+        const selectedTotal = finPrice(); 
+
+        let final = selectedTotal;
+
+        if (selectedCoupon) {
+          final = Math.max(0, selectedTotal - selectedCoupon.price);
+        }
+
+        set({ finalPrice: final });
+      },
+
+      //주문항목을 저장할 변수
       orderList: [],
+
       //주문하기
       onAddOrder: () => {
-        const { cartItems, orderList, finalPrice } = get()
-
-        // const newOrder = {
-        //   id: new Date().toString(),
-        //   date: new Date().toLocaleString(),
-        //   items: [...cartItems],
-        //   totalPrice: finalPrice,
-        //   status: "결제완료"
-        // }
+        const { cartItems, orderList } = get()
         const checkItems = cartItems.filter((item) => item.checked === true)
         set({
           orderList: checkItems,
@@ -283,10 +318,20 @@ export const useProductStore = create(
         })
         console.log("오더", checkItems, orderList);
         console.log("카트?", cartItems);
-      }
+      },
 
+      //주문완료
+      // onOrderFin: ()=>{
+      //      const { orderList, finalPrice } = get()
 
-
+      //   const newOrder = {
+      //     id: new Date().toString(),
+      //     date: new Date().toLocaleString(),
+      //     items: [...orderList],
+      //     totalPrice: finalPrice,
+      //     status: "결제완료"
+      //   }
+      // }
     }))
 
 

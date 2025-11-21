@@ -14,8 +14,8 @@ const Shop = () => {
 
   return (
     <div>
-      {/* <ShopTop  /> */}
-      <ShopAll  />
+      <ShopTop key={category} category={category || "All"} />
+      <ShopAll />
       {/* <ShopAll/> */}
     </div>
   )

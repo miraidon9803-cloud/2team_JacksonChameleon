@@ -21,20 +21,18 @@ const ShopAll = () => {
 
     let data = jacksonProduct;
 
+
+    //카테고리 필터링
     if (category && category !== "All") {
         data = data.filter(
-            (item) =>
-                item.product &&
-                item.product === category
+            (item) => item?.product === category
         );
     }
 
     //재질 필터링
     if (selectedSubCate && selectedSubCate !== "All") {
         data = data.filter(
-            (item) =>
-                item.subcate &&
-                item.subcate.toLowerCase() === selectedSubCate
+            (item) => item?.subcate.toLowerCase() === selectedSubCate
         );
     }
 
@@ -111,12 +109,12 @@ const ShopAll = () => {
 
     return (
         <div className="shop-wrap">
-            <ShopTop key={category} category={category || "All"} />
+            {/* <ShopTop key={category} category={category || "All"} /> */}
             <div className="inner">
                 <div className="product-filter">
                     <div className="filter-title">
                         <p className='product-sort'>
-                            {category && subcate ?
+                            { subcate ?
                                 `${upper(category)} > ${upper(subcate)}`
                                 : category
                                     ? upper(category)
