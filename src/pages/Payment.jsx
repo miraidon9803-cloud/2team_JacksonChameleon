@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import Coupon from '../components/Coupon';
 import PaymentDelivery from '../components/PaymentDelivery';
+import PaymentComplete from '../components/PaymentComplete';
 
 
 
@@ -33,6 +34,10 @@ const Payment = () => {
   const [ShowDelivery, setShowDelivery] = useState(false);
   const hanldeDelivery = () => setShowDelivery(true);
   const hanldeCloseDelivery = () => setShowDelivery(false);
+
+  const [showComplete, setshowComplete] = useState(false);
+  const handleComplete = () => setshowComplete(true);
+  const handleCloseComplete = () => setshowComplete(false);
 
   const saleTotal = getItemSalePrice();
   const selectedTotal = getSelectedTotalPrice();
@@ -295,7 +300,7 @@ const Payment = () => {
                   <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
 
-                <button className='pay-btn'><span>결제하기</span></button>
+                <button className='pay-btn' onClick={handleComplete}><span>결제하기</span></button>
               </div>
             </div>
           </div>
@@ -307,6 +312,10 @@ const Payment = () => {
 
         {ShowDelivery && (
           <PaymentDelivery onClose={hanldeCloseDelivery} />
+        )}
+
+        {showComplete &&(
+          <PaymentComplete onclose={handleCloseComplete}/>
         )}
 
         {(showCoupon || ShowDelivery) && (
