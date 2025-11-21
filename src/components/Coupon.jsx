@@ -2,8 +2,10 @@ import React from 'react'
 import { useProductStore } from '../store/ProductStore'
 import "./scss/Coupon.scss"
 
+
 const Coupon = ({ onClose }) => {
-  const { coupons, onSelectCoupon, selectedCoupon } = useProductStore();
+  const { coupons, cancelCoupon, tempCoupon,
+    onSelectTempCoupon, applyCoupon, } = useProductStore();
   console.log("coupons:", coupons);
 
   return (
@@ -16,17 +18,16 @@ const Coupon = ({ onClose }) => {
 
         <ul className="coupon-list">
           {coupons.map((c) => (
-            <li key={c.id} className={`coupon-item ${selectedCoupon?.id === c.id ? "active" : ""}`}>
+            <li key={c.id} className={`coupon-item ${tempCoupon?.id === c.id ? "active" : ""}`}>
               <label>
-                <input
-                  className='coupons'
+                <input className='coupons'
                   type="radio"
                   name="coupon"
-                  checked={selectedCoupon?.id === c.id}
-                  onChange={() => onSelectCoupon(c)}
+                  checked={tempCoupon?.id === c.id}
+                  onChange={() => onSelectTempCoupon(c)}
                 />
 
-                <div className="coupon-right active">
+                <div className="coupon-right">
                   <div className="coupon-title1">
                     <div className="coupon-text1">
                       <div className='coupon-text2'>
@@ -43,7 +44,25 @@ const Coupon = ({ onClose }) => {
           ))}
         </ul>
 
-        <button className='con-btn'>적용하기</button>
+        <button
+          className='con-btn'
+          onClick={() => {
+            applyCoupon();
+            onClose();
+          }}
+        >
+          적용하기
+        </button>
+
+        <button
+          className='cancel-btn'
+          onClick={() => {
+            cancelCoupon(); 
+            onClose();      
+          }}
+        >
+          적용취소
+        </button>
       </div>
     </div>
   )
