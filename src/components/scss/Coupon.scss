@@ -12,15 +12,20 @@
   border-radius: 10px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 
+  
+
   .inner {
     margin: 0 auto;
 
     .coupon-title {
-      @include g.myTitle24();
+      
       width: 54rem;
       display: flex;
       justify-content: space-between;
       margin-bottom: 24px;
+      h3{
+        @include g.myTitle24();
+      }
     }
 
 
@@ -29,13 +34,15 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      
 
 
       .coupon-item {
         width: 54rem;
         height: 15.2rem;
         border: 1px solid g.$text8;
-        margin-bottom: 10px;
+        border-radius: 4px;
+        margin-bottom: 12px;
         padding: 12px 12px 12px 24px;
 
         &.active {
@@ -72,10 +79,8 @@
             }
 
             .disprice {
+              @include g.myTitle24();
               font-size: 20px;
-              font-weight: 500;
-              line-height: 140%;
-              letter-spacing: -0.5px;
               text-align: left;
               margin-bottom: 8px;
 
@@ -107,8 +112,10 @@
 
       }
     }
-
-    .con-btn {
+    .coupon-btn-wrap{
+      display: flex;
+      gap:12px;
+    button {
       @include g.myTitle16();
       color:g.$text10;
       display: flex;
@@ -120,11 +127,18 @@
       border-radius: 4px;
       background: g.$text4;
       width: 100%;
+      margin-top: 28px;
+     
     }
+     .close-btn{
+        background-color: #fff;
+        color:g.$text1
+      }
     .coupon-close{
       width: 24px;
       height: 24px;
       cursor: pointer;
     }
+  }
   }
 }
