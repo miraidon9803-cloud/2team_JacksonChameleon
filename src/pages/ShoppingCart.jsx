@@ -131,23 +131,23 @@ const ShoppingCart = () => {
                         )}
                     </div>
 
-                    <div className="total-wrap">
-                        <div className="total-content">
-                            <h4>구매 금액</h4>
-                            <ul>
-                                <li><span>상품금액</span><span>{selectedTotal.toLocaleString()}원</span></li>
-                                <li><span>할인 금액</span><span>{saleTotal.toLocaleString()}</span></li>
-                                 <li><span>배송비</span><span>무료배송</span></li>
-                                <li><span>예상적립금</span><span>{savePoint.toLocaleString()}원</span></li>
-                               
-                            </ul>
+                    <div className="total">
+                        <div className="total-wrap">
+                            <div className="total-content">
+                                <h4>구매 금액</h4>
+                                <ul>
+                                    <li><span>상품금액</span><span>{selectedTotal.toLocaleString()}원</span></li>
+                                    <li><span>할인 금액</span><span>{saleTotal.toLocaleString()}</span></li>
+                                    <li><span>적립금</span><span>{savePoint.toLocaleString()}원</span></li>
+                                    <li><span>배송비</span><span>무료배송</span></li>
+                                </ul>
 
-                            <div className="total-price">
-                                <span>총 구매 금액</span>
-                                <strong>
-                                    {finalTotal.toLocaleString()}원
-                                </strong>
-                            </div>
+                                <div className="total-price">
+                                    <span>총 구매 금액</span>
+                                    <strong>
+                                        {finalTotal.toLocaleString()}원
+                                    </strong>
+                                </div>
 
                                 <Link to="/payment"><div className='pay-btn'><span>결제하기</span></div></Link>
                             </div>

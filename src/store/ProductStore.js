@@ -403,15 +403,6 @@ export const useProductStore = create(
           openCoupon: null,
         }),
 
-      openDel: null,
-
-      cancleDel: () =>
-        set({
-          selectedCoupon: null,
-          openDel: null,
-        }),
-
-      cancleDel, openDel, onSelectopenDel,
       
       finalPrice: 0,
       saveMoney: 1000,
