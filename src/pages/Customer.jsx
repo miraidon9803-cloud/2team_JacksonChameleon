@@ -5,7 +5,7 @@ import Chatbot from "../components/Chatbot";
 
 const Customer = () => {
   return (
-    <section className="customer wrap">
+    <section className="customer-wrap">
       <div className="inner">
 
 

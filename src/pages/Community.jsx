@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import './scss/Community.scss'
+import './scss/community.scss'
 
 const Community = () => {
     return (

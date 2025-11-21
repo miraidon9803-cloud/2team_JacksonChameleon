@@ -58,6 +58,7 @@
           border-radius: 8px;
           background: l.$BG;
           border: none;
+          outline: none;
         }
 
         .login-btn {
@@ -103,7 +104,7 @@
 
         .btn {
           @include l.myTitle16();
-          color: l.$text8;
+          color: l.$text6;
           width: 100%;
           padding: 12px 24px;
           border-radius: 8px;
