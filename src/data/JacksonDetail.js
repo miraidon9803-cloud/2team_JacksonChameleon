@@ -3,7 +3,8 @@ export const products = [
     id: 1,
     title: "Bolso Sofa",
     price: "1,056,000원",
-
+    sale: "0.2",
+    price_regular: "2,300,000원",
     size: [
       { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
       { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
@@ -25,7 +26,8 @@ export const products = [
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 }
+      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -131,7 +133,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/doughsofa/dough-cushion.png", price: 209000 }
+      { id: 1, cushion: "쿠션", img: "/img/doughsofa/dough-cushion.png", price: 209000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -224,7 +227,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/inksofa/inkcushion.png", price: 165000 }
+      { id: 1, cushion: "쿠션", img: "/img/inksofa/inkcushion.png", price: 165000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -338,7 +342,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/pebblesofa/pebblecushion.png", price: 165000 }
+      { id: 1, cushion: "쿠션", img: "/img/pebblesofa/pebblecushion.png", price: 165000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [
@@ -425,7 +430,8 @@ https://www.instagram.com/maumee_life/`,
     ],
 
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/tartesofa/tartecushion.png", price: 231000 }
+      { id: 1, cushion: "쿠션", img: "/img/tartesofa/tartecushion.png", price: 231000 },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 }
     ],
 
     intro: [

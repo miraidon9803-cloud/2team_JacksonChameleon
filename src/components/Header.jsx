@@ -12,8 +12,8 @@ const menus = [
             {
                 key: 'sofa', label: 'Sofas',
                 sub: [
-                    { key: "fabric", label: 'Sofas/Fabric' },
-                    { key: "leather", label: 'Sofas/Leather' }
+                    { key: "Fabric", label: 'Sofas/Fabric' },
+                    { key: "Leather", label: 'Sofas/Leather' }
                 ]
             },
             {
@@ -35,8 +35,8 @@ const menus = [
             {
                 key: 'lighting', label: 'Lighting',
                 sub: [
-                    { key: 'Table Lamp', label: 'Lighting/Table Lamp' },
-                    { key: 'Floor Lamp', label: 'Lighting/Floor Lamp' }
+                    { key: 'Floor Lamp', label: 'Lighting/Floor Lamp' },
+                    { key: 'Table Lamp', label: 'Lighting/Table Lamp' }
                 ]
             }
         ]

@@ -20,7 +20,7 @@ import Sellection from './pages/Sellection';
 
 import Community from './pages/Community';
 import Collections from './pages/Collections';
-import ShopAll from './pages/ShopAll';
+import ProductList from './components/ProductList';
 import ShopChair from './pages/ShopChair';
 import ShopTable from './pages/ShopTable';
 import ShopSofa from './pages/ShopSofa';
@@ -52,7 +52,7 @@ function App() {
   useEffect(() => {
     initAuth();
   }, []);
-  
+
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -60,12 +60,11 @@ function App() {
         <Route path="/main" element={<Main />} />
 
         <Route path='/shop' element={<Shop />} />
-        <Route path="/shop/all" element={<ShopAll />} />
-        <Route path="/shop/chair" element={<ShopChair />} />
-        <Route path="/shop/table" element={<ShopTable />} />
-        <Route path="/shop/sofa" element={<ShopSofa />} />
-        <Route path="/shop/lighting" element={<ShopLighting />} />
-        <Route path="/shop/:id" element={<ShopDetailTop />} />
+        <Route path="/shop/all" element={<Shop />} />
+        <Route path="/shop/:category" element={<Shop />} />
+        <Route path='/shop/:category/:subcate' element={<Shop />} />
+        <Route path="/shop/product/:id" element={<ShopDetailTop />} />
+        
 
 
 

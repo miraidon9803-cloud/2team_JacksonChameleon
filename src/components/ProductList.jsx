@@ -1,22 +1,45 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import jacksonProduct from "../data/jacksonproduct.js";
 import "./scss/product.scss";
 import "../components/scss/filterPopup.scss";
-import ShopTop from "../components/ShopTop.jsx";
-import { Link } from "react-router-dom";
+import ShopTop from "./ShopTop.jsx";
+import { Link, useParams } from "react-router-dom";
 
-const ShopAll = () => {
+const ProductList = () => {
+    const { category, subcate } = useParams();
     // const [selectedCategory, setSelectedCategory] = useState("All");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [tempSortOption, setTempSortOption] = useState(null);
     const [sortOption, setSortOption] = useState(null);
-    const [selectedSubCate, setSelectedSubCate] = useState("All");
+    const [selectedSubCate, setSelectedSubCate] = useState(subcate ? subcate.toLowerCase() : "All");
 
-    //    카테고리 자동 추출
-    const categories = [
-        "All",
-        ...new Set(jacksonProduct.map((item) => item.product)),
-    ];
+
+
+    useEffect(() => {
+        setSelectedSubCate(subcate ? subcate.toLocaleLowerCase() : "All");
+    }, [subcate])
+
+    let data = jacksonProduct;
+
+
+    //카테고리 필터링
+    if (category && category !== "All") {
+        data = data.filter(
+            (item) =>
+                item.product &&
+                item.product === category
+        );
+    }
+
+    //재질 필터링
+    if (selectedSubCate && selectedSubCate !== "All") {
+        data = data.filter(
+            (item) =>
+                item.product &&
+                item.subcate?.toLowerCase() === selectedSubCate
+        );
+    }
+
 
     //  가격 문자열을 숫자로 변환하는 함수
     const intPrice = (priceStr) => {
@@ -25,7 +48,7 @@ const ShopAll = () => {
         return Number(num) || 0;
     };
 
-    let data = jacksonProduct;
+
 
     // 필터링
     if (sortOption === "best") {
@@ -48,12 +71,6 @@ const ShopAll = () => {
         );
     }
 
-    //재질 필터링
-    if (selectedSubCate !== "All") {
-        data = data.filter(
-            (item) => item.subcate === selectedSubCate
-        );
-    }
 
 
     //페이징 처리
@@ -88,16 +105,24 @@ const ShopAll = () => {
             );
         }
         return buttons;
-    }
+    };
+
+    //첫글자 대문자
+    const upper = (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
 
 
     return (
         <div className="shop-wrap">
-            <ShopTop />
+            {/* <ShopTop key={category} category={category || "All"} /> */}
             <div className="inner">
                 <div className="product-filter">
                     <div className="filter-title">
-                        <p className='product-sort'>All</p>
+                        <p className='product-sort'>
+                            {subcate ?
+                                `${upper(category)} > ${upper(subcate)}`
+                                : category
+                                    ? upper(category)
+                                    : "All"}</p>
                     </div>
                     <div className="filter">
                         <p className="total-product">({data.length}product)</p>
@@ -109,7 +134,7 @@ const ShopAll = () => {
 
                 <div className="product-list">
                     {currentItem.map((item) => (
-                        <Link to={`/shop/${item.id}`} className="product" key={item.id}>
+                        <Link to={`/shop/product/${item.id}`} className="product" key={item.id}>
                             <span className='new'>{item.badges}</span>
                             <div className="img-box">
                                 <p className="default-img"><img src={item.img_url} alt={item.title} /></p>
@@ -193,4 +218,4 @@ const ShopAll = () => {
     );
 };
 
-export default ShopAll;
+export default ProductList;
