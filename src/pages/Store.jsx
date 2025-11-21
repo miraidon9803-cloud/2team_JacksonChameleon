@@ -38,7 +38,7 @@ const Store = ({ moveToStore }) => {
 
 
   return (
-    <section className="store wrap">
+    <section className="store-wrap">
       <div className="inner">
         <div className="store-tap-wrap">
           <div className="store-tabs">

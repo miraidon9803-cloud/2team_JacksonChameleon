@@ -13,6 +13,52 @@
             margin-bottom: 20px;
         }
 
+        .check-box {
+
+            .real {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 0;
+                opacity: 0;
+            }
+
+            .fake {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                
+                width: 22px;
+                height: 22px;
+                border: 1px solid g.$text6;
+                border-radius: 4px;
+                background: g.$text10;
+            }
+
+            .icon{
+                width:14px;
+                height:14px;
+                opacity:0
+            }
+
+            .fake::after{
+                content:'';
+                position:absolute;
+                left:0;
+                top:0;
+                width:22px;
+                height:22px;
+                background-image: var(--check-img);
+                opacity:0
+
+            }
+            .real:checked + .fake .icon {
+                opacity:1;
+            }
+        }
+
         .content-wrap {
             display: flex;
 
@@ -220,8 +266,8 @@
                     flex-direction: column;
                     border-radius: 0 8px 8px 0;
 
-                    position:sticky;
-                    top:100px;
+                    position: sticky;
+                    top: 100px;
 
 
 

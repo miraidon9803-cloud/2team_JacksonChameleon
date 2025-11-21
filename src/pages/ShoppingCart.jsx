@@ -58,11 +58,15 @@ const ShoppingCart = () => {
 
                     <div className="cart-list">
                         <div className="choose-del-wrap">
-                            <input
-                                type="checkbox"
-                                checked={isAllSelected}
-                                onChange={handleSelectAll}
-                            />
+                            <label className="check-box">
+                                <input
+                                    type="checkbox"
+                                    checked={isAllSelected}
+                                    onChange={handleSelectAll}
+                                    className='real'
+                                />
+                                <span className='fake'><img className='icon' src="/images/check.png" alt="checkicon" /></span>
+                            </label>
                             <button onClick={handleDeleteSelected}>선택삭제</button>
                         </div>
 
@@ -77,11 +81,16 @@ const ShoppingCart = () => {
 
                                         <div className="item-wrap" key={index}>
                                             <div className="selected-wrap">
-                                                <input
-                                                    type="checkbox"
-                                                    checked={selectedItems.includes(item)}
-                                                    onChange={() => handleSelectItem(item)}
-                                                />
+                                                <label className="check-box">
+                                                    <input
+                                                        type="checkbox"
+                                                        checked={selectedItems.includes(item)}
+                                                        onChange={() => handleSelectItem(item)}
+                                                        className='real'
+                                                    />
+                                                    <span className='fake'><img className='icon' src="/images/check.png" alt="checkicon" /></span>
+
+                                                </label>
                                                 <button className='close-btn' onClick={() => onRemoveCart(item)}><img src="/images/close-icon.png" alt="삭제버튼" /></button>
                                             </div>
 
