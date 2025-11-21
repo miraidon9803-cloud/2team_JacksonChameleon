@@ -24,15 +24,16 @@ const Payment = () => {
   } = useProductStore();
 
   const { user } = useAuthStore();
+  const navigate = useNavigate();
   // const discountPrice = selectedCoupon ? selectedCoupon.price : 0;
   const [showCoupon, setShowCoupon] = useState(false);
-  const navigate = useNavigate();
   const handleCoupon = () => setShowCoupon(true);
   const handleCloseCoupon = () => setShowCoupon(false);
 
   const [ShowDelivery, setShowDelivery] = useState(false);
   const hanldeDelivery = () => setShowDelivery(true);
-  const hanldeCloseDelivery = () => setcloseDelivery(false);
+  const hanldeCloseDelivery = () => setShowDelivery(false);
+
   const saleTotal = getItemSalePrice();
   const selectedTotal = getSelectedTotalPrice();
   const savePoint = getsavePoint();
