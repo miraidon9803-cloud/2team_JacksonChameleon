@@ -79,6 +79,7 @@ export const useProductStore = create(
       //장바구니에 추가
       onAddToCart: (product) => {
         const cart = get().cartItems;
+        const { getItemSalePrice } = get();
 
         const existing = cart.find((item) =>
           item.id === product.id &&
@@ -108,19 +109,25 @@ export const useProductStore = create(
 
         }
 
+
+
+
+
+        // alert('장바구니에 추가되었습니다!');
+
         // 총금액
-        let total = 0;
-        updateCart.forEach((item) => {
-          const sizePrice = item.size?.price || 0;
-          const addPrice = item.add?.price || 0;
-          const itemTotal = (sizePrice + addPrice) * item.qty;
-          total += itemTotal;
-        });
+        // let total = 0;
+        // updateCart.forEach((item) => {
+        //   const sizePrice = item.size?.price || 0;
+        //   const addPrice = item.add?.price || 0;
+        //   const itemTotal = (sizePrice + addPrice) * item.qty;
+        //   total += itemTotal;
+        // });
 
         set({
           cartItems: updateCart,
           cartCount: updateCart.length,
-          totalPrice: total
+          // totalPrice: total
         });
       },
 
@@ -295,6 +302,58 @@ export const useProductStore = create(
         })
       },
 
+      //장바구니 금액
+      //선택된 아이템 배열 구하기
+      getSelectedItems: () => {
+        const { cartItems } = get();
+        return cartItems.filter(item => item.checked);
+      },
+
+      //한 아이템 가격
+      getItemTotal: (item) => {
+        if (!item) return 0;
+
+        const sizePrice = item.size?.price || 0;
+        const addPrice = item.add?.price || 0;
+        return (sizePrice + addPrice) * item.qty;
+      },
+
+      //선택된 총 제품가격
+      getSelectedTotalPrice: () => {
+        const { getSelectedItems, getItemTotal } = get();
+        const selected = getSelectedItems();
+        if (selected.length === 0) return 0;
+
+        return selected.reduce((sum, item) => {
+          return sum + getItemTotal(item);
+        }, 0)
+      },
+
+      //선택된 제품 기준 할인 금액
+      getItemSalePrice: () => {
+        const { getSelectedItems, getItemTotal } = get();
+        const selected = getSelectedItems();
+        if (selected.length === 0) return 0;
+
+        return selected.reduce((sum, item) => {
+          if (!item.sale) return sum;
+
+          const basePrice = getItemTotal(item)
+
+          const saleRate = item.sale;
+          const discount = basePrice * saleRate;
+
+          return sum + discount;
+        }, 0);
+      },
+      
+      //적립금
+      getsavePoint: () =>{
+        const {getSelectedTotalPrice} = get();
+        const totalPrice = getSelectedTotalPrice();
+        return totalPrice* 0.001
+      },
+
       isReqOpen: false,
       setIsReqOpen: () =>
         set((state) => ({
@@ -427,17 +486,17 @@ export const useProductStore = create(
       },
 
       //주문완료
-      // onOrderFin: ()=>{
-      //      const { orderList, finalPrice } = get()
+      onOrderFin: () => {
+        const { orderList, finalPrice } = get()
 
-      //   const newOrder = {
-      //     id: new Date().toString(),
-      //     date: new Date().toLocaleString(),
-      //     items: [...orderList],
-      //     totalPrice: finalPrice,
-      //     status: "결제완료"
-      //   }
-      // }
+        const newOrder = {
+          id: new Date().toString(),
+          date: new Date().toLocaleString(),
+          items: [...orderList],
+          totalPrice: finalPrice,
+          status: "결제완료"
+        }
+      }
     }))
 
 
