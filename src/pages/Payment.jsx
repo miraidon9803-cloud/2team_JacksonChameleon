@@ -19,15 +19,23 @@ const Payment = () => {
     selectedMethodBtn, setSelectedMethodBtn,
     simpleOpt, cartItems, onAddOrder, orderList,
     finalPrice, onFinalPrice,
-    totalPrice, selectedCoupon
+    totalPrice, selectedCoupon, getsavePoint,
+    getItemSalePrice, usedPoint, setUsedPoint, resetUsedPoint
   } = useProductStore();
 
   const { user } = useAuthStore();
-  const discountPrice = selectedCoupon ? selectedCoupon.price : 0;
+  // const discountPrice = selectedCoupon ? selectedCoupon.price : 0;
   const [showCoupon, setShowCoupon] = useState(false);
   const navigate = useNavigate();
   const handleCoupon = () => setShowCoupon(true);
   const handleCloseCoupon = () => setShowCoupon(false);
+  const couponDiscount = selectedCoupon ? selectedCoupon.price : 0;
+  const extraDiscount = getItemSalePrice("ko-KR");
+  const totalDiscount = couponDiscount + extraDiscount;
+  const saviongPoint = getsavePoint("ko-KR");
+  // const finalPayment = finalPrice - saviongPoint;
+  const finalPayment = finalPrice - usedPoint;
+  const userPoint = getsavePoint("ko-KR");
   const handleConfirm = (e) => {
     // e.preventDefault();
     //장바구니 내용을 주문 내역에 저장
@@ -147,8 +155,18 @@ const Payment = () => {
             <div className="left-con4 acc">
               <p>적립금 사용</p>
               <div className="use-acc">
-                <input type="text" placeholder='최소 1000포인트 이상 보유시 사용 가능' />
-                <button>사용취소</button>
+                <input
+                  type="text"
+                  placeholder="최소 1000포인트 이상 보유시 사용 가능"
+                  value={usedPoint === 0 ? "" : usedPoint}
+                  onChange={(e) => {
+                    let raw = Number(e.target.value.replace(/[^0-9]/g, ""));
+                    if (raw > userPoint) raw = userPoint;
+                    setUsedPoint(raw);
+                  }}
+                />
+
+                <button onClick={resetUsedPoint}>사용취소</button>
               </div>
             </div>
 
@@ -158,7 +176,7 @@ const Payment = () => {
               <button onClick={handleCoupon}>쿠폰사용</button>
             </div>
 
-           
+
 
             {/* 결제수단 */}
             <div className="left-con6 payment">
@@ -218,16 +236,16 @@ const Payment = () => {
                 <h4>구매 금액</h4>
                 <ul>
                   <li><span>상품금액</span><span><p>{totalPrice.toLocaleString("ko-KR")}원</p></span></li>
-                  <li><span>할인 금액</span><span>{selectedCoupon
-                    ? `-${selectedCoupon.price.toLocaleString("ko-KR")}원`
-                    : "0원"}</span></li>
-                  <li><span>적립금</span><span></span></li>
+                  <li><span>할인 금액</span> {totalDiscount > 0
+                    ? `-${totalDiscount.toLocaleString("ko-KR")}원`
+                    : "0원"}</li>
+                  <li><span>적립금</span><span>{usedPoint === 0 ? "" : usedPoint}</span></li>
                   <li><span>배송비</span><span>무료배송</span></li>
                 </ul>
 
                 <div className="total-price">
                   <span>총 구매 금액</span>
-                  <strong>{finalPrice.toLocaleString("ko-KR")}원</strong>
+                  <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
 
                 <button className='pay-btn'><span>결제하기</span></button>
@@ -236,10 +254,10 @@ const Payment = () => {
           </div>
 
         </div>
-         {showCoupon ? <Coupon
-              onClose={handleCloseCoupon} /> : ""}
+        {showCoupon ? <Coupon
+          onClose={handleCloseCoupon} /> : ""}
       </div>
-                    
+
     </div>
   );
 };
