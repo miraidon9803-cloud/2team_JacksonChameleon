@@ -3,32 +3,37 @@ import './scss/PaymentComplete.scss';
 import { useProductStore } from '../store/ProductStore';
 import { useNavigate } from 'react-router-dom';
 
-const PaymentComplete = () => {
-
+const PaymentComplete = ({onClose}) => {
+    
     const navigate = useNavigate();
 
-    const { 
-        updateMyPoint,   
-        onAddOrder,     
-        usedPoint,        
-        getsavePoint     
+    const {
+        updateMyPoint,
+        onAddOrder,
+        usedPoint,
+        getsavePoint,
+        finalPrice,
+        orderList,
+        onClearCart
     } = useProductStore();
-
+    console.log(orderList);
 
     const handleConfirm = () => {
-        const used = usedPoint;
-        const saved = getsavePoint();
-        updateMyPoint(used, saved);
-        onAddOrder();
-        navigate("/mypage");
+        const used = usedPoint;           
+        const saved = getsavePoint();      
+        updateMyPoint(used, saved);  
+        onAddOrder();  
+        onClearCart();       
+        navigate("/mypage");            
     };
 
     return (
         <div className='PaymentComplete-wrap'>
             <div className="wrap">
 
+            
                 <div className="top">
-                    <div className="close">
+                    <div onClick={onClose} className="close">
                         <img src="/images/close-grey.svg" alt="close" />
                     </div>
 
@@ -45,27 +50,41 @@ const PaymentComplete = () => {
                     <p>Thank you for purchasing our product</p>
                 </div>
 
+           
                 <div className="text-box">
+
+              
                     <div className="first-box">
                         <div className="box">
                             <p>주문번호</p>
                             <p>20251121-12345678</p>
                         </div>
+
                         <div className="box">
                             <p>결제일자</p>
                             <p>{new Date().toLocaleDateString()}</p>
                         </div>
+
                         <div className="box">
                             <p>주문상품</p>
-                            <p></p>
+
+                            <div className="order-items">
+                                {orderList.map((i) => (
+                                    <div className="order-item" key={i.id}>
+                                        <p className="item-title">{i.title}</p>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
+                    {/* 금액 정보 */}
                     <div className="first-box">
                         <div className="box big-text">
                             <p>총 구매 금액</p>
-                            <p></p>
+                            <p>{finalPrice.toLocaleString("ko-KR")}원</p>
                         </div>
+
                         <div className="box">
                             <p>적립금</p>
                             <p>{getsavePoint().toLocaleString("ko-KR")}원</p>
@@ -73,12 +92,12 @@ const PaymentComplete = () => {
                     </div>
 
                 </div>
+
+                <button onClick={handleConfirm}>메인 화면 가기</button>
+
             </div>
-
-            <button onClick={handleConfirm}>메인 화면 가기</button>
-
         </div>
     );
-}
+};
 
 export default PaymentComplete;

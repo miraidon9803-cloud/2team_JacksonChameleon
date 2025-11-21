@@ -318,7 +318,7 @@ const Payment = () => {
           <PaymentComplete onclose={handleCloseComplete}/>
         )}
 
-        {(showCoupon || ShowDelivery) && (
+        {(showCoupon || ShowDelivery ||showComplete) && (
           <div className="popup-overlay"></div>
         )}
       </div>

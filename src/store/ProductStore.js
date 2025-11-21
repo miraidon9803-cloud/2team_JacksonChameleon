@@ -403,7 +403,7 @@ export const useProductStore = create(
           openCoupon: null,
         }),
 
-      
+
       finalPrice: 0,
       saveMoney: 1000,
 
@@ -438,7 +438,11 @@ export const useProductStore = create(
         set({ finalPrice: final });
       },
 
-
+      onClearCart: () => set({
+        cartItems: [],
+        // totalPrice: 0,
+        cartCount: 0
+      }),
 
       //주문항목을 저장할 변수
       orderList: [],
