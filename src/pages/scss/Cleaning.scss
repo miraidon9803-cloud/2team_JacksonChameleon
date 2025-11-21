@@ -1,100 +1,107 @@
 @use "../../App.scss" as cle;
 
-.cleaning-wrap{
+.cleaning-wrap {
+  padding: 120px 0;
 
-.calendar-top{
-  margin-top: 100px;
-  text-align: center;
+  .inner {
+    .calendar-top {
+      // margin-top: 100px;
+      text-align: center;
 
-  h2{
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 20px;
+      h2 {
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      p {
+        font-size: 16px;
+        margin-bottom: 80px;
+      }
+
+    }
+
+    .cleaning-process {
+      margin-bottom: 123px;
+    }
+
+    .calendar-list {
+      display: flex;
+
+      .calendar-title {
+        flex: 0 0 408px;
+
+        p {
+          font-size: 24px;
+        }
+
+      }
+
+      .calendar-right {
+
+        .calendar-depth1 {
+          font-size: 20px;
+          margin-bottom: 40px;
+        }
+
+        .calendar-md {
+          display: flex;
+          gap: 24px;
+          align-items: flex-start;
+
+          .calendar {
+            flex: 0 0 384px;
+            margin-bottom: 80px;
+          }
+
+          .calendar-time {
+            flex: 0 0 384px;
+          }
+        }
+
+      }
+    }
+
+
+    .calendar-left {
+      display: flex;
+
+      p {
+        font-size: 16px;
+      }
+
+      .canlendar-blank {
+        flex: 0 0 408px;
+      }
+
+      .calendar-mid1 {
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+
+      .calendar-mid2 {
+        margin-bottom: 16px;
+      }
+
+      .submit-btn {
+        margin-top: 80px;
+        width: 792px;
+        height: 46px;
+        border-radius: 4px;
+        background: cle.$text4;
+        color: cle.$text10;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.2s;
+
+        &:hover {
+          background: cle.$text1;
+        }
+
+        &.active {
+          background: cle.$text1;
+        }
+      }
+    }
   }
-
-  p{
-    font-size: 16px;
-    margin-bottom: 80px;
-  }
 }
-
-.cleaning-process{
-  margin-bottom: 123px;
-}
-
-.calendar-list {
-  display: flex;
-
-
-}
-
-.calendar-title {
-  flex: 0 0 408px;
-
-  p {
-    font-size: 24px;
-  }
-}
-
-.calendar-depth1 {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.calendar-md {
-  display: flex;
-  gap: 24px;
-  align-items: flex-start;
-
-}
-
-.calendar {
-  flex: 0 0 384px;
-  margin-bottom: 80px;
-}
-
-.calendar-time {
-  flex: 0 0 384px;
-}
-
-.calendar-left {
-  display: flex;
-
-  p {
-    font-size: 16px;
-  }
-}
-
-.canlendar-blank {
-  flex: 0 0 408px;
-}
-
-.calendar-mid1 {
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-.calendar-mid2 {
-  margin-bottom: 16px;
-}
-
-.submit-btn {
-  margin-top: 80px;
-  width: 792px;
-  height: 46px;
-  border-radius: 4px;
-  background: cle.$text4;
-  color: cle.$text10;
-  font-size: 16px;
-  cursor: pointer;
-  transition: all 0.2s;
-
-  &:hover {
-    background: cle.$text1;
-  }
-
-  &.active {
-    background: cle.$text1;
-  }
-
-}}

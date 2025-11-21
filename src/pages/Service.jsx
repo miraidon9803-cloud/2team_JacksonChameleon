@@ -11,15 +11,15 @@ const Service = () => {
           <div className='service-text-box'>
             <h2 className='service-title'>고객님을 위한 잭슨카멜레온만의 서비스를 경험해 보세요</h2>
             <div className="service-btn">
-              <p><Link to='/service/cleaning'>클리닝 서비스 접수하기</Link></p>
-              <p><Link to='/service/sample'>원단 샘플 접수하기</Link></p>
-              
-        
+              <Link to='/service/cleaning'><p className='link-box'>클리닝 서비스 접수하기</p></Link>
+              <Link to='/service/sample'><p className='link-box'>원단 샘플 접수하기</p></Link>
+
             </div>
           </div>
         </div>
       </div>
     </div>
+
   )
 }
 
