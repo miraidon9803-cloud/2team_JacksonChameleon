@@ -177,14 +177,16 @@ export const useProductStore = create(
       },
 
       //적립금
-      getsavePoint: () =>{
-        const {getSelectedTotalPrice} = get();
+      getsavePoint: () => {
+        const { getSelectedTotalPrice } = get();
         const totalPrice = getSelectedTotalPrice();
-        return totalPrice* 0.001
+        return Math.floor(totalPrice * 0.001);
       },
 
-      //옵션 변경하기
-      selectedOptions: { sheetType: null, size: null, color: null, addOption: null },
+      usedPoint: 0, // 사용된 적립금 금액
+
+      setUsedPoint: (val) => set({ usedPoint: val }),
+      resetUsedPoint: () => set({ usedPoint: 0 }),
 
       onOptionChange: (cartId, newColor, newSize, newOption) => {
         let updatedCart = get().cartItems.map((item) => {
@@ -346,14 +348,6 @@ export const useProductStore = create(
           return sum + discount;
         }, 0);
       },
-      
-      //적립금
-      getsavePoint: () =>{
-        const {getSelectedTotalPrice} = get();
-        const totalPrice = getSelectedTotalPrice();
-        return totalPrice* 0.001
-      },
-
       isReqOpen: false,
       setIsReqOpen: () =>
         set((state) => ({
@@ -424,20 +418,7 @@ export const useProductStore = create(
       //
       finalPrice: 0,
 
-      selectedCoupon: null,
-      onSelectCoupon: (coupon) => set({ selectedCoupon: coupon }),
-
-      onFinalPrice: () => {
-        const { totalPrice, selectedCoupon, } = get();
-        let final = totalPrice;
-        if (selectedCoupon) {
-          final = (totalPrice - selectedCoupon.price)
-        }
-        set({
-          finalPrice: final
-        })
-      },
-
+    
 
       finPrice: () => {
         const carts = get().cartItems;
