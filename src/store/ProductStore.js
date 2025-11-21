@@ -109,21 +109,6 @@ export const useProductStore = create(
 
         }
 
-
-
-
-
-        // alert('장바구니에 추가되었습니다!');
-
-        // 총금액
-        // let total = 0;
-        // updateCart.forEach((item) => {
-        //   const sizePrice = item.size?.price || 0;
-        //   const addPrice = item.add?.price || 0;
-        //   const itemTotal = (sizePrice + addPrice) * item.qty;
-        //   total += itemTotal;
-        // });
-
         set({
           cartItems: updateCart,
           cartCount: updateCart.length,
@@ -228,10 +213,11 @@ export const useProductStore = create(
 
         set({ cartItems: mergedCart, cartCount: mergedCart.length, totalPrice: total });
       },
+
+      //체크박스 토글
       onCheckCart: (cartId) => {
         const carts = get().cartItems;
 
-        //체크박스 토글
         const updateCart = carts.map((cart) =>
           cart.cartId === cartId ? { ...cart, checked: !cart.checked } : cart
         );
@@ -239,6 +225,7 @@ export const useProductStore = create(
         set({ cartItems: updateCart });
         // console.log(updateCart);
       },
+
       //장바구니삭제
       onRemoveCart: (product) => {
         const cart = get().cartItems;
@@ -256,7 +243,7 @@ export const useProductStore = create(
         set({
           cartItems: updateCart,
           cartCount: updateCart.length,
-          totalPrice: total
+          // totalPrice: total
         })
       },
 
@@ -278,7 +265,7 @@ export const useProductStore = create(
         set({
           cartItems: updateCart,
           cartCount: updateCart.length,
-          totalPrice: total
+          // totalPrice: total
         })
       },
 
@@ -300,7 +287,7 @@ export const useProductStore = create(
         set({
           cartItems: updateCart,
           cartCount: updateCart.length,
-          totalPrice: total
+          // totalPrice: total
         })
       },
 
@@ -326,9 +313,7 @@ export const useProductStore = create(
         const selected = getSelectedItems();
         if (selected.length === 0) return 0;
 
-        return selected.reduce((sum, item) => {
-          return sum + getItemTotal(item);
-        }, 0)
+        return selected.reduce((sum, item) => sum + getItemTotal(item), 0);
       },
 
       //선택된 제품 기준 할인 금액
@@ -348,6 +333,16 @@ export const useProductStore = create(
           return sum + discount;
         }, 0);
       },
+
+      //적립금
+      getsavePoint: () => {
+        const { getSelectedTotalPrice } = get();
+        const totalPrice = getSelectedTotalPrice();
+        return totalPrice * 0.001
+      },
+
+
+
       isReqOpen: false,
       setIsReqOpen: () =>
         set((state) => ({
