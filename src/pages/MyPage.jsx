@@ -4,14 +4,14 @@ import { Link, useNavigate } from 'react-router-dom';
 import "./scss/Mypage.scss";
 import { useLogJoinStore } from '../store/LogJoinStore';
 import DaumPostcode from "react-daum-postcode";
+import { useProductStore } from '../store/ProductStore';
 
 
 const MyPage = () => {
   const { user, onLogout } = useAuthStore();
-  const { isPostOpen, setIsPostOpen, handleComplete, joinForm,
-    setJoinForm, } = useLogJoinStore();
+  const { isPostOpen, setIsPostOpen, handleComplete, joinForm,setJoinForm, } = useLogJoinStore();
   const navigate = useNavigate();
-
+  const {myPoint} =useProductStore();
 
 
   const [activeTab, setActiveTab] = useState(0);
@@ -52,7 +52,7 @@ const MyPage = () => {
 
                 <div className="box box2">
                   <h3>적립금</h3>
-                  <p>1,000</p>
+                  <p>{myPoint}</p>
                 </div>
 
                 <div className="box box3">
@@ -77,8 +77,8 @@ const MyPage = () => {
 
               <div className="deliver-box box-style">
                 <div className="del">
-                <h3>최근 주문 내역</h3>
-                <p> <Link to="/orderdetail">자세히 보기</Link></p>
+                  <h3>최근 주문 내역</h3>
+                  <p> <Link to="/orderdetail">자세히 보기</Link></p>
                 </div>
                 <div className="Sequence-wrap">
                   <div className="Sequence active"><p>1</p><p>주문접수</p></div>
