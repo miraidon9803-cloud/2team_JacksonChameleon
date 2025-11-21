@@ -25,7 +25,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 한남",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "잭슨카멜레온의 무브먼트랩 에디션 제품과 큐레이션 컬렉션을 다양한 라이프 스타일 브랜드의 소품들과 함께 둘러보고 체험하실 수 있습니다.",
         "매장주소": "서울 용산구 대사관로15길 8-3",
         "lat": 37.535623,
@@ -37,7 +37,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 부산",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "해운대 달맞이길에 위치하고 있으며 큐레이션 컬렉션을 다양한 라이프 스타일 브랜드의 소품들과 함께 둘러보고 경험하실 수 있습니다.",
         "매장주소": "부산 해운대구 달맞이길65번길 148",
         "lat": 35.163453,
@@ -49,7 +49,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 의왕",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "취향이 깃든 공간을 위한 리빙 스타일 큐레이션 스토어로 다양한 브랜드들과 잭슨카멜레온의 제품을 무브먼트랩에서 만날 수 있는 공간입니다.",
         "매장주소": "경기 의왕시 백운로 588 지하 1층, 지상 3층  ",
         "lat": 37.307602,
@@ -61,7 +61,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 노량진",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "무브먼트랩의 중고, 리퍼브 제품을 구매하고 무브먼트랩을 통해 구매하셨던 가구를 재판매할 수 있는 세컨드마켓 서비스 매장입니다.",
         "매장주소": "서울 동작구 장승배기로18길 3",
         "lat": 37.509529,
@@ -73,7 +73,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 신세계 사우스시티 경기",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "백화점 첫 단독 신세계 사우스시티 매장은 무브먼트랩이 선별한 잭슨카멜레온의 가구와 소품을 경험할 수 있는 리빙  큐레이션 스토어입니다.",
         "매장주소": "경기 용인시 수지구 포은대로 536 신세계 사우스시티 6층",
         "lat": 37.335465,
@@ -85,7 +85,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 신세계백화점 대전",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "신세계백화점 대전점 지하 1층 생활관에 위치한 무브먼트랩은 다양한 제품들을 자유롭게 경험해보실 수 있는 특별한 공간입니다.",
         "매장주소": "대전 유성구 엑스포로 1 신세계백화점 대전점 아트앤사이언스 지하1층",
         "lat": 36.373056,
@@ -97,7 +97,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 신세계백화점 센텀시티점 부산",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "8층 생활관에 위치한 무브먼트랩 신세계백화점 센텀시티점은 다양한 제품들을 자유롭게 경험해보실 수 있는 특별한 공간입니다. ",
         "매장주소": "부산 해운대구 센텀남대로 35 8층 생활관",
         "lat": 35.168938,
@@ -109,7 +109,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 현대백화점 더현대 서울",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "4층 Life & Balance 관에 위치한 무브먼트랩 더현대 서울은 다양한 제품들을 자유롭게 경험해보실 수 있는 특별한 공간입니다.",
         "매장주소": "서울 영등포구 여의대로 108 더현대 서울 4층 라이프앤밸런스관",
         "lat": 37.525260,
@@ -121,7 +121,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 더현대 대구",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "7층 리빙 셀렉션관에 위치한 무브먼트랩 더현대 대구는 다양한 제품들을 자유롭게 경험해보실 수 있는 특별한 공간입니다.",
         "매장주소": "대구 중구 달구벌대로 2077 더현대 대구 7층 리빙셀렉션관",
         "lat": 35.870728,
@@ -133,7 +133,7 @@ export const storeData = [
     },
     {
         "title": "무브먼트랩 롯데백화점 인천점",
-        "img_up": "/images/store_up.png",
+        "img_up": "/images/store_down.png",
         "title_sub": "5층 리빙/가전관에 위치한 무브먼트랩 롯데백화점 인천점은 다양한 제품들을 자유롭게 경험해보실 수 있는 특별한 공간입니다. ",
         "매장주소": "인천 미추홀구 연남로 35 5층 리빙/가전관",
         "lat": 37.456594,
