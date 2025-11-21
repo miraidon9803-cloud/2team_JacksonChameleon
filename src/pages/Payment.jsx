@@ -4,6 +4,7 @@ import './scss/Payment.scss';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
 import Coupon from '../components/Coupon';
+import PaymentDelivery from '../components/PaymentDelivery';
 
 
 
@@ -28,6 +29,10 @@ const Payment = () => {
   const navigate = useNavigate();
   const handleCoupon = () => setShowCoupon(true);
   const handleCloseCoupon = () => setShowCoupon(false);
+
+  const [ShowDelivery, setShowDelivery] = useState(false);
+  const hanldeDelivery = () => setShowDelivery(true);
+  const hanldeCloseDelivery = () => setcloseDelivery(false);
   const saleTotal = getItemSalePrice();
   const selectedTotal = getSelectedTotalPrice();
   const savePoint = getsavePoint();
@@ -40,20 +45,20 @@ const Payment = () => {
   // const finalPayment = finalPrice - saviongPoint;
   const finalPayment = finalTotal - totalDiscount - usedPoint;
   const [inputPoint, setInputPoint] = useState("");
-  
- const handleConfirm = () => {
-   // 사용한 적립금
-  const used = usedPoint;   
-  // 이번 결제에서 적립될 포인트    
-  const saved = savePoint;       
-  // 1) 포인트 업데이트
-  updateMyPoint(used, saved);
-  // 2) 주문 처리
-  onAddOrder();
-  alert("결제가 완료되었습니다");
-  // 3) 페이지 이동
-  navigate("/mypage");
-};
+
+  const handleConfirm = () => {
+    // 사용한 적립금
+    const used = usedPoint;
+    // 이번 결제에서 적립될 포인트    
+    const saved = savePoint;
+    // 1) 포인트 업데이트
+    updateMyPoint(used, saved);
+    // 2) 주문 처리
+    onAddOrder();
+    alert("결제가 완료되었습니다");
+    // 3) 페이지 이동
+    navigate("/mypage");
+  };
   useEffect(() => {
     onFinalPrice(); // 선택 변경 or 쿠폰 변경 시 실행
   }, [selectedCoupon, cartItems]);
@@ -75,7 +80,7 @@ const Payment = () => {
             <div className="left-con1 user-info">
               <div className="user-name">
                 <p>{user?.email}</p>
-                <button>배송지 변경</button>
+                <button onClick={hanldeDelivery}>배송지 변경</button>
               </div>
               <div className="address">
                 <p>{user?.addnum} {user?.address} {user?.add}</p>
@@ -197,8 +202,8 @@ const Payment = () => {
                 />
                 <p>보유적립금:{myPoint}</p>
                 <button onClick={() => {
-                  resetUsedPoint();  
-                  setInputPoint(""); 
+                  resetUsedPoint();
+                  setInputPoint("");
                 }}>사용취소</button>
               </div>
             </div>
@@ -295,8 +300,17 @@ const Payment = () => {
           </div>
 
         </div>
-        {showCoupon ? <Coupon
-          onClose={handleCloseCoupon} /> : ""}
+        {showCoupon && (
+          <Coupon onClose={handleCloseCoupon} />
+        )}
+
+        {ShowDelivery && (
+          <PaymentDelivery onClose={hanldeCloseDelivery} />
+        )}
+
+        {(showCoupon || ShowDelivery) && (
+          <div className="popup-overlay"></div>
+        )}
       </div>
 
     </div>

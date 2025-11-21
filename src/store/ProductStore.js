@@ -388,21 +388,31 @@ export const useProductStore = create(
 
       //쿠폰선택
       selectedCoupon: null,     // 최종 적용된 쿠폰
-      tempCoupon: null,         // 팝업에서 임시 선택된 쿠폰
+      openCoupon: null,         // 팝업에서 임시 선택된 쿠폰
 
-      onSelectTempCoupon: (coupon) => set({ tempCoupon: coupon }),
+      onSelectopenCoupon: (coupon) => set({ openCoupon: coupon }),
 
       applyCoupon: () =>
         set((state) => ({
-          selectedCoupon: state.tempCoupon,
+          selectedCoupon: state.openCoupon,
         })),
 
       cancelCoupon: () =>
         set({
           selectedCoupon: null,
-          tempCoupon: null,
+          openCoupon: null,
         }),
-      //
+
+      openDel: null,
+
+      cancleDel: () =>
+        set({
+          selectedCoupon: null,
+          openDel: null,
+        }),
+
+      cancleDel, openDel, onSelectopenDel,
+      
       finalPrice: 0,
       saveMoney: 1000,
 
@@ -437,6 +447,8 @@ export const useProductStore = create(
         set({ finalPrice: final });
       },
 
+
+
       //주문항목을 저장할 변수
       orderList: [],
 
@@ -464,7 +476,9 @@ export const useProductStore = create(
           totalPrice: finalPrice,
           status: "결제완료"
         }
-      }
+      },
+
+
     }))
 
 

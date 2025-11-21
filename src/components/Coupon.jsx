@@ -4,8 +4,8 @@ import "./scss/Coupon.scss"
 
 
 const Coupon = ({ onClose }) => {
-  const { coupons, cancelCoupon, tempCoupon,
-    onSelectTempCoupon, applyCoupon, } = useProductStore();
+  const { coupons, cancelCoupon, openCoupon,
+    onSelectopenCoupon, applyCoupon, } = useProductStore();
   console.log("coupons:", coupons);
 
   return (
@@ -13,18 +13,18 @@ const Coupon = ({ onClose }) => {
       <div className="inner">
         <div className="coupon-title">
           <h3>쿠폰사용</h3>
-          <p className='coupon-close' onClick={onClose}><img src="/images/close-icon.png" alt="" /></p>
+          <p className='coupon-close' onClick={onClose}><img src="/images/close-grey.svg" alt="" /></p>
         </div>
 
         <ul className="coupon-list">
           {coupons.map((c) => (
-            <li key={c.id} className={`coupon-item ${tempCoupon?.id === c.id ? "active" : ""}`}>
+            <li key={c.id} className={`coupon-item ${openCoupon?.id === c.id ? "active" : ""}`}>
               <label>
                 <input className='coupons'
                   type="radio"
                   name="coupon"
-                  checked={tempCoupon?.id === c.id}
-                  onChange={() => onSelectTempCoupon(c)}
+                  checked={openCoupon?.id === c.id}
+                  onChange={() => onSelectopenCoupon(c)}
                 />
 
                 <div className="coupon-right">
