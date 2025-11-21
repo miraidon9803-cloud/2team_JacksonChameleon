@@ -20,7 +20,7 @@ import Sellection from './pages/Sellection';
 
 import Community from './pages/Community';
 import Collections from './pages/Collections';
-import ShopAll from './components/ShopAll';
+import ProductList from './components/ProductList';
 import ShopChair from './pages/ShopChair';
 import ShopTable from './pages/ShopTable';
 import ShopSofa from './pages/ShopSofa';
@@ -63,11 +63,7 @@ function App() {
         <Route path="/shop/all" element={<Shop />} />
         <Route path="/shop/:category" element={<Shop />} />
         <Route path='/shop/:category/:subcate' element={<Shop />} />
-        {/* <Route path="/shop/chair" element={<ShopAll />} /> */}
-        {/* <Route path="/shop/table" element={<ShopTable />} /> */}
-        {/* <Route path="/shop/sofa" element={<ShopSofa />} /> */}
-        {/* <Route path="/shop/lighting" element={<ShopLighting />} /> */}
-        <Route path="/shop/:id" element={<ShopDetailTop />} />
+        <Route path="/shop/product/:id" element={<ShopDetailTop />} />
         
 
 

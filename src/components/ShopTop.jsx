@@ -20,6 +20,8 @@ const ShopTop = ({ category }) => {
 
     const currentCate = ShopTopCate.find(cate => cate.name === selectedCate);
 
+    // const safeCate = currentCate || ShopTopCate.find(cate => cate.name === 'All');
+
     //첫글자만 대문자
     const firstUpper = (txt) => {
         return txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase();
@@ -46,7 +48,7 @@ const ShopTop = ({ category }) => {
                                 <li key={id} className={selectedCate === cate.name ? "active" : ""} >
                                     <Link to={cate.name === 'All' ? '/shop' : `/shop/${cate.name}`} >
                                         {(cate.name)}
-                                        
+
                                     </Link>
                                 </li>
                             ))}

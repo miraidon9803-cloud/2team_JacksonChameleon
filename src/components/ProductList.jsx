@@ -5,7 +5,7 @@ import "../components/scss/filterPopup.scss";
 import ShopTop from "./ShopTop.jsx";
 import { Link, useParams } from "react-router-dom";
 
-const ShopAll = () => {
+const ProductList = () => {
     const { category, subcate } = useParams();
     // const [selectedCategory, setSelectedCategory] = useState("All");
     const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -25,14 +25,18 @@ const ShopAll = () => {
     //카테고리 필터링
     if (category && category !== "All") {
         data = data.filter(
-            (item) => item?.product === category
+            (item) =>
+                item.product &&
+                item.product === category
         );
     }
 
     //재질 필터링
     if (selectedSubCate && selectedSubCate !== "All") {
         data = data.filter(
-            (item) => item?.subcate.toLowerCase() === selectedSubCate
+            (item) =>
+                item.product &&
+                item.subcate?.toLowerCase() === selectedSubCate
         );
     }
 
@@ -114,7 +118,7 @@ const ShopAll = () => {
                 <div className="product-filter">
                     <div className="filter-title">
                         <p className='product-sort'>
-                            { subcate ?
+                            {subcate ?
                                 `${upper(category)} > ${upper(subcate)}`
                                 : category
                                     ? upper(category)
@@ -130,7 +134,7 @@ const ShopAll = () => {
 
                 <div className="product-list">
                     {currentItem.map((item) => (
-                        <Link to={`/shop/${item.id}`} className="product" key={item.id}>
+                        <Link to={`/shop/product/${item.id}`} className="product" key={item.id}>
                             <span className='new'>{item.badges}</span>
                             <div className="img-box">
                                 <p className="default-img"><img src={item.img_url} alt={item.title} /></p>
@@ -214,4 +218,4 @@ const ShopAll = () => {
     );
 };
 
-export default ShopAll;
+export default ProductList;
