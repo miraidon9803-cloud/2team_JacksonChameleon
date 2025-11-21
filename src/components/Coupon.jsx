@@ -44,25 +44,27 @@ const Coupon = ({ onClose }) => {
           ))}
         </ul>
 
-        <button
-          className='con-btn'
-          onClick={() => {
-            applyCoupon();
-            onClose();
-          }}
-        >
-          적용하기
-        </button>
+        <div className="coupon-btn-wrap">
+          <button
+            className='close-btn'
+            onClick={() => {
+              cancelCoupon();
+              onClose();
+            }}
+          >
+            적용취소
+          </button>
 
-        <button
-          className='cancel-btn'
-          onClick={() => {
-            cancelCoupon(); 
-            onClose();      
-          }}
-        >
-          적용취소
-        </button>
+             <button
+             
+            onClick={() => {
+              applyCoupon();
+              onClose();
+            }}
+          >
+            적용하기
+          </button>
+        </div>
       </div>
     </div>
   )

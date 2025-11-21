@@ -334,19 +334,11 @@ export const useProductStore = create(
         }, 0);
       },
 
-      //적립금
-      getsavePoint: () => {
-        const { getSelectedTotalPrice } = get();
-        const totalPrice = getSelectedTotalPrice();
-        return totalPrice * 0.001
-      },
-
-
-
-      isReqOpen: false,
-      setIsReqOpen: () =>
+      //마이페이지 보유 포인트업데이트
+      myPoint: 1000,
+      updateMyPoint: (used, saved) =>
         set((state) => ({
-          isReqOpen: !state.isReqOpen
+          myPoint: state.myPoint - used + saved
         })),
 
       isCustomInput: false,
@@ -412,8 +404,8 @@ export const useProductStore = create(
         }),
       //
       finalPrice: 0,
+      saveMoney: 1000,
 
-    
 
       finPrice: () => {
         const carts = get().cartItems;
