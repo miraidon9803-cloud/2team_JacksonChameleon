@@ -107,7 +107,7 @@ export const useProductStore = create(
           }];
 
         }
-
+        
 
 
 
@@ -128,6 +128,50 @@ export const useProductStore = create(
           cartCount: updateCart.length,
           totalPrice: total
         });
+      },
+
+      //옵션 변경하기
+      selectedOptions: { sheetType: null, size: null, color: null, addOption: null },
+    
+      onOptionChange: (cartId, newColor, newSize, newOption) => {
+        let updatedCart = get().cartItems.map((item) => {
+          if (item.cartId !== cartId) return item;
+
+          // "없음" 선택 시 null 처리
+          const addOption = newOption === "없음" ? null : newOption;
+
+          return {
+            ...item,
+            color: newColor ?? item.color,
+            size: newSize ?? item.size,
+            add: addOption ?? item.add,
+            qty: item.qty, // qty는 그대로 유지
+          };
+        });
+
+        // 중복 옵션 병합
+        const mergedCart = [];
+        updatedCart.forEach((item) => {
+          const id= mergedCart.findIndex(
+            (m) =>
+              m.id === item.id &&
+              m.sheet?.title === item.sheet?.title &&
+              m.size?.id === item.size?.id &&
+              m.color?.id === item.color?.id &&
+              ((m.add?.id ?? null) === (item.add?.id ?? null))
+          );
+          if (id > -1) mergedCart[id].qty += item.qty;
+          else mergedCart.push({ ...item });
+        });
+
+        // 총 가격 계산
+        const total = mergedCart.reduce((acc, item) => {
+          const sizePrice = item.size?.price || 0;
+          const addPrice = item.add?.price || 0; // add가 null이면 0
+          return acc + (sizePrice + addPrice) * item.qty;
+        }, 0);
+
+        set({ cartItems: mergedCart, cartCount: mergedCart.length, totalPrice: total });
       },
       onCheckCart: (cartId) => {
         const carts = get().cartItems;
