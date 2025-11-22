@@ -9,9 +9,9 @@ import { useProductStore } from '../store/ProductStore';
 
 const MyPage = () => {
   const { user, onLogout } = useAuthStore();
-  const { isPostOpen, setIsPostOpen, handleComplete, joinForm,setJoinForm, } = useLogJoinStore();
+  const { isPostOpen, setIsPostOpen, handleComplete, joinForm, setJoinForm, } = useLogJoinStore();
   const navigate = useNavigate();
-  const {myPoint} =useProductStore();
+  const myPoint = useProductStore((state) => state.myPoint);
 
 
   const [activeTab, setActiveTab] = useState(0);
@@ -52,7 +52,7 @@ const MyPage = () => {
 
                 <div className="box box2">
                   <h3>적립금</h3>
-                  <p>{myPoint}</p>
+                  <p>{myPoint.toLocaleString("ko-KR")}원</p>
                 </div>
 
                 <div className="box box3">
