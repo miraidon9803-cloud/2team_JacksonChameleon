@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './scss/ShopDetailTop.scss';
 import ShopDetailSwiper from '../components/ShopDetailSwiper';
 import { useParams } from 'react-router-dom';
@@ -9,7 +9,6 @@ import ShopDetailBottomSize from './ShopDetailBottomSize';
 import ShopDetailBottomService from './ShopDetailBottomService';
 import ShopDetailBottomReview from './ShopDetailBottomReview';
 import DetailCartPopup from '../components/DetailCartPopup';
-
 
 const ShopDetailTop = () => {
   const sheetList = [
@@ -27,7 +26,7 @@ const ShopDetailTop = () => {
   const [selectedList, setSelectedList] = useState([]);
 
   const [activeTap, setActiveTap] = useState(0);
-  const [showPopup, SetShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
   const ItemPrice = (sel) => {
     let total = 0;
@@ -50,7 +49,7 @@ const ShopDetailTop = () => {
 
   if (!product) return <p>로딩중입니다...</p>;
 
-  //  Sheet 선택 → 새 세트 추가
+  // Sheet 선택 → 세트 추가
   const selectSheet = (item) => {
     setSelectedList((prev) => [
       ...prev,
@@ -59,10 +58,9 @@ const ShopDetailTop = () => {
     setOpenIndex(1);
   };
 
-  //  Size 선택 → 마지막 세트 갱신
+  // Size 선택
   const selectSize = (item) => {
     setSelectedList((prev) => {
-      if (prev.length === 0) return prev;
       const updated = [...prev];
       updated[updated.length - 1] = { ...updated[updated.length - 1], size: item };
       return updated;
@@ -70,10 +68,9 @@ const ShopDetailTop = () => {
     setOpenIndex(2);
   };
 
-  //  Color 선택 → 마지막 세트 갱신
+  // Color 선택
   const selectColor = (item) => {
     setSelectedList((prev) => {
-      if (prev.length === 0) return prev;
       const updated = [...prev];
       updated[updated.length - 1] = { ...updated[updated.length - 1], color: item };
       return updated;
@@ -81,10 +78,9 @@ const ShopDetailTop = () => {
     setOpenIndex(3);
   };
 
-  //  Add 선택 → 마지막 세트 갱신
+  // Add 선택
   const selectAdd = (item) => {
     setSelectedList((prev) => {
-      if (prev.length === 0) return prev;
       const updated = [...prev];
       updated[updated.length - 1] = {
         ...updated[updated.length - 1],
@@ -94,7 +90,7 @@ const ShopDetailTop = () => {
     });
   };
 
-  //  수량 조절
+  // 수량 증가/감소
   const increaseQty = (idx) => {
     setSelectedList((prev) =>
       prev.map((s, i) => (i === idx ? { ...s, qty: s.qty + 1 } : s))
@@ -109,12 +105,12 @@ const ShopDetailTop = () => {
     );
   };
 
-  //  세트 삭제
+  // 세트 삭제
   const handleRemove = (idx) => {
     setSelectedList((prev) => prev.filter((_, i) => i !== idx));
   };
 
-  //  옵션 텍스트
+  // 옵션 텍스트 만들기
   const getSelectedText = (sel) => {
     const { sheet, size, color, add } = sel;
     const t = [];
@@ -125,7 +121,7 @@ const ShopDetailTop = () => {
     return t.length ? t.join(" / ") : "옵션을 선택중입니다...";
   };
 
-  //  총 금액 계산
+  // 총 금액 계산
   const getTotalPrice = () => {
     const total = selectedList.reduce((acc, s) => {
       let t = s.size?.price ? s.size.price * s.qty : 0;
@@ -135,27 +131,29 @@ const ShopDetailTop = () => {
     return total.toLocaleString() + "원";
   };
 
-  //  장바구니 담기
+  // 장바구니 담기
   const handleAddToCart = () => {
     if (selectedList.length === 0) {
       alert("옵션을 선택해주세요.");
       return;
     }
+
     selectedList.forEach((sel) => {
       onAddToCart({ ...product, ...sel });
     });
-    SetShowPopup(true);
-    setTimeout(() => {
-      SetShowPopup(false);
-    }, 3000)
 
+    setShowPopup(true);
+    setTimeout(() => setShowPopup(false), 3000);
   };
 
   return (
     <div className="shop-detail-banner">
+
       {showPopup && <DetailCartPopup />}
+
       <div className="inner">
         <div className="detail-banner-wrap">
+
           <div className="detail-top">
             {/* LEFT */}
             <div className="top-left">
@@ -171,8 +169,10 @@ const ShopDetailTop = () => {
             {/* RIGHT */}
             <div className="top-right">
               <p>Choose Option</p>
+
               <div className="option">
-                {/* 0. SHEET */}
+
+                {/* SHEET */}
                 <div className={`type ${openIndex === 0 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(0)}>
                     <p>Sheet Type</p>
@@ -192,7 +192,7 @@ const ShopDetailTop = () => {
                   </div>
                 </div>
 
-                {/* 1. SIZE */}
+                {/* SIZE */}
                 <div className={`type ${openIndex === 1 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(1)}>
                     <p>Size</p>
@@ -205,12 +205,11 @@ const ShopDetailTop = () => {
                         key={s.id}
                         onClick={() => selectSize(s)}
                       >
-
                         <div className="depth-left">
                           <div className="left-img">
                             <img src={s.img} alt={s.sizename} />
                           </div>
-                          <div className='left-title'>
+                          <div className="left-title">
                             <span>{s.sizename}</span>
                           </div>
                         </div>
@@ -225,7 +224,7 @@ const ShopDetailTop = () => {
                   </div>
                 </div>
 
-                {/* 2. COLOR */}
+                {/* COLOR */}
                 <div className={`type ${openIndex === 2 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(2)}>
                     <p>Color</p>
@@ -236,11 +235,12 @@ const ShopDetailTop = () => {
                       <div
                         className="depth-content"
                         key={c.id}
-                        onClick={() => selectColor(c)}>
+                        onClick={() => selectColor(c)}
+                      >
                         <div className="content-dept">
                           <div className="content-img">
                             <img src={c.img} alt={c.colorname} />
-                            <p className='content-text'>{c.colorname}</p>
+                            <p className="content-text">{c.colorname}</p>
                           </div>
                         </div>
                       </div>
@@ -248,37 +248,42 @@ const ShopDetailTop = () => {
                   </div>
                 </div>
 
-                {/* 3. ADD */}
+                {/* ADD */}
                 <div className={`type ${openIndex === 3 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(3)}>
                     <p>Add</p>
                     <p><img src="/images/Arrow-down.png" alt="" /></p>
                   </div>
+
                   <div className="depth-content-wrap">
+
+                    {/* Add 옵션들 */}
                     {product.add.map((a) => (
-                      <React.Fragment key={a.id}>
-                        <div
-                          className="depth-content"
-                          onClick={() => selectAdd(a)}
-                        >
-                          <img src={a.img} alt={a.cushion} />
-                          <p>{a.cushion}</p>
-                        </div>
-                        <div
-                          className="depth-content"
-                          onClick={() => selectAdd("none")}
-                        >
-                          <p>선택안함</p>
-                        </div>
-                      </React.Fragment>
+                      <div
+                        className="depth-content"
+                        key={a.id}
+                        onClick={() => selectAdd(a)}
+                      >
+                        <img src={a.img} alt={a.cushion} />
+                        <p>{a.cushion}</p>
+                      </div>
                     ))}
+
+                    {/* 선택안함 */}
+                    <div
+                      className="depth-content"
+                      onClick={() => selectAdd("none")}
+                    >
+                      <p>선택안함</p>
+                    </div>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
 
-          {/* BOTTOM */}
+          {/* 선택 옵션 박스 & 총금액 */}
           <div className="detail-bottom">
             <div className="bottom-left">
               {selectedList.length === 0 ? (
@@ -288,6 +293,7 @@ const ShopDetailTop = () => {
                   <div className="selected-box" key={idx}>
                     <div className="selected-box-top">
                       <p className="selected-opt">{getSelectedText(sel)}</p>
+
                       <button
                         className="cancel"
                         onClick={() => handleRemove(idx)}
@@ -296,8 +302,10 @@ const ShopDetailTop = () => {
                         <img src="/images/cancel-hover.png" alt="cancel-hover" />
                       </button>
                     </div>
+
                     <div className="selected-box-bottom">
                       <p className="price-total">{ItemPrice(sel)}</p>
+
                       <div className="button-wrap">
                         <button onClick={() => decreaseQty(idx)}>
                           <img src="/images/minus.png" alt="minus" />
@@ -305,6 +313,7 @@ const ShopDetailTop = () => {
                         </button>
 
                         <span>{sel.qty}</span>
+
                         <button onClick={() => increaseQty(idx)}>
                           <img src="/images/plus.png" alt="plus" />
                           <img src="/images/plus-hover.png" alt="plus-hover" />
@@ -321,6 +330,7 @@ const ShopDetailTop = () => {
                 <p>총 상품금액</p>
                 <p className="price-total">{getTotalPrice()}</p>
               </div>
+
               <div className="total-btn">
                 <div className="go-cart" onClick={handleAddToCart}>
                   장바구니
@@ -329,18 +339,21 @@ const ShopDetailTop = () => {
               </div>
             </div>
           </div>
+
         </div>
-      </div>
 
-      <div className="detail-bottom">
-        <ShopDetailBottomNav activeTap={activeTap} setActiveTap={setActiveTap} />
+        {/* 상세 탭 영역 */}
+        <div className="detail-bottom">
+          <ShopDetailBottomNav activeTap={activeTap} setActiveTap={setActiveTap} />
 
-        {activeTap === 0 && <ShopDetailBottomIntro product={product} />}
-        {activeTap === 1 && <ShopDetailBottomSize product={product} />}
-        {activeTap === 2 && <ShopDetailBottomReview product={product} />}
-        {activeTap === 3 && <ShopDetailBottomService product={product} />}
+          {activeTap === 0 && <ShopDetailBottomIntro product={product} />}
+          {activeTap === 1 && <ShopDetailBottomSize product={product} />}
+          {activeTap === 2 && <ShopDetailBottomReview product={product} />}
+          {activeTap === 3 && <ShopDetailBottomService product={product} />}
+        </div>
+
       </div>
-    </div >
+    </div>
   );
 };
 

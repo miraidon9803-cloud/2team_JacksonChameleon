@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useAuthStore } from '../store/authStore';
 import { Link, useNavigate } from 'react-router-dom';
 import "./scss/Mypage.scss";
@@ -8,7 +8,7 @@ import { useProductStore } from '../store/ProductStore';
 
 
 const MyPage = () => {
-  const { user, onLogout } = useAuthStore();
+  const { user, onLogout, updateUser, setUpdateUser, updateUserField, updateUserAddress, updateUserinfo,updateAddressinfo} = useAuthStore();
   const { isPostOpen, setIsPostOpen, handleComplete, joinForm, setJoinForm, } = useLogJoinStore();
   const navigate = useNavigate();
   const myPoint = useProductStore((state) => state.myPoint);
@@ -21,6 +21,12 @@ const MyPage = () => {
     navigate("/");
   };
 
+  useEffect(() => {
+    if (user) {
+      setUpdateUser(user);
+    }
+  }, [user]);
+
   return (
     <div className='maypage-wrap'>
       <div className="inner-wrap">
@@ -30,7 +36,7 @@ const MyPage = () => {
 
 
           <div className="name-box box-style">
-            <p>{user?.email} 님, 안녕하세요</p>
+            <p>{user?.name} 님, 안녕하세요</p>
             <button onClick={handleLogout}><span>로그아웃</span></button>
           </div>
 
@@ -125,47 +131,80 @@ const MyPage = () => {
                   <div className="input-wrap">
                     <div className="input">
                       <p>이메일 주소</p>
-                      <input type="email" placeholder={user?.email} />
+                      <input
+                        type="email"
+                        value={updateUser.email}
+                        onChange={(e) => updateUserField("email", e.target.value)}
+                      />
                     </div>
                     <div className="input">
                       <p>비밀번호</p>
-                      <input type="password" placeholder={user?.password} />
+                      <input type="password" value={user?.password}
+                        onChange={(e) => updateUserField("password", e.target.value)} />
                     </div>
                     <div className="input">
                       <p>비밀번호 확인</p>
-                      <input type="password" placeholder={user?.password} />
+                      <input type="password" value={user?.password} />
                     </div>
                     <div className="input">
                       <p>휴대폰번호</p>
-                      <input type="text" placeholder={user?.phone} />
+                      <input type="text" value={updateUser?.phone}
+                        onChange={(e) => updateUserField("phone", e.target.value)} />
                     </div>
 
                     <button className='del-btn'>탈퇴하기</button>
                   </div>
 
-                  <button className='change-btn'>회원정보 수정</button>
+                  <button
+                    className='change-btn'
+                    onClick={() => {
+                      updateUserinfo();
+                    }}
+                  >
+                    회원정보 수정
+                  </button>
                 </div>
-
 
                 <div className={`tab tab2 ${activeTab === 1 ? "active" : ""}`}>
                   <div className="input-wrap">
                     <p>주소</p>
+
                     <div className="input12">
+
                       <div className="addnum-box">
-                        <input type="text" placeholder='우편번호'
-                          value={user?.addnum}
-                          readOnly />
+                        <input
+                          type="text"
+                          placeholder="우편번호"
+                          value={updateUser.addnum}
+                          readOnly
+                        />
                         <button onClick={() => setIsPostOpen(true)}>주소찾기</button>
                       </div>
-                      <input type="text" placeholder='기본주소' value={user?.address} />
-                      <input type="text" placeholder='상세주소' value={user?.addnum}
-                        onChange={(e) => setJoinForm({ ...joinForm, add: e.target.value })} />
+
+                      <input
+                        type="text"
+                        placeholder="기본주소"
+                        value={updateUser.address}
+                        onChange={(e) => updateUserField("address", e.target.value)}
+                      />
+
+                      <input
+                        type="text"
+                        placeholder="상세주소"
+                        value={updateUser.add}
+                        onChange={(e) => updateUserField("add", e.target.value)}
+                      />
+
                     </div>
                   </div>
 
-                  <button className='change-btn'>배송정보 수정</button>
+                  <button
+                    className="change-btn"
+                    onClick={() => updateAddressinfo()}
+                  >
+                    배송정보 수정
+                  </button>
                 </div>
-
 
                 <div className={`tab tab3 ${activeTab === 2 ? "active" : ""}`}>
                   <div className="input-wrap">
@@ -192,8 +231,14 @@ const MyPage = () => {
                 className="post_bg"
                 onClick={() => setIsPostOpen(false)}
               ></div>
+
               <div className="post_modal">
-                <DaumPostcode onComplete={handleComplete} />
+                <DaumPostcode
+                  onComplete={(data) => {
+                    updateUserAddress(data.zonecode, data.address);
+                    setIsPostOpen(false);
+                  }}
+                />
                 <button onClick={() => setIsPostOpen(false)}>닫기</button>
               </div>
             </div>

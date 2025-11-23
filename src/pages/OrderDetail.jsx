@@ -79,9 +79,9 @@ const OrderDetail = () => {
               <h4>주문 상세</h4>
 
               <div className="user-info">
-                <h5>{user?.email}</h5>
-                <p>서울시</p>
-                <p>010-1234-5678</p>
+                <h4>{user.name}</h4>
+                <p>{user.addnum} / {user.address} / {user.add}</p>
+                <p>{user.phone}</p>
               </div>
 
               <div className="pay-info">

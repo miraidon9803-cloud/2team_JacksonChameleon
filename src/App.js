@@ -20,11 +20,11 @@ import Sellection from './pages/Sellection';
 
 import Community from './pages/Community';
 import Collections from './pages/Collections';
-import ProductList from './components/ProductList';
-import ShopChair from './pages/ShopChair';
-import ShopTable from './pages/ShopTable';
-import ShopSofa from './pages/ShopSofa';
-import ShopLighting from './pages/ShopLighting';
+// import ProductList from './components/ProductList';
+// import ShopChair from './pages/ShopChair';
+// import ShopTable from './pages/ShopTable';
+// import ShopSofa from './pages/ShopSofa';
+// import ShopLighting from './pages/ShopLighting';
 import InkCollection from './pages/InkCollection';
 import PebbleCollection from './pages/PebbleCollection';
 import ClayCollection from './pages/ClayCollection';

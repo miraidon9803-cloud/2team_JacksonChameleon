@@ -235,6 +235,19 @@ export default function LogJoin() {
                         <div className="join-flex-wrap">
                           <div className="left-inputs">
 
+                             <div className="input-group">
+                              <p>성함</p>
+                              <input
+                                type="name"
+                                name="name"
+                                value={joinForm.name}
+                                onChange={handleJoinChange}
+                                placeholder="이메일 주소 입력해주세요"
+                                required
+                              />
+                            </div>
+
+
                             <div className="input-group">
                               <p>이메일 주소</p>
                               <input

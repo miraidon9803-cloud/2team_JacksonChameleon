@@ -22,6 +22,7 @@ export const useLogJoinStore = create((set) => ({
 
 
   joinForm: {
+    name:"",
     email: "",
     password: "",
     passwordConfirm: "",
@@ -40,6 +41,7 @@ export const useLogJoinStore = create((set) => ({
   resetJoinForm: () =>
     set({
       joinForm: {
+        displayName:"",
         email: "",
         password: "",
         passwordConfirm: "",
