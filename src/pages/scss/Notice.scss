@@ -1,0 +1,102 @@
+@use "../../App.scss" as g;
+
+.notice-wrap{
+
+    margin-top: 100px;
+    margin-bottom: 120px;
+
+    h2{
+padding-bottom: 40px;
+font-size: 24px;
+border-bottom: 1px solid g.$text8;
+
+    }
+.notice-list-wrap {
+  width: 100%;
+
+}
+
+.notice-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  
+  border-bottom: 1px solid g.$text8;
+
+  &:hover{
+    background-color: g.$BG;
+  }
+}
+
+.notice-title {
+  flex: 1;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notice-day {
+  width: 150px;
+  text-align: right;
+  font-size: 14px;
+  color: #555;
+}
+
+.notice-view {
+  width: 60px;
+  text-align: right;
+  font-size: 14px;
+  color: #555;
+}
+
+.pagination {
+   display: flex;
+  justify-content: center;
+  margin-top: 80px;
+  gap: 16px;
+
+  .page-btn {
+    border: none;
+  background: g.$text10;
+  color: g.$text6;
+  cursor: pointer;
+  font-size: 14px;
+
+    &.active {
+     color: g.$text1;
+    }
+  }
+
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: none;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  }
+
+}
+
+
+
+
+
+.notice-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  font-size: 13px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: #333;
+}
+}

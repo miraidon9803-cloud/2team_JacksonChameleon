@@ -1,0 +1,124 @@
+  @use "../../App.scss" as g;
+
+  .option-popup-bg {
+      position: relative;
+
+
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 5;
+
+
+      .option-popup-wrap {
+          width: 48.6rem;
+          position: fixed;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          padding: 24px;
+          background: g.$BG;
+          border-radius: 8px;
+          z-index: 10;
+          display: flex;
+          flex-direction: column;
+          gap: 4rem;
+
+          .option-popup-inner {
+              display: flex;
+              flex-direction: column;
+              gap: 2.4rem;
+
+              .top {
+                  display: flex;
+                  justify-content: space-between;
+                  align-items: center;
+
+                  h2 {
+                      @include g.myTitle24();
+                      text-align: left;
+                  }
+
+              }
+
+              .option-list {
+                  display: flex;
+                  flex-direction: column;
+                  gap: 1.6rem;
+
+                  .option {
+                      display: flex;
+                      flex-direction: column;
+                      gap: 8px;
+                      cursor: pointer;
+
+                      p {
+                          @include g.myTitle16();
+                          text-align: left;
+                      }
+
+                      .choice-list {
+                          display: flex;
+                          flex-direction: column;
+                          gap: 4px;
+
+                          .choice {
+                              display: flex;
+                              justify-content: space-between;
+                              background: g.$text10;
+                              border-radius: 4px;
+                              padding: 1.2rem 1.8rem;
+                              border: 1px solid g.$text9;
+
+                              p {
+                                  margin-left: 6px;
+                              }
+                          }
+
+                          .another {
+                              display: none;
+                              background: g.$text10;
+                              border-radius: 4px;
+                              padding: 0 2.4rem;
+                              border: 1px solid g.$text9;
+
+                              p {
+                                  padding: 12px 0;
+                                  border-top: 1px solid g.$text9;
+                                  border-bottom: 1px solid g.$text9;
+                              }
+                          }
+
+                          .another.open {
+                              display: block;
+                          }
+                      }
+
+                  }
+
+
+              }
+
+          }
+      }
+
+      .btn {
+          button {
+              background: g.$text4;
+              border: none;
+              outline: none;
+              appearance: none; //브라우저 기본 스타일 제거
+              padding: 12px 0;
+              width: 100%;
+              @include g.myTitle16();
+              color: g.$text10;
+
+          }
+
+          button:hover {
+              background: g.$text1;
+          }
+      }
+
+  }

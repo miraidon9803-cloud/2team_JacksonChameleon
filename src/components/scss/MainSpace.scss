@@ -1,0 +1,48 @@
+@use "../../App.scss" as g;
+
+.SpaceSolution-wrap {
+  // background: g.$BG;
+  padding-bottom: 8rem;
+  margin-top: 60px;
+  .inner-wrap {
+    .inner {
+      h2 {
+        padding-top: 60px;
+        margin-bottom: 40px;
+        @include g.myTitle24();
+        text-align: left;
+      }
+    }
+    .mySwiper .swiper-wrapper {
+      transition-timing-function: ease-in-out;
+    }
+
+    .swiper-slide {
+      width: 100%;
+
+      img {
+        border-radius: 8px;
+        width: 100%;
+        height: 600px;
+        object-fit: cover;
+      }
+    }
+
+    .mySwiper .swiper-pagination-bullet {
+      // background-color: g.$text8;
+      // opacity: 100;
+      width: 4px;
+      height: 4px;
+      border-radius: 4px;
+      margin: 0 4px;
+    }
+
+    .mySwiper .swiper-pagination-bullet-active {
+      background-color: g.$text1;
+      opacity: 30%;
+      width: 40px;
+      height: 4px;
+      border-radius: 4px;
+    }
+  }
+}

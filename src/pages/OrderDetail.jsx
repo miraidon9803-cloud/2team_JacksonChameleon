@@ -5,7 +5,7 @@ import { useAuthStore } from "../store/authStore";
 
 const OrderDetail = () => {
   const orders = useProductStore((state) => state.orders);
-  const {user} =useAuthStore();
+  const { user } = useAuthStore();
 
   if (orders.length === 0) {
     return (
@@ -19,6 +19,14 @@ const OrderDetail = () => {
 
   // 제일 최근 주문 가져오기
   const latestOrder = orders[orders.length - 1];
+
+  // 핸드폰 하이픈추가
+  const hyphenphone = (value) => {
+    if (!value) return "";
+    return value
+      .replace(/[^0-9]/g, "")
+      .replace(/(^\d{3})(\d{3,4})(\d{4})$/, "$1-$2-$3");
+  };
 
   return (
     <div className="order-detail-wrap">
@@ -51,13 +59,14 @@ const OrderDetail = () => {
 
                     <p className="item-option">
                       {item.sheet?.text} / {item.size?.sizename} /{" "}
-                      {item.color?.colorname} / {item.add?.cushion || "선택안함"} /{" "}
-                      {item.qty}개
+                      {item.color?.colorname} /{" "}
+                      {item.add?.cushion || "선택안함"} / {item.qty}개
                     </p>
 
                     <p className="item-price">
-                      {(item.size.price + (item.add?.price ?? 0))
-                        .toLocaleString("ko-KR")}
+                      {(
+                        item.size.price + (item.add?.price ?? 0)
+                      ).toLocaleString("ko-KR")}
                       원
                     </p>
 
@@ -80,8 +89,12 @@ const OrderDetail = () => {
 
               <div className="user-info">
                 <h4>{user.name}</h4>
-                <p>{user.addnum} / {user.address} / {user.add}</p>
-                <p>{user.phone}</p>
+                <p>
+                  {user.address} {user.add}
+                </p>
+                <p>
+                  <p>{hyphenphone(user?.phone)}</p>
+                </p>
               </div>
 
               <div className="pay-info">
@@ -95,7 +108,10 @@ const OrderDetail = () => {
                   <li>
                     <span>할인 금액</span>
                     <span>
-                      {(latestOrder.salePrice + latestOrder.couponDiscount).toLocaleString()}원
+                      {(
+                        latestOrder.salePrice + latestOrder.couponDiscount
+                      ).toLocaleString()}
+                      원
                     </span>
                   </li>
 
@@ -118,9 +134,7 @@ const OrderDetail = () => {
 
               <div className="total-price">
                 <span>총 구매 금액</span>
-                <strong>
-                  {latestOrder.finalPayment.toLocaleString()}원
-                </strong>
+                <strong>{latestOrder.finalPayment.toLocaleString()}원</strong>
               </div>
             </div>
           </div>
