@@ -2,6 +2,7 @@ import React from "react";
 import { useProductStore } from "../store/ProductStore";
 import "./scss/OrderDetail.scss";
 import { useAuthStore } from "../store/authStore";
+import OrderCard from "../components/OrderCard";
 
 const OrderDetail = () => {
   const orders = useProductStore((state) => state.orders);
@@ -18,7 +19,7 @@ const OrderDetail = () => {
   }
 
   // 제일 최근 주문 가져오기
-  const latestOrder = orders[orders.length - 1];
+  // const latestOrder = orders[orders.length - 1];
 
   // 핸드폰 하이픈추가
   const hyphenphone = (value) => {
@@ -29,123 +30,26 @@ const OrderDetail = () => {
   };
 
   return (
-    <>
-    {latestOrder.items.map((item) => (
-        <div className="order-detail-wrap">
-          <div className="inner">
-            <div className="order-top">
-              <p className="title">최근 주문 내역</p>
-              <p>취소/교환/반품 신청은 주문완료일 기준 7일까지 가능합니다.</p>
-            </div>
-
-            <div className="order-bottom">
-              <div className="order-bottom-left">
-                <div className="order-date-wrap">
-                  <p className="order-date">
-                    {latestOrder.orderDate} ({latestOrder.items.length}건)
-                  </p>
-                  <p>주문번호 {latestOrder.orderId}</p>
-                </div>
-
-                {/* {latestOrder.items.map((item) => ( */}
-                <div className="item-wrap" key={item.cartId}>
-                  <p className="order">배송중</p>
-
-                  <div className="item-box">
-                    <div className="item-img">
-                      <img src={item.size?.img} alt={item.title} />
-                    </div>
-
-                    <div className="item-info">
-                      <h4 className="item-title">{item.title}</h4>
-
-                      <p className="item-option">
-                        {item.sheet?.text} / {item.size?.sizename} /{" "}
-                        {item.color?.colorname} /{" "}
-                        {item.add?.cushion || "선택안함"} / {item.qty}개
-                      </p>
-
-                      <p className="item-price">
-                        {(
-                          item.size.price + (item.add?.price ?? 0)
-                        ).toLocaleString("ko-KR")}
-                        원
-                      </p>
-
-                      <button className="btn-return">
-                        <span>반품신청</span>
-                      </button>
-                      <button className="btn-change">
-                        <span>교환신청</span>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-
-              {/* 오른쪽 결제 정보 */}
-              <div className="order-bottom-right">
-                <div className="content-wrap">
-                  <h4>주문 상세</h4>
-
-                  <div className="user-info">
-                    <h4>{user.name}</h4>
-                    <p>
-                      {user.address} {user.add}
-                    </p>
-                    <p>
-                      <p>{hyphenphone(user?.phone)}</p>
-                    </p>
-                  </div>
-
-                  <div className="pay-info">
-                    <h5>결제 정보</h5>
-                    <ul>
-                      <li>
-                        <span>상품금액</span>
-                        <span>{latestOrder.productPrice.toLocaleString()}원</span>
-                      </li>
-
-                      <li>
-                        <span>할인 금액</span>
-                        <span>
-                          {(
-                            latestOrder.salePrice + latestOrder.couponDiscount
-                          ).toLocaleString()}
-                          원
-                        </span>
-                      </li>
-
-                      <li>
-                        <span>적립금</span>
-                        <span>{latestOrder.savePoint.toLocaleString()}원</span>
-                      </li>
-
-                      <li>
-                        <span>배송비</span>
-                        <span>무료배송</span>
-                      </li>
-
-                      <li>
-                        <span>결제수단</span>
-                        <span>{latestOrder.paymentMethod}</span>
-                      </li>
-                    </ul>
-                  </div>
-
-                  <div className="total-price">
-                    <span>총 구매 금액</span>
-                    <strong>{latestOrder.finalPayment.toLocaleString()}원</strong>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+    <div className="order-detail-wrap">
+      <div className="inner">
+        <div className="order-top">
+          <p className="title">최근 주문 내역</p>
+          <p>취소/교환/반품 신청은 주문완료일 기준 7일까지 가능합니다.</p>
         </div>
-      ))
-    }
-    </>
+
+        {orders
+        .slice()
+        .reverse()
+        .map((order) => (
+          <OrderCard
+            key={order.orderId}
+            order={order}
+            user={user}
+            hyphenphone={hyphenphone}
+          />
+        ))}
+      </div>
+    </div>
   );
 };
 
