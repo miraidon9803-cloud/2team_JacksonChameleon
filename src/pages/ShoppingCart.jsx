@@ -131,8 +131,8 @@ const ShoppingCart = () => {
                         <div className="item-info">
                           <h4 className="item-title">{item.title}</h4>
                           <p className="item-option">
-                            {item.sheet.text} / {item.size.sizename} /{" "}
-                            {item.color.colorname} /{" "}
+                            {item.sheet.text} / {item.size.sizename} /
+                            {item.color.colorname}
                             {item.add ? item.add.cushion : "선택안함"}
                           </p>
                           <button
