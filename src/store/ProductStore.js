@@ -209,7 +209,16 @@ export const useProductStore = create(
     /* ------------------------- 장바구니 선택 항목 ------------------------- */
 
     // 선택된 아이템
-    getSelectedItems: () => get().cartItems.filter((item) => item.checked),
+    getSelectedItems: () => {
+      const checkout = get().checkoutItems;
+      const cart = get().cartItems;
+
+      // 디테일에서 바로 결제하기 → checkoutItems 사용
+      if (checkout.length > 0) return checkout;
+
+      // 장바구니에서 결제하기 → checked 된 아이템 사용
+      return cart.filter((item) => item.checked);
+    },
 
     // 단일 아이템 가격
     getItemTotal: (item) => {
@@ -221,16 +230,21 @@ export const useProductStore = create(
 
     // 선택된 상품 총합
     getSelectedTotalPrice: () => {
-      const selected = get().getSelectedItems();
-      return selected.reduce((sum, item) => sum + get().getItemTotal(item), 0);
+      const items = get().getSelectedItems();
+      return items.reduce((sum, item) => {
+        const size = item.size?.price || 0;
+        const add = item.add?.price || 0;
+        return sum + (size + add) * item.qty;
+      }, 0);
     },
 
     // 즉시할인(세일)
     getItemSalePrice: () => {
-      const selected = get().getSelectedItems();
-      return selected.reduce((sum, item) => {
+      const items = get().getSelectedItems();
+      return items.reduce((sum, item) => {
         if (!item.sale) return sum;
-        return sum + get().getItemTotal(item) * item.sale;
+        const price = (item.size?.price || 0) + (item.add?.price || 0);
+        return sum + price * item.qty * item.sale;
       }, 0);
     },
 

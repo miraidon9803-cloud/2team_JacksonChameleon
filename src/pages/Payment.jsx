@@ -80,9 +80,17 @@ const Payment = () => {
     onClearCart(); // 장바구니 비우기 (결제 완료 후)
     navigate("/mypage");
   };
+
   /* ------------------ 주문상품 초기화 ------------------ */
   useEffect(() => {
     onAddOrder();
+  }, []);
+
+  const { resetCheckoutItems } = useProductStore();
+
+  useEffect(() => {
+    // 페이지 나갈 때 checkoutItems 초기화
+    return () => resetCheckoutItems();
   }, []);
 
   return (

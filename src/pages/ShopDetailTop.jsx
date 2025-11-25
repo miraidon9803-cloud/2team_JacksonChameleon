@@ -53,6 +53,10 @@ const ShopDetailTop = () => {
 
   if (!product) return <p>로딩중입니다...</p>;
 
+  //소파인지 여부
+  const isSofa =
+    product.title.includes("Sofa") && !product.title.includes("Table");
+
   // Sheet 선택 → 세트 추가
   const selectSheet = (item) => {
     setSelectedList((prev) => [
@@ -181,60 +185,64 @@ const ShopDetailTop = () => {
 
               <div className="option">
                 {/* SHEET */}
-                <div className={`type ${openIndex === 0 ? "open" : ""}`}>
-                  <div className="title" onClick={() => setOpenIndex(0)}>
-                    <p>Sheet Type</p>
-                    <p>
-                      <img src="/images/Arrow-down.png" alt="" />
-                    </p>
+                {isSofa && (
+                  <div className={`type ${openIndex === 0 ? "open" : ""}`}>
+                    <div className="title" onClick={() => setOpenIndex(0)}>
+                      <p>Sheet Type</p>
+                      <p>
+                        <img src="/images/Arrow-down.png" alt="" />
+                      </p>
+                    </div>
+                    <div className="depth-content-wrap">
+                      {sheetList.map((item) => (
+                        <div
+                          className="depth-content"
+                          key={item?.title}
+                          onClick={() => selectSheet(item)}
+                        >
+                          <p className="ST-title">{item?.title}</p>
+                          <p className="ST-sub">{item?.text}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                  <div className="depth-content-wrap">
-                    {sheetList.map((item) => (
-                      <div
-                        className="depth-content"
-                        key={item.title}
-                        onClick={() => selectSheet(item)}
-                      >
-                        <p className="ST-title">{item.title}</p>
-                        <p className="ST-sub">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                )}
 
                 {/* SIZE */}
-                <div className={`type ${openIndex === 1 ? "open" : ""}`}>
-                  <div className="title" onClick={() => setOpenIndex(1)}>
-                    <p>Size</p>
-                    <p>
-                      <img src="/images/Arrow-down.png" alt="" />
-                    </p>
-                  </div>
-                  <div className="depth-content-wrap">
-                    {product.size.map((s) => (
-                      <div
-                        className="depth-content"
-                        key={s.id}
-                        onClick={() => selectSize(s)}
-                      >
-                        <div className="depth-left">
-                          <div className="left-img">
-                            <img src={s.img} alt={s.sizename} />
+                {isSofa && (
+                  <div className={`type ${openIndex === 1 ? "open" : ""}`}>
+                    <div className="title" onClick={() => setOpenIndex(1)}>
+                      <p>Size</p>
+                      <p>
+                        <img src="/images/Arrow-down.png" alt="" />
+                      </p>
+                    </div>
+                    <div className="depth-content-wrap">
+                      {product.size.map((s) => (
+                        <div
+                          className="depth-content"
+                          key={s?.id}
+                          onClick={() => selectSize(s)}
+                        >
+                          <div className="depth-left">
+                            <div className="left-img">
+                              <img src={s?.img} alt={s?.sizename} />
+                            </div>
+                            <div className="left-title">
+                              <span>{s?.sizename}</span>
+                            </div>
                           </div>
-                          <div className="left-title">
-                            <span>{s.sizename}</span>
-                          </div>
-                        </div>
 
-                        <div className="depth-right">
-                          <p>너비: {s.width}</p>
-                          <p>높이: {s.height}</p>
-                          <p>깊이: {s.depth}</p>
+                          <div className="depth-right">
+                            <p>너비: {s?.width}</p>
+                            <p>높이: {s?.height}</p>
+                            <p>깊이: {s?.depth}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* COLOR */}
                 <div className={`type ${openIndex === 2 ? "open" : ""}`}>
@@ -263,36 +271,29 @@ const ShopDetailTop = () => {
                 </div>
 
                 {/* ADD */}
-                <div className={`type ${openIndex === 3 ? "open" : ""}`}>
-                  <div className="title" onClick={() => setOpenIndex(3)}>
-                    <p>Add</p>
-                    <p>
-                      <img src="/images/Arrow-down.png" alt="" />
-                    </p>
-                  </div>
+                {isSofa && product.add && product.add.length > 0 && (
+                  <div className={`type ${openIndex === 3 ? "open" : ""}`}>
+                    <div className="title" onClick={() => setOpenIndex(3)}>
+                      <p>Add</p>
+                      <p>
+                        <img src="/images/Arrow-down.png" alt="" />
+                      </p>
+                    </div>
 
-                  <div className="depth-content-wrap">
-                    {/* Add 옵션들 */}
-                    {product.add.map((a) => (
-                      <div
-                        className="depth-content"
-                        key={a.id}
-                        onClick={() => selectAdd(a)}
-                      >
-                        {a.img && <img src={a.img} alt={a.cushion} />}
-                        <p>{a.cushion}</p>
-                      </div>
-                    ))}
-
-                    {/* 선택안함 */}
-                    {/* <div
-                      className="depth-content"
-                      onClick={() => selectAdd("none")}
-                    >
-                      <p>선택안함</p>
-                    </div> */}
+                    <div className="depth-content-wrap">
+                      {product.add.map((a) => (
+                        <div
+                          className="depth-content"
+                          key={a.id}
+                          onClick={() => selectAdd(a)}
+                        >
+                          {a?.img && <img src={a?.img} alt={a?.cushion} />}
+                          <p>{a?.cushion}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
