@@ -35,7 +35,8 @@
 
   .noticepage-img {
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
+
 
     img {
       width: 100%;
@@ -43,15 +44,16 @@
   }
 
   .noticepage-back {
-    margin-top: 10px;
+    
      text-align: center;
 
     a {
+      
       border-radius: 4px;
       background:g.$text4;
       color: g.$text10;
-      padding: 10px 20px;
-      font-size: 12px;
+      padding: 14px 43px;
+      font-size: 16px;
       cursor: pointer;
       transition: all 0.2s;
 

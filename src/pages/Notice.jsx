@@ -16,6 +16,9 @@ const Notice = () => {
     setCurrentPage(page);
   };
 
+   window.scrollTo(0, 0);
+       
+
   return (
     <section className="notice-wrap">
       <div className="inner">
