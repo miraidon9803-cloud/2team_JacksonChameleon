@@ -32,7 +32,7 @@ const NoticePage = () => {
         </div>
 
         <div className="noticepage-back">
-          <Link to="/notice">목록으로 돌아가기</Link>
+          <Link to="/community/notice">목록으로 돌아가기</Link>
         </div>
       </div>
     </section>

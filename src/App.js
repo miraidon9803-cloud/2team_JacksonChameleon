@@ -95,7 +95,8 @@ function App() {
         <Route path="/community/store" element={<Map />} />
         <Route path="/careservice" element={<CareService />} />
         <Route path="/cs" element={<CS />} />
-        <Route path="/notice" element={<Notice />} />
+        <Route path="/community/notice" element={<Notice />} />
+       
         {/* <Route path="/noticedetails" element={<NoticeDetails />} /> */}
         <Route path="/payment" element={<Payment />} />
         <Route path="/search" element={<Search />} />
