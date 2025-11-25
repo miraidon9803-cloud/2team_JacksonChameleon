@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./scss/ShoppingCart.scss";
 import { useProductStore } from "../store/ProductStore";
-import { Link } from "react-router-dom";
-import OptionChange from "../components/OptionChange";
+// import OptionChange from "../components/OptionChange";
 import CartOptionPopup from "../components/CartOptionPopup";
+import { useNavigate } from "react-router-dom";
 
 const ShoppingCart = () => {
   const {
@@ -17,6 +17,7 @@ const ShoppingCart = () => {
     getSelectedTotalPrice,
     getItemSalePrice,
     getsavePoint,
+    resetCheckoutItems,
   } = useProductStore();
 
   const selectedTotal = getSelectedTotalPrice();
@@ -26,6 +27,7 @@ const ShoppingCart = () => {
 
   const [isAllSelected, setIsAllSelected] = useState(false);
   const [optionItem, setOptionItem] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (cartItems.length > 0) {
@@ -124,17 +126,26 @@ const ShoppingCart = () => {
 
                     <div className="item-box">
                       <div className="item-img">
-                        <img src={item.size.img} alt={item.title} />
+                        <img
+                          src={
+                            item.size?.img ||
+                            item.color?.img ||
+                            item.add?.img ||
+                            "/images/noimg.png"
+                          }
+                          alt={item.title}
+                        />
                       </div>
-
                       <div className="item-text">
                         <div className="item-info">
                           <h4 className="item-title">{item.title}</h4>
                           <p className="item-option">
-                            {item.sheet.text} / {item.size.sizename} /
-                            {item.color.colorname}
-                            {item.add ? item.add.cushion : "선택안함"}
+                            {item.sheet?.text || "시트 없음"} /
+                            {item.size?.sizename || "사이즈 없음"} /
+                            {item.color?.colorname || "색상 없음"} /
+                            {item.add?.cushion || "선택안함"}
                           </p>
+
                           <button
                             className="btn-option"
                             onClick={() => setOptionItem(item)}
@@ -198,11 +209,15 @@ const ShoppingCart = () => {
                   <strong>{finalTotal.toLocaleString()}원</strong>
                 </div>
 
-                <Link to="/payment">
-                  <div className="pay-btn">
-                    <span>결제하기</span>
-                  </div>
-                </Link>
+                <button
+                  className="pay-btn"
+                  onClick={() => {
+                    resetCheckoutItems();
+                    navigate("/payment");
+                  }}
+                >
+                  <span>결제하기</span>
+                </button>
               </div>
             </div>
           </div>

@@ -234,8 +234,12 @@ export const useProductStore = create(
       }, 0);
     },
 
-    /* ---------------------------- 결제 계산 ---------------------------- */
+    /* ---------------------------- 결제 및 계산 ---------------------------- */
 
+    //결제창 바로 넘어가기
+    checkoutItems: [],
+    setCheckoutItems: (items) => set({ checkoutItems: items }),
+    resetCheckoutItems: () => set({ checkoutItems: [] }),
     // 총 쿠폰 할인금액
     getCouponDiscount: () => {
       const { selectedCoupon } = get();
