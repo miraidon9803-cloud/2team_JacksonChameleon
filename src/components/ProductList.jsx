@@ -10,12 +10,12 @@ const ProductList = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [tempSortOption, setTempSortOption] = useState(null);
     const [sortOption, setSortOption] = useState(null);
-    const [selectedSubCate, setSelectedSubCate] = useState(subcate ? subcate.toLowerCase() : "All");
+    const [selectedSubCate, setSelectedSubCate] = useState(subcate || "All");
 
 
 
     useEffect(() => {
-        setSelectedSubCate(subcate ? subcate.toLocaleLowerCase() : "All");
+        setSelectedSubCate(subcate || "All");
     }, [subcate])
 
     let data = jacksonProduct;
@@ -37,7 +37,21 @@ const ProductList = () => {
                 item.product &&
                 item.subcate?.toLowerCase() === selectedSubCate
         );
-    }
+    };
+
+    const subCateList =
+        category && category !== "All"
+            ? [
+                ...new Set(
+                    jacksonProduct
+                        .filter(
+                            (item) => item.product === category && item.subcate
+                        )
+                        .map((item) => item.subcate)
+                ),
+            ]
+            : [];
+
 
 
     //  가격 문자열을 숫자로 변환하는 함수
@@ -112,16 +126,33 @@ const ProductList = () => {
 
     return (
         <div className="shop-wrap">
-            {/* <ShopTop key={category} category={category || "All"} /> */}
             <div className="inner">
                 <div className="product-filter">
                     <div className="filter-title">
                         <p className='product-sort'>
                             {subcate ?
-                                `${upper(category)} > ${upper(subcate)}`
+                                `${upper(category)}`
                                 : category
                                     ? upper(category)
                                     : "All"}</p>
+                        <p className="arrow"><img src="/images/product-icon.png" alt="" /></p>
+                        <div className="select-material">
+                            {subCateList.map((sub) => {
+                                const subcate = sub === "All" ? "All" : sub.toLowerCase();
+                                return (
+                                    <p
+                                        key={sub}
+                                        onClick={() => {
+                                            setSelectedSubCate(subcate);
+                                            setCurrentpage(1);
+                                        }}
+                                        className={selectedSubCate === subcate ? "active" : ""}
+                                    >
+                                        {sub}
+                                    </p>
+                                );
+                            })}
+                        </div>
                     </div>
                     <div className="filter">
                         <p className="total-product">({data.length}product)</p>
