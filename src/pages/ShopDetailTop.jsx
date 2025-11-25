@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import './scss/ShopDetailTop.scss';
-import ShopDetailSwiper from '../components/ShopDetailSwiper';
-import { useParams } from 'react-router-dom';
-import { useProductStore } from '../store/ProductStore';
-import ShopDetailBottomNav from './ShopDetailBottomNav';
-import ShopDetailBottomIntro from './ShopDetailBottomIntro';
-import ShopDetailBottomSize from './ShopDetailBottomSize';
-import ShopDetailBottomService from './ShopDetailBottomService';
-import ShopDetailBottomReview from './ShopDetailBottomReview';
-import DetailCartPopup from '../components/DetailCartPopup';
+import React, { useEffect, useState } from "react";
+import "./scss/ShopDetailTop.scss";
+import ShopDetailSwiper from "../components/ShopDetailSwiper";
+import { useParams } from "react-router-dom";
+import { useProductStore } from "../store/ProductStore";
+import ShopDetailBottomNav from "./ShopDetailBottomNav";
+import ShopDetailBottomIntro from "./ShopDetailBottomIntro";
+import ShopDetailBottomSize from "./ShopDetailBottomSize";
+import ShopDetailBottomService from "./ShopDetailBottomService";
+import ShopDetailBottomReview from "./ShopDetailBottomReview";
+import DetailCartPopup from "../components/DetailCartPopup";
 
 const ShopDetailTop = () => {
   const sheetList = [
@@ -62,7 +62,10 @@ const ShopDetailTop = () => {
   const selectSize = (item) => {
     setSelectedList((prev) => {
       const updated = [...prev];
-      updated[updated.length - 1] = { ...updated[updated.length - 1], size: item };
+      updated[updated.length - 1] = {
+        ...updated[updated.length - 1],
+        size: item,
+      };
       return updated;
     });
     setOpenIndex(2);
@@ -72,7 +75,10 @@ const ShopDetailTop = () => {
   const selectColor = (item) => {
     setSelectedList((prev) => {
       const updated = [...prev];
-      updated[updated.length - 1] = { ...updated[updated.length - 1], color: item };
+      updated[updated.length - 1] = {
+        ...updated[updated.length - 1],
+        color: item,
+      };
       return updated;
     });
     setOpenIndex(3);
@@ -148,12 +154,10 @@ const ShopDetailTop = () => {
 
   return (
     <div className="shop-detail-banner">
-
       {showPopup && <DetailCartPopup />}
 
       <div className="inner">
         <div className="detail-banner-wrap">
-
           <div className="detail-top">
             {/* LEFT */}
             <div className="top-left">
@@ -171,12 +175,13 @@ const ShopDetailTop = () => {
               <p>Choose Option</p>
 
               <div className="option">
-
                 {/* SHEET */}
                 <div className={`type ${openIndex === 0 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(0)}>
                     <p>Sheet Type</p>
-                    <p><img src="/images/Arrow-down.png" alt="" /></p>
+                    <p>
+                      <img src="/images/Arrow-down.png" alt="" />
+                    </p>
                   </div>
                   <div className="depth-content-wrap">
                     {sheetList.map((item) => (
@@ -196,7 +201,9 @@ const ShopDetailTop = () => {
                 <div className={`type ${openIndex === 1 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(1)}>
                     <p>Size</p>
-                    <p><img src="/images/Arrow-down.png" alt="" /></p>
+                    <p>
+                      <img src="/images/Arrow-down.png" alt="" />
+                    </p>
                   </div>
                   <div className="depth-content-wrap">
                     {product.size.map((s) => (
@@ -228,7 +235,9 @@ const ShopDetailTop = () => {
                 <div className={`type ${openIndex === 2 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(2)}>
                     <p>Color</p>
-                    <p><img src="/images/Arrow-down.png" alt="" /></p>
+                    <p>
+                      <img src="/images/Arrow-down.png" alt="" />
+                    </p>
                   </div>
                   <div className="depth-content-wrap">
                     {product.color.map((c) => (
@@ -252,33 +261,32 @@ const ShopDetailTop = () => {
                 <div className={`type ${openIndex === 3 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(3)}>
                     <p>Add</p>
-                    <p><img src="/images/Arrow-down.png" alt="" /></p>
+                    <p>
+                      <img src="/images/Arrow-down.png" alt="" />
+                    </p>
                   </div>
 
                   <div className="depth-content-wrap">
-
-                    {/* Add 옵션들 */}
                     {product.add.map((a) => (
                       <div
                         className="depth-content"
                         key={a.id}
                         onClick={() => selectAdd(a)}
                       >
-                        <img src={a.img} alt={a.cushion} />
+                        {a.img && <img src={a.img} alt={a.cushion} />}{" "}
                         <p>{a.cushion}</p>
                       </div>
                     ))}
 
                     {/* 선택안함 */}
-                    <div
+                    {/* <div
                       className="depth-content"
                       onClick={() => selectAdd("none")}
                     >
                       <p>선택안함</p>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
@@ -299,7 +307,10 @@ const ShopDetailTop = () => {
                         onClick={() => handleRemove(idx)}
                       >
                         <img src="/images/cancel.png" alt="cancel" />
-                        <img src="/images/cancel-hover.png" alt="cancel-hover" />
+                        <img
+                          src="/images/cancel-hover.png"
+                          alt="cancel-hover"
+                        />
                       </button>
                     </div>
 
@@ -309,7 +320,10 @@ const ShopDetailTop = () => {
                       <div className="button-wrap">
                         <button onClick={() => decreaseQty(idx)}>
                           <img src="/images/minus.png" alt="minus" />
-                          <img src="/images/minus-hover.png" alt="minus-hover" />
+                          <img
+                            src="/images/minus-hover.png"
+                            alt="minus-hover"
+                          />
                         </button>
 
                         <span>{sel.qty}</span>
@@ -339,19 +353,20 @@ const ShopDetailTop = () => {
               </div>
             </div>
           </div>
-
         </div>
 
         {/* 상세 탭 영역 */}
         <div className="detail-bottom">
-          <ShopDetailBottomNav activeTap={activeTap} setActiveTap={setActiveTap} />
+          <ShopDetailBottomNav
+            activeTap={activeTap}
+            setActiveTap={setActiveTap}
+          />
 
           {activeTap === 0 && <ShopDetailBottomIntro product={product} />}
           {activeTap === 1 && <ShopDetailBottomSize product={product} />}
           {activeTap === 2 && <ShopDetailBottomReview product={product} />}
           {activeTap === 3 && <ShopDetailBottomService product={product} />}
         </div>
-
       </div>
     </div>
   );
