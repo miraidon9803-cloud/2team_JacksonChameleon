@@ -50,15 +50,25 @@
         display: flex;
         flex-direction: column;
         gap: 12px;
-
+        .input-wrap {
+          width: 100%;
+          height: 48px;
+          padding: 0 24px;
+          border-radius: 8px;
+          border: 1px solid l.$text8;
+          background: l.$BG;
+          display: flex;
+          gap: 12px;
+        }
         input {
           width: 100%;
           height: 48px;
-          padding: 12px 24px;
-          border-radius: 8px;
-          background: l.$BG;
+          background: none;
           border: none;
           outline: none;
+        }
+        .input-wrap:hover {
+          border: 1px solid l.$text6;
         }
 
         .login-btn {
@@ -71,7 +81,6 @@
           cursor: pointer;
           transition: 0.3s;
           border: none;
-
 
           &:hover {
             background: l.$text1;
@@ -96,10 +105,18 @@
         flex-direction: column;
         gap: 8px;
 
-        p {
-          @include l.myTitle14();
-          color: l.$text4;
-          margin-bottom: 10px;
+        .text-box {
+          display: flex;
+          align-items: center;
+          width: 100%;
+          gap: 13px;
+          height: 20px;
+          margin-bottom: 12px;
+          h2 {
+            @include l.myTitle14();
+            color: l.$text4;
+            margin-bottom: 0;
+          }
         }
 
         .btn {
@@ -112,6 +129,18 @@
           background: l.$BG;
           cursor: pointer;
           transition: 0.3s;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          p {
+            @include l.myTitle16();
+            color: l.$text6;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-right: 36px;
+          }
 
           &:hover {
             color: l.$text1;
@@ -141,13 +170,17 @@
     }
 
     .text-overlay {
-      @include l.myTitle32();
-      width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      color: l.$text10;
+
+      p {
+        @include l.myTitle32();
+        font-weight: 400;
+        width: 334px;
+        color: l.$text10;
+      }
     }
   }
 
@@ -165,17 +198,17 @@
 
       .right-side {
         position: relative;
-        padding: 40px 60px;
+        padding: 40px;
         flex: 1;
         overflow: hidden;
         display: flex;
         flex-direction: column;
         width: 868px;
+        border-radius: 4px;
 
         .section-title {
           // width: 80.0rem;
           @include l.myTitle24();
-
         }
 
         .terms-content {
@@ -245,6 +278,7 @@
                   @include l.myTitle16();
                   color: #777;
                   cursor: pointer;
+                  margin-bottom: 0;
                 }
               }
 
@@ -264,7 +298,6 @@
             }
           }
 
-
           .next-btn {
             @include l.myTitle16();
             position: absolute;
@@ -280,19 +313,17 @@
             cursor: pointer;
             transition: background 0.3s;
 
-
             &:hover {
               background: #000;
             }
           }
         }
 
-
         //  회원가입폼
         .join-form {
           position: absolute;
           inset: 0;
-          padding: 40px 60px;
+          padding: 40px;
           background: transparent;
           opacity: 0;
           pointer-events: none;
@@ -300,10 +331,9 @@
 
           .join-wrap {
             display: flex;
-            width: 80.0rem;
+            width: 80rem;
             height: 100%;
             background: l.$BG;
-
 
             .right-side {
               position: relative;
@@ -323,15 +353,11 @@
                 .nav-btns {
                   opacity: 0;
                 }
-
-
               }
-
 
               .section-title {
                 @include l.myTitle24();
                 // margin-bottom: 24px;
-
               }
 
               form {
@@ -366,7 +392,6 @@
                       padding: 12px 24px;
                       background: l.$text10;
                       outline: none;
-
                     }
 
                     button {
@@ -386,17 +411,20 @@
                     }
 
                     .address-btn {
+                      margin-top: -16px;
+                      display: flex;
+                      gap: 12px;
                       input {
                         width: 244px;
                       }
 
                       button {
                         width: 124px;
+                        // margin-left: 20px;
                       }
                     }
                   }
                 }
-
 
                 .join-btn {
                   @include l.myTitle16();
@@ -412,7 +440,6 @@
                   color: l.$text10;
                   cursor: pointer;
                   transition: background 0.3s;
-
 
                   &:hover {
                     background: l.$text1;
@@ -440,7 +467,6 @@
       }
     }
   }
-
 
   &.terms-active {
     .slider-wrapper {
@@ -495,7 +521,7 @@
       .bounce {
         width: 170px;
         animation: updown 3.6s ease-in-out infinite;
-        display: inline-block
+        display: inline-block;
       }
 
       @keyframes updown {
@@ -545,13 +571,9 @@
       transform: translateX(-152%);
       opacity: 1;
     }
-
-
   }
 
-
-  // 주소창  
-
+  // 주소창
 }
 
 .post_wrapper {

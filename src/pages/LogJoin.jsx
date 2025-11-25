@@ -102,22 +102,28 @@ export default function LogJoin() {
             <div className="login-box">
               <h2>LOGIN</h2>
               <form onSubmit={handleLogin}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={loginForm.email}
-                  onChange={handleLoginChange}
-                  required
-                />
-                <input
-                  type="password"
-                  name="password"
-                  placeholder="Password"
-                  value={loginForm.password}
-                  onChange={handleLoginChange}
-                  required
-                />
+                <div className="input-wrap">
+                  <img src="/images/email.svg" alt="email" />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    value={loginForm.email}
+                    onChange={handleLoginChange}
+                    required
+                  />
+                </div>
+                <div className="input-wrap">
+                  <img src="/images/lyra-icon-lock.svg" alt="password" />
+                  <input
+                    type="password"
+                    name="password"
+                    placeholder="Password"
+                    value={loginForm.password}
+                    onChange={handleLoginChange}
+                    required
+                  />
+                </div>
                 <button type="submit" className="login-btn">
                   로그인
                 </button>
@@ -129,20 +135,27 @@ export default function LogJoin() {
               </p>
 
               <div className="social-login">
-                <p>SNS 간편로그인</p>
+                <div className="text-box">
+                  <img src="/images/line.svg" alt="line" />
+                  <h2>SNS 간편로그인</h2>
+                  <img src="/images/line.svg" alt="line" />
+                </div>
+
                 <button
                   type="button"
                   onClick={onGoogleLogin}
                   className="btn google"
                 >
-                  구글 로그인
+                  <img src="/images/google.svg" alt="google" />
+                  <p>구글 로그인</p>
                 </button>
                 <button
                   type="button"
                   onClick={onKakaoLogin}
                   className="btn kakao"
                 >
-                  카카오 로그인
+                  <img src="/images/kakao.svg" alt="kakao" />
+                  <p>카카오 로그인</p>
                 </button>
               </div>
             </div>
@@ -301,8 +314,8 @@ export default function LogJoin() {
                           </div>
 
                           <div className="right-address">
+                            <p>주소</p>
                             <div className="address-btn">
-                              <p>주소</p>
                               <input
                                 type="text"
                                 name="addnum"
