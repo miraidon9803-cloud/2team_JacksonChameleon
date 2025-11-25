@@ -76,21 +76,22 @@ const Payment = () => {
     setInputPoint(valid.toString());
     setUsedPoint(valid);
   };
-
   const handleConfirm = () => {
-    saveOrder();
-    processPayment();
-    resetPaymentState();
-    onClearCart(); // 장바구니 비우기 (결제 완료 후)
-    // navigate("/mypage");
+    onAddOrder(); // 주문상품 저장 → orderList 업데이트
+    saveOrder(); // Firestore 저장 (optional)
+    processPayment(); // 결제 처리
+    if (checkoutItems.length === 0) {
+      onClearCart(); // 장바구니 결제일 때만 비움
+    }
+    resetPaymentState(); // 결제 화면 UI 상태 초기화 (orderList 초기화 금지)
+    setShowComplete(true); // 완료 팝업 표시
   };
 
-  /* ------------------ 주문상품 초기화 ------------------ */
-  useEffect(() => {
-    onAddOrder();
-  }, []);
-
   const { resetCheckoutItems } = useProductStore();
+
+  useEffect(() => {
+    onAddOrder(); // 장바구니 결제일 때 orderList 저장
+  }, []);
 
   useEffect(() => {
     // 페이지 나갈 때 checkoutItems 초기화
@@ -361,7 +362,6 @@ const Payment = () => {
                   className="pay-btn"
                   onClick={() => {
                     handleConfirm(); // 결제 처리
-                    setShowComplete(true); // 완료 팝업 ON
                   }}
                 >
                   결제하기

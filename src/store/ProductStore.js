@@ -107,7 +107,7 @@ export const useProductStore = create(
       set({
         cartItems: [],
         cartCount: 0,
-        orderList: [],
+
         // usedPoint: 0,
       }),
 
@@ -383,17 +383,23 @@ export const useProductStore = create(
     orderList: [],
 
     onAddOrder: () => {
-      const checked = get().cartItems.filter((item) => item.checked);
-      set({ orderList: checked });
+      const { checkoutItems, cartItems } = get();
+
+      // 단독결제 있으면 그걸 우선 사용, 아니면 장바구니에서 checked 된 것만
+      const baseItems =
+        checkoutItems && checkoutItems.length > 0
+          ? checkoutItems
+          : cartItems.filter((item) => item.checked);
+
+      set({ orderList: baseItems });
     },
 
     processPayment: () => {
-      const { usedPoint, getsavePoint, updateMyPoint, onAddOrder } = get();
+      const { usedPoint, getsavePoint, updateMyPoint } = get();
       const saved = getsavePoint();
-
       updateMyPoint(usedPoint, saved);
-      onAddOrder();
     },
+
     resetPaymentState: () =>
       set({
         selectedCoupon: null,
