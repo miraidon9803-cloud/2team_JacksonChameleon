@@ -1,17 +1,18 @@
 import React from 'react'
 import jacksonproduct from '../data/jacksonproduct'
 import "./scss/CollectionList.scss"
+import { useNavigate } from "react-router-dom"; 
 
 
 const CollectionList = ({ brand }) => {
-    // brand prop이 있으면 필터링, 없으면 전체 표시
+    const navigate = useNavigate();  
+
+   
     const filteredProducts = brand
         ? jacksonproduct.filter(item =>
             item.brand?.toLowerCase() === brand.toLowerCase()
         )
         : jacksonproduct
-
-    
 
     return (
         <div className="collection-product-wrap">
@@ -19,17 +20,24 @@ const CollectionList = ({ brand }) => {
                 
                 <div className="product-list">
                     {filteredProducts.length > 0 ? (
-                        filteredProducts.map((item, index) => (
-                            <div className="product" key={index}>
+                        filteredProducts.map((item) => (
+                            <div 
+                                className="product" 
+                                key={item.id}
+
+                                onClick={() => navigate(`/shop/product/${item.id}`)}
+                            >
                                 <span className='new'>{item.badges}</span>
+
                                 <div className="img-box">
                                     <p className="default-img">
                                         <img src={item.img_url} alt={item.title} />
                                     </p>
                                     <p className='hover-img'>
-                                        <img src={item.img_hover} alt="" />
+                                        <img src={item.img_hover} alt={item.title} />
                                     </p>
                                 </div>
+
                                 <div className="text-box">
                                     <p className="title">{item.title}</p>
                                     <div className="price-wrap">
