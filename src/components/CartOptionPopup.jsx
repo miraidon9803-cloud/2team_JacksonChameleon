@@ -12,7 +12,12 @@ const CartOptionPopup = ({ item, onClose }) => {
   const originProduct = products.find((p) => p.id === item.id);
   if (!originProduct) return null;
 
-  const sheetOptions = originProduct.sheet || [];
+  const sheetOptions = [
+    { title: "H", text: "하드" },
+    { title: "M", text: "미디움" },
+    { title: "MH", text: "미디움하드" },
+    { title: "MS", text: "미디움소프트" },
+  ];
   const sizeOptions = originProduct.size || [];
   const colorOptions = originProduct.color || [];
   const addOptions = originProduct.add || [];

@@ -1,10 +1,9 @@
-import React from 'react';
-import './scss/PaymentComplete.scss';
-import { useProductStore } from '../store/ProductStore';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import "./scss/PaymentComplete.scss";
+import { useProductStore } from "../store/ProductStore";
+import { useNavigate } from "react-router-dom";
 
 const PaymentComplete = ({ onClose }) => {
-
   const navigate = useNavigate();
 
   const {
@@ -14,24 +13,23 @@ const PaymentComplete = ({ onClose }) => {
     processPayment,
     onClearCart,
     resetPaymentState,
-    saveOrder  
+    saveOrder,
   } = useProductStore();
 
   const finalPayment = getFinalPayment();
   const savedPoint = getsavePoint();
 
   const handleConfirm = () => {
-    saveOrder ();
-    processPayment();  
+    saveOrder();
+    processPayment();
     resetPaymentState();
-    onClearCart();     // 장바구니 비우기 (결제 완료 후)
-    navigate("/mypage"); 
+    onClearCart(); // 장바구니 비우기 (결제 완료 후)
+    navigate("/mypage");
   };
 
   return (
-    <div className='PaymentComplete-wrap'>
+    <div className="PaymentComplete-wrap">
       <div className="wrap">
-
         {/* TOP AREA */}
         <div className="top">
           <div onClick={onClose} className="close">
@@ -39,10 +37,10 @@ const PaymentComplete = ({ onClose }) => {
           </div>
 
           <div className="img-box">
-            <div className='line'>
+            <div className="line">
               <img src="/images/complete1.png" alt="complete1" />
             </div>
-            <div className='ani'>
+            <div className="ani">
               <img src="/images/complete2.png" alt="complete2" />
             </div>
           </div>
@@ -53,9 +51,7 @@ const PaymentComplete = ({ onClose }) => {
 
         {/* ORDER INFO */}
         <div className="text-box">
-
           <div className="first-box">
-
             <div className="box">
               <p>주문번호</p>
               <p>20251121-{Math.floor(Math.random() * 90000000 + 10000000)}</p>
@@ -91,11 +87,9 @@ const PaymentComplete = ({ onClose }) => {
               <p>{savedPoint.toLocaleString("ko-KR")}원</p>
             </div>
           </div>
-
         </div>
 
-        <button onClick={handleConfirm}>메인 화면 가기</button>
-
+        <button>메인 화면 가기</button>
       </div>
     </div>
   );

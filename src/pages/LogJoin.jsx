@@ -28,18 +28,15 @@ export default function LogJoin() {
   const [panel, setPanel] = useState("login");
   const [showJoinForm, setShowJoinForm] = useState(false);
 
-
   const handleLoginChange = (e) => {
     const { name, value } = e.target;
     setLoginForm((prev) => ({ ...prev, [name]: value }));
   };
 
-
   const handleJoinChange = (e) => {
     const { name, value } = e.target;
     setJoinForm((prev) => ({ ...prev, [name]: value }));
   };
-
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -53,12 +50,10 @@ export default function LogJoin() {
     }
   };
 
-
   const openTermsPanel = () => {
-    resetJoinForm(); 
+    resetJoinForm();
     setPanel("terms");
   };
-
 
   const handleNextFromTerms = () => {
     if (terms.some((t) => t.required && !t.checked)) {
@@ -67,7 +62,6 @@ export default function LogJoin() {
     }
     setShowJoinForm(true);
   };
-
 
   const handleJoinSubmit = async (e) => {
     e.preventDefault();
@@ -89,20 +83,20 @@ export default function LogJoin() {
     }
   };
   const [joinComplete, setJoinComplete] = useState(false);
-  
-    const goLogin = () => {
-  setJoinComplete(false);     
-  setShowJoinForm(false);     
-  setPanel("login");          
-};
 
-  const cardClass = panel === "terms" ? "glass-card terms-active" : "glass-card";
+  const goLogin = () => {
+    setJoinComplete(false);
+    setShowJoinForm(false);
+    setPanel("login");
+  };
+
+  const cardClass =
+    panel === "terms" ? "glass-card terms-active" : "glass-card";
 
   return (
     <div className="logjoin-container">
       <div className={cardClass}>
         <div className="slider-wrapper">
-
           {/* 로그인 */}
           <div className="login-area">
             <div className="login-box">
@@ -136,10 +130,18 @@ export default function LogJoin() {
 
               <div className="social-login">
                 <p>SNS 간편로그인</p>
-                <button type="button" onClick={onGoogleLogin} className="btn google">
+                <button
+                  type="button"
+                  onClick={onGoogleLogin}
+                  className="btn google"
+                >
                   구글 로그인
                 </button>
-                <button type="button" onClick={onKakaoLogin} className="btn kakao">
+                <button
+                  type="button"
+                  onClick={onKakaoLogin}
+                  className="btn kakao"
+                >
                   카카오 로그인
                 </button>
               </div>
@@ -151,17 +153,15 @@ export default function LogJoin() {
             <img src="/images/log-img2.png" alt="login visual" />
             <div className="text-overlay">
               <p>
-                Welcome back to <br />
-                a space of new harmony
+                Welcome back to <br />a space of new harmony
               </p>
             </div>
           </div>
 
-         {/* 약관 회원가입 */}
-          <div className={`term-join-area ${joinComplete ? "hide" : ""}` }>
+          {/* 약관 회원가입 */}
+          <div className={`term-join-area ${joinComplete ? "hide" : ""}`}>
             <div className={`terms-wrap ${panel === "terms" ? "show" : ""}}`}>
               <div className={`right-side ${showJoinForm ? "show-join" : ""}`}>
-
                 {/* 약관 */}
                 <div className="terms-content">
                   <div className="title-wrap">
@@ -201,12 +201,15 @@ export default function LogJoin() {
                           </label>
                           <p
                             className="term-toggle"
-                            onClick={() => toggleDetail(term.id)}>
+                            onClick={() => toggleDetail(term.id)}
+                          >
                             {term.show ? "[접기]" : "[보기]"}
                           </p>
                         </div>
 
-                        {term.show && <div className="term-content">{term.content}</div>}
+                        {term.show && (
+                          <div className="term-content">{term.content}</div>
+                        )}
                       </div>
                     ))}
                   </div>
@@ -221,32 +224,33 @@ export default function LogJoin() {
                   <div className="join-wrap">
                     <div className="right-side">
                       <div className="title-wrap">
-                        <p className="nav-btn" onClick={() => setShowJoinForm(false)}>
+                        <p
+                          className="nav-btn"
+                          onClick={() => setShowJoinForm(false)}
+                        >
                           <img src="/images/log-arrow-left.png" alt="" />
                         </p>
-                        
+
                         <h2 className="section-title">SIGN UP</h2>
-                          <p className="nav-btns" onClick={handleNextFromTerms}>
-                      <img src="/images/log-arrow-right.png" alt="" />
-                    </p>
+                        <p className="nav-btns" onClick={handleNextFromTerms}>
+                          <img src="/images/log-arrow-right.png" alt="" />
+                        </p>
                       </div>
 
                       <form onSubmit={handleJoinSubmit}>
                         <div className="join-flex-wrap">
                           <div className="left-inputs">
-
-                             <div className="input-group">
+                            <div className="input-group">
                               <p>성함</p>
                               <input
                                 type="name"
                                 name="name"
                                 value={joinForm.name}
                                 onChange={handleJoinChange}
-                                placeholder="이메일 주소 입력해주세요"
+                                placeholder="성함을 입력해주세요"
                                 required
                               />
                             </div>
-
 
                             <div className="input-group">
                               <p>이메일 주소</p>
@@ -255,7 +259,7 @@ export default function LogJoin() {
                                 name="email"
                                 value={joinForm.email}
                                 onChange={handleJoinChange}
-                                placeholder="이메일 주소 입력해주세요"
+                                placeholder="이메일 주소를 입력해주세요"
                                 required
                               />
                             </div>
@@ -279,7 +283,7 @@ export default function LogJoin() {
                                 name="passwordConfirm"
                                 value={joinForm.passwordConfirm}
                                 onChange={handleJoinChange}
-                                placeholder="비밀번호를 다시  입력해주세요"
+                                placeholder="비밀번호를 다시 입력해주세요"
                                 required
                               />
                             </div>
@@ -306,7 +310,10 @@ export default function LogJoin() {
                                 value={joinForm.addnum}
                                 readOnly
                               />
-                              <button type="button" onClick={() => setIsPostOpen(true)}>
+                              <button
+                                type="button"
+                                onClick={() => setIsPostOpen(true)}
+                              >
                                 주소찾기
                               </button>
                             </div>
@@ -333,20 +340,21 @@ export default function LogJoin() {
                           회원가입 완료
                         </button>
                       </form>
-
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
-          <div className={`join-complete ${joinComplete ? 'show' : ''}`}>
+          <div className={`join-complete ${joinComplete ? "show" : ""}`}>
             <div className="complete-wrap">
               <p>JOIN US</p>
-              <img className='bounce' src="/images/logincomplete.png" alt="" />
+              <img className="bounce" src="/images/logincomplete.png" alt="" />
               <p>회원가입 완료</p>
-              <p>잭슨카멜레온의 회원이 되신것을 환영합니다 <br/>로그인후 서비스를 이용해주시기 바랍니다.</p>
+              <p>
+                잭슨카멜레온의 회원이 되신것을 환영합니다 <br />
+                로그인후 서비스를 이용해주시기 바랍니다.
+              </p>
               <button onClick={goLogin}>로그인 하러가기</button>
             </div>
           </div>
