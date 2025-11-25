@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, getAuth } from "firebase/auth";
-import { getFirestore,setDoc,doc } from "firebase/firestore";
+import { getFirestore, setDoc, doc } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
 // Your web app's Firebase configuration
@@ -13,17 +13,16 @@ import { getStorage } from "firebase/storage";
 //     appId: "1:1094099913191:web:05ad44c1a06d2a84275542"
 // };
 const firebaseConfig = {
-  apiKey: "AIzaSyAwDHWOWjL5jkkJKw22jFILlUOLFq6bPfk",
-  authDomain: "jacksonchameleon-practice.firebaseapp.com",
-  projectId: "jacksonchameleon-practice",
-  storageBucket: "jacksonchameleon-practice.appspot.com",
-  messagingSenderId: "1042027975933",
-  appId: "1:1042027975933:web:f606463f02d507bed99a94",
-  measurementId: "G-FN8MZ91M38"
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AuthDomain,
+  projectId: process.env.REACT_APP_FIREBASE_ProjectId,
+  storageBucket: process.env.REACT_APP_FIREBASE_StorageBucket,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MessagingSenderId,
+  appId: process.env.REACT_APP_FIREBASE_AppId,
+  measurementId: process.env.REACT_APP_FIREBASE_MeasurementId,
 };
 
 // Initialize Firebase
-
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -31,7 +30,6 @@ export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
 export const db = getFirestore(app);
 export const storage = getStorage(app);
-
 
 // 🔹 Firestore에 주소 저장하는 함수 (옵션)
 export const saveUserAddress = async (userId, address) => {
@@ -44,6 +42,3 @@ export const saveUserAddress = async (userId, address) => {
     console.error(" 주소 저장 실패:", error);
   }
 };
-
-
-

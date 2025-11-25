@@ -1,23 +1,38 @@
-import React from 'react'
+import React from "react";
 import "./scss/MainSwiperBannerLamp.scss";
-import 'animate.css';
-
+import "animate.css";
+import { useNavigate } from "react-router-dom";
 
 const MainSwiperBannerLamp = () => {
-    return (
-        <section className="main-swiper">
-            <div className="text-box">
-                <p className='animate__animated animate__fadeInDown'>Cone Collection</p>
-                <h2 className='animate__animated animate__fadeInDown'>CONE LAMP</h2>
-                <button className='animate__animated animate__fadeInDown'>SHOP NOW</button>
-            </div>
+  const navigate = useNavigate();
+  return (
+    <section className="main-swiper">
+      <div className="text-box">
+        <p className="animate__animated animate__fadeInDown">Cone Collection</p>
+        <h2 className="animate__animated animate__fadeInDown">CONE LAMP</h2>
 
-            <div className="img-box">
-                <img className=' left animate__animated animate__fadeInBottomLeft' src="/images/main-best-lamp-left.png" alt="제품이미지" />
-                <img className='right animate__animated animate__fadeInTopRight' src=" /images/main-best-lamp-right.png" alt="제품이미지" />
-            </div>
-        </section>
-    )
-}
+        <button
+          onClick={() => navigate("/shop/lighting")}
+          className="animate__animated animate__fadeInDown"
+        >
+          SHOP NOW
+        </button>
+      </div>
 
-export default MainSwiperBannerLamp
+      <div className="img-box">
+        <img
+          className=" left animate__animated animate__fadeInBottomLeft"
+          src="/images/main-best-lamp-left.png"
+          alt="제품이미지"
+        />
+        <img
+          className="right animate__animated animate__fadeInTopRight"
+          src=" /images/main-best-lamp-right.png"
+          alt="제품이미지"
+        />
+      </div>
+    </section>
+  );
+};
+
+export default MainSwiperBannerLamp;
