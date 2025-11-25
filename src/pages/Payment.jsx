@@ -1,20 +1,22 @@
-import React, { useEffect, useState } from 'react';
-import { useProductStore } from '../store/ProductStore';
-import './scss/Payment.scss';
-import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '../store/authStore';
-import Coupon from '../components/Coupon';
-import PaymentDelivery from '../components/PaymentDelivery';
-import PaymentComplete from '../components/PaymentComplete';
+import React, { useEffect, useState } from "react";
+import { useProductStore } from "../store/ProductStore";
+import "./scss/Payment.scss";
+import { useNavigate } from "react-router-dom";
+import { useAuthStore } from "../store/authStore";
+import Coupon from "../components/Coupon";
+import PaymentDelivery from "../components/PaymentDelivery";
+import PaymentComplete from "../components/PaymentComplete";
 
 const Payment = () => {
-
   /* ------------------ STORE ------------------ */
   const {
     // 요청사항
-    isReqOpen, toggleReqOpen,
-    isCustomInput, setIsCustomInput,
-    reqText, setReqText,
+    isReqOpen,
+    toggleReqOpen,
+    isCustomInput,
+    setIsCustomInput,
+    reqText,
+    setReqText,
     reqOptions,
 
     // 결제 계산
@@ -25,12 +27,17 @@ const Payment = () => {
     getsavePoint,
 
     // 포인트
-    usedPoint, setUsedPoint, resetUsedPoint, validatePoint,
+    usedPoint,
+    setUsedPoint,
+    resetUsedPoint,
+    validatePoint,
     myPoint,
 
     // 결제수단
-    selectedMethod, setSelectedMethod,
-    selectedMethodBtn, setSelectedMethodBtn,
+    selectedMethod,
+    setSelectedMethod,
+    selectedMethodBtn,
+    setSelectedMethodBtn,
     simpleOpt,
 
     // 주문
@@ -38,22 +45,18 @@ const Payment = () => {
     orderList,
   } = useProductStore();
 
-
   const { user } = useAuthStore();
 
-  
   const [showCoupon, setShowCoupon] = useState(false);
   const [showDelivery, setShowDelivery] = useState(false);
   const [showComplete, setShowComplete] = useState(false);
   const [inputPoint, setInputPoint] = useState("");
 
-
-  const selectedTotal = getSelectedTotalPrice();   // 상품 금액 총합
-  const saleTotal = getItemSalePrice();            // 즉시할인
-  const couponDiscount = getCouponDiscount();      // 쿠폰 할인
-  const finalPayment = getFinalPayment();          // 최종 결제 금액
-  const savePoint = getsavePoint();                // 예상 적립금
-
+  const selectedTotal = getSelectedTotalPrice(); // 상품 금액 총합
+  const saleTotal = getItemSalePrice(); // 즉시할인
+  const couponDiscount = getCouponDiscount(); // 쿠폰 할인
+  const finalPayment = getFinalPayment(); // 최종 결제 금액
+  const savePoint = getsavePoint(); // 예상 적립금
 
   const handlePointOpen = () => {
     const valid = validatePoint(inputPoint);
@@ -72,24 +75,25 @@ const Payment = () => {
   }, []);
 
   return (
-    <div className='checkout-wrap'>
+    <div className="checkout-wrap">
       <div className="inner">
-
-        <h3 className='title'>CHECKOUT</h3>
+        <h3 className="title">CHECKOUT</h3>
 
         <div className="content-wrap">
-
           {/* ------------------ LEFT ------------------ */}
           <div className="left">
-
             {/* 사용자 정보 */}
             <div className="left-con1 user-info">
               <div className="user-name">
-                <p>{user?.email}</p>
-                <button onClick={() => setShowDelivery(true)}>배송지 변경</button>
+                <p>{user?.name}</p>
+                <button onClick={() => setShowDelivery(true)}>
+                  배송지 변경
+                </button>
               </div>
               <div className="address">
-                <p>{user?.addnum} {user?.address} {user?.add}</p>
+                <p>
+                  {user?.addnum} {user?.address} {user?.add}
+                </p>
                 <p>{user?.phone}</p>
               </div>
             </div>
@@ -98,9 +102,8 @@ const Payment = () => {
             <div className="left-con2 req">
               <p>요청사항</p>
 
-              <div className='req-list-wrap' onClick={toggleReqOpen}>
+              <div className="req-list-wrap" onClick={toggleReqOpen}>
                 <div className="req-list">
-
                   {isCustomInput ? (
                     <input
                       type="text"
@@ -124,11 +127,12 @@ const Payment = () => {
 
               {isReqOpen && (
                 <div className="req-dropdown">
-
                   {reqOptions.map((opt) => (
                     <div
                       key={opt.id}
-                      className={`req-item ${reqText === opt.label ? "selected" : ""}`}
+                      className={`req-item ${
+                        reqText === opt.label ? "selected" : ""
+                      }`}
                       onClick={(e) => {
                         e.stopPropagation();
                         setIsCustomInput(false);
@@ -161,15 +165,21 @@ const Payment = () => {
 
               {orderList.map((i) => (
                 <div className="order-item" key={i.cartId}>
-                  <div className="item-img"><img src={i.size?.img} alt="" /></div>
+                  <div className="item-img">
+                    <img src={i.size?.img} alt="" />
+                  </div>
 
                   <div className="item-info">
                     <p className="item-title">{i.title}</p>
                     <p className="item-option">
-                      {i.sheet?.text} / {i.size?.sizename} / {i.color?.colorname} / {i.add?.cushion || "선택안함"}
+                      {i.sheet?.text} / {i.size?.sizename} /{" "}
+                      {i.color?.colorname} / {i.add?.cushion || "선택안함"}
                     </p>
                     <p className="item-price">
-                      {((i.size?.price || 0) + (i.add?.price || 0)).toLocaleString("ko-KR")}원
+                      {(
+                        (i.size?.price || 0) + (i.add?.price || 0)
+                      ).toLocaleString("ko-KR")}
+                      원
                     </p>
                   </div>
                 </div>
@@ -215,7 +225,6 @@ const Payment = () => {
               <p>결제수단</p>
 
               <form>
-
                 {/* 간편결제 */}
                 <label>
                   <input
@@ -225,8 +234,11 @@ const Payment = () => {
                     onChange={() => setSelectedMethod("simple")}
                   />
                   간편결제
-
-                  <div className={`selected-method ${selectedMethod === "simple" ? "active" : ""}`}>
+                  <div
+                    className={`selected-method ${
+                      selectedMethod === "simple" ? "active" : ""
+                    }`}
+                  >
                     {simpleOpt.map((btn) => (
                       <button
                         type="button"
@@ -235,7 +247,11 @@ const Payment = () => {
                         onClick={() => setSelectedMethodBtn(btn.id)}
                       >
                         <img
-                          src={selectedMethodBtn === btn.id ? btn.activeimg : btn.img}
+                          src={
+                            selectedMethodBtn === btn.id
+                              ? btn.activeimg
+                              : btn.img
+                          }
                           alt={btn.label}
                         />
                       </button>
@@ -252,32 +268,33 @@ const Payment = () => {
                     onChange={() => setSelectedMethod("general")}
                   />
                   일반결제
-
-                  <div className={`selected-method ${selectedMethod === "general" ? "active" : ""}`}>
-                    {["무통장 입금", "카드결제", "가상계좌", "실시간 입금"].map((btn) => (
-                      <button
-                        type="button"
-                        key={btn}
-                        className={selectedMethodBtn === btn ? "active" : ""}
-                        onClick={() => setSelectedMethodBtn(btn)}
-                      >
-                        {btn}
-                      </button>
-                    ))}
+                  <div
+                    className={`selected-method ${
+                      selectedMethod === "general" ? "active" : ""
+                    }`}
+                  >
+                    {["무통장 입금", "카드결제", "가상계좌", "실시간 입금"].map(
+                      (btn) => (
+                        <button
+                          type="button"
+                          key={btn}
+                          className={selectedMethodBtn === btn ? "active" : ""}
+                          onClick={() => setSelectedMethodBtn(btn)}
+                        >
+                          {btn}
+                        </button>
+                      )
+                    )}
                   </div>
                 </label>
-
               </form>
-
             </div>
-
           </div>
 
           {/* ------------------ RIGHT ------------------ */}
           <div className="right">
             <div className="total-wrap">
               <div className="total-content">
-
                 <h4>구매 금액</h4>
 
                 <ul>
@@ -315,28 +332,26 @@ const Payment = () => {
                   <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
 
-                <button
-                  className="pay-btn"
-                  onClick={setShowComplete}
-                >
+                <button className="pay-btn" onClick={setShowComplete}>
                   <span>결제하기</span>
                 </button>
-
               </div>
             </div>
           </div>
-
         </div>
 
         {/* 팝업들 */}
         {showCoupon && <Coupon onClose={() => setShowCoupon(false)} />}
-        {showDelivery && <PaymentDelivery onClose={() => setShowDelivery(false)} />}
-        {showComplete && <PaymentComplete onClose={() => setShowComplete(false)} />}
+        {showDelivery && (
+          <PaymentDelivery onClose={() => setShowDelivery(false)} />
+        )}
+        {showComplete && (
+          <PaymentComplete onClose={() => setShowComplete(false)} />
+        )}
 
         {(showCoupon || showDelivery || showComplete) && (
           <div className="popup-overlay"></div>
         )}
-
       </div>
     </div>
   );
