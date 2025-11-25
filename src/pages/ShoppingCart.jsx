@@ -55,7 +55,7 @@ const ShoppingCart = () => {
 
   //선택삭제
   const handleDeleteSelected = () => {
-    const checkedItems = cartItems.filter((item) => item.checked);
+    const checkedItems = cartItems?.filter((item) => item.checked);
     if (checkedItems.length === 0) {
       alert("삭제할 상품을 선택해주세요");
       return;
@@ -126,15 +126,7 @@ const ShoppingCart = () => {
 
                     <div className="item-box">
                       <div className="item-img">
-                        <img
-                          src={
-                            item.size?.img ||
-                            item.color?.img ||
-                            item.add?.img ||
-                            "/images/noimg.png"
-                          }
-                          alt={item.title}
-                        />
+                        <img src={item?.size?.img} alt={item.title} />
                       </div>
                       <div className="item-text">
                         <div className="item-info">
@@ -142,8 +134,7 @@ const ShoppingCart = () => {
                           <p className="item-option">
                             {item.sheet?.text || "시트 없음"} /
                             {item.size?.sizename || "사이즈 없음"} /
-                            {item.color?.colorname || "색상 없음"} /
-                            {item.add?.cushion || "선택안함"}
+                            {item.color?.colorname || "컬러 없음"}
                           </p>
 
                           <button
