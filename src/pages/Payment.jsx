@@ -46,6 +46,10 @@ const Payment = () => {
 
     //단독결제
     checkoutItems,
+    saveOrder,
+    processPayment,
+    resetPaymentState,
+    onClearCart,
   } = useProductStore();
 
   const { user } = useAuthStore();
@@ -78,7 +82,7 @@ const Payment = () => {
     processPayment();
     resetPaymentState();
     onClearCart(); // 장바구니 비우기 (결제 완료 후)
-    navigate("/mypage");
+    // navigate("/mypage");
   };
 
   /* ------------------ 주문상품 초기화 ------------------ */
@@ -353,9 +357,14 @@ const Payment = () => {
                   <span>총 결제 금액</span>
                   <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
-
-                <button className="pay-btn" onClick={setShowComplete}>
-                  <span onClick={handleConfirm}>결제하기</span>
+                <button
+                  className="pay-btn"
+                  onClick={() => {
+                    handleConfirm(); // 결제 처리
+                    setShowComplete(true); // 완료 팝업 ON
+                  }}
+                >
+                  결제하기
                 </button>
               </div>
             </div>
