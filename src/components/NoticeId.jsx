@@ -1,6 +1,6 @@
 import React from 'react'
 import './scss/NoticeId.scss'
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const NoticeId = () => {
 
@@ -27,11 +27,11 @@ const NoticeId = () => {
                 </div>
 
                 <div className="noticeid-link">
-                    <Link to='/sample' className='link'>샘플신청 하러가기</Link>
+                    <Link to='/service/sample' className='link'>샘플신청 하러가기</Link>
                 </div>
 
                 <div className="noticepage-back">
-                    <Link to="/notice">목록으로 돌아가기</Link>
+                    <Link to="/community/notice">목록으로 돌아가기</Link>
                 </div>
             </div>
         </section>

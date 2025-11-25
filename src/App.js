@@ -44,6 +44,8 @@ import Sample from './pages/Sample';
 import OrderDetail from './pages/OrderDetail';
 import Checkout from './pages/Checkout';
 import { useEffect } from 'react';
+import NoticePage from './components/NoticePage';
+import NoticeId from './components/NoticeId';
 
 
 
@@ -100,7 +102,11 @@ function App() {
         <Route path="/community/store" element={<Map />} />
         <Route path="/careservice" element={<CareService />} />
         <Route path="/cs" element={<CS />} />
-        <Route path="/notice" element={<Notice />} />
+        <Route path="/community/notice" element={<Notice />} />
+        <Route path='/notice/:id'  element={<NoticePage/>}/>
+        <Route path='/notice/1/special'  element={<NoticeId/>}/>
+
+
         <Route path="/noticedetails" element={<NoticeDetails />} />
         <Route path="/payment" element={<Payment />} />
         <Route path="/search" element={<Search />} />

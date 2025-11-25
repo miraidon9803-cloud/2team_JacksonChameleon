@@ -4,6 +4,7 @@
 .noticeid-wrap {
     .inner {
         margin-top: 100px;
+        margin-bottom: 120px;
 
         h2 {
             font-size: 24px;
@@ -16,7 +17,7 @@
             gap: 16px;
             font-size: 16px;
             color: g.$text1;
-    
+
         }
 
         .line1 {
@@ -63,7 +64,7 @@
         .noticeid-link {
             display: flex;
             justify-content: center;
-            margin-bottom: 50px;
+            margin-bottom: 70px;
 
             .link {
                 text-align: center;
@@ -72,7 +73,7 @@
                 border: 1px solid g.$text6;
                 border-radius: 4px;
                 background: g.$text10;
-                font-size: 12px;
+                font-size: 16px;
                 cursor: pointer;
                 transition: all 0.2s;
                 color: g.$text1;
@@ -89,13 +90,15 @@
         .noticepage-back {
             margin-top: 10px;
             text-align: center;
+            
 
             a {
+                width: 200px;
                 border-radius: 4px;
                 background: g.$text4;
                 color: g.$text10;
-                padding: 10px 20px;
-                font-size: 12px;
+                padding: 14px 43px;
+                font-size: 16px;
                 cursor: pointer;
                 transition: all 0.2s;
 
