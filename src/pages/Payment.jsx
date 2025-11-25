@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useProductStore } from "../store/ProductStore";
 import "./scss/Payment.scss";
-import { useNavigate } from "react-router-dom";
 import { useAuthStore } from "../store/authStore";
 import Coupon from "../components/Coupon";
 import PaymentDelivery from "../components/PaymentDelivery";
 import PaymentComplete from "../components/PaymentComplete";
 
 const Payment = () => {
+  const navigate = useNavigate();
   /* ------------------ STORE ------------------ */
   const {
     // 요청사항
@@ -19,7 +20,7 @@ const Payment = () => {
     setReqText,
     reqOptions,
 
-    // 결제 계산
+    // 계산 로직 (orderList 기준으로 수정됨)
     getSelectedTotalPrice,
     getItemSalePrice,
     getCouponDiscount,
@@ -40,39 +41,79 @@ const Payment = () => {
     setSelectedMethodBtn,
     simpleOpt,
 
-    // 주문
+    // 주문 리스트
     onAddOrder,
     orderList,
+    directOrderList,
+    resetDirectOrder,
+    setOrderList,
+    saveOrder,
+    processPayment,
+    resetPaymentState,
+    onClearCart,
   } = useProductStore();
 
   const { user } = useAuthStore();
 
+  /* ------------------ LOCAL STATE ------------------ */
   const [showCoupon, setShowCoupon] = useState(false);
   const [showDelivery, setShowDelivery] = useState(false);
   const [showComplete, setShowComplete] = useState(false);
   const [inputPoint, setInputPoint] = useState("");
 
-  const selectedTotal = getSelectedTotalPrice(); // 상품 금액 총합
-  const saleTotal = getItemSalePrice(); // 즉시할인
-  const couponDiscount = getCouponDiscount(); // 쿠폰 할인
-  const finalPayment = getFinalPayment(); // 최종 결제 금액
-  const savePoint = getsavePoint(); // 예상 적립금
+  // 가격 state
+  const [selectedTotal, setSelectedTotal] = useState(0);
+  const [saleTotal, setSaleTotal] = useState(0);
+  const [couponDiscount, setCouponDiscount] = useState(0);
+  const [finalPayment, setFinalPayment] = useState(0);
+  const [savePoint, setSavePoint] = useState(0);
 
+  /* ------------------ Payment 진입 시 주문 리스트 세팅 ------------------ */
+  useEffect(() => {
+    console.log("💡 Payment 진입 directOrderList:", directOrderList);
+
+    if (directOrderList && directOrderList.length > 0) {
+      setOrderList(directOrderList); // 바로결제
+      resetDirectOrder();
+    } else {
+      onAddOrder(); // 장바구니 결제
+    }
+  }, []);
+
+  /* ------------------ 가격 자동 재계산 ------------------ */
+  useEffect(() => {
+    setSelectedTotal(getSelectedTotalPrice());
+    setSaleTotal(getItemSalePrice());
+    setCouponDiscount(getCouponDiscount());
+    setFinalPayment(getFinalPayment());
+    setSavePoint(getsavePoint());
+  }, [orderList, usedPoint, selectedMethod, selectedMethodBtn]);
+
+  /* ------------------ 포인트 입력 ------------------ */
   const handlePointOpen = () => {
     const valid = validatePoint(inputPoint);
+
     if (valid === 0) {
       setInputPoint("");
       setUsedPoint(0);
       return;
     }
+
     setInputPoint(valid.toString());
     setUsedPoint(valid);
   };
 
-  /* ------------------ 주문상품 초기화 ------------------ */
-  useEffect(() => {
-    onAddOrder();
-  }, []);
+  const handleConfirm = () => {
+    saveOrder();
+    processPayment();
+    resetPaymentState();
+
+    if (directOrderList.length === 0) {
+      onClearCart();
+    }
+
+    navigate("/mypage");
+  };
 
   return (
     <div className="checkout-wrap">
@@ -332,7 +373,16 @@ const Payment = () => {
                   <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
 
-                <button className="pay-btn" onClick={setShowComplete}>
+                <button
+                  className="pay-btn"
+                  onClick={() => {
+                    if (directOrderList.length === 0) {
+                      onClearCart();
+                    }
+
+                    setShowComplete(true);
+                  }}
+                >
                   <span>결제하기</span>
                 </button>
               </div>
@@ -340,13 +390,16 @@ const Payment = () => {
           </div>
         </div>
 
-        {/* 팝업들 */}
+        {/* 팝업 */}
         {showCoupon && <Coupon onClose={() => setShowCoupon(false)} />}
         {showDelivery && (
           <PaymentDelivery onClose={() => setShowDelivery(false)} />
         )}
         {showComplete && (
-          <PaymentComplete onClose={() => setShowComplete(false)} />
+          <PaymentComplete
+            onConfirm={handleConfirm}
+            onClose={() => setShowComplete(false)}
+          />
         )}
 
         {(showCoupon || showDelivery || showComplete) && (

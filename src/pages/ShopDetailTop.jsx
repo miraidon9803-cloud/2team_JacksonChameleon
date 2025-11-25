@@ -9,6 +9,7 @@ import ShopDetailBottomSize from "./ShopDetailBottomSize";
 import ShopDetailBottomService from "./ShopDetailBottomService";
 import ShopDetailBottomReview from "./ShopDetailBottomReview";
 import DetailCartPopup from "../components/DetailCartPopup";
+import { useNavigate } from "react-router-dom";
 
 const ShopDetailTop = () => {
   const sheetList = [
@@ -18,8 +19,10 @@ const ShopDetailTop = () => {
     { title: "MS", text: "미디움소프트" },
   ];
 
+  const navigate = useNavigate();
   const { id } = useParams();
-  const { items, onFetchItems, onAddToCart } = useProductStore();
+  const { items, onFetchItems, onAddToCart, setDirectOrder } =
+    useProductStore();
 
   const [product, setProduct] = useState(null);
   const [openIndex, setOpenIndex] = useState(0);
@@ -349,7 +352,27 @@ const ShopDetailTop = () => {
                 <div className="go-cart" onClick={handleAddToCart}>
                   장바구니
                 </div>
-                <div className="go-pay">결제하기</div>
+                <div
+                  className="go-pay"
+                  onClick={() => {
+                    if (selectedList.length === 0) {
+                      alert("옵션을 선택해주세요.");
+                      return;
+                    }
+
+                    setDirectOrder(
+                      selectedList.map((sel) => ({
+                        ...product,
+                        ...sel,
+                        cartId: Date.now() + Math.random(),
+                      }))
+                    );
+
+                    navigate("/payment");
+                  }}
+                >
+                  결제하기
+                </div>
               </div>
             </div>
           </div>
