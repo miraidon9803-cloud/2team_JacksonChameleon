@@ -46,6 +46,7 @@ import Checkout from "./pages/Checkout";
 import { useEffect } from "react";
 import NoticeId from "./components/NoticeId";
 import NoticePage from "./pages/NoticePage";
+import AboutStoryDetail from "./components/AboutStoryDetail";
 
 function App() {
   const initAuth = useAuthStore((state) => state.initAuth);
@@ -85,6 +86,7 @@ function App() {
         <Route path="/about/brand" element={<Brand />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/story" element={<AboutStory />} />
+        <Route path="/about/story/:id" element={<AboutStoryDetail />} />
 
         <Route path="/map" element={<Store />} />
 
