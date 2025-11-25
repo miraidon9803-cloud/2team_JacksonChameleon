@@ -64,13 +64,16 @@ const PaymentComplete = ({ onClose }) => {
             <div className="box">
               <p>주문상품</p>
               <div className="order-items">
-                {orderItems.map((i) => (
-                  <div className="order-item" key={i.cartId}>
-                    <p className="item-title">{i.title}</p>
-                  </div>
-                ))}
+                {orderItems.length === 1 ? (
+                  <p className="item-title">{orderItems[0].title}</p>
+                ) : (
+                  <p className="item-title">
+                    {orderItems[0].title} 외 {orderItems.length - 1}건
+                  </p>
+                )}
               </div>
             </div>
+
           </div>
 
           {/* 가격 요약 */}

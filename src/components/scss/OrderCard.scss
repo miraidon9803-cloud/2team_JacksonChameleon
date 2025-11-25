@@ -1,0 +1,170 @@
+@use "../../App.scss" as g;
+
+.order-bottom {
+    display: flex;
+    flex: 1;
+    width: 100%;
+    margin-bottom: 48px;
+
+
+
+    .order-bottom-left {
+        background: g.$BG;
+        padding: 24px;
+        // flex: 1;
+        width: 70%;
+        border-radius: 4px 0 0 4px;
+
+        .order-date-wrap {
+            border-bottom: 1px solid g.$text8;
+            padding-bottom: 24px;
+
+            .order-date {
+                font-size: 2rem;
+                text-align: start;
+                font-weight: 500;
+            }
+
+            p {
+                @include g.myTitle16($ta: start);
+            }
+        }
+
+        .empty-wrap {
+            padding-top: 24px;
+            font-size: 16px;
+        }
+
+        .item-wrap {
+            border-bottom: 1px solid g.$text8;
+            position: relative;
+
+            .order {
+                @include g.myTitle16($ta: start, $color: g.$text3);
+                position: absolute;
+                top: 10px;
+                left: 10px;
+            }
+
+            .item-box {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                padding-top: 10px;
+
+                .item-img {
+                    img {
+                        width: 180px;
+                        height: 180px;
+                    }
+                }
+
+                .item-info {
+                    .item-title {
+                        @include g.myTitle16($fw: 500, $ta: start);
+                    }
+
+                    p {
+                        @include g.myTitle16($ta: start);
+                    }
+
+                    button {
+                        padding: 8px 16px;
+                        border: 1px solid g.$text8;
+                        border-radius: 4px;
+
+                        &:hover {
+                            background: g.$text8;
+                        }
+
+                        span {
+                            @include g.myTitle16()
+                        }
+                    }
+
+                    .btn-return {
+                        position: absolute;
+                        bottom: 24px;
+                        right: 110px;
+                    }
+
+                    .btn-change {
+                        position: absolute;
+                        bottom: 24px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    .order-bottom-right {
+        background: g.$text9;
+        padding: 24px;
+        width: 30%;
+        border-radius: 0 4px 4px 0;
+
+        .content-wrap {
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+                @include g.myTitle24($ta: start);
+                margin-bottom: 40px;
+            }
+
+            .user-info {
+                margin-bottom: 40px;
+
+                .name {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    text-align: start;
+                    margin-bottom: 12px
+                }
+
+                p {
+                    @include g.myTitle16($ta: start);
+                    margin-bottom: 12px;
+                }
+            }
+
+            .pay-info {
+                margin-bottom: 48px;
+
+                h5 {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    text-align: start;
+                    margin-bottom: 20px
+                }
+
+                ul {
+                    li {
+                        margin-bottom: 12px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        span {
+                            @include g.myTitle16();
+                        }
+                    }
+                }
+            }
+
+            .total-price {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    @include g.myTitle16();
+                }
+
+                strong {
+                    @include g.myTitle24();
+                }
+            }
+        }
+    }
+}

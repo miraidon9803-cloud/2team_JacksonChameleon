@@ -50,6 +50,8 @@ const Payment = () => {
     processPayment,
     resetPaymentState,
     onClearCart,
+
+    hyphenphone
   } = useProductStore();
 
   const { user } = useAuthStore();
@@ -109,16 +111,16 @@ const Payment = () => {
             {/* 사용자 정보 */}
             <div className="left-con1 user-info">
               <div className="user-name">
-                <p>{user?.email}</p>
+                <p>{user?.name}</p>
                 <button onClick={() => setShowDelivery(true)}>
                   배송지 변경
                 </button>
               </div>
               <div className="address">
                 <p>
-                  {user?.addnum} {user?.address} {user?.add}
+                {user?.address} {user?.add}
                 </p>
-                <p>{user?.phone}</p>
+                <p>{hyphenphone(user?.phone)}</p>
               </div>
             </div>
 

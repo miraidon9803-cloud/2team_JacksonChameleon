@@ -51,6 +51,14 @@ export const useProductStore = create(
         return { recentSearch: updated };
       }),
 
+    hyphenphone : (value) => {
+    if (!value) return "";
+    const num = String(value).replace(/\D/g, "");
+    if (num.length < 4) return num;
+    if (num.length < 7) return num.replace(/(\d{3})(\d{1,3})/, "$1-$2");
+    return num.replace(/(\d{3})(\d{3,4})(\d{4})/, "$1-$2-$3");
+  },
+  
     /* ----------------------------- 장바구니 ----------------------------- */
 
     cartItems: [],
