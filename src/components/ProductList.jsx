@@ -10,12 +10,12 @@ const ProductList = () => {
     const [isFilterOpen, setIsFilterOpen] = useState(false);
     const [tempSortOption, setTempSortOption] = useState(null);
     const [sortOption, setSortOption] = useState(null);
-    const [selectedSubCate, setSelectedSubCate] = useState(subcate || "All");
+    const [selectedSubCate, setSelectedSubCate] = useState(subcate ? subcate.toLowerCase() : "All");
 
 
 
     useEffect(() => {
-        setSelectedSubCate(subcate || "All");
+        setSelectedSubCate(subcate ? subcate.toLowerCase() : "All");
     }, [subcate])
 
     let data = jacksonProduct;
