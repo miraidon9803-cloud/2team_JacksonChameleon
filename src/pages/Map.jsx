@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import "./scss/Map.scss" 
+import "./scss/Map.scss";
 import Store from "./Store";
 
 const Map = () => {
@@ -27,7 +27,7 @@ const Map = () => {
     const createdMarker = new kakao.maps.Marker({
       map: createdMap,
       position: createdMap.getCenter(),
-      image: markerImage
+      image: markerImage,
     });
 
     setMarker(createdMarker);
@@ -36,14 +36,13 @@ const Map = () => {
       createdMap.relayout();
     }, 50);
 
-    kakao.maps.event.addListener(createdMap, 'tilesloaded', function () {
+    kakao.maps.event.addListener(createdMap, "tilesloaded", function () {
       const projection = createdMap.getProjection();
       const point = projection.pointFromCoords(createdMarker.getPosition());
       const movedPoint = new kakao.maps.Point(point.x - 150, point.y);
       const movedPos = projection.coordsFromPoint(movedPoint);
       createdMap.setCenter(movedPos);
     });
-
   }, []);
 
   const moveToStore = (lat, lon) => {
