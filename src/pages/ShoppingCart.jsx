@@ -1,238 +1,237 @@
-import React, { useEffect, useState } from "react";
-import "./scss/ShoppingCart.scss";
-import { useProductStore } from "../store/ProductStore";
-// import OptionChange from "../components/OptionChange";
-import CartOptionPopup from "../components/CartOptionPopup";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import jacksonProduct from "../data/jacksonproduct.js";
+import "../components/scss/Product.scss";
+import "../components/scss/filterPopup.scss";
+import ShopTop from "../components/ShopTop.jsx";
 
-const ShoppingCart = () => {
-  const {
-    cartItems,
-    totalPrice,
-    onRemoveCart,
-    onItemPlus,
-    onItemMinus,
-    onCheckCart,
-    getItemTotal,
-    getSelectedTotalPrice,
-    getItemSalePrice,
-    getsavePoint,
-    resetCheckoutItems,
-  } = useProductStore();
+const ShopSofa = () => {
+  // const [selectedCategory, setSelectedCategory] = useState("sofa");
+  const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [tempSortOption, setTempSortOption] = useState(null);
+  const [sortOption, setSortOption] = useState(null);
+  const [selectedSubCate, setSelectedSubCate] = useState("All");
 
-  const selectedTotal = getSelectedTotalPrice();
-  const saleTotal = getItemSalePrice();
-  const savePoint = getsavePoint();
-  const finalTotal = selectedTotal - saleTotal;
+  //  카테고리 자동 추출
+  // const categories = [
+  //   "All",
+  //   ...new Set(jacksonProduct.map((item) => item.product)),
+  // ];
 
-  const [isAllSelected, setIsAllSelected] = useState(false);
-  const [optionItem, setOptionItem] = useState(null);
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    if (cartItems.length > 0) {
-      const checkedItems = cartItems.filter((item) => item.checked);
-      setIsAllSelected(checkedItems.length === cartItems.length);
-      console.log(totalPrice);
-    } else {
-      setIsAllSelected(false);
-    }
-  }, [cartItems]);
-
-  //전체선택
-  const handleSelectAll = () => {
-    cartItems.forEach((item) => {
-      if (item.checked !== !isAllSelected) {
-        onCheckCart(item.cartId);
-      }
-    });
+  //  가격 문자열을 숫자로 변환하는 함수
+  const intPrice = (priceStr) => {
+    if (!priceStr) return 0;
+    const num = priceStr.replace(/[^0-9]/g, "");
+    return Number(num) || 0;
   };
 
-  //개별 체크
-  const handleSelectItem = (cartId) => {
-    onCheckCart(cartId);
+  let data = jacksonProduct;
+  data = data.filter((item) => item.product === "chair");
+  console.log(data);
+
+  // 필터링
+  if (sortOption === "best") {
+    data = [...data].sort((a, b) => {
+      return a.brand.localeCompare(b.brand);
+    });
+  } else if (sortOption === "new") {
+    data = [...data].sort((a, b) => {
+      const dateA = parseInt(a.date) || 0;
+      const dateB = parseInt(b.date) || 0;
+      return dateB - dateA;
+    });
+  } else if (sortOption === "asc") {
+    data = [...data].sort((a, b) => intPrice(a.price) - intPrice(b.price));
+  } else if (sortOption === "desc") {
+    data = [...data].sort((a, b) => intPrice(b.price) - intPrice(a.price));
+  }
+
+  //재질 필터링
+  if (selectedSubCate !== "All") {
+    data = data.filter((item) => item.subcate === selectedSubCate);
+  }
+
+  //페이징 처리
+  //한페이지에 보여질 개수
+  const itemPerPage = 21;
+  //현재 보여지는 페이지를 체크하고 변경하기
+  const [currentPage, setCurrentpage] = useState(1);
+  //전체 페이지수 계산하기
+  const totalPage = Math.ceil(data.length / itemPerPage);
+
+  const start = (currentPage - 1) * itemPerPage;
+  const currentItem = data.slice(start, start + itemPerPage);
+
+  //페이지 변경
+  const handleGoPage = (pageNum) => {
+    if (pageNum < 1 || pageNum > totalPage) return;
+    console.log(pageNum);
+    setCurrentpage(pageNum);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  //선택삭제
-  const handleDeleteSelected = () => {
-    const checkedItems = cartItems?.filter((item) => item.checked);
-    if (checkedItems.length === 0) {
-      alert("삭제할 상품을 선택해주세요");
-      return;
+  //버튼 생성하기
+  const pagerButton = () => {
+    //버열을 저장할 배열
+    const buttons = [];
+    for (let i = 1; i <= totalPage; i++) {
+      buttons.push(
+        <button
+          key={i}
+          className={currentPage === i ? "active" : ""}
+          onClick={() => handleGoPage(i)}
+        >
+          {i}
+        </button>
+      );
     }
-
-    checkedItems.forEach((item) => {
-      onRemoveCart(item);
-    });
+    return buttons;
   };
 
   return (
-    <div className="shopping-cart-wrap">
+    <div className="shop-wrap">
+      <ShopTop category="chair" />
       <div className="inner">
-        <h3 className="title">SHOPPING CART</h3>
-
-        <div className="content-wrap">
-          <div className="cart-list">
-            <div className="choose-del-wrap">
-              <label className="check-box">
-                <input
-                  type="checkbox"
-                  checked={isAllSelected}
-                  onChange={handleSelectAll}
-                  className="real"
-                />
-                <span className="fake">
-                  <img
-                    className="icon"
-                    src="/images/check.png"
-                    alt="checkicon"
-                  />
-                </span>
-              </label>
-              <button onClick={handleDeleteSelected}>선택삭제</button>
+        <div className="product-filter">
+          <div className="filter-title">
+            <p className="product-sort">Chair</p>
+            <p className="arrow">
+              <img src="/images/product-icon.png" alt="" />
+            </p>
+            <div className="select-material">
+              <p
+                onClick={() => {
+                  setSelectedSubCate("Dining");
+                  setCurrentpage(1);
+                }}
+                className={selectedSubCate === "Dining" ? "active" : ""}
+              >
+                Dining
+              </p>
+              <p
+                onClick={() => {
+                  setSelectedSubCate("Lounge");
+                  setCurrentpage(1);
+                }}
+                className={selectedSubCate === "Lounge" ? "active" : ""}
+              >
+                Lounge
+              </p>
+              <p
+                onClick={() => {
+                  setSelectedSubCate("Bench");
+                  setCurrentpage(1);
+                }}
+                className={selectedSubCate === "Bench" ? "active" : ""}
+              >
+                Bench
+              </p>
             </div>
-
-            {cartItems.length === 0 ? (
-              <div className="empty-wrap">
-                <p>장바구니가 비어있습니다.</p>
-              </div>
-            ) : (
-              <div className="item-list">
-                {cartItems.map((item, index) => (
-                  <div className="item-wrap" key={index}>
-                    <div className="selected-wrap">
-                      <label className="check-box">
-                        <input
-                          type="checkbox"
-                          checked={item.checked}
-                          onChange={() => handleSelectItem(item.cartId)}
-                          className="real"
-                        />
-                        <span className="fake">
-                          <img
-                            className="icon"
-                            src="/images/check.png"
-                            alt="checkicon"
-                          />
-                        </span>
-                      </label>
-                      <button
-                        className="close-btn"
-                        onClick={() => onRemoveCart(item)}
-                      >
-                        <img src="/images/close-icon.png" alt="삭제버튼" />
-                      </button>
-                    </div>
-
-                    <div className="item-box">
-                      <div className="item-img">
-<<<<<<< HEAD
-                        <img src={item?.size?.img} alt={item.title} />
-=======
-                        <img
-                          src={
-                            item.size?.img ||
-                            item.color?.img ||
-                            item.add?.img ||
-                            "/images/noimg.png"
-                          }
-                          alt={item.title}
-                        />
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
-                      </div>
-                      <div className="item-text">
-                        <div className="item-info">
-                          <h4 className="item-title">{item.title}</h4>
-                          <p className="item-option">
-                            {item.sheet?.text || "시트 없음"} /
-                            {item.size?.sizename || "사이즈 없음"} /
-<<<<<<< HEAD
-                            {item.color?.colorname || "컬러 없음"}
-=======
-                            {item.color?.colorname || "색상 없음"} /
-                            {item.add?.cushion || "선택안함"}
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
-                          </p>
-
-                          <button
-                            className="btn-option"
-                            onClick={() => setOptionItem(item)}
-                          >
-                            <span>옵션변경</span>
-                          </button>
-
-                          {optionItem && (
-                            <CartOptionPopup
-                              item={optionItem}
-                              onClose={() => setOptionItem(null)}
-                            />
-                          )}
-                        </div>
-
-                        <div className="count-wrap">
-                          <button onClick={() => onItemMinus(item)}>
-                            <img src="/images/minus.png" alt="빼기아이콘" />
-                          </button>
-                          <span>{item.qty}</span>
-                          <button onClick={() => onItemPlus(item)}>
-                            <img src="/images/plus.png" alt="더하기아이콘" />
-                          </button>
-                        </div>
-                        <p className="price">
-                          {getItemTotal(item).toLocaleString()}원
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
           </div>
+          <div className="filter">
+            <p className="total-product">({data.length}product)</p>
+            <p>Filter</p>
+            <button onClick={() => setIsFilterOpen(!isFilterOpen)}>
+              <img src="/images/filter-icon.png" alt="필터아이콘" />
+            </button>
+          </div>
+        </div>
 
-          <div className="total">
-            <div className="total-wrap">
-              <div className="total-content">
-                <h4>구매 금액</h4>
-                <ul>
-                  <li>
-                    <span>상품금액</span>
-                    <span>{selectedTotal.toLocaleString()}원</span>
-                  </li>
-                  <li>
-                    <span>할인 금액</span>
-                    <span>{saleTotal.toLocaleString()}</span>
-                  </li>
-                  <li>
-                    <span>적립금</span>
-                    <span>{savePoint.toLocaleString()}원</span>
-                  </li>
-                  <li>
-                    <span>배송비</span>
-                    <span>무료배송</span>
-                  </li>
-                </ul>
-
-                <div className="total-price">
-                  <span>총 구매 금액</span>
-                  <strong>{finalTotal.toLocaleString()}원</strong>
+        <div className="product-list">
+          {currentItem.map((item, index) => (
+            <div className="product" key={index}>
+              <span className="new">{item.badges}</span>
+              <div className="img-box">
+                <p className="default-img">
+                  <img src={item.img_url} alt={item.title} />
+                </p>
+                <p className="hover-img">
+                  <img src={item.img_hover} alt="" />
+                </p>
+              </div>
+              <div className="text-box">
+                <p className="title">{item.title}</p>
+                <div className="price-wrap">
+                  <div className="price">
+                    {item.price_regular && (
+                      <span className="pre-price">{item.price_regular}</span>
+                    )}
+                    <strong>{item.price}</strong>
+                  </div>
+                  <p className="sale">{item.sale}</p>
                 </div>
-
-                <button
-                  className="pay-btn"
-                  onClick={() => {
-                    resetCheckoutItems();
-                    navigate("/payment");
-                  }}
-                >
-                  <span>결제하기</span>
-                </button>
               </div>
             </div>
+          ))}
+        </div>
+        <div className="pager-wrap">
+          <div className="pager">
+            <button onClick={() => handleGoPage(currentPage - 1)}>
+              <img src="/images/pager-left.png" alt="" />
+            </button>
+            {pagerButton()}
+            <button onClick={() => handleGoPage(currentPage + 1)}>
+              <img src="/images/pager-right.png" alt="" />
+            </button>
           </div>
         </div>
       </div>
+      {isFilterOpen && (
+        <div className="filter-popup" onClick={() => setIsFilterOpen(false)}>
+          <div className="filter-wrap" onClick={(e) => e.stopPropagation()}>
+            <div className="filter-title">
+              <h3>Filter</h3>
+              <p className="close-btn" onClick={() => setIsFilterOpen(false)}>
+                <img src="/images/close-icon.png" alt="" />
+              </p>
+            </div>
+
+            <div className="sort-wrap">
+              <p className="sort-title">정렬</p>
+              <div className="btn-wrap">
+                <button
+                  onClick={() => setTempSortOption("best")}
+                  className={tempSortOption === "best" ? "active" : ""}
+                >
+                  추천순
+                </button>
+
+                <button
+                  onClick={() => setTempSortOption("new")}
+                  className={tempSortOption === "new" ? "active" : ""}
+                >
+                  최신순
+                </button>
+
+                <button
+                  onClick={() => setTempSortOption("asc")}
+                  className={tempSortOption === "asc" ? "active" : ""}
+                >
+                  가격 낮은순
+                </button>
+
+                <button
+                  onClick={() => setTempSortOption("desc")}
+                  className={tempSortOption === "desc" ? "active" : ""}
+                >
+                  가격 높은순
+                </button>
+              </div>
+            </div>
+
+            <p
+              className="apply-btn"
+              onClick={() => {
+                setSortOption(tempSortOption);
+                setIsFilterOpen(false);
+              }}
+            >
+              적용하기
+            </p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default ShoppingCart;
+export default ShopSofa;

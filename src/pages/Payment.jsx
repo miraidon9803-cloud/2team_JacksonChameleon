@@ -1,23 +1,13 @@
 import React, { useEffect, useState } from "react";
-<<<<<<< HEAD
-import { useNavigate } from "react-router-dom";
-import { useProductStore } from "../store/ProductStore";
-import "./scss/Payment.scss";
-=======
 import { useProductStore } from "../store/ProductStore";
 import "./scss/Payment.scss";
 import { useNavigate } from "react-router-dom";
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 import { useAuthStore } from "../store/authStore";
 import Coupon from "../components/Coupon";
 import PaymentDelivery from "../components/PaymentDelivery";
 import PaymentComplete from "../components/PaymentComplete";
 
 const Payment = () => {
-<<<<<<< HEAD
-  const navigate = useNavigate();
-=======
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
   /* ------------------ STORE ------------------ */
   const {
     // 요청사항
@@ -29,7 +19,7 @@ const Payment = () => {
     setReqText,
     reqOptions,
 
-    // 계산 로직 (orderList 기준으로 수정됨)
+    // 결제 계산
     getSelectedTotalPrice,
     getItemSalePrice,
     getCouponDiscount,
@@ -50,88 +40,41 @@ const Payment = () => {
     setSelectedMethodBtn,
     simpleOpt,
 
-    // 주문 리스트
+    // 주문
     onAddOrder,
     orderList,
-<<<<<<< HEAD
-    directOrderList,
-    resetDirectOrder,
-    setOrderList,
-=======
 
     //단독결제
     checkoutItems,
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     saveOrder,
     processPayment,
     resetPaymentState,
     onClearCart,
-<<<<<<< HEAD
-  } = useProductStore();
 
-  const { user } = useAuthStore();
-
-  /* ------------------ LOCAL STATE ------------------ */
-=======
-
-    hyphenphone
+    hyphenphone,
   } = useProductStore();
 
   const { user } = useAuthStore();
   const navigate = useNavigate();
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
   const [showCoupon, setShowCoupon] = useState(false);
   const [showDelivery, setShowDelivery] = useState(false);
   const [showComplete, setShowComplete] = useState(false);
   const [inputPoint, setInputPoint] = useState("");
 
-<<<<<<< HEAD
-  // 가격 state
-  const [selectedTotal, setSelectedTotal] = useState(0);
-  const [saleTotal, setSaleTotal] = useState(0);
-  const [couponDiscount, setCouponDiscount] = useState(0);
-  const [finalPayment, setFinalPayment] = useState(0);
-  const [savePoint, setSavePoint] = useState(0);
-
-  /* ------------------ Payment 진입 시 주문 리스트 세팅 ------------------ */
-  useEffect(() => {
-    console.log("💡 Payment 진입 directOrderList:", directOrderList);
-
-    if (directOrderList && directOrderList.length > 0) {
-      setOrderList(directOrderList); // 바로결제
-      resetDirectOrder();
-    } else {
-      onAddOrder(); // 장바구니 결제
-    }
-  }, []);
-=======
   const selectedTotal = getSelectedTotalPrice(); // 상품 금액 총합
   const saleTotal = getItemSalePrice(); // 즉시할인
   const couponDiscount = getCouponDiscount(); // 쿠폰 할인
   const finalPayment = getFinalPayment(); // 최종 결제 금액
   const savePoint = getsavePoint(); // 예상 적립금
   const paymentItems = checkoutItems.length > 0 ? checkoutItems : orderList; //단독결제 및 장바구니결제
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 
-  /* ------------------ 가격 자동 재계산 ------------------ */
-  useEffect(() => {
-    setSelectedTotal(getSelectedTotalPrice());
-    setSaleTotal(getItemSalePrice());
-    setCouponDiscount(getCouponDiscount());
-    setFinalPayment(getFinalPayment());
-    setSavePoint(getsavePoint());
-  }, [orderList, usedPoint, selectedMethod, selectedMethodBtn]);
-
-  /* ------------------ 포인트 입력 ------------------ */
   const handlePointOpen = () => {
     const valid = validatePoint(inputPoint);
-
     if (valid === 0) {
       setInputPoint("");
       setUsedPoint(0);
       return;
     }
-
     setInputPoint(valid.toString());
     setUsedPoint(valid);
   };
@@ -148,19 +91,6 @@ const Payment = () => {
 
   const { resetCheckoutItems } = useProductStore();
 
-<<<<<<< HEAD
-  const handleConfirm = () => {
-    saveOrder();
-    processPayment();
-    resetPaymentState();
-
-    if (directOrderList.length === 0) {
-      onClearCart();
-    }
-
-    navigate("/mypage");
-  };
-=======
   useEffect(() => {
     onAddOrder(); // 장바구니 결제일 때 orderList 저장
   }, []);
@@ -169,7 +99,6 @@ const Payment = () => {
     // 페이지 나갈 때 checkoutItems 초기화
     return () => resetCheckoutItems();
   }, []);
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 
   return (
     <div className="checkout-wrap">
@@ -189,15 +118,9 @@ const Payment = () => {
               </div>
               <div className="address">
                 <p>
-<<<<<<< HEAD
-                  {user?.addnum} {user?.address} {user?.add}
-                </p>
-                <p>{user?.phone}</p>
-=======
-                {user?.address} {user?.add}
+                  {user?.address} {user?.add}
                 </p>
                 <p>{hyphenphone(user?.phone)}</p>
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
               </div>
             </div>
 
@@ -266,12 +189,6 @@ const Payment = () => {
             <div className="left-con3 order">
               <p>주문상품</p>
 
-<<<<<<< HEAD
-              {orderList.map((i) => (
-                <div className="order-item" key={i.cartId}>
-                  <div className="item-img">
-                    <img src={i.size?.img} alt="" />
-=======
               {paymentItems.map((i, idx) => (
                 <div className="order-item" key={i.cartId || idx}>
                   <div className="item-img">
@@ -279,18 +196,13 @@ const Payment = () => {
                       src={i.size?.img || i.img || "/images/noimage.png"}
                       alt={i.title}
                     />
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                   </div>
 
                   <div className="item-info">
                     <p className="item-title">{i.title}</p>
                     <p className="item-option">
                       {i.sheet?.text} / {i.size?.sizename} /{" "}
-<<<<<<< HEAD
-                      {i.color?.colorname} / {i.add?.cushion || "선택안함"}
-=======
                       {i.color?.colorname} /{i.add?.cushion || "선택안함"}
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                     </p>
                     <p className="item-price">
                       {(
@@ -451,15 +363,7 @@ const Payment = () => {
                 <button
                   className="pay-btn"
                   onClick={() => {
-<<<<<<< HEAD
-                    if (directOrderList.length === 0) {
-                      onClearCart();
-                    }
-
-                    setShowComplete(true);
-=======
                     handleConfirm(); // 결제 처리
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                   }}
                 >
                   결제하기
@@ -469,20 +373,13 @@ const Payment = () => {
           </div>
         </div>
 
-        {/* 팝업 */}
+        {/* 팝업들 */}
         {showCoupon && <Coupon onClose={() => setShowCoupon(false)} />}
         {showDelivery && (
           <PaymentDelivery onClose={() => setShowDelivery(false)} />
         )}
         {showComplete && (
-<<<<<<< HEAD
-          <PaymentComplete
-            onConfirm={handleConfirm}
-            onClose={() => setShowComplete(false)}
-          />
-=======
           <PaymentComplete onClose={() => setShowComplete(false)} />
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
         )}
 
         {(showCoupon || showDelivery || showComplete) && (

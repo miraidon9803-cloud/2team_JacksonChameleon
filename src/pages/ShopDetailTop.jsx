@@ -21,13 +21,8 @@ const ShopDetailTop = () => {
     { title: "MS", text: "미디움소프트" },
   ];
 
-  const navigate = useNavigate();
   const { id } = useParams();
-<<<<<<< HEAD
-  const { items, onFetchItems, onAddToCart, setDirectOrder } =
-=======
   const { items, onFetchItems, onAddToCart, setCheckoutItems } =
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     useProductStore();
 
   const [product, setProduct] = useState(null);
@@ -190,14 +185,6 @@ const ShopDetailTop = () => {
 
               <div className="option">
                 {/* SHEET */}
-<<<<<<< HEAD
-                <div className={`type ${openIndex === 0 ? "open" : ""}`}>
-                  <div className="title" onClick={() => setOpenIndex(0)}>
-                    <p>Sheet Type</p>
-                    <p>
-                      <img src="/images/Arrow-down.png" alt="" />
-                    </p>
-=======
                 {isSofa && (
                   <div className={`type ${openIndex === 0 ? "open" : ""}`}>
                     <div className="title" onClick={() => setOpenIndex(0)}>
@@ -218,30 +205,10 @@ const ShopDetailTop = () => {
                         </div>
                       ))}
                     </div>
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                   </div>
                 )}
 
                 {/* SIZE */}
-<<<<<<< HEAD
-                <div className={`type ${openIndex === 1 ? "open" : ""}`}>
-                  <div className="title" onClick={() => setOpenIndex(1)}>
-                    <p>Size</p>
-                    <p>
-                      <img src="/images/Arrow-down.png" alt="" />
-                    </p>
-                  </div>
-                  <div className="depth-content-wrap">
-                    {product.size.map((s) => (
-                      <div
-                        className="depth-content"
-                        key={s.id}
-                        onClick={() => selectSize(s)}
-                      >
-                        <div className="depth-left">
-                          <div className="left-img">
-                            <img src={s.img} alt={s.sizename} />
-=======
                 {isSofa && (
                   <div className={`type ${openIndex === 1 ? "open" : ""}`}>
                     <div className="title" onClick={() => setOpenIndex(1)}>
@@ -264,7 +231,6 @@ const ShopDetailTop = () => {
                             <div className="left-title">
                               <span>{s?.sizename}</span>
                             </div>
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                           </div>
 
                           <div className="depth-right">
@@ -305,37 +271,6 @@ const ShopDetailTop = () => {
                 </div>
 
                 {/* ADD */}
-<<<<<<< HEAD
-                <div className={`type ${openIndex === 3 ? "open" : ""}`}>
-                  <div className="title" onClick={() => setOpenIndex(3)}>
-                    <p>Add</p>
-                    <p>
-                      <img src="/images/Arrow-down.png" alt="" />
-                    </p>
-                  </div>
-
-                  <div className="depth-content-wrap">
-                    {product.add.map((a) => (
-                      <div
-                        className="depth-content"
-                        key={a.id}
-                        onClick={() => selectAdd(a)}
-                      >
-                        {a.img && <img src={a.img} alt={a.cushion} />}{" "}
-                        <p>{a.cushion}</p>
-                      </div>
-                    ))}
-
-                    {/* 선택안함 */}
-                    {/* <div
-                      className="depth-content"
-                      onClick={() => selectAdd("none")}
-                    >
-                      <p>선택안함</p>
-                    </div> */}
-                  </div>
-                </div>
-=======
                 {isSofa && product.add && product.add.length > 0 && (
                   <div className={`type ${openIndex === 3 ? "open" : ""}`}>
                     <div className="title" onClick={() => setOpenIndex(3)}>
@@ -359,7 +294,6 @@ const ShopDetailTop = () => {
                     </div>
                   </div>
                 )}
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
               </div>
             </div>
           </div>
@@ -425,18 +359,6 @@ const ShopDetailTop = () => {
                 <div
                   className="go-pay"
                   onClick={() => {
-<<<<<<< HEAD
-                    if (selectedList.length === 0) {
-                      alert("옵션을 선택해주세요.");
-                      return;
-                    }
-
-                    setDirectOrder(
-                      selectedList.map((sel) => ({
-                        ...product,
-                        ...sel,
-                        cartId: Date.now() + Math.random(),
-=======
                     for (let sel of selectedList) {
                       if (!sel.sheet || !sel.size || !sel.color || !sel.add) {
                         alert("모든 옵션을 선택해주세요!");
@@ -448,7 +370,6 @@ const ShopDetailTop = () => {
                       selectedList.map((sel) => ({
                         ...product,
                         ...sel,
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                       }))
                     );
 
