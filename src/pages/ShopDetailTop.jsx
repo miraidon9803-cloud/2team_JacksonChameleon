@@ -35,10 +35,8 @@ const ShopDetailTop = () => {
 
   const ItemPrice = (sel) => {
     let total = 0;
-
     if (sel.size?.price) total += sel.size.price;
     if (sel.add) total += sel.add.price;
-
     return (total * sel.qty).toLocaleString() + "원";
   };
 
@@ -48,15 +46,17 @@ const ShopDetailTop = () => {
   }, []);
 
   useEffect(() => {
+    console.log("params id:", id);
+    console.log("items ids:", items.map((i) => i.id));
     const findItem = items.find((item) => Number(item.id) === Number(id));
+    console.log("findItem:", findItem);
     setProduct(findItem);
   }, [id, items]);
 
   if (!product) return <p>로딩중입니다...</p>;
 
   //소파인지 여부
-  const isSofa =
-    product.title.includes("Sofa") && !product.title.includes("Table");
+  const isSofa = product.title.includes("Sofa") && !product.title.includes("Table")
 
   // Sheet 선택 → 세트 추가
   const selectSheet = (item) => {
@@ -185,6 +185,7 @@ const ShopDetailTop = () => {
               <p>Choose Option</p>
 
               <div className="option">
+
                 {/* SHEET */}
                 {isSofa && (
                   <div className={`type ${openIndex === 0 ? "open" : ""}`}>
@@ -257,13 +258,13 @@ const ShopDetailTop = () => {
                     {product.color.map((c) => (
                       <div
                         className="depth-content"
-                        key={c.id}
+                        key={c?.id}
                         onClick={() => selectColor(c)}
                       >
                         <div className="content-dept">
                           <div className="content-img">
-                            <img src={c.img} alt={c.colorname} />
-                            <p className="content-text">{c.colorname}</p>
+                            <img src={c?.img} alt={c?.colorname} />
+                            <p className="content-text">{c?.colorname}</p>
                           </div>
                         </div>
                       </div>

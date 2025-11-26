@@ -47,7 +47,7 @@ const ShopTop = ({ category }) => {
                             {ShopTopCate.map((cate, id) => (
                                 <li key={id} className={selectedCate === cate.name ? "active" : ""} >
                                     <Link to={cate.name === 'All' ? '/shop' : `/shop/${cate.name}`} >
-                                        {(cate.name)}
+                                        {firstUpper((cate.name))}
 
                                     </Link>
                                 </li>

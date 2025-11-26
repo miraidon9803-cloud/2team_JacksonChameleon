@@ -55,7 +55,6 @@ const Payment = () => {
   } = useProductStore();
 
   const { user } = useAuthStore();
-  const navigate = useNavigate();
   const [showCoupon, setShowCoupon] = useState(false);
   const [showDelivery, setShowDelivery] = useState(false);
   const [showComplete, setShowComplete] = useState(false);
@@ -66,7 +65,6 @@ const Payment = () => {
   const couponDiscount = getCouponDiscount(); // 쿠폰 할인
   const finalPayment = getFinalPayment(); // 최종 결제 금액
   const savePoint = getsavePoint(); // 예상 적립금
-  const paymentItems = checkoutItems.length > 0 ? checkoutItems : orderList; //단독결제 및 장바구니결제
 
   const handlePointOpen = () => {
     const valid = validatePoint(inputPoint);
@@ -189,20 +187,17 @@ const Payment = () => {
             <div className="left-con3 order">
               <p>주문상품</p>
 
-              {paymentItems.map((i, idx) => (
-                <div className="order-item" key={i.cartId || idx}>
+              {orderList.map((i) => (
+                <div className="order-item" key={i.cartId}>
                   <div className="item-img">
-                    <img
-                      src={i.size?.img || i.img || "/images/noimage.png"}
-                      alt={i.title}
-                    />
+                    <img src={i.size?.img} alt="" />
                   </div>
 
                   <div className="item-info">
                     <p className="item-title">{i.title}</p>
                     <p className="item-option">
                       {i.sheet?.text} / {i.size?.sizename} /{" "}
-                      {i.color?.colorname} /{i.add?.cushion || "선택안함"}
+                      {i.color?.colorname} / {i.add?.cushion || "선택안함"}
                     </p>
                     <p className="item-price">
                       {(
