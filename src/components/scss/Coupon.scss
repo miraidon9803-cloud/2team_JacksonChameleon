@@ -33,13 +33,13 @@
       .coupon-item {
         width: 54rem;
         height: 15.2rem;
-        border: 1px solid g.$text8;
+        outline: 1px solid g.$text8;
         border-radius: 4px;
         margin-bottom: 12px;
         padding: 12px 12px 12px 24px;
 
         &.active {
-          border: 2px solid g.$text6;
+          outline: 2px solid g.$text6;
         }
 
         .coupons {
