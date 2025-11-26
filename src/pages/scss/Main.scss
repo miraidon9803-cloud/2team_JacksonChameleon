@@ -1,71 +1,70 @@
-@use '../../App.scss' as g;
+@use "../../App.scss" as g;
 
 .main-video-wrap {
+  position: relative;
+  video {
+    width: 100%;
+    height: 870px;
+    object-fit: cover;
+  }
 
-    video {
-        width: 100%;
-        height: 870px;
-        object-fit: cover;
-        position: relative;
+  .main-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    color: g.$text10;
+    text-shadow: 0.5px 0.5px 2px rgba(0, 0, 0, 0.2);
+
+    p:nth-of-type(1) {
+      font-size: 64px;
+      font-weight: 600;
+      letter-spacing: -1.6px;
+      margin-bottom: 12px;
     }
 
-    .main-title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-
-        color: g.$text10;
-        text-shadow: 0.5px 0.5px 2px  rgba(0, 0, 0, 0.2);
-
-        p:nth-of-type(1) {
-            font-size: 64px;
-            font-weight: 600;
-            letter-spacing: -1.6px;
-            margin-bottom: 12px;
-        }
-
-        p:nth-of-type(2) {
-            @include g.myTitle16($color: g.$text10);
-        }
+    p:nth-of-type(2) {
+      @include g.myTitle16($color: g.$text10);
     }
+  }
 
-    .main-popup {
-        max-width: 1200px;
-        width: 100%;
+  .main-popup {
+    max-width: 1200px;
+    width: 100%;
 
-        position: absolute;
+    position: absolute;
 
-        left: 50%;
-        transform: translateX(-50%);
-        top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 80px;
 
-        display: flex;
-        justify-content: flex-end;
+    display: flex;
+    justify-content: flex-end;
 
-        >p {
-            display: flex;
-            align-items: center;
-            gap: 24px;
+    > p {
+      display: flex;
+      align-items: center;
+      gap: 24px;
 
-            padding: 8px 16px;
-            border-radius: 4px;
+      padding: 8px 16px;
+      border-radius: 4px;
 
-            @include g.myTitle14($ta: left);
+      @include g.myTitle14($ta: left);
 
-            background: rgba(255,255,255,0.5);
-            backdrop-filter: blur(50px);
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(50px);
 
-            span {
-                width: 24px;
-                height: 24px;
-                cursor: pointer;
+      span {
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
 
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+        img {
+          width: 100%;
+          height: 100%;
         }
+      }
     }
+  }
 }

@@ -7,6 +7,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  .check-box {
+    display: flex;
+    align-items: center;
+
+    .real {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+
+    .fake {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 18px;
+      height: 18px;
+      border: 1px solid l.$text6;
+      border-radius: 4px;
+      background: l.$text10;
+    }
+
+    .icon {
+      width: 12px;
+      height: 12px;
+      opacity: 0;
+    }
+
+    .fake::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 18px;
+      height: 18px;
+      background-image: var(--check-img);
+      opacity: 0;
+    }
+
+    .real:checked + .fake .icon {
+      opacity: 1;
+    }
+  }
 }
 
 // 메인카드
@@ -195,6 +243,7 @@
       display: flex;
       height: 67.6rem;
       background: l.$BG;
+      border-radius: 4px;
 
       .right-side {
         position: relative;
@@ -204,7 +253,7 @@
         display: flex;
         flex-direction: column;
         width: 868px;
-        border-radius: 4px;
+        // border-radius: 4px;
 
         .section-title {
           // width: 80.0rem;
@@ -478,7 +527,7 @@
       height: 67.6rem;
       margin-top: 12px;
       opacity: 0.95;
-
+      border-radius: 4px;
       p {
         opacity: 0;
         transition: opacity 0.9s ease;

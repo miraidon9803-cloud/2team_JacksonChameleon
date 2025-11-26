@@ -47,7 +47,10 @@ const ShopDetailTop = () => {
 
   useEffect(() => {
     console.log("params id:", id);
-    console.log("items ids:", items.map((i) => i.id));
+    console.log(
+      "items ids:",
+      items.map((i) => i.id)
+    );
     const findItem = items.find((item) => Number(item.id) === Number(id));
     console.log("findItem:", findItem);
     setProduct(findItem);
@@ -56,7 +59,8 @@ const ShopDetailTop = () => {
   if (!product) return <p>로딩중입니다...</p>;
 
   //소파인지 여부
-  const isSofa = product.title.includes("Sofa") && !product.title.includes("Table")
+  const isSofa =
+    product.title.includes("Sofa") && !product.title.includes("Table");
 
   // Sheet 선택 → 세트 추가
   const selectSheet = (item) => {
@@ -185,10 +189,9 @@ const ShopDetailTop = () => {
               <p>Choose Option</p>
 
               <div className="option">
-
                 {/* SHEET */}
                 {isSofa && (
-                  <div className={`type ${openIndex === 0 ? "open" : ""}`}>
+                  <div className={`type ${openIndex === 0 ? "open" : ""} opt1`}>
                     <div className="title" onClick={() => setOpenIndex(0)}>
                       <p>Sheet Type</p>
                       <p>
@@ -212,7 +215,7 @@ const ShopDetailTop = () => {
 
                 {/* SIZE */}
                 {isSofa && (
-                  <div className={`type ${openIndex === 1 ? "open" : ""}`}>
+                  <div className={`type ${openIndex === 1 ? "open" : ""} opt2`}>
                     <div className="title" onClick={() => setOpenIndex(1)}>
                       <p>Size</p>
                       <p>
@@ -247,7 +250,7 @@ const ShopDetailTop = () => {
                 )}
 
                 {/* COLOR */}
-                <div className={`type ${openIndex === 2 ? "open" : ""}`}>
+                <div className={`type ${openIndex === 2 ? "open" : ""} opt3`}>
                   <div className="title" onClick={() => setOpenIndex(2)}>
                     <p>Color</p>
                     <p>
@@ -274,7 +277,7 @@ const ShopDetailTop = () => {
 
                 {/* ADD */}
                 {isSofa && product.add && product.add.length > 0 && (
-                  <div className={`type ${openIndex === 3 ? "open" : ""}`}>
+                  <div className={`type ${openIndex === 3 ? "open" : ""} opt4`}>
                     <div className="title" onClick={() => setOpenIndex(3)}>
                       <p>Add</p>
                       <p>

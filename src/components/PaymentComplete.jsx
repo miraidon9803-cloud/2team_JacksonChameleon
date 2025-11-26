@@ -5,6 +5,10 @@ import { useNavigate } from "react-router-dom";
 
 const PaymentComplete = ({ onClose }) => {
   const navigate = useNavigate();
+  const gohandleMaintop = () => {
+    navigate("/");
+    window.scrollTo(0, 0);
+  };
 
   // 주문 스냅샷(가장 최근 주문)
   const { orders } = useProductStore();
@@ -73,7 +77,6 @@ const PaymentComplete = ({ onClose }) => {
                 )}
               </div>
             </div>
-
           </div>
 
           {/* 가격 요약 */}
@@ -90,7 +93,7 @@ const PaymentComplete = ({ onClose }) => {
           </div>
         </div>
 
-        <button onClick={() => navigate("/")}>메인 화면 가기</button>
+        <button onClick={gohandleMaintop}>메인 화면 가기</button>
       </div>
     </div>
   );
