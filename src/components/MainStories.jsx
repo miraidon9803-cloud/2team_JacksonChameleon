@@ -8,8 +8,14 @@ import "swiper/css/navigation";
 import "./scss/MainStories.scss";
 
 import { Navigation, Pagination } from "swiper/modules";
+import { useNavigate } from "react-router-dom";
 
 const MainStories = () => {
+  const navigate = useNavigate();
+  const goAbout1 = () => {
+    navigate("/about/story/1");
+    window.scrollTo(0, 0);
+  };
   return (
     <section className="mainstory-wrap">
       <div className="inner-wrap">
@@ -36,7 +42,7 @@ const MainStories = () => {
               <img src="/images/Arrow-right.png" alt="right" />
             </div>
             <SwiperSlide>
-              <div className="mainstory-cards">
+              <div onClick={goAbout1} className="mainstory-cards">
                 <div>
                   <img src="/images/mainstory1.png" alt="" />
                 </div>

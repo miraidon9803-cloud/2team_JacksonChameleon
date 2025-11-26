@@ -163,7 +163,7 @@ https://www.instagram.com/maumee_life/`,
 2023-02-26 15:25:46 에 등록된 무브먼트랩 구매평`,
         date: "2023-02-26",
       },
-      
+
       {
         id: 3,
         name: "정*우",
@@ -201,7 +201,7 @@ https://www.instagram.com/maumee_life/`,
       },
     ],
   },
-   {
+  {
     id: 6,
     title: "Bolso Sofa",
     price: "1,056,000원",
@@ -558,7 +558,7 @@ https://www.instagram.com/maumee_life/`,
       },
     ],
   },
- {
+  {
     id: 13,
     title: "Dough Sofa",
     price: "1,903,000원 ~",

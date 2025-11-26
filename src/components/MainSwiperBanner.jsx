@@ -1,14 +1,22 @@
 import React from "react";
 import "./scss/MainSwiperBanner.scss";
 import "animate.css";
+import { useNavigate } from "react-router-dom";
 
 const MainSwiperBanner = ({ title, subTitle, frontImg, backImg }) => {
+  const navigate = useNavigate();
+  const handleGoPebble = () => {
+    navigate("/shop/product/4");
+  };
   return (
     <section className="main-swiper">
       <div className="text-box">
         <p className="animate__animated animate__fadeInDown">{subTitle}</p>
         <h2 className="animate__animated animate__fadeInDown">{title}</h2>
-        <button className="animate__animated animate__fadeInDown">
+        <button
+          onClick={handleGoPebble}
+          className="animate__animated animate__fadeInDown"
+        >
           SHOP NOW
         </button>
       </div>

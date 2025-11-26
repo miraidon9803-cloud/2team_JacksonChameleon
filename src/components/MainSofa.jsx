@@ -155,14 +155,14 @@ const MainSofa = () => {
                 제약이 없는 것이 특징입니다.{" "}
               </p>
             </div>
-            <button
+            {/* <button
               className={
                 textTrigger ? "animate__animated animate__fadeInDown" : ""
               }
             >
               {" "}
               SHOP NOW
-            </button>
+            </button> */}
           </div>
           <div className="effect-box">
             <div
