@@ -32,7 +32,6 @@
     margin-bottom: 40px;
   }
 
-
   .noticepage-img {
     width: 100%;
     margin-bottom: 40px;
@@ -43,15 +42,18 @@
   }
 
   .noticepage-back {
+    display: flex;
+    justify-content: center;
     margin-top: 10px;
-     text-align: center;
 
     a {
+      width: 200px;
+      padding: 14px 0;
+      border: 1px solid g.$text4;
       border-radius: 4px;
-      background:g.$text4;
+      background: g.$text4;
+      @include g.myTitle16();
       color: g.$text10;
-      padding: 10px 20px;
-      font-size: 12px;
       cursor: pointer;
       transition: all 0.2s;
 

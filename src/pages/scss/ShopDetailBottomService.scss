@@ -1,214 +1,208 @@
-@use '../../App.scss' as g;
+@use "../../App.scss" as g;
 
 .bottom-service-wrap {
-    background: g.$BG;
-    margin-bottom:120px;
+  background: g.$BG;
+  margin-bottom: 120px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
 
-    .inner {
-        padding: 80px 0;
+  .inner {
+    padding: 80px 0;
 
-        .service-store-wrap {
+    .service-store-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 80px;
+
+      font-size: 16px;
+
+      .service-store-top,
+      .service-store-bottom {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+
+        .service-title {
+          grid-column: 1/2;
+          @include g.myTitle24($fw: 400, $ta: left);
+        }
+      }
+
+      .service-store-top {
+        .service-store {
+          grid-column: 2/4;
+
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+
+          .sub-title {
+            font-size: 20px;
+            font-weight: 400;
+          }
+
+          .store-info {
             display: flex;
             flex-direction: column;
-            gap: 80px;
+            gap: 16px;
 
-            font-size: 16px;
+            p:nth-of-type(1),
+            p:nth-of-type(2) {
+              display: flex;
+              gap: 40px;
 
-            .service-store-top,
-            .service-store-bottom {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 24px;
-
-                .service-title {
-                    grid-column: 1/2;
-                    @include g.myTitle24($fw: 400, $ta: left);
-                }
+              strong {
+                @include g.myTitle16($fw: 600, $ta: left);
+                width: 84px;
+              }
             }
+          }
 
-            .service-store-top {
-                .service-store {
-                    grid-column: 2/4;
+          button {
+            width: 225px;
+            height: 46px;
+            border-radius: 4px;
 
-                    display: flex;
-                    flex-direction: column;
-                    gap: 24px;
+            border: 1px solid g.$text6;
 
-                    .sub-title {
-                        font-size: 20px;
-                        font-weight: 400;
-                    }
+            &:hover {
+              background: g.$text1;
+              border: none;
 
-                    .store-info {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 16px;
-
-                        p:nth-of-type(1),
-                        p:nth-of-type(2) {
-                            display: flex;
-                            gap: 40px;
-
-                            strong {
-                                @include g.myTitle16($fw: 600, $ta: left);
-                                width: 84px;
-                            }
-                        }
-                    }
-
-                    button {
-                        width: 225px;
-                        height: 46px;
-                        border-radius: 4px;
-
-                        border: 1px solid g.$text6;
-
-                        &:hover {
-                            background: g.$text1;
-                            border: none;
-
-                            color: g.$text10;
-                        }
-                    }
-                }
+              color: g.$text10;
             }
-
-            .service-store-bottom {
-                .service-cs {
-                    grid-column: 2/4;
-
-                    .sub-title {
-                        font-size: 20px;
-                        font-weight: 400;
-
-                        padding-bottom: 40px;
-                    }
-
-
-                    .dept-info {
-
-                        .dept-title {
-                            font-size: 20px;
-                            font-weight: 500;
-
-                            display: flex;
-                            justify-content: space-between;
-
-                            padding: 16px;
-
-                            border-top: 1px solid g.$text4;
-
-                            cursor: pointer;
-
-                            .minus {
-                                display: none
-                            }
-
-                        }
-
-                        &:nth-child(3) .dept-title {
-                            border-bottom: 1px solid g.$text4;
-                        }
-
-
-                        .dept-ex {
-                            font-size: 16px;
-                            font-weight: 400;
-                            color: g.$text5;
-
-                            max-height: 0;
-                            transition: padding 0.1s ease-in-out;
-                            transition: All 0.5s ease-in-out;
-                            overflow: hidden;
-
-                            h3 {
-                                font-size: 20px;
-                                font-weight: 400;
-                                padding: 16px 0 8px 0;
-                            }
-
-                            p,
-                            li {
-                                padding: 8px;
-                            }
-
-                            .note {
-                                color: g.$point2;
-                            }
-
-                            >div {
-                                margin: 20px 12px 40px 12px;
-                            }
-
-                            // .policy,
-                            // .delivery-policy {
-                            //     ul {
-                            //         list-style-position: inside;
-                            //         padding-inline-start: 24px;
-
-                            //         li {
-                            //             list-style: disc;
-                            //         }
-                            //     }
-                            // }
-                        }
-
-                        &.active {
-                            .dept-ex {
-                                max-height: 1800px;
-                            }
-
-                            &:last-child .as-policy {
-                                padding-bottom: 40px;
-                                margin-bottom: 0px;
-                                border-bottom: 1px solid g.$text4;
-                            }
-
-                            .dept-title {
-                                .plus {
-                                    display: none;
-                                }
-
-                                .minus {
-                                    display: block;
-                                }
-                            }
-
-                            .policy,
-                            .delivery-policy {
-                                ul {
-                                    list-style-position: inside;
-                                    padding-inline-start: 24px;
-
-                                    li {
-                                        list-style: disc;
-                                    }
-                                }
-                            }
-
-                            .as-policy{
-                                ul{
-                                    list-style-position: inside;
-                                    padding-inline-start: 24px;                                
-                                    
-                                    li{
-                                        list-style: decimal;
-                                    }
-                                }
-                            }
-                        }
-                    }
-
-                }
-
-            }
+          }
         }
+      }
+
+      .service-store-bottom {
+        .service-cs {
+          grid-column: 2/4;
+
+          .sub-title {
+            font-size: 20px;
+            font-weight: 400;
+
+            padding-bottom: 40px;
+          }
+
+          .dept-info {
+            .dept-title {
+              font-size: 20px;
+              font-weight: 500;
+
+              display: flex;
+              justify-content: space-between;
+
+              padding: 16px;
+
+              border-top: 1px solid g.$text4;
+
+              cursor: pointer;
+
+              .minus {
+                display: none;
+              }
+            }
+
+            &:nth-child(3) .dept-title {
+              border-bottom: 1px solid g.$text4;
+            }
+
+            .dept-ex {
+              font-size: 16px;
+              font-weight: 400;
+              color: g.$text5;
+
+              max-height: 0;
+              transition: padding 0.1s ease-in-out;
+              transition: All 0.5s ease-in-out;
+              overflow: hidden;
+
+              h3 {
+                font-size: 20px;
+                font-weight: 400;
+                padding: 16px 0 8px 0;
+              }
+
+              p,
+              li {
+                padding: 8px;
+              }
+
+              .note {
+                color: g.$point2;
+              }
+
+              > div {
+                margin: 20px 12px 40px 12px;
+              }
+
+              // .policy,
+              // .delivery-policy {
+              //     ul {
+              //         list-style-position: inside;
+              //         padding-inline-start: 24px;
+
+              //         li {
+              //             list-style: disc;
+              //         }
+              //     }
+              // }
+            }
+
+            &.active {
+              .dept-ex {
+                max-height: 1800px;
+              }
+
+              &:last-child .as-policy {
+                padding-bottom: 40px;
+                margin-bottom: 0px;
+                border-bottom: 1px solid g.$text4;
+              }
+
+              .dept-title {
+                .plus {
+                  display: none;
+                }
+
+                .minus {
+                  display: block;
+                }
+              }
+
+              .policy,
+              .delivery-policy {
+                ul {
+                  list-style-position: inside;
+                  padding-inline-start: 24px;
+
+                  li {
+                    list-style: disc;
+                  }
+                }
+              }
+
+              .as-policy {
+                ul {
+                  list-style-position: inside;
+                  padding-inline-start: 24px;
+
+                  li {
+                    list-style: decimal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
+  }
 }
-
-
-
-
 
 // 기본 padding-inline-start:40px;
 

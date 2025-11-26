@@ -1,6 +1,5 @@
 @use "../../App.scss" as cu;
 
-
 .customer-wrap {
   // height: 940px;
   display: flex;
@@ -12,7 +11,6 @@
   body {
     overflow: hidden;
   }
-
 }
 
 .cus-background {
@@ -28,11 +26,7 @@
   border-radius: 8px;
   margin-top: 100px;
   pointer-events: none;
-
-
-
 }
-
 
 .cus-text {
   margin-top: 120px;
@@ -69,7 +63,6 @@
     justify-content: flex-start;
 
     &:hover {
-
       // border: 2px solid cu.$text2;
       background-color: cu.$text9;
       color: cu.$text1;
@@ -86,7 +79,6 @@
     }
   }
 }
-
 
 .chat-box {
   height: 400px;
@@ -112,7 +104,6 @@
 .chat-box::-webkit-scrollbar {
   width: 6px;
 }
-
 
 .chat-box::-webkit-scrollbar-track {
   background: transparent;
@@ -141,14 +132,13 @@
 
   .user-time {
     margin-right: 10px;
-    margin-bottom:4px;
+    margin-bottom: 4px;
   }
 
   .bot-time {
     margin-left: 10px;
-    margin-bottom:4px;
+    margin-bottom: 4px;
   }
-
 
   .bubble {
     max-width: 70%;
@@ -157,6 +147,7 @@
     font-size: 15px;
     line-height: 1.4;
     animation: fadeIn 0.25s ease;
+    z-index: 20;
   }
 
   &.user .bubble {
@@ -226,7 +217,6 @@
     background: cu.$text10;
     border-radius: 8px 0 0 8px;
     padding: 10px 14px;
-
 
     .cus-link-img {
       cursor: pointer;

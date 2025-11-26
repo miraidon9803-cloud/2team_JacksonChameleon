@@ -1,8 +1,16 @@
 import React from "react";
 import "./scss/Footer.scss";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const handleGoChatbot = () => {
+    navigate("/community/customer");
+  };
+
+  const handleGoStore = () => {
+    navigate("/community/store");
+  };
   return (
     <footer>
       <div className="footer-wrap">
@@ -45,8 +53,8 @@ const Footer = () => {
                     </p>
                   </div>
                 </div>
-                <button className="room-btn">
-                  <Link to="/community/store">매장 안내 바로가기</Link>
+                <button onClick={handleGoStore} className="room-btn">
+                  매장 안내 바로가기
                 </button>
               </div>
 
@@ -59,8 +67,8 @@ const Footer = () => {
                     <p className="day">(*주말, 공휴일 휴무)</p>
                   </div>
                 </div>
-                <button className="online-btn">
-                  <Link to="/community/customer">온라인 문의 바로가기</Link>
+                <button onClick={handleGoChatbot} className="online-btn">
+                  온라인 문의 바로가기
                 </button>
               </div>
             </div>
