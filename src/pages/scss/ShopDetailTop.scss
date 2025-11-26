@@ -123,7 +123,7 @@
             .type {
               background: g.$text10;
               border-radius: 8px;
-              height: 358px;
+
               padding: 12px 18px;
 
               .title {
@@ -184,7 +184,7 @@
                 }
 
                 .depth-content-wrap {
-                  max-height: 358px;
+                  max-height: 300px;
                   // max-height: 370px;
 
                   overflow-y: auto;

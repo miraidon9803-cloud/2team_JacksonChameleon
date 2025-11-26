@@ -1,26 +1,22 @@
-import React, { useEffect, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { FreeMode, Navigation, Thumbs, Autoplay } from 'swiper/modules';
-import MainSwiperBanner from '../components/MainSwiperBanner';
-import MainSwiperBannerLamp from './MainSwiperBannerLamp';
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Navigation, Thumbs, Autoplay } from "swiper/modules";
+import MainSwiperBanner from "../components/MainSwiperBanner";
+import MainSwiperBannerLamp from "./MainSwiperBannerLamp";
 
-
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 import "./scss/MainSwiper.scss";
-import MainSwiperBannerChair from './MainSwiperBannerChair';
-
+import MainSwiperBannerChair from "./MainSwiperBannerChair";
 
 // import 'animate.css';
 // import WOW from 'wowjs';
 
 const MainSwiper = () => {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
 
   // useEffect(() => {
   //   // WOW.js 초기화
@@ -35,32 +31,47 @@ const MainSwiper = () => {
 
   return (
     <div className="inner main-swiper-wrap">
-      <p className='main-swiper-title'>Bestseller</p>
+      <p className="main-swiper-title">Bestseller</p>
       <Swiper
         autoplay={{
-          delay: 3500
+          delay: 3500,
         }}
         loop={true}
         spaceBetween={10}
-        thumbs={{ swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null }}
+        thumbs={{
+          swiper: thumbsSwiper && !thumbsSwiper.destroyed ? thumbsSwiper : null,
+        }}
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
-        className="mySwiper1">
+        className="mySwiper1"
+      >
         <SwiperSlide>
           <MainSwiperBannerLamp />
         </SwiperSlide>
         <SwiperSlide>
-          <MainSwiperBanner title="BUMPY SOFA" subTitle="Bumpy Collection"
-            frontImg="/images/main-best-bumpy-front.png" backImg="/images/main-best-bumpy-back.png"
+          <MainSwiperBanner
+            title="BUMPY SOFA"
+            subTitle="Bumpy Collection"
+            frontImg="/images/main-best-bumpy-front.png"
+            backImg="/images/main-best-bumpy-back.png"
+            productId={28}
           />
         </SwiperSlide>
         <SwiperSlide>
-          <MainSwiperBanner title="PEBBLE SOFA" subTitle="Pebble Collection"
-            frontImg="/images/main-best-pebble-front.png" backImg="/images/main-best-pebble-back.png"
+          <MainSwiperBanner
+            title="PEBBLE SOFA"
+            subTitle="Pebble Collection"
+            frontImg="/images/main-best-pebble-front.png"
+            backImg="/images/main-best-pebble-back.png"
+            productId={4}
           />
         </SwiperSlide>
         <SwiperSlide>
-          <MainSwiperBanner title="OTIUM SOFA" subTitle="Otium Collection"
-            frontImg="/images/main-best-otium-front.png" backImg="/images/main-best-otium-back.png"
+          <MainSwiperBanner
+            title="OTIUM SOFA"
+            subTitle="Otium Collection"
+            frontImg="/images/main-best-otium-front.png"
+            backImg="/images/main-best-otium-back.png"
+            productId={96}
           />
         </SwiperSlide>
         <SwiperSlide>
@@ -70,7 +81,7 @@ const MainSwiper = () => {
 
       <Swiper
         autoplay={{
-          delay: 3500
+          delay: 3500,
         }}
         onSwiper={setThumbsSwiper}
         loop={false}
@@ -81,7 +92,6 @@ const MainSwiper = () => {
         modules={[FreeMode, Navigation, Thumbs, Autoplay]}
         className="mySwiper2"
       >
-
         <SwiperSlide>
           <img src="/images/main-swiper-1.png" alt="" />
         </SwiperSlide>
@@ -97,11 +107,9 @@ const MainSwiper = () => {
         <SwiperSlide>
           <img src="/images/main-swiper-5.png" alt="" />
         </SwiperSlide>
-
       </Swiper>
-    </div >
+    </div>
+  );
+};
 
-  )
-}
-
-export default MainSwiper
+export default MainSwiper;
