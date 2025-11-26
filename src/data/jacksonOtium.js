@@ -7,7 +7,7 @@
             {
                 id: 1,
                 sizename: "데이베드A",
-                img: "/img/doughsofa/dough-middle.png",
+                img: "/img/otiumsofa/otium-middle-daybedA.png",
                 width: 2000,
                 depth: 400,
                 height: 920,
@@ -16,7 +16,7 @@
             {
                 id: 2,
                 sizename: "데이베드 B",
-                img: "/img/doughsofa/dough-armrestA.png",
+                img: "/img/otiumsofa/otium-middle-daybedB.png",
                 width: 2000,
                 depth: 920,
                 height: 580,
@@ -25,7 +25,7 @@
             {
                 id: 3,
                 sizename: "소파",
-                img: "/img/doughsofa/dough-armrestB.png",
+                img: "/img/otiumsofa/otium-sofa.png",
                 width: 2000,
                 depth: 920,
                 height: 580,
@@ -36,17 +36,17 @@
             {
                 id: 1,
                 colorname: "탱고01",
-                img: "/img/doughsofa/dough-color-벨르01.jpg",
+                img: "/img/otiumsofa/otium-color-탱고01.jpg",
             },
             {
                 id: 2,
                 colorname: "탱고02",
-                img: "/img/doughsofa/dough-color-오스틴01.jpg",
+                img: "/img/otiumsofa/otium-color-탱고02.jpg",
             },
             {
                 id: 3,
                 colorname: "탱고03",
-                img: "/img/doughsofa/dough-color-오스틴05.jpg",
+                img: "/img/otiumsofa/otium-color-탱고03.jpg",
             },
 
         ],
@@ -54,21 +54,21 @@
             {
                 id: 1,
                 cushion: "쿠션",
-                img: "/img/doughsofa/dough-cushion.png",
+                img: "/img/otiumsofa/otium-cushion.jng",
                 price: 209000,
             },
             { id: 2, cushion: "쿠션없음", img: "", price: 0 },
         ],
         intro: [
-            { img: "/img/doughsofa/dough-sofa-01.jpg" },
-            { img: "/img/doughsofa/dough-sofa-02.jpg" },
-            { img: "/img/doughsofa/dough-sofa-03.jpg" },
-            { img: "/img/doughsofa/dough-sofa-04.jpg" },
-            { img: "/img/doughsofa/dough-sofa-05.jpg" },
+            { img: "/img/otiumsofa/otium-sofa-01.jng" },
+            { img: "/img/otiumsofa/otium-sofa-02.jng" },
+            { img: "/img/otiumsofa/otium-sofa-03.jng" },
+            { img: "/img/otiumsofa/otium-sofa-04.jng" },
+            { img: "/img/otiumsofa/otium-sofa-05.jng" },
         ],
 
         protext: [{ img: "/img/doughsofa/protext.png" }],
-        sizeImg: [{ img: "/img/doughsofa/dough-sofa-size.jpg" }],
+        sizeImg: [{ img: "/img/otiumsofa/otium-sofa-size.jpg" }],
 
         review: [
             {
