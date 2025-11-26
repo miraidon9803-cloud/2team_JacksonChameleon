@@ -57,17 +57,17 @@ const jacksonproduct = [
     subcate: "Leather",
     product: "sofa"
   },
-  // {
-  //   id: 6,
-  //   brand: "Petalo",
-  //   title: "Petalo Chair",
-  //   price: "308,000원 ~",
-  //   img_url: "/defaultimages/Petalo_Chair_Dining.png",
-  //   img_hover: "/hoverimages/Petalo_Chair_Dining_hover.jpg",
-  //   date: "202205",
-  //   subcate: "Fabric",
-  //   product: "chair"
-  // },
+  {
+    id: 6,
+    brand: "Pillow",
+    title: "Pillow Sofa",
+    price: "995,000원 ~",
+    img_url: "/defaultimages/Pillow_Sofa_Fabric.png",
+    img_hover: "/hoverimages/Pillow_Sofa_Fabric_hover.jpg",
+    date: "202410",
+    subcate: "Fabric",
+    product: "sofa"
+  },
   {
     id: 7,
     brand: "Petalo",
@@ -136,16 +136,17 @@ const jacksonproduct = [
     subcate: "Dining",
     product: "chair"
   },
-  // {
-  //   id: 13,
-  //   brand: "Flare",
-  //   title: "Flare Gloss Table",
-  //   price: "2,222,000원",
-  //   img_url: "/defaultimages/Flare_Gloss_Table.png", // img_hover 없음 → title 기반 변환
-  //   date: "202508",
-  //   subcate: "Dining",
-  //   product: "table"
-  // },
+    {
+    id: 13,
+    brand: "Pesca",
+    title: "Pesca Sofa",
+    price: "2,380,000원 ~",
+    img_url: "/defaultimages/Pesca_Sofa_Fabric.png",
+    img_hover: "/hoverimages/Pesca_Sofa_Fabric_hover.jpg",
+    date: "202409",
+    subcate: "Fabric",
+    product: "sofa"
+  },
   {
     id: 14,
     brand: "Flare",
@@ -1120,28 +1121,8 @@ const jacksonproduct = [
     subcate: "Fabric",
     product: "sofa"
   },
-  {
-    id: 102,
-    brand: "Pesca",
-    title: "Pesca Sofa",
-    price: "2,380,000원 ~",
-    img_url: "/defaultimages/Pesca_Sofa_Fabric.png",
-    img_hover: "/hoverimages/Pesca_Sofa_Fabric_hover.jpg",
-    date: "202409",
-    subcate: "Fabric",
-    product: "sofa"
-  },
-  {
-    id: 103,
-    brand: "Pillow",
-    title: "Pillow Sofa",
-    price: "995,000원 ~",
-    img_url: "/defaultimages/Pillow_Sofa_Fabric.png",
-    img_hover: "/hoverimages/Pillow_Sofa_Fabric_hover.jpg",
-    date: "202410",
-    subcate: "Fabric",
-    product: "sofa"
-  }
+
+
 
 ];
 

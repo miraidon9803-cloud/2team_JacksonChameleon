@@ -51,12 +51,23 @@ export const useProductStore = create(
         return { recentSearch: updated };
       }),
 
+<<<<<<< HEAD
     /* ----------------------------- 단독결제 (바로결제) ----------------------------- */
 
     directOrderList: [],
     setDirectOrder: (list) => set({ directOrderList: list }),
     resetDirectOrder: () => set({ directOrderList: [] }),
 
+=======
+    hyphenphone : (value) => {
+    if (!value) return "";
+    const num = String(value).replace(/\D/g, "");
+    if (num.length < 4) return num;
+    if (num.length < 7) return num.replace(/(\d{3})(\d{1,3})/, "$1-$2");
+    return num.replace(/(\d{3})(\d{3,4})(\d{4})/, "$1-$2-$3");
+  },
+  
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     /* ----------------------------- 장바구니 ----------------------------- */
 
     cartItems: [],
@@ -114,7 +125,7 @@ export const useProductStore = create(
       set({
         cartItems: [],
         cartCount: 0,
-        orderList: [],
+
         // usedPoint: 0,
       }),
 
@@ -216,8 +227,22 @@ export const useProductStore = create(
 
     /* ------------------------- 장바구니 선택 항목 ------------------------- */
 
+<<<<<<< HEAD
     // 선택된 아이템 (장바구니 기준)
     getSelectedItems: () => get().cartItems.filter((item) => item.checked),
+=======
+    // 선택된 아이템
+    getSelectedItems: () => {
+      const checkout = get().checkoutItems;
+      const cart = get().cartItems;
+
+      // 디테일에서 바로 결제하기 → checkoutItems 사용
+      if (checkout.length > 0) return checkout;
+
+      // 장바구니에서 결제하기 → checked 된 아이템 사용
+      return cart.filter((item) => item.checked);
+    },
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 
     // 단일 아이템 가격
     getItemTotal: (item) => {
@@ -231,6 +256,7 @@ export const useProductStore = create(
 
     // 선택된 상품 총합 (orderList가 있으면 orderList 기준, 없으면 장바구니 선택 기준)
     getSelectedTotalPrice: () => {
+<<<<<<< HEAD
       const orderList = get().orderList;
       const baseList =
         orderList && orderList.length > 0
@@ -238,10 +264,19 @@ export const useProductStore = create(
           : get().getSelectedItems();
 
       return baseList.reduce((sum, item) => sum + get().getItemTotal(item), 0);
+=======
+      const items = get().getSelectedItems();
+      return items.reduce((sum, item) => {
+        const size = item.size?.price || 0;
+        const add = item.add?.price || 0;
+        return sum + (size + add) * item.qty;
+      }, 0);
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     },
 
     // 즉시할인(세일) - orderList 우선, 없으면 장바구니 선택 기준
     getItemSalePrice: () => {
+<<<<<<< HEAD
       const orderList = get().orderList;
       const baseList =
         orderList && orderList.length > 0
@@ -249,11 +284,25 @@ export const useProductStore = create(
           : get().getSelectedItems();
 
       return baseList.reduce((sum, item) => {
+=======
+      const items = get().getSelectedItems();
+      return items.reduce((sum, item) => {
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
         if (!item.sale) return sum;
-        return sum + get().getItemTotal(item) * item.sale;
+        const price = (item.size?.price || 0) + (item.add?.price || 0);
+        return sum + price * item.qty * item.sale;
       }, 0);
     },
 
+<<<<<<< HEAD
+=======
+    /* ---------------------------- 결제 및 계산 ---------------------------- */
+
+    //결제창 바로 넘어가기
+    checkoutItems: [],
+    setCheckoutItems: (items) => set({ checkoutItems: items }),
+    resetCheckoutItems: () => set({ checkoutItems: [] }),
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     // 총 쿠폰 할인금액
     getCouponDiscount: () => {
       const { selectedCoupon } = get();
@@ -385,18 +434,23 @@ export const useProductStore = create(
 
     // 장바구니에서 체크된 항목 → 주문 리스트로 복사
     onAddOrder: () => {
-      const checked = get().cartItems.filter((item) => item.checked);
-      set({ orderList: checked });
+      const { checkoutItems, cartItems } = get();
+
+      // 단독결제 있으면 그걸 우선 사용, 아니면 장바구니에서 checked 된 것만
+      const baseItems =
+        checkoutItems && checkoutItems.length > 0
+          ? checkoutItems
+          : cartItems.filter((item) => item.checked);
+
+      set({ orderList: baseItems });
     },
 
     setOrderList: (list) => set({ orderList: list }),
 
     processPayment: () => {
-      const { usedPoint, getsavePoint, updateMyPoint, onAddOrder } = get();
+      const { usedPoint, getsavePoint, updateMyPoint } = get();
       const saved = getsavePoint();
-
       updateMyPoint(usedPoint, saved);
-      onAddOrder();
     },
 
     resetPaymentState: () =>
