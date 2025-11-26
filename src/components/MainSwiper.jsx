@@ -73,7 +73,7 @@ const MainSwiper = () => {
           delay: 3500
         }}
         onSwiper={setThumbsSwiper}
-        loop={true}
+        loop={false}
         spaceBetween={10}
         slidesPerView={5}
         freeMode={true}
