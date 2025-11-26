@@ -204,7 +204,7 @@
               }
             }
 
-            .type:nth-child(1) {
+            .opt1 {
               .depth-content-wrap {
                 // height: 358px;
                 .depth-content {
@@ -219,7 +219,7 @@
               }
             }
 
-            .type:nth-child(2) {
+            .opt2 {
               .depth-content-wrap {
                 grid-template-columns: minmax(120px, 1fr);
 
@@ -275,7 +275,7 @@
               }
             }
 
-            .type:nth-child(3) {
+            .opt3 {
               .depth-content-wrap {
                 .depth-content {
                   max-width: 156px;
@@ -333,7 +333,7 @@
               }
             }
 
-            .type:nth-child(4) {
+            .opt4 {
               .depth-content-wrap {
                 .select {
                   max-width: 156px;

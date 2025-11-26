@@ -191,12 +191,20 @@ export default function LogJoin() {
                     <p>이용약관동의</p>
 
                     <div className="term-wrap1">
-                      <label>
+                      <label className="check-box">
                         <input
                           type="checkbox"
                           checked={terms.every((t) => t.checked)}
                           onChange={(e) => handleAllTerms(e.target.checked)}
+                          className="real"
                         />
+                        <span className="fake">
+                          <img
+                            className="icon"
+                            src="/images/check.png"
+                            alt="checkicon"
+                          />
+                        </span>
                         전체 동의하기
                       </label>
                     </div>
@@ -204,12 +212,20 @@ export default function LogJoin() {
                     {terms.map((term) => (
                       <div key={term.id} className="term-item2">
                         <div className="term-header">
-                          <label>
+                          <label className="check-box">
                             <input
                               type="checkbox"
                               checked={term.checked}
                               onChange={() => toggleTerm(term.id)}
+                              className="real"
                             />
+                            <span className="fake">
+                              <img
+                                className="icon"
+                                src="/images/check.png"
+                                alt="checkicon"
+                              />
+                            </span>
                             [{term.required ? "필수" : "선택"}] {term.title}
                           </label>
                           <p
