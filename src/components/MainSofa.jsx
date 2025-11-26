@@ -40,12 +40,6 @@ const MainSofa = () => {
   const opacity = progress < 0.5 ? progress * 2 : 1;
   const textTrigger = scrollY >= 2700;
 
-  const navigate = useNavigate();
-  const handlegoPebble = () => {
-    navigate("/collections/pebble");
-    window.scrollTo(0, 0);
-  };
-
   return (
     <div className="main-sofa-wrap">
       <div className="inner-wrap">
@@ -163,7 +157,6 @@ const MainSofa = () => {
               </p>
             </div>
             <button
-              onClick={handlegoPebble}
               className={
                 textTrigger ? "animate__animated animate__fadeInDown" : ""
               }

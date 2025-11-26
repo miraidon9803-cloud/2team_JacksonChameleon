@@ -12,6 +12,8 @@ import DetailCartPopup from "../components/DetailCartPopup";
 import { useNavigate } from "react-router-dom";
 
 const ShopDetailTop = () => {
+  const navigate = useNavigate();
+
   const sheetList = [
     { title: "H", text: "하드" },
     { title: "M", text: "미디움" },
@@ -21,7 +23,11 @@ const ShopDetailTop = () => {
 
   const navigate = useNavigate();
   const { id } = useParams();
+<<<<<<< HEAD
   const { items, onFetchItems, onAddToCart, setDirectOrder } =
+=======
+  const { items, onFetchItems, onAddToCart, setCheckoutItems } =
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     useProductStore();
 
   const [product, setProduct] = useState(null);
@@ -51,6 +57,10 @@ const ShopDetailTop = () => {
   }, [id, items]);
 
   if (!product) return <p>로딩중입니다...</p>;
+
+  //소파인지 여부
+  const isSofa =
+    product.title.includes("Sofa") && !product.title.includes("Table");
 
   // Sheet 선택 → 세트 추가
   const selectSheet = (item) => {
@@ -142,11 +152,12 @@ const ShopDetailTop = () => {
 
   // 장바구니 담기
   const handleAddToCart = () => {
-    if (selectedList.length === 0) {
-      alert("옵션을 선택해주세요.");
-      return;
+    for (let sel of selectedList) {
+      if (!sel.sheet || !sel.size || !sel.color || !sel.add) {
+        alert("모든 옵션을 선택해주세요!");
+        return;
+      }
     }
-
     selectedList.forEach((sel) => {
       onAddToCart({ ...product, ...sel });
     });
@@ -179,28 +190,40 @@ const ShopDetailTop = () => {
 
               <div className="option">
                 {/* SHEET */}
+<<<<<<< HEAD
                 <div className={`type ${openIndex === 0 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(0)}>
                     <p>Sheet Type</p>
                     <p>
                       <img src="/images/Arrow-down.png" alt="" />
                     </p>
+=======
+                {isSofa && (
+                  <div className={`type ${openIndex === 0 ? "open" : ""}`}>
+                    <div className="title" onClick={() => setOpenIndex(0)}>
+                      <p>Sheet Type</p>
+                      <p>
+                        <img src="/images/Arrow-down.png" alt="" />
+                      </p>
+                    </div>
+                    <div className="depth-content-wrap">
+                      {sheetList.map((item) => (
+                        <div
+                          className="depth-content"
+                          key={item?.title}
+                          onClick={() => selectSheet(item)}
+                        >
+                          <p className="ST-title">{item?.title}</p>
+                          <p className="ST-sub">{item?.text}</p>
+                        </div>
+                      ))}
+                    </div>
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                   </div>
-                  <div className="depth-content-wrap">
-                    {sheetList.map((item) => (
-                      <div
-                        className="depth-content"
-                        key={item.title}
-                        onClick={() => selectSheet(item)}
-                      >
-                        <p className="ST-title">{item.title}</p>
-                        <p className="ST-sub">{item.text}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+                )}
 
                 {/* SIZE */}
+<<<<<<< HEAD
                 <div className={`type ${openIndex === 1 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(1)}>
                     <p>Size</p>
@@ -218,21 +241,42 @@ const ShopDetailTop = () => {
                         <div className="depth-left">
                           <div className="left-img">
                             <img src={s.img} alt={s.sizename} />
+=======
+                {isSofa && (
+                  <div className={`type ${openIndex === 1 ? "open" : ""}`}>
+                    <div className="title" onClick={() => setOpenIndex(1)}>
+                      <p>Size</p>
+                      <p>
+                        <img src="/images/Arrow-down.png" alt="" />
+                      </p>
+                    </div>
+                    <div className="depth-content-wrap">
+                      {product.size.map((s) => (
+                        <div
+                          className="depth-content"
+                          key={s?.id}
+                          onClick={() => selectSize(s)}
+                        >
+                          <div className="depth-left">
+                            <div className="left-img">
+                              <img src={s?.img} alt={s?.sizename} />
+                            </div>
+                            <div className="left-title">
+                              <span>{s?.sizename}</span>
+                            </div>
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                           </div>
-                          <div className="left-title">
-                            <span>{s.sizename}</span>
-                          </div>
-                        </div>
 
-                        <div className="depth-right">
-                          <p>너비: {s.width}</p>
-                          <p>높이: {s.height}</p>
-                          <p>깊이: {s.depth}</p>
+                          <div className="depth-right">
+                            <p>너비: {s?.width}</p>
+                            <p>높이: {s?.height}</p>
+                            <p>깊이: {s?.depth}</p>
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
+                )}
 
                 {/* COLOR */}
                 <div className={`type ${openIndex === 2 ? "open" : ""}`}>
@@ -261,6 +305,7 @@ const ShopDetailTop = () => {
                 </div>
 
                 {/* ADD */}
+<<<<<<< HEAD
                 <div className={`type ${openIndex === 3 ? "open" : ""}`}>
                   <div className="title" onClick={() => setOpenIndex(3)}>
                     <p>Add</p>
@@ -290,6 +335,31 @@ const ShopDetailTop = () => {
                     </div> */}
                   </div>
                 </div>
+=======
+                {isSofa && product.add && product.add.length > 0 && (
+                  <div className={`type ${openIndex === 3 ? "open" : ""}`}>
+                    <div className="title" onClick={() => setOpenIndex(3)}>
+                      <p>Add</p>
+                      <p>
+                        <img src="/images/Arrow-down.png" alt="" />
+                      </p>
+                    </div>
+
+                    <div className="depth-content-wrap">
+                      {product.add.map((a) => (
+                        <div
+                          className="depth-content"
+                          key={a.id}
+                          onClick={() => selectAdd(a)}
+                        >
+                          {a?.img && <img src={a?.img} alt={a?.cushion} />}
+                          <p>{a?.cushion}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
               </div>
             </div>
           </div>
@@ -355,6 +425,7 @@ const ShopDetailTop = () => {
                 <div
                   className="go-pay"
                   onClick={() => {
+<<<<<<< HEAD
                     if (selectedList.length === 0) {
                       alert("옵션을 선택해주세요.");
                       return;
@@ -365,6 +436,19 @@ const ShopDetailTop = () => {
                         ...product,
                         ...sel,
                         cartId: Date.now() + Math.random(),
+=======
+                    for (let sel of selectedList) {
+                      if (!sel.sheet || !sel.size || !sel.color || !sel.add) {
+                        alert("모든 옵션을 선택해주세요!");
+                        return;
+                      }
+                    }
+
+                    setCheckoutItems(
+                      selectedList.map((sel) => ({
+                        ...product,
+                        ...sel,
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                       }))
                     );
 

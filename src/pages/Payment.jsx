@@ -1,14 +1,23 @@
 import React, { useEffect, useState } from "react";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
 import { useProductStore } from "../store/ProductStore";
 import "./scss/Payment.scss";
+=======
+import { useProductStore } from "../store/ProductStore";
+import "./scss/Payment.scss";
+import { useNavigate } from "react-router-dom";
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 import { useAuthStore } from "../store/authStore";
 import Coupon from "../components/Coupon";
 import PaymentDelivery from "../components/PaymentDelivery";
 import PaymentComplete from "../components/PaymentComplete";
 
 const Payment = () => {
+<<<<<<< HEAD
   const navigate = useNavigate();
+=======
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
   /* ------------------ STORE ------------------ */
   const {
     // 요청사항
@@ -44,23 +53,39 @@ const Payment = () => {
     // 주문 리스트
     onAddOrder,
     orderList,
+<<<<<<< HEAD
     directOrderList,
     resetDirectOrder,
     setOrderList,
+=======
+
+    //단독결제
+    checkoutItems,
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
     saveOrder,
     processPayment,
     resetPaymentState,
     onClearCart,
+<<<<<<< HEAD
   } = useProductStore();
 
   const { user } = useAuthStore();
 
   /* ------------------ LOCAL STATE ------------------ */
+=======
+
+    hyphenphone
+  } = useProductStore();
+
+  const { user } = useAuthStore();
+  const navigate = useNavigate();
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
   const [showCoupon, setShowCoupon] = useState(false);
   const [showDelivery, setShowDelivery] = useState(false);
   const [showComplete, setShowComplete] = useState(false);
   const [inputPoint, setInputPoint] = useState("");
 
+<<<<<<< HEAD
   // 가격 state
   const [selectedTotal, setSelectedTotal] = useState(0);
   const [saleTotal, setSaleTotal] = useState(0);
@@ -79,6 +104,14 @@ const Payment = () => {
       onAddOrder(); // 장바구니 결제
     }
   }, []);
+=======
+  const selectedTotal = getSelectedTotalPrice(); // 상품 금액 총합
+  const saleTotal = getItemSalePrice(); // 즉시할인
+  const couponDiscount = getCouponDiscount(); // 쿠폰 할인
+  const finalPayment = getFinalPayment(); // 최종 결제 금액
+  const savePoint = getsavePoint(); // 예상 적립금
+  const paymentItems = checkoutItems.length > 0 ? checkoutItems : orderList; //단독결제 및 장바구니결제
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 
   /* ------------------ 가격 자동 재계산 ------------------ */
   useEffect(() => {
@@ -102,7 +135,20 @@ const Payment = () => {
     setInputPoint(valid.toString());
     setUsedPoint(valid);
   };
+  const handleConfirm = () => {
+    onAddOrder(); // 주문상품 저장 → orderList 업데이트
+    saveOrder(); // Firestore 저장 (optional)
+    processPayment(); // 결제 처리
+    if (checkoutItems.length === 0) {
+      onClearCart(); // 장바구니 결제일 때만 비움
+    }
+    resetPaymentState(); // 결제 화면 UI 상태 초기화 (orderList 초기화 금지)
+    setShowComplete(true); // 완료 팝업 표시
+  };
 
+  const { resetCheckoutItems } = useProductStore();
+
+<<<<<<< HEAD
   const handleConfirm = () => {
     saveOrder();
     processPayment();
@@ -114,6 +160,16 @@ const Payment = () => {
 
     navigate("/mypage");
   };
+=======
+  useEffect(() => {
+    onAddOrder(); // 장바구니 결제일 때 orderList 저장
+  }, []);
+
+  useEffect(() => {
+    // 페이지 나갈 때 checkoutItems 초기화
+    return () => resetCheckoutItems();
+  }, []);
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
 
   return (
     <div className="checkout-wrap">
@@ -133,9 +189,15 @@ const Payment = () => {
               </div>
               <div className="address">
                 <p>
+<<<<<<< HEAD
                   {user?.addnum} {user?.address} {user?.add}
                 </p>
                 <p>{user?.phone}</p>
+=======
+                {user?.address} {user?.add}
+                </p>
+                <p>{hyphenphone(user?.phone)}</p>
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
               </div>
             </div>
 
@@ -204,17 +266,31 @@ const Payment = () => {
             <div className="left-con3 order">
               <p>주문상품</p>
 
+<<<<<<< HEAD
               {orderList.map((i) => (
                 <div className="order-item" key={i.cartId}>
                   <div className="item-img">
                     <img src={i.size?.img} alt="" />
+=======
+              {paymentItems.map((i, idx) => (
+                <div className="order-item" key={i.cartId || idx}>
+                  <div className="item-img">
+                    <img
+                      src={i.size?.img || i.img || "/images/noimage.png"}
+                      alt={i.title}
+                    />
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                   </div>
 
                   <div className="item-info">
                     <p className="item-title">{i.title}</p>
                     <p className="item-option">
                       {i.sheet?.text} / {i.size?.sizename} /{" "}
+<<<<<<< HEAD
                       {i.color?.colorname} / {i.add?.cushion || "선택안함"}
+=======
+                      {i.color?.colorname} /{i.add?.cushion || "선택안함"}
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                     </p>
                     <p className="item-price">
                       {(
@@ -372,18 +448,21 @@ const Payment = () => {
                   <span>총 결제 금액</span>
                   <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
-
                 <button
                   className="pay-btn"
                   onClick={() => {
+<<<<<<< HEAD
                     if (directOrderList.length === 0) {
                       onClearCart();
                     }
 
                     setShowComplete(true);
+=======
+                    handleConfirm(); // 결제 처리
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
                   }}
                 >
-                  <span>결제하기</span>
+                  결제하기
                 </button>
               </div>
             </div>
@@ -396,10 +475,14 @@ const Payment = () => {
           <PaymentDelivery onClose={() => setShowDelivery(false)} />
         )}
         {showComplete && (
+<<<<<<< HEAD
           <PaymentComplete
             onConfirm={handleConfirm}
             onClose={() => setShowComplete(false)}
           />
+=======
+          <PaymentComplete onClose={() => setShowComplete(false)} />
+>>>>>>> d1847b26c574017e91501b7f28c27be51103f684
         )}
 
         {(showCoupon || showDelivery || showComplete) && (
