@@ -1,22 +1,29 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import FilterPopup from './FilterPopup'
-import Header from './Header'
-import Footer from './Footer'
-import SearchPopup from './SearchPopup'
-import { useProductStore } from '../store/ProductStore'
+import React, { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import SearchPopup from "./SearchPopup";
+import { useProductStore } from "../store/ProductStore";
 
 const Layout = () => {
-    const { isSearchOpen } = useProductStore();
+  const { isSearchOpen, closeSearch } = useProductStore();
+  const location = useLocation();
 
-    return (
-        <div>
-            <Header/>
-            {isSearchOpen && <SearchPopup />}
-            <Outlet />
-            <Footer/>
-        </div>
-    )
-}
+  // 경로가 바뀔 때마다 검색 팝업 닫기
+  useEffect(() => {
+    if (isSearchOpen) {
+      closeSearch();
+    }
+  }, [location.pathname]);
 
-export default Layout
+  return (
+    <div>
+      <Header />
+      {isSearchOpen && <SearchPopup />}
+      <Outlet />
+      <Footer />
+    </div>
+  );
+};
+
+export default Layout;

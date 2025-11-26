@@ -51,7 +51,7 @@ const Payment = () => {
     resetPaymentState,
     onClearCart,
 
-    hyphenphone
+    hyphenphone,
   } = useProductStore();
 
   const { user } = useAuthStore();
@@ -118,7 +118,7 @@ const Payment = () => {
               </div>
               <div className="address">
                 <p>
-                {user?.address} {user?.add}
+                  {user?.address} {user?.add}
                 </p>
                 <p>{hyphenphone(user?.phone)}</p>
               </div>
@@ -230,7 +230,6 @@ const Payment = () => {
                   }}
                   onBlur={handlePointOpen}
                 />
-                <p>보유적립금: {myPoint.toLocaleString("ko-KR")}원</p>
 
                 <button
                   onClick={() => {
@@ -241,6 +240,7 @@ const Payment = () => {
                   사용취소
                 </button>
               </div>
+              <p>보유적립금: {myPoint.toLocaleString("ko-KR")}원</p>
             </div>
 
             {/* 쿠폰 */}
@@ -343,7 +343,7 @@ const Payment = () => {
                   </li>
 
                   <li>
-                    <span>적립금사용</span>
+                    <span>적립금 사용</span>
                     <span>{usedPoint.toLocaleString("ko-KR")}원</span>
                   </li>
 
@@ -354,7 +354,10 @@ const Payment = () => {
                 </ul>
 
                 <h4>적립혜택</h4>
-                <p>예상적립금 {savePoint.toLocaleString("ko-KR")}원</p>
+                <div className="cash">
+                  <p>적립금</p>
+                  <p>{savePoint.toLocaleString("ko-KR")}원</p>
+                </div>
 
                 <div className="total-price">
                   <span>총 결제 금액</span>
