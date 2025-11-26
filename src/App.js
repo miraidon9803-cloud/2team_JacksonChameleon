@@ -100,10 +100,7 @@ function App() {
         <Route path="/careservice" element={<CareService />} />
         <Route path="/cs" element={<CS />} />
         <Route path="/community/notice" element={<Notice />} />
-<<<<<<< HEAD
        
-=======
->>>>>>> d1847b26c574017e91501b7f28c27be51103f684
         {/* <Route path="/noticedetails" element={<NoticeDetails />} /> */}
         <Route path="/payment" element={<Payment />} />
         <Route path="/search" element={<Search />} />
