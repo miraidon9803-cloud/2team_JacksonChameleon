@@ -123,7 +123,7 @@
             .type {
               background: g.$text10;
               border-radius: 8px;
-
+              height: 358px;
               padding: 12px 18px;
 
               .title {
@@ -141,6 +141,7 @@
                 gap: 12px;
 
                 max-height: 0;
+                // height: 300px;
                 // overflow-y: auto;
                 transition: max-height 0.3s ease-in-out;
                 overflow: hidden;
@@ -205,6 +206,7 @@
 
             .type:nth-child(1) {
               .depth-content-wrap {
+                // height: 358px;
                 .depth-content {
                   .ST-title {
                     @include g.myTitle32($ta: left, $color: g.$text6);

@@ -1,125 +1,120 @@
-  @use "../../App.scss" as g;
+@use "../../App.scss" as g;
 
-  .PaymentComplete-wrap {
-      width: 58.8rem;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
+.PaymentComplete-wrap {
+  width: 58.8rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  background: g.$BG;
+  border-radius: 8px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .wrap {
+    .top {
+      .close {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+      }
+      .close:hover {
+        filter: brightness(0);
+      }
+
+      .img-box {
+        position: relative;
+        height: 260px;
+        //   background-color: aqua;
+
+        .line {
+          position: absolute;
+          left: 50%;
+          top: -48px;
+          transform: translateX(-50%);
+          z-index: 30;
+        }
+
+        .ani {
+          position: absolute;
+          transform: translateX(-50%);
+          left: 32%;
+          top: -10px;
+          z-index: 25;
+          transform-origin: 50% 10px; // 회전 기준점
+          animation: swing 1.6s ease-in-out infinite alternate;
+        }
+
+        @keyframes swing {
+          0% {
+            transform: rotate(-8deg);
+          }
+
+          100% {
+            transform: rotate(8deg);
+          }
+        }
+      }
+
+      h2 {
+        //   margin-top: 345px;
+        @include g.myTitle24();
+        font-size: 20px;
+      }
+
+      p {
+        @include g.myTitle16();
+        margin-bottom: 24px;
+      }
+    }
+
+    .text-box {
       padding: 24px;
-      background: g.$BG;
-      border-radius: 8px;
-      z-index: 10;
+      background: g.$text10;
+      border-radius: 4px;
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 40px;
 
+      .box {
+        display: flex;
+        justify-content: space-between;
 
-
-      .wrap {
-          .top {
-              .close {
-                  width: 100%;
-                  display: flex;
-                  justify-content: end;
-
-              }
-              .close:hover{
-                filter: brightness(0);
-              }
-
-              .img-box {
-                  position: relative;
-                  height: 260px;
-                //   background-color: aqua;
-
-                  .line {
-                      position: absolute;
-                      left: 50%;
-                      top: -48px;
-                      transform: translateX(-50%);
-                      z-index: 30;
-
-                  }
-
-                  .ani {
-                      position: absolute;
-                      transform: translateX(-50%);
-                      left: 32%;
-                      top: -10px;
-                      z-index: 25;
-                     transform-origin: 50% 10px; // 회전 기준점
-                      animation: swing 1.6s ease-in-out infinite alternate
-                  }
-
-                  @keyframes swing {
-                      0% {
-                          transform: rotate(-8deg);
-                      }
-
-                      100% {
-                          transform: rotate(8deg);
-                      }
-                  }
-
-              }
-
-              h2 {
-                  //   margin-top: 345px;
-                  @include g.myTitle24();
-                  font-size: 20px;
-              }
-
-              p {
-                  @include g.myTitle16();
-                  margin-bottom: 24px;
-              }
-          }
-
-          .text-box {
-              padding: 24px;
-              background: g.$text10;
-              border-radius: 4px;
-              display: flex;
-              flex-direction: column;
-              gap: 40px;
-
-              .box {
-                  display: flex;
-                  justify-content: space-between;
-
-                  p {}
-              }
-
-              .first-box {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 20px;
-              }
-
-              .big-text {
-                  p {
-                      @include g.myTitle24();
-                  }
-              }
-
-          }
+        p {
+        }
       }
 
-      button {
-          @include g.myTitle16();
-          background: g.$text4;
-          color: g.$text10;
-          padding: 12px 0;
-          border: none;
-          border-radius: 4px;
-          outline: none;
-          appearance: none; //브라우저 기본 스타일 제거
-
+      .first-box {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
 
-      button:hover {
-          background: g.$text1;
-          color: g.$text10;
+      .big-text {
+        p {
+          @include g.myTitle24();
+        }
       }
+    }
   }
+  button {
+    @include g.myTitle16();
+    background: g.$text4;
+    color: g.$text10;
+    width: 100%;
+    padding: 12px 0;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    appearance: none; //브라우저 기본 스타일 제거
+    margin-top: 4rem;
+  }
+
+  button:hover {
+    background: g.$text1;
+    color: g.$text10;
+  }
+}

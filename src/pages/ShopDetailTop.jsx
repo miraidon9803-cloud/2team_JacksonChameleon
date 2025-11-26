@@ -19,6 +19,7 @@ const ShopDetailTop = () => {
     { title: "M", text: "미디움" },
     { title: "MH", text: "미디움하드" },
     { title: "MS", text: "미디움소프트" },
+    { title: "S", text: "소프트" },
   ];
 
   const { id } = useParams();
@@ -209,7 +210,6 @@ const ShopDetailTop = () => {
                   </div>
                 )}
 
-
                 {/* SIZE */}
                 {isSofa && (
                   <div className={`type ${openIndex === 1 ? "open" : ""}`}>
@@ -245,7 +245,6 @@ const ShopDetailTop = () => {
                     </div>
                   </div>
                 )}
-
 
                 {/* COLOR */}
                 <div className={`type ${openIndex === 2 ? "open" : ""}`}>

@@ -46,6 +46,12 @@ const Payment = () => {
 
     //단독결제
     checkoutItems,
+    saveOrder,
+    processPayment,
+    resetPaymentState,
+    onClearCart,
+
+    hyphenphone,
   } = useProductStore();
 
   const { user } = useAuthStore();
@@ -70,17 +76,26 @@ const Payment = () => {
     setInputPoint(valid.toString());
     setUsedPoint(valid);
   };
-
   const handleConfirm = () => {
-    saveOrder();
-    processPayment();
-    resetPaymentState();
-    onClearCart(); // 장바구니 비우기 (결제 완료 후)
-    navigate("/mypage");
+    onAddOrder(); // 주문상품 저장 → orderList 업데이트
+    saveOrder(); // Firestore 저장 (optional)
+    processPayment(); // 결제 처리
+    if (checkoutItems.length === 0) {
+      onClearCart(); // 장바구니 결제일 때만 비움
+    }
+    resetPaymentState(); // 결제 화면 UI 상태 초기화 (orderList 초기화 금지)
+    setShowComplete(true); // 완료 팝업 표시
   };
-  /* ------------------ 주문상품 초기화 ------------------ */
+
+  const { resetCheckoutItems } = useProductStore();
+
   useEffect(() => {
-    onAddOrder();
+    onAddOrder(); // 장바구니 결제일 때 orderList 저장
+  }, []);
+
+  useEffect(() => {
+    // 페이지 나갈 때 checkoutItems 초기화
+    return () => resetCheckoutItems();
   }, []);
 
   return (
@@ -101,9 +116,9 @@ const Payment = () => {
               </div>
               <div className="address">
                 <p>
-                  {user?.addnum} {user?.address} {user?.add}
+                  {user?.address} {user?.add}
                 </p>
-                <p>{user?.phone}</p>
+                <p>{hyphenphone(user?.phone)}</p>
               </div>
             </div>
 
@@ -210,7 +225,6 @@ const Payment = () => {
                   }}
                   onBlur={handlePointOpen}
                 />
-                <p>보유적립금: {myPoint.toLocaleString("ko-KR")}원</p>
 
                 <button
                   onClick={() => {
@@ -221,6 +235,7 @@ const Payment = () => {
                   사용취소
                 </button>
               </div>
+              <p>보유적립금: {myPoint.toLocaleString("ko-KR")}원</p>
             </div>
 
             {/* 쿠폰 */}
@@ -323,7 +338,7 @@ const Payment = () => {
                   </li>
 
                   <li>
-                    <span>적립금사용</span>
+                    <span>적립금 사용</span>
                     <span>{usedPoint.toLocaleString("ko-KR")}원</span>
                   </li>
 
@@ -334,15 +349,22 @@ const Payment = () => {
                 </ul>
 
                 <h4>적립혜택</h4>
-                <p>예상적립금 {savePoint.toLocaleString("ko-KR")}원</p>
+                <div className="cash">
+                  <p>적립금</p>
+                  <p>{savePoint.toLocaleString("ko-KR")}원</p>
+                </div>
 
                 <div className="total-price">
                   <span>총 결제 금액</span>
                   <strong>{finalPayment.toLocaleString("ko-KR")}원</strong>
                 </div>
-
-                <button className="pay-btn" onClick={setShowComplete}>
-                  <span>결제하기</span>
+                <button
+                  className="pay-btn"
+                  onClick={() => {
+                    handleConfirm(); // 결제 처리
+                  }}
+                >
+                  결제하기
                 </button>
               </div>
             </div>

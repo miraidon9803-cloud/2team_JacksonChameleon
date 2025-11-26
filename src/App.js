@@ -46,6 +46,8 @@ import Checkout from "./pages/Checkout";
 import { useEffect } from "react";
 import NoticeId from "./components/NoticeId";
 import NoticePage from "./pages/NoticePage";
+import AboutStoryDetail from "./components/AboutStoryDetail";
+
 
 function App() {
   const initAuth = useAuthStore((state) => state.initAuth);
@@ -72,6 +74,7 @@ function App() {
         <Route path="/collections/plato" element={<PlatoCollection />} />
         <Route path="/collections" element={<Collections />} />
 
+
         <Route path="/service" element={<Service />} />
         <Route path="/service/sample" element={<Sample />} />
         <Route path="/service/cleaning" element={<Cleaning />} />
@@ -85,6 +88,7 @@ function App() {
         <Route path="/about/brand" element={<Brand />} />
         <Route path="/about" element={<About />} />
         <Route path="/about/story" element={<AboutStory />} />
+        <Route path="/about/story/:id" element={<AboutStoryDetail />} />
 
         <Route path="/map" element={<Store />} />
 
@@ -95,7 +99,7 @@ function App() {
         <Route path="/community/store" element={<Map />} />
         <Route path="/careservice" element={<CareService />} />
         <Route path="/cs" element={<CS />} />
-        <Route path="/notice" element={<Notice />} />
+        <Route path="/community/notice" element={<Notice />} />
         {/* <Route path="/noticedetails" element={<NoticeDetails />} /> */}
         <Route path="/payment" element={<Payment />} />
         <Route path="/search" element={<Search />} />

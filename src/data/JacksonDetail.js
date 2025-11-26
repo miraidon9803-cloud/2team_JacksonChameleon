@@ -5,12 +5,208 @@ export const products = [
     price: "1,056,000원",
     sale: "0.2",
     price_regular: "2,300,000원",
-    sheet: [
-      { title: "H", text: "하드" },
-      { title: "M", text: "미디움" },
-      { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" },
+    size: [
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
+
+    color: [
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
+    ],
+
+    add: [
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
+    ],
+
+    intro: [
+      { img: "/img/bolossofa/bolson-sofa-01.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-02.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-03.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-04.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
+    ],
+
+    protext: [{ img: "/img/bolossofa/protext.png" }],
+    sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
+
+    review: [
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: `내 집이 생기면 꼭 사고싶었던 잭슨카멜레온의 볼손소파 신혼가구로 구매했어요!
+
+사용 5개월차 후기 입니다.
+
+소파의 쿠션 추가구매 없이 기본구성으로 구매했어요. 기본 긴 쿠션에 머리를 대고 누워서 티비를 보면 침대보다도 편안하고 아늑해 주말마다 남편과 쇼파에서 꿀잠에 빠지곤해요.
+사용해보고 추가구성품인 쿠션을 구매하기로 했는데 없이도 편하게 잘 사용해서 추가로 구매 안했답니다.
+
+그리고 집꾸미기를 좋아하는 저에게 소파 무게가 적당해서 혼자 이리 저리 돌려가며 레이아웃을 변경할 수 있어서 좋았답니다. 손님이 방문에 따라 쇼파 레이아웃을 변경하고 있어요.
+
+그리고 같이 구매한 원형 테이블이 쇼파 사이에 딱 맞게 들어가 쇼파에 앉아서 맥주도 마시고 커피마셔요. 그래서 저히 부부는 쇼파생활에 아주 만족하고 있답니다.
+
+평소 사용하는 모습을 더 보고 싶다면 인스타구경오세요.
+@maumee_life
+https://www.instagram.com/maumee_life/`,
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: `볼손 벨베티 71 컬러로 된 리뷰는 많지 않아서 구입시 살짝 고민이 되었는데, 도착한 소파를 보고 매우 만족했습니다. 인테리어에 적당히 포인트되면서도 다른 가구와 매칭하기 쉬운 컬러네요. 오히려 처음 고려했던 컬러로 했음 후회했을 듯 하네요.
+연희동 잭슨카멜레온 쇼룸에서 상담했는데, 소파 모양 고민시 좋은 조언해준 친절한 직원도 칭찬합니다 :)
+
+2023-02-26 15:25:46 에 등록된 무브먼트랩 구매평`,
+        date: "2023-02-26",
+      },
+      
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: `안녕하세요 여기는 부산입니다.^^
+
+저희는 이번에 이사를 가면서 인테리어를 하며 소파를 새로 구입하였습니다.
+
+이리저리 인테리어 분위기를 맞춰 찾다보니 저희 부부의 픽은 잭슨카멜레온 쇼파로 결정!!! (이사 전에는 자코모를 사용하였습니다.)
+
+다행이 부산엔 달맞이 무브먼트랩에서 잭슨카멜레온 쇼파를 볼 수 있었습니다. (무조건 쇼파는 직접 보고 앉아보고 사자라는 주의)
+
+그중에서도 1.너무유명한 페블쇼파(사실 이 쇼파 보고 사고싶어 갔었음) 2.클레이쇼파 처음엔 두가지 쇼파만 전시장에 있어 구경을 하였습니다.
+
+페블쇼파 너무이쁘고 색도 다양하게 있더군요 하지만.. 저희가 원하는 착좌감이 아니였습니다. 호불호가 갈린다 하였는데 저희는 불호쪽에 속했네요.. 쇼파는 편한하고 cozy해야 한다고 생각한 저희에겐 안맞았습니다. 금방이라도 일어나야 할 거 같은 느낌이더라구요..(저희는 퇴근하고 쇼파에 눕고 뒹굴고 느러져 있는걸 좋아합니다ㅠㅠㅋ)
+
+클레이 쇼파는 앉아보니 정말 넓고 편하고 다 좋았는데 앞 뒤 폭이 너무나 컷습니다..(저희기준)
+거실에서 쇼파가 공간을 너무 크게 차지하지 않았으면 좋겠다는 생각도 있었기 때문이죠..
+
+그렇게 상담을 받던 중 직원분께서 볼손 쇼파를 추천해 주셧습니다. 저희가 원하는 쇼파 느낌에 앞 뒤 폭도 적당한..
+사진을 보자마자 바로 테이블과 함께 계약을 하고 나왔습니다.
+
+집으로 돌아와서 2개월 정도에 걸쳐 쇼파를 받고 쇼파를 설치했는데.. 이거 치수가 왜이렇죠..
+들어갈꺼라고 생각은 했지만 양쪽 기둥 사이에 딱 들어맞는 기적이^^ (설치하시는 분들이랑 인테리어 하시는 분들이랑 다같이 보고 놀랬다는 후문이..)
+
+현재 쇼파를 받고 3개월 정도 지났는데 너무 잘 사용하고 있습니다. 눕고싶은 사람은 눕고싶은데로 눕고 (볼손 테이블 가운데가 뚫려 있어서 저 사이로 발 넣으면 1자로 쭉 누워집니다^^) 앉을 사람은 앉고 개성있게 각자 사용중이네요ㅎ
+
+집에 돌지난 아기가 있어 뭘 흘리거나하면 세탁도 천만 벗겨내서 베게 커버 빨듯이 세탁하면되어서 편하게 세탁하며 사용중입니다.
+
+다음 이사갈땐 더 넓은곳으로 가게 된다면 클레이 소파도 이용해보고 싶네요^^
+
+후기는 모두 주관적인 저희 가족 이야기였으니 참고만하시고 좋은 선택하세요ㅎ 저희는 볼손 쇼파 대.만.족 입니다!`,
+        date: "2020.11.11",
+      },
+    ],
+  },
+   {
+    id: 6,
+    title: "Bolso Sofa",
+    price: "1,056,000원",
+    sale: "0.2",
+    price_regular: "2,300,000원",
     size: [
       {
         id: 1,
@@ -362,7 +558,161 @@ https://www.instagram.com/maumee_life/`,
       },
     ],
   },
+ {
+    id: 13,
+    title: "Dough Sofa",
+    price: "1,903,000원 ~",
 
+    size: [
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/doughsofa/dough-middle.png",
+        width: 1220,
+        depth: 1070,
+        height: 750,
+        price: 3091000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트 A",
+        img: "/img/doughsofa/dough-armrestA.png",
+        width: 1520,
+        depth: 1070,
+        height: 750,
+        price: 3267000,
+      },
+      {
+        id: 3,
+        sizename: "암레스트 B",
+        img: "/img/doughsofa/dough-armrestB.png",
+        width: 1620,
+        depth: 1070,
+        height: 750,
+        price: 4301000,
+      },
+      {
+        id: 4,
+        sizename: "소파 3인 A",
+        img: "/img/doughsofa/dough-3seaterA.png",
+        width: 2340,
+        depth: 1070,
+        height: 750,
+        price: 6534000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 B",
+        img: "/img/doughsofa/dough-3seaterB.png",
+        width: 2340,
+        depth: 1070,
+        height: 750,
+        price: 7568000,
+      },
+      {
+        id: 6,
+        sizename: "소파 4인",
+        img: "/img/doughsofa/dough-4seater.png",
+        width: 3040,
+        depth: 1070,
+        height: 750,
+        price: 8602000,
+      },
+    ],
+
+    color: [
+      {
+        id: 1,
+        colorname: "벨르01",
+        img: "/img/doughsofa/dough-color-벨르01.jpg",
+      },
+      {
+        id: 2,
+        colorname: "오스틴01",
+        img: "/img/doughsofa/dough-color-오스틴01.jpg",
+      },
+      {
+        id: 3,
+        colorname: "오스틴05",
+        img: "/img/doughsofa/dough-color-오스틴05.jpg",
+      },
+    ],
+
+    add: [
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/doughsofa/dough-cushion.png",
+        price: 209000,
+      },
+      { id: 2, cushion: "쿠션없음", img: "", price: 0 },
+    ],
+
+    intro: [
+      { img: "/img/doughsofa/dough-sofa-01.jpg" },
+      { img: "/img/doughsofa/dough-sofa-02.jpg" },
+      { img: "/img/doughsofa/dough-sofa-03.jpg" },
+      { img: "/img/doughsofa/dough-sofa-04.jpg" },
+      { img: "/img/doughsofa/dough-sofa-05.jpg" },
+    ],
+
+    protext: [{ img: "/img/doughsofa/protext.png" }],
+    sizeImg: [{ img: "/img/doughsofa/dough-sofa-size.jpg" }],
+
+    review: [
+      {
+        id: 1,
+        name: "조*은",
+        star: "★★★★★",
+        img: "/img/doughsofa/dough-sofa-리뷰1.webp",
+        text: `동글동글한 쉐잎과 부드러운 촉감, 빈티지한 카멜컬러의 가죽소재가 너무 근사한 도우소파
+갓 구운 식빵처럼 동글동글 맛있게 부풀어 오른 소파로 노릇노릇 예쁘게 구워지는 거실이 되었어요
+
+도우소파의 가장 큰 매력은 기존 소파에서는 볼 수 없었던 유니크한 동글동글한 쉐잎이 아닐까 싶어요 패브릭으로도 만들기 힘들 것 같은 볼륨감 있는 쉐잎이 가죽으로 만들어져 더 매력적이구요 이 부드러운 곡선들이 공간을 근사하게 만들어주더라구요
+낮은 바디와 적당히 소프트하면서도 깊이 있는 착석감으로 몸을 감싸주는 느낌 역시 너무 편안합니다
+오스틴 가죽은 사용할수록 점점 더 자연스러워지면서 아름다운 모습을 지니기 때문에 제가 참 좋아하는데 거기에 분리하고 조합해서 다양한 구성으로 쓸 수 있는 모듈형이라 더 맘에 들어요`,
+        date: "2024-12-06",
+      },
+      {
+        id: 2,
+        name: "조*라",
+        star: "★★★★★",
+        img: "/img/doughsofa/dough-sofa-리뷰2.webp",
+        text: `이사하면서 소파를 바꿀 생각이 없었는데
+우연히 도우소파를 봐버려서 구매하게 됐어요😂
+이사일에 맞추려다보니 실제로 보지 못하고 온라인으로 구매했는데 쿠션감도 딱 좋고 만족스럽습니다!
+다만 쿠션이 꺼지면 안 예쁠 거 같아서 아껴 앉게되는 부작용도 있어요🫠
+소파 구매 후에 쿠션을 따로 주문했는데 쿠션만 사는데도 이렇게나 오래 걸릴줄 몰랏네요 ㅜㅜㅋㅋㅋ
+지금 27일쯤 됐는데 아직도 안 와욬ㅋㅋ
+빨리 보내주세여😭
+막상 살아보니 쿠션이 그닥 필요해보이지 않아서 배송이 늦어지니 취소하고 싶어지거든요 ㅋㅋㅋ
+소파는 정말 예쁘고 고급져서 추천합니다!
+
+2024-12-09 12:09:19에 무브먼트랩에서 작성된 구매평`,
+        date: "2024-06-14",
+      },
+      {
+        id: 3,
+        name: "황*주",
+        star: "★★★★★",
+        img: "/img/doughsofa/dough-sofa-리뷰3.webp",
+        text: `저희집에 가죽소파는 처음인데요.
+같은 누드톤이라 할지라도 가죽이 지닌
+고유의 색감에서 미묘한 밀도감이 느껴지는데
+여기서 고급스러움이 발현되는 것 같아요.
+
+어제 낮에는 정리가 덜 되어 사진엔 담지 못했지만
+빛을 머금은 가죽의 색은 또 다른 매력이 느껴진답니다.
+
+착석감도 얼마나 포근하고 부드러운지 몰라요!
+앉아있다보면 어느새 누워있게되는 건,
+잭슨카멜레온 소파들의 특징인가봐요☺️
+
+가죽소파를 입문하시는 분들께 추천드려요!`,
+        date: "2024-06-14",
+      },
+    ],
+  },
   {
     id: 3,
     title: "Ink Sofa",
@@ -913,26 +1263,55 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
   },
 
   {
@@ -943,26 +1322,55 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
   },
   {
     id: 15,
@@ -972,29 +1380,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 16,
     title: "Kante Sofa Table",
@@ -1003,29 +1438,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 17,
     title: "Pillar Oval Table",
@@ -1090,29 +1552,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 19,
     title: "Kante Sofa Table",
@@ -1121,29 +1610,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 20,
     title: "Kante Sofa Table",
@@ -1152,29 +1668,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 30,
     title: "Kante Sofa Table",
@@ -1183,29 +1726,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 32,
     title: "Kante Sofa Table",
@@ -1214,29 +1784,56 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
+  },
   {
     id: 33,
     title: "Kante Sofa Table",
@@ -1245,26 +1842,55 @@ https://www.instagram.com/maumee_life/`,
       { id: 1, img: "/img/KanteSofaTable/Kante1.jpg" },
       { id: 2, img: "/img/KanteSofaTable/Kante2.jpg" },
       { id: 3, img: "/img/KanteSofaTable/Kante3.jpg" },
-      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" }
+      { id: 4, img: "/img/KanteSofaTable/Kante4.jpg" },
     ],
     color: [
-      { id: 1, colorname: "아이보리", img: "/img/KanteSofaTable/Kante-color-아이보리.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/KanteSofaTable/Kante-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "아이보리",
+        img: "/img/KanteSofaTable/Kante-color-아이보리.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/KanteSofaTable/Kante-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/KanteSofaTable/kante_sofa_01.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_02.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_03.jpg" },
       { img: "/img/KanteSofaTable/kante_sofa_04.jpg" },
-      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" }
+      { img: "/img/KanteSofaTable/kante_sofa_05.jpg" },
     ],
     protext: [{ img: "/img/KanteSofaTable/protext.jpg" }],
     sizeImg: [{ img: "/img/KanteSofaTable/kante_sofa_size.jpg" }],
     review: [
-      { id: 1, name: "이*진", star: "★★★★★", img: "/img/KanteSofaTable/review-1.webp", text: "검정 테이블을 거실에 두면...", date: "2025-09-15" },
-      { id: 2, name: "이*평", star: "★★★★★", img: "/img/KanteSofaTable/review-2.webp", text: "Kante 소파테이블은 처음 봤을 때부터...", date: "2025-11-02" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/KanteSofaTable/review-3.webp", text: "클레이 블랙 가죽소파랑 찰떡인...", date: "2025-10-31" }
-    ]
+      {
+        id: 1,
+        name: "이*진",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-1.webp",
+        text: "검정 테이블을 거실에 두면...",
+        date: "2025-09-15",
+      },
+      {
+        id: 2,
+        name: "이*평",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-2.webp",
+        text: "Kante 소파테이블은 처음 봤을 때부터...",
+        date: "2025-11-02",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/KanteSofaTable/review-3.webp",
+        text: "클레이 블랙 가죽소파랑 찰떡인...",
+        date: "2025-10-31",
+      },
+    ],
   },
   {
     id: 7,
@@ -1273,29 +1899,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 8,
     title: "Ink B Lounge Chair",
@@ -1303,29 +1956,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 9,
     title: "Round Arm Chair",
@@ -1408,29 +2088,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 11,
     title: "Ink B Lounge Chair",
@@ -1438,29 +2145,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 12,
     title: "Ink B Lounge Chair",
@@ -1468,29 +2202,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 22,
     title: "Ink B Lounge Chair",
@@ -1498,29 +2259,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 24,
     title: "Ink B Lounge Chair",
@@ -1528,29 +2316,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 31,
     title: "Ink B Lounge Chair",
@@ -1558,29 +2373,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 60,
     title: "Ink B Lounge Chair",
@@ -1588,29 +2430,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 67,
     title: "Ink B Lounge Chair",
@@ -1618,29 +2487,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 4,
     title: "Ink B Lounge Chair",
@@ -1788,7 +2684,6 @@ https://www.instagram.com/maumee_life/`,
     ],
   },
 
-
   {
     id: 69,
     title: "Ink B Lounge Chair",
@@ -1796,29 +2691,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 70,
     title: "Ink B Lounge Chair",
@@ -1826,29 +2748,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 71,
     title: "Ink B Lounge Chair",
@@ -1856,29 +2805,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 72,
     title: "Ink B Lounge Chair",
@@ -1886,29 +2862,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 73,
     title: "Ink B Lounge Chair",
@@ -1916,29 +2919,56 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
+  },
   {
     id: 74,
     title: "Ink B Lounge Chair",
@@ -1946,26 +2976,55 @@ https://www.instagram.com/maumee_life/`,
     size: [
       { id: 1, img: "/img/InkBLoungeChair/Ink1.jpg" },
       { id: 2, img: "/img/InkBLoungeChair/Ink2.jpg" },
-      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" }
+      { id: 3, img: "/img/InkBLoungeChair/Ink3.jpg" },
     ],
     color: [
-      { id: 1, colorname: "내추럴", img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg" },
-      { id: 2, colorname: "블랙", img: "/img/InkBLoungeChair/Ink-color-블랙.jpg" }
+      {
+        id: 1,
+        colorname: "내추럴",
+        img: "/img/InkBLoungeChair/Ink-color-내추럴.jpg",
+      },
+      {
+        id: 2,
+        colorname: "블랙",
+        img: "/img/InkBLoungeChair/Ink-color-블랙.jpg",
+      },
     ],
     intro: [
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair1.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair2.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair3.jpg" },
       { img: "/img/InkBLoungeChair/Ink_Lounge_Chair4.jpg" },
-      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" }
+      { img: "/img/InkBLoungeChair/Ink_Lounge_Chair5.jpg" },
     ],
     protext: [{ img: "/img/InkBLoungeChair/protext.jpg" }],
     sizeImg: [{ img: "/img/InkBLoungeChair/inkb_chair_size.jpg" }],
     review: [
-      { id: 1, name: "김*예", star: "★★★★★", img: "/img/InkBLoungeChair/review-1.webp", text: "제품 보자마자 이건 우리집을 위한 제품이다...", date: "2025-07-04" },
-      { id: 2, name: "김*영", star: "★★★★★", img: "/img/InkBLoungeChair/review-2.webp", text: "저희집에 잭슨카멜레온 제품만...", date: "2025-06-08" },
-      { id: 3, name: "정*아", star: "★★★★★", img: "/img/InkBLoungeChair/review-3.webp", text: "부클 소재의 특유의 고급스러움...", date: "2025-05-10" }
-    ]
+      {
+        id: 1,
+        name: "김*예",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-1.webp",
+        text: "제품 보자마자 이건 우리집을 위한 제품이다...",
+        date: "2025-07-04",
+      },
+      {
+        id: 2,
+        name: "김*영",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-2.webp",
+        text: "저희집에 잭슨카멜레온 제품만...",
+        date: "2025-06-08",
+      },
+      {
+        id: 3,
+        name: "정*아",
+        star: "★★★★★",
+        img: "/img/InkBLoungeChair/review-3.webp",
+        text: "부클 소재의 특유의 고급스러움...",
+        date: "2025-05-10",
+      },
+    ],
   },
 
   {
@@ -1978,47 +3037,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 23,
     title: "Bolso Sofa",
@@ -2029,47 +3196,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 25,
     title: "Bolso Sofa",
@@ -2080,47 +3355,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 26,
     title: "Bolso Sofa",
@@ -2131,47 +3514,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 27,
     title: "Bolso Sofa",
@@ -2182,47 +3673,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 28,
     title: "Bolso Sofa",
@@ -2233,47 +3832,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 29,
     title: "Bolso Sofa",
@@ -2284,47 +3991,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 34,
     title: "Bolso Sofa",
@@ -2335,47 +4150,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 35,
     title: "Bolso Sofa",
@@ -2386,47 +4309,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 36,
     title: "Bolso Sofa",
@@ -2437,47 +4468,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 37,
     title: "Bolso Sofa",
@@ -2488,47 +4627,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 38,
     title: "Bolso Sofa",
@@ -2539,47 +4786,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 39,
     title: "Bolso Sofa",
@@ -2590,47 +4945,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 40,
     title: "Bolso Sofa",
@@ -2641,47 +5104,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 41,
     title: "Bolso Sofa",
@@ -2692,47 +5263,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 42,
     title: "Bolso Sofa",
@@ -2743,47 +5422,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 43,
     title: "Bolso Sofa",
@@ -2794,47 +5581,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 44,
     title: "Bolso Sofa",
@@ -2845,47 +5740,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 45,
     title: "Bolso Sofa",
@@ -2896,47 +5899,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 46,
     title: "Bolso Sofa",
@@ -2947,47 +6058,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 47,
     title: "Bolso Sofa",
@@ -2998,47 +6217,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 48,
     title: "Bolso Sofa",
@@ -3049,47 +6376,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 55,
     title: "Bolso Sofa",
@@ -3100,47 +6535,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 56,
     title: "Bolso Sofa",
@@ -3151,47 +6694,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 57,
     title: "Bolso Sofa",
@@ -3202,47 +6853,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 58,
     title: "Bolso Sofa",
@@ -3253,47 +7012,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 59,
     title: "Bolso Sofa",
@@ -3304,47 +7171,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 61,
     title: "Bolso Sofa",
@@ -3355,47 +7330,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 62,
     title: "Bolso Sofa",
@@ -3406,47 +7489,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 64,
     title: "Bolso Sofa",
@@ -3457,47 +7648,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 65,
     title: "Bolso Sofa",
@@ -3508,47 +7807,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 66,
     title: "Bolso Sofa",
@@ -3559,47 +7966,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 83,
     title: "Bolso Sofa",
@@ -3610,47 +8125,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 84,
     title: "Bolso Sofa",
@@ -3661,47 +8284,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 85,
     title: "Bolso Sofa",
@@ -3712,47 +8443,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 86,
     title: "Bolso Sofa",
@@ -3763,47 +8602,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 87,
     title: "Bolso Sofa",
@@ -3814,47 +8761,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 88,
     title: "Bolso Sofa",
@@ -3865,47 +8920,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 89,
     title: "Bolso Sofa",
@@ -3916,47 +9079,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 90,
     title: "Bolso Sofa",
@@ -3967,47 +9238,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 91,
     title: "Bolso Sofa",
@@ -4018,47 +9397,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 92,
     title: "Bolso Sofa",
@@ -4069,47 +9556,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 93,
     title: "Bolso Sofa",
@@ -4120,47 +9715,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 94,
     title: "Bolso Sofa",
@@ -4171,47 +9874,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 95,
     title: "Bolso Sofa",
@@ -4222,180 +10033,314 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
-   {
-        id: 96,
-        title: "Otium Daybed Sofa (Leather)",
-        price: "2,980,000원 ~",
-        sheet: [
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
+  {
+    id: 96,
+    title: "Bolso Sofa",
+    price: "1,056,000원",
+    sale: "0.2",
+    price_regular: "2,300,000원",
+    sheet: [
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
-        size: [
-            {
-                id: 1,
-                sizename: "데이베드A",
-                img: "/img/otiumsofa/otium-middle-daybedA.png",
-                width: 2000,
-                depth: 400,
-                height: 920,
-                price: 3091000,
-            },
-            {
-                id: 2,
-                sizename: "데이베드 B",
-                img: "/img/otiumsofa/otium-middle-daybedB.png",
-                width: 2000,
-                depth: 920,
-                height: 580,
-                price: 3267000,
-            },
-            {
-                id: 3,
-                sizename: "소파",
-                img: "/img/otiumsofa/otium-sofa.png",
-                width: 2000,
-                depth: 920,
-                height: 580,
-                price: 4301000,
-            },
-        ],
-        color: [
-            {
-                id: 1,
-                colorname: "탱고01",
-                img: "/img/otiumsofa/otium-color-탱고01.jpg",
-            },
-            {
-                id: 2,
-                colorname: "탱고02",
-                img: "/img/otiumsofa/otium-color-탱고02.jpg",
-            },
-            {
-                id: 3,
-                colorname: "탱고03",
-                img: "/img/otiumsofa/otium-color-탱고03.jpg",
-            },
-
-        ],
-        add: [
-            {
-                id: 1,
-                cushion: "쿠션",
-                img: "/img/otiumsofa/otium-cushion.png",
-                price: 209000,
-            },
-            { id: 2, cushion: "쿠션없음", img: "", price: 0 },
-        ],
-        intro: [
-            { img: "/img/otiumsofa/otium-sofa-01.jng" },
-            { img: "/img/otiumsofa/otium-sofa-02.jng" },
-            { img: "/img/otiumsofa/otium-sofa-03.jng" },
-            { img: "/img/otiumsofa/otium-sofa-04.jng" },
-            { img: "/img/otiumsofa/otium-sofa-05.jng" },
-        ],
-
-        protext: [{ img: "/img/doughsofa/protext.png" }],
-        sizeImg: [{ img: "/img/otiumsofa/otium-sofa-size.jpg" }],
-
-        review: [
-            {
-                id: 1,
-                name: "조*은",
-                star: "★★★★★",
-                img: "/img/doughsofa/dough-sofa-리뷰1.webp",
-                text: `동글동글한 쉐잎과 부드러운 촉감, 빈티지한 카멜컬러의 가죽소재가 너무 근사한 도우소파
-갓 구운 식빵처럼 동글동글 맛있게 부풀어 오른 소파로 노릇노릇 예쁘게 구워지는 거실이 되었어요
-
-도우소파의 가장 큰 매력은 기존 소파에서는 볼 수 없었던 유니크한 동글동글한 쉐잎이 아닐까 싶어요 패브릭으로도 만들기 힘들 것 같은 볼륨감 있는 쉐잎이 가죽으로 만들어져 더 매력적이구요 이 부드러운 곡선들이 공간을 근사하게 만들어주더라구요
-낮은 바디와 적당히 소프트하면서도 깊이 있는 착석감으로 몸을 감싸주는 느낌 역시 너무 편안합니다
-오스틴 가죽은 사용할수록 점점 더 자연스러워지면서 아름다운 모습을 지니기 때문에 제가 참 좋아하는데 거기에 분리하고 조합해서 다양한 구성으로 쓸 수 있는 모듈형이라 더 맘에 들어요`,
-                date: "2024-12-06",
-            },
-            {
-                id: 2,
-                name: "조*라",
-                star: "★★★★★",
-                img: "/img/doughsofa/dough-sofa-리뷰2.webp",
-                text: `이사하면서 소파를 바꿀 생각이 없었는데
-우연히 도우소파를 봐버려서 구매하게 됐어요😂
-이사일에 맞추려다보니 실제로 보지 못하고 온라인으로 구매했는데 쿠션감도 딱 좋고 만족스럽습니다!
-다만 쿠션이 꺼지면 안 예쁠 거 같아서 아껴 앉게되는 부작용도 있어요🫠
-소파 구매 후에 쿠션을 따로 주문했는데 쿠션만 사는데도 이렇게나 오래 걸릴줄 몰랏네요 ㅜㅜㅋㅋㅋ
-지금 27일쯤 됐는데 아직도 안 와욬ㅋㅋ
-빨리 보내주세여😭
-막상 살아보니 쿠션이 그닥 필요해보이지 않아서 배송이 늦어지니 취소하고 싶어지거든요 ㅋㅋㅋ
-소파는 정말 예쁘고 고급져서 추천합니다!
-
-2024-12-09 12:09:19에 무브먼트랩에서 작성된 구매평`,
-                date: "2024-06-14",
-            },
-            {
-                id: 3,
-                name: "황*주",
-                star: "★★★★★",
-                img: "/img/doughsofa/dough-sofa-리뷰3.webp",
-                text: `저희집에 가죽소파는 처음인데요.
-같은 누드톤이라 할지라도 가죽이 지닌
-고유의 색감에서 미묘한 밀도감이 느껴지는데
-여기서 고급스러움이 발현되는 것 같아요.
-
-어제 낮에는 정리가 덜 되어 사진엔 담지 못했지만
-빛을 머금은 가죽의 색은 또 다른 매력이 느껴진답니다.
-
-착석감도 얼마나 포근하고 부드러운지 몰라요!
-앉아있다보면 어느새 누워있게되는 건,
-잭슨카멜레온 소파들의 특징인가봐요☺️
-
-가죽소파를 입문하시는 분들께 추천드려요!`,
-                date: "2024-06-14",
-            },
-        ]
-    }
-  ,
-
+    size: [
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
+    ],
+    color: [
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
+    ],
+    add: [
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
+    ],
+    intro: [
+      { img: "/img/bolossofa/bolson-sofa-01.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-02.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-03.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-04.jpg" },
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
+    ],
+    protext: [{ img: "/img/bolossofa/protext.png" }],
+    sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
+    review: [
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 97,
     title: "Bolso Sofa",
@@ -4406,47 +10351,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 98,
     title: "Bolso Sofa",
@@ -4457,47 +10510,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 99,
     title: "Bolso Sofa",
@@ -4508,47 +10669,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 100,
     title: "Bolso Sofa",
@@ -4559,47 +10828,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 101,
     title: "Bolso Sofa",
@@ -4610,47 +10987,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 102,
     title: "Bolso Sofa",
@@ -4661,47 +11146,155 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
+  },
   {
     id: 103,
     title: "Bolso Sofa",
@@ -4712,44 +11305,154 @@ https://www.instagram.com/maumee_life/`,
       { title: "H", text: "하드" },
       { title: "M", text: "미디움" },
       { title: "MH", text: "미디움하드" },
-      { title: "MS", text: "미디움소프트" }
+      { title: "MS", text: "미디움소프트" },
     ],
     size: [
-      { id: 1, sizename: "미들", img: "/img/bolossofa/bolson-middle.png", width: 820, depth: 920, height: 740, price: 1397000 },
-      { id: 2, sizename: "암레스트", img: "/img/bolossofa/bolson-armrest.png", width: 1520, depth: 920, height: 740, price: 2211000 },
-      { id: 3, sizename: "오토만", img: "/img/bolossofa/bolson-ottoman.png", width: 820, depth: 920, height: 400, price: 1056000 },
-      { id: 4, sizename: "소파 1인", img: "/img/bolossofa/bolson-1seater.png", width: 820, depth: 920, height: 740, price: 1529000 },
-      { id: 5, sizename: "소파 3인 A", img: "/img/bolossofa/bolso-3seaterA.png", width: 2340, depth: 920, height: 740, price: 3267000 },
-      { id: 6, sizename: "소파 3인 B", img: "/img/bolossofa/bolson-3seaterB.png", width: 2340, depth: 920, height: 740, price: 3608000 },
-      { id: 7, sizename: "소파 4인", img: "/img/bolossofa/bolson-4seater.png", width: 3040, depth: 920, height: 740, price: 4422000 }
+      {
+        id: 1,
+        sizename: "미들",
+        img: "/img/bolossofa/bolson-middle.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1397000,
+      },
+      {
+        id: 2,
+        sizename: "암레스트",
+        img: "/img/bolossofa/bolson-armrest.png",
+        width: 1520,
+        depth: 920,
+        height: 740,
+        price: 2211000,
+      },
+      {
+        id: 3,
+        sizename: "오토만",
+        img: "/img/bolossofa/bolson-ottoman.png",
+        width: 820,
+        depth: 920,
+        height: 400,
+        price: 1056000,
+      },
+      {
+        id: 4,
+        sizename: "소파 1인",
+        img: "/img/bolossofa/bolson-1seater.png",
+        width: 820,
+        depth: 920,
+        height: 740,
+        price: 1529000,
+      },
+      {
+        id: 5,
+        sizename: "소파 3인 A",
+        img: "/img/bolossofa/bolso-3seaterA.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3267000,
+      },
+      {
+        id: 6,
+        sizename: "소파 3인 B",
+        img: "/img/bolossofa/bolson-3seaterB.png",
+        width: 2340,
+        depth: 920,
+        height: 740,
+        price: 3608000,
+      },
+      {
+        id: 7,
+        sizename: "소파 4인",
+        img: "/img/bolossofa/bolson-4seater.png",
+        width: 3040,
+        depth: 920,
+        height: 740,
+        price: 4422000,
+      },
     ],
     color: [
-      { id: 1, colorname: "벨베티07", img: "/img/bolossofa/bolson-color-벨베티07.jpg" },
-      { id: 2, colorname: "벨베티08", img: "/img/bolossofa/bolson-color-벨베티08.jpg" },
-      { id: 3, colorname: "벨베티20", img: "/img/bolossofa/bolson-color-벨베티20.jpg" },
-      { id: 4, colorname: "벨베티38", img: "/img/bolossofa/bolson-color-벨베티38.jpg" },
-      { id: 5, colorname: "벨베티47", img: "/img/bolossofa/bolson-color-벨베티47.jpg" },
-      { id: 6, colorname: "벨베티49", img: "/img/bolossofa/bolson-color-벨베티49.jpg" },
-      { id: 7, colorname: "벨베티71", img: "/img/bolossofa/bolson-color-벨베티71.jpg" }
+      {
+        id: 1,
+        colorname: "벨베티07",
+        img: "/img/bolossofa/bolson-color-벨베티07.jpg",
+      },
+      {
+        id: 2,
+        colorname: "벨베티08",
+        img: "/img/bolossofa/bolson-color-벨베티08.jpg",
+      },
+      {
+        id: 3,
+        colorname: "벨베티20",
+        img: "/img/bolossofa/bolson-color-벨베티20.jpg",
+      },
+      {
+        id: 4,
+        colorname: "벨베티38",
+        img: "/img/bolossofa/bolson-color-벨베티38.jpg",
+      },
+      {
+        id: 5,
+        colorname: "벨베티47",
+        img: "/img/bolossofa/bolson-color-벨베티47.jpg",
+      },
+      {
+        id: 6,
+        colorname: "벨베티49",
+        img: "/img/bolossofa/bolson-color-벨베티49.jpg",
+      },
+      {
+        id: 7,
+        colorname: "벨베티71",
+        img: "/img/bolossofa/bolson-color-벨베티71.jpg",
+      },
     ],
     add: [
-      { id: 1, cushion: "쿠션", img: "/img/bolossofa/bolson-cushion.png", price: 165000 },
-      { id: 2, cushion: "쿠션없음", price: 0 }
+      {
+        id: 1,
+        cushion: "쿠션",
+        img: "/img/bolossofa/bolson-cushion.png",
+        price: 165000,
+      },
+      { id: 2, cushion: "쿠션없음", price: 0 },
     ],
     intro: [
       { img: "/img/bolossofa/bolson-sofa-01.jpg" },
       { img: "/img/bolossofa/bolson-sofa-02.jpg" },
       { img: "/img/bolossofa/bolson-sofa-03.jpg" },
       { img: "/img/bolossofa/bolson-sofa-04.jpg" },
-      { img: "/img/bolossofa/bolson-sofa-05.jpg" }
+      { img: "/img/bolossofa/bolson-sofa-05.jpg" },
     ],
     protext: [{ img: "/img/bolossofa/protext.png" }],
     sizeImg: [{ img: "/img/bolossofa/bolson-sofa-size.jpg" }],
     review: [
-      { id: 1, name: "윤*희", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰1.webp", text: "리뷰내용1", date: "2023-04-25" },
-      { id: 2, name: "김*람", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰2.webp", text: "리뷰내용2", date: "2023-02-26" },
-      { id: 3, name: "정*우", star: "★★★★★", img: "/img/bolossofa/bolson-sofa-리뷰3.webp", text: "리뷰내용3", date: "2020.11.11" }
-    ]
+      {
+        id: 1,
+        name: "윤*희",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰1.webp",
+        text: "리뷰내용1",
+        date: "2023-04-25",
+      },
+      {
+        id: 2,
+        name: "김*람",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰2.webp",
+        text: "리뷰내용2",
+        date: "2023-02-26",
+      },
+      {
+        id: 3,
+        name: "정*우",
+        star: "★★★★★",
+        img: "/img/bolossofa/bolson-sofa-리뷰3.webp",
+        text: "리뷰내용3",
+        date: "2020.11.11",
+      },
+    ],
   },
   {
     id: 50,
@@ -4757,150 +11460,288 @@ https://www.instagram.com/maumee_life/`,
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 51,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 52,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 53,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 54,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 75,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 76,
     title: "Cone Table Lamp",
@@ -4971,132 +11812,246 @@ https://www.instagram.com/maumee_life/`,
     ],
   },
 
-
   {
     id: 77,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 78,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 79,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 80,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 81,
     title: "Layer Table Lamp",
     price: "429,000원",
     size: [{ id: 1, img: "/img/LayerTableLamp/Layer1.jpg" }],
     color: [
-      { id: 1, colorname: "실버", img: "/img/LayerTableLamp/Layer-color-실버.jpg" }
+      {
+        id: 1,
+        colorname: "실버",
+        img: "/img/LayerTableLamp/Layer-color-실버.jpg",
+      },
     ],
     intro: [
       { img: "/img/LayerTableLamp/Layer-Lamp1.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp2.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp3.jpg" },
       { img: "/img/LayerTableLamp/Layer-Lamp4.jpg" },
-      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" }
+      { img: "/img/LayerTableLamp/Layer-Lamp5.jpg" },
     ],
     protext: [{ img: "/img/LayerTableLamp/protext.jpg" }],
     sizeImg: [{ img: "/img/LayerTableLamp/layerlamp_size.jpg" }],
     review: [
-      { id: 1, name: "권*영", star: "★★★★★", img: "/img/LayerTableLamp/review-1.webp", text: "층층이 레이어드 된...", date: "2023-09-11" },
-      { id: 2, name: "강*유", star: "★★★★★", img: "/img/LayerTableLamp/review-2.webp", text: "묵직한 무게감이 바닥에 두어도...", date: "2023-09-08" },
-      { id: 3, name: "노*희", star: "★★★★★", img: "/img/LayerTableLamp/review-3.webp", text: "알루미늄 레이어 사이로...", date: "2023-03-20" }
-    ]
-  }
-  ,
-
+      {
+        id: 1,
+        name: "권*영",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-1.webp",
+        text: "층층이 레이어드 된...",
+        date: "2023-09-11",
+      },
+      {
+        id: 2,
+        name: "강*유",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-2.webp",
+        text: "묵직한 무게감이 바닥에 두어도...",
+        date: "2023-09-08",
+      },
+      {
+        id: 3,
+        name: "노*희",
+        star: "★★★★★",
+        img: "/img/LayerTableLamp/review-3.webp",
+        text: "알루미늄 레이어 사이로...",
+        date: "2023-03-20",
+      },
+    ],
+  },
   {
     id: 82,
     title: "Scoop Table Lamp",
@@ -5152,5 +12107,5 @@ https://www.instagram.com/maumee_life/`,
         date: "2023-08-02",
       },
     ],
-  }
+  },
 ];

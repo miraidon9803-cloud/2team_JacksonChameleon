@@ -1,0 +1,57 @@
+@use "../../App.scss" as g;
+.AboutStoryDetail-wrap {
+  margin: 0 0.2%;
+  padding: 120px 0;
+  @include g.myTitle16($ta: left);
+  .inner {
+    .text-area {
+      width: 100%;
+      border-bottom: 1px solid g.$text9;
+      padding: 12px 0 24px 0;
+      .title {
+        @include g.myTitle24($ta: left, $fw: 600);
+        padding-bottom: 4px;
+      }
+
+      .hash {
+        padding-top: 12px;
+        @include g.myTitle16($ta: left, $fw: 300, $color: g.$text5);
+      }
+    }
+
+    .content-area {
+      padding: 32px 0 8px 0;
+
+      .img {
+        padding: 10px 0;
+      }
+
+      .text,
+      .text-top,
+      .text-bold {
+        padding: 28px 4px;
+        letter-spacing: 0.2px;
+        line-height: 28px;
+      }
+
+      .text-top {
+        padding-top: 20px;
+      }
+
+      .text-bold {
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .img {
+        width: 100%;
+      }
+
+      .text-info {
+        padding: 0 4px 8px 4px;
+        font-size: 12px;
+        color: g.$text6;
+      }
+    }
+  }
+}

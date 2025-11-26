@@ -1,350 +1,370 @@
-@use '../../App.scss' as g;
-
+@use "../../App.scss" as g;
 
 .checkout-wrap {
-    input {
-        font-family: 'pretendard';
+  input {
+    font-family: "pretendard";
+  }
+
+  button {
+    background: g.$text10;
+    border: 1px solid g.$text8;
+    outline: none;
+    border-radius: 4px;
+
+    &:hover {
+      background: g.$text6;
+      border: 1px solid g.$text6;
+      color: g.$text10;
+    }
+  }
+
+  padding: 120px 0;
+  margin: 0 2%;
+
+  @include g.myTitle16($ta: left);
+
+  .inner {
+    .title {
+      @include g.myTitle24($ta: left);
+      margin-bottom: 20px;
     }
 
-    button {
-        background: g.$text10;
-        border: 1px solid g.$text8;
-        outline: none;
-        border-radius: 4px;
+    .content-wrap {
+      display: flex;
 
-        &:hover {
-            background: g.$text6;
-            border: 1px solid g.$text6;
-            color: g.$text10;
-        }
-    }
+      .left {
+        width: 68%;
+        background: g.$BG;
+        border-radius: 8px 0 0 8px;
 
-    padding:120px 0;
-    margin:0 2%;
+        padding: 24px;
 
-    @include g.myTitle16($ta: left);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
 
-    .inner {
-        .title {
-            @include g.myTitle24($ta: left);
-            margin-bottom: 20px;
-        }
-
-        .content-wrap {
+        .left-con1 {
+          .user-name {
             display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-            .left {
-                width:68%;
-                background: g.$BG;
-                border-radius: 8px 0 0 8px;
+            margin-bottom: 20px;
 
-                padding: 24px;
-
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-
-                .left-con1 {
-                    .user-name {
-                        display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-
-                        margin-bottom: 20px;
-
-                        p {
-                            font-size: 20px;
-                            font-weight: 600;
-                        }
-
-                        button {
-                            width: 88px;
-                            height: 30px;
-                        }
-                    }
-
-                    .address {
-                        p:nth-child(1) {
-                            margin-bottom: 8px;
-                        }
-                    }
-                }
-
-                .left-con2 {
-                    >p {
-                        margin-bottom: 12px;
-                    }
-
-                    .req-list-wrap {
-                        width: 100%;
-                        height: 48px;
-                        padding: 0 24px;
-
-                        background: g.$text10;
-                        border: 1px solid g.$text8;
-                        border-radius: 4px;
-
-                        display: flex;
-                        align-items: center;
-
-                        .req-list {
-                            width: 100%;
-                            display: flex;
-                            align-items: center;
-                            justify-content: space-between;
-
-                            p.active {
-                                img {
-                                    transform: rotate(180deg);
-                                }
-                            }
-
-                            input {
-                                width: 100%;
-                                height: 40px;
-
-                                border: none;
-                                outline: none;
-
-                                @include g.myTitle16($ta: left);
-                            }
-                        }
-                    }
-
-                    .req-dropdown {
-                        width: 100%;
-                        height: auto;
-                        padding: 0 24px;
-                        margin-top: 12px;
-
-                        background: g.$text10;
-                        border: 1px solid g.$text8;
-                        border-radius: 4px;
-
-                        .req-item {
-                            padding: 12px 0;
-
-                            display: flex;
-                            align-items: center;
-
-                            cursor: pointer;
-
-                            &+.req-item {
-                                border-top: 1px solid g.$text8;
-                            }
-                        }
-                    }
-                }
-
-                .left-con3 {
-                    >p {
-                        margin-bottom: 12px;
-                    }
-
-                    .order-item {
-                        width: 100%;
-                        padding: 24px 34px;
-
-                        display: flex;
-                        align-items: center;
-                        gap: 16px;
-
-                        border-bottom: 1px solid g.$text8;
-
-                        &:first-of-type {
-                            border-top: 1px solid g.$text8;
-                        }
-
-                        .item-img {
-                            width: 180px;
-                            height: 180px;
-
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-
-                            >img {
-                                width: 80%;
-                                height: 80%;
-                                object-fit: contain;
-                                object-position: center;
-                            }
-                        }
-
-                        .item-info {
-                            .item-title {
-                                @include g.myTitle16($ta: left, $fw: 600);
-                                margin-bottom: 16px;
-                            }
-                        }
-                    }
-                }
-
-                .left-con4 {
-                    >p {
-                        margin-bottom: 12px;
-                    }
-
-                    .use-acc {
-                        display: flex;
-                        gap: 12px;
-                        height: 46px;
-
-                        input {
-                            flex: 6;
-
-                            border-radius: 4px;
-                            border: 1px solid g.$text8;
-
-                            padding-left: 24px;
-
-                            &:focus {
-                                border: 1px solid g.$text6;
-                                outline: none;
-                            }
-                        }
-
-                        button {
-                            flex: 1;
-                            min-width: 104px;
-                        }
-                    }
-                }
-
-                .left-con5 {
-                    >p {
-                        margin-bottom: 12px;
-                    }
-
-                    button {
-                        width: 100%;
-                        height: 46px;
-                    }
-                }
-
-                .left-con6 {
-                    >p {
-                        margin-bottom: 12px;
-                    }
-
-                    form {
-                        width: 100%;
-                        display: flex;
-                        flex-direction: column;
-                        gap: 16px;
-
-                        padding: 24px;
-                        background: g.$text10;
-
-                        label>input {
-                            margin-right: 12px;
-                        }
-
-                        label>div {
-                            display: none;
-                            gap: 12px;
-
-                            &.active {
-                                margin-top: 16px;
-                                display: flex;
-                            }
-
-                            button {
-                                width: 120px;
-                                height: 42px;
-
-                                &.active {
-                                    background: g.$text6;
-                                    color: g.$text10;
-                                }
-                            }
-
-
-                        }
-
-
-                    }
-                }
+            p {
+              @include g.myTitle24();
+              font-size: 20px;
             }
 
-            .right {
-                width:32%;
-                height: auto;
-                background: g.$text9;
-                border-radius: 0 8px 8px 0;
-                padding:24px;
-
-                .total-wrap {
-                    width: 100%;
-                    height: auto;
-                    background-color: g.$text9;
-                    display: flex;
-                    flex-direction: column;
-                    border-radius: 0 8px 8px 0;
-
-                    position: sticky;
-                    top: 100px;
-
-                    .total-content {
-
-                        height: auto;
-
-                        display: flex;
-                        flex-direction: column;
-
-
-                        h4 {
-                            font-size: 2rem;
-                            font-weight: 500;
-                            margin-bottom: 2rem;
-                        }
-
-                        ul {
-                            li {
-                                display: flex;
-                                justify-content: space-between;
-                                padding: 8px 0;
-                                font-size: 1.6rem;
-                                font-weight: 400;
-                            }
-                        }
-
-                        .total-price {
-                            display: flex;
-                            justify-content: space-between;
-                            font-size: 1.6rem;
-                            font-weight: 400;
-                            margin-top: 46px;
-                            align-items: center;
-
-                            strong {
-                                font-size: 2.4rem;
-                                font-weight: 500;
-                            }
-                        }
-
-                        .pay-btn {
-                            height: 4.6rem;
-                            border-radius: 4px;
-                            border: none;
-                            background-color: g.$text4;
-                            margin-top: 20px;
-
-
-                            &:hover {
-                                background-color: #000;
-                            }
-
-                            span {
-                                color: #fff;
-                                font-size: 1.6rem;
-                                font-weight: 400;
-                            }
-
-                        }
-                    }
-                }
+            button {
+              width: 88px;
+              height: 30px;
             }
+          }
+
+          .address {
+            p:nth-child(1) {
+              margin-bottom: 8px;
+            }
+          }
         }
+
+        .left-con2 {
+          > p {
+            margin-bottom: 12px;
+          }
+
+          .req-list-wrap {
+            width: 100%;
+            height: 48px;
+            padding: 0 24px;
+
+            background: g.$text10;
+            border: 1px solid g.$text8;
+            border-radius: 4px;
+
+            display: flex;
+            align-items: center;
+
+            .req-list {
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              p.active {
+                img {
+                  transform: rotate(180deg);
+                }
+              }
+
+              input {
+                width: 100%;
+                height: 40px;
+
+                border: none;
+                outline: none;
+
+                @include g.myTitle16($ta: left);
+              }
+            }
+          }
+
+          .req-dropdown {
+            width: 100%;
+            height: auto;
+            padding: 0 24px;
+            margin-top: 4px;
+
+            background: g.$text10;
+            border: 1px solid g.$text8;
+            border-radius: 4px;
+
+            .req-item {
+              padding: 12px 0;
+              display: flex;
+              align-items: center;
+
+              cursor: pointer;
+
+              & + .req-item {
+                border-top: 1px solid g.$text8;
+              }
+            }
+          }
+        }
+
+        .left-con3 {
+          > p {
+            margin-bottom: 12px;
+          }
+
+          .order-item {
+            width: 100%;
+            padding: 0 24px;
+
+            display: flex;
+            align-items: center;
+            gap: 16px;
+
+            border-bottom: 1px solid g.$text8;
+
+            &:first-of-type {
+              border-top: 1px solid g.$text8;
+            }
+
+            .item-img {
+              width: 180px;
+              height: 180px;
+
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              > img {
+                width: 80%;
+                height: 80%;
+                object-fit: contain;
+                object-position: center;
+              }
+            }
+
+            .item-info {
+              .item-title {
+                @include g.myTitle16($ta: left, $fw: 600);
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
+
+        .left-con4 {
+          > p {
+            margin-bottom: 12px;
+          }
+          p:nth-of-type(2) {
+            @include g.myTitle16($ta: left);
+            font-size: 14px;
+            margin-top: 4px;
+          }
+
+          .use-acc {
+            display: flex;
+            gap: 12px;
+            height: 46px;
+
+            input {
+              flex: 6;
+              border-radius: 4px;
+              border: 1px solid g.$text8;
+              padding-left: 24px;
+              @include g.myTitle16($ta: left);
+
+              &:focus {
+                border: 1px solid g.$text6;
+                outline: none;
+              }
+            }
+
+            button {
+              flex: 1;
+              min-width: 104px;
+            }
+          }
+        }
+
+        .left-con5 {
+          > p {
+            margin-bottom: 12px;
+          }
+
+          button {
+            width: 100%;
+            height: 46px;
+          }
+        }
+
+        .left-con6 {
+          > p {
+            margin-bottom: 12px;
+          }
+
+          form {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            padding: 24px;
+            background: g.$text10;
+
+            label > input {
+              margin-right: 12px;
+            }
+
+            label > div {
+              display: none;
+              gap: 12px;
+
+              &.active {
+                margin-top: 16px;
+                display: flex;
+              }
+
+              button {
+                width: 120px;
+                height: 42px;
+
+                &.active {
+                  background: g.$text6;
+                  color: g.$text10;
+                }
+              }
+              button:hover {
+                background: g.$text9;
+                border: 1px solid g.$text9;
+                color: g.$text1;
+              }
+            }
+          }
+        }
+      }
+
+      .right {
+        width: 32%;
+        height: auto;
+        background: g.$text9;
+        border-radius: 0 8px 8px 0;
+        padding: 24px;
+
+        .total-wrap {
+          width: 100%;
+          height: auto;
+          background-color: g.$text9;
+          display: flex;
+          flex-direction: column;
+          border-radius: 0 8px 8px 0;
+
+          position: sticky;
+          top: 100px;
+
+          .total-content {
+            height: auto;
+
+            display: flex;
+            flex-direction: column;
+
+            h4 {
+              font-size: 2rem;
+              font-weight: 500;
+              margin-bottom: 1.4rem;
+            }
+            h4:nth-of-type(2) {
+              margin-top: 40px;
+            }
+
+            ul {
+              li {
+                display: flex;
+                justify-content: space-between;
+                padding: 6px 0;
+                font-size: 1.6rem;
+                font-weight: 400;
+              }
+            }
+            .cash {
+              display: flex;
+              justify-content: space-between;
+              margin-top: 6px;
+            }
+
+            .total-price {
+              display: flex;
+              justify-content: space-between;
+              font-size: 1.6rem;
+              font-weight: 400;
+              margin-top: 46px;
+              align-items: center;
+
+              strong {
+                font-size: 2.4rem;
+                font-weight: 500;
+              }
+            }
+
+            .pay-btn {
+              height: 4.6rem;
+              border-radius: 4px;
+              border: none;
+              background-color: g.$text4;
+              margin-top: 20px;
+              @include g.myTitle16();
+              color: g.$text10;
+
+              &:hover {
+                background-color: #000;
+              }
+
+              span {
+                color: #fff;
+                font-size: 1.6rem;
+                font-weight: 400;
+              }
+            }
+          }
+        }
+      }
     }
+  }
+  .popup-overlay {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.25);
+      z-index: 5;
+    }
+  }
 }

@@ -1,126 +1,113 @@
-  @use "../../App.scss" as g;
+@use "../../App.scss" as g;
 
-  .delivery-popup-wrap {
-      width: 58.8rem;
-      position: fixed;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-      padding: 24px;
-      background: g.$BG;
-      border-radius: 8px;
-      z-index: 10;
+.delivery-popup-wrap {
+  width: 58.8rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+  background: g.$BG;
+  border-radius: 8px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+
+  .delivery-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+
+    button {
+      @include g.myTitle16();
+      background: g.$text6;
+      width: 124px;
+      color: g.$text10;
+      padding: 12px 0;
+      border: none;
+      border-radius: 4px;
+      outline: none;
+      appearance: none; //브라우저 기본 스타일 제거
+    }
+
+    button:hover {
+      background: g.$text4;
+      color: g.$text10;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      h2 {
+        @include g.myTitle24();
+        text-align: left;
+      }
+
+      div:hover img {
+        filter: brightness(0);
+      }
+    }
+
+    .input-list {
       display: flex;
       flex-direction: column;
-      gap: 4rem;
+      gap: 1.6rem;
 
-      .delivery-inner {
-          display: flex;
-          flex-direction: column;
-          gap: 2.4rem;
+      .input {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
 
-          button {
-              @include g.myTitle16();
-              background: g.$text6;
-              width: 124px;
-              color: g.$text10;
-              padding: 12px 0;
-              border: none;
-              border-radius: 4px;
-              outline: none;
-              appearance: none; //브라우저 기본 스타일 제거
-
-          }
-
-          button:hover {
-              background: g.$text4;
-              color: g.$text10;
-          }
-
-          .top {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-
-              h2 {
-                  @include g.myTitle24();
-                  text-align: left;
-              }
-
-              div:hover img {
-                  filter: brightness(0);
-              }
-
-          }
-
-          .input-list {
-              display: flex;
-              flex-direction: column;
-              gap: 1.6rem;
-
-              .input {
-                  display: flex;
-                  flex-direction: column;
-                  gap: 8px;
-
-                  p {
-                      @include g.myTitle16();
-                      text-align: left;
-                  }
-
-                  input {
-                      @include g.myTitle16();
-                      text-align: left;
-                      padding: 12px 24px;
-                      border: 1px solid g.$text9;
-                      border-radius: 4px;
-                      color: g.$text6;
-                  }
-
-                  input:focus {
-                      outline: none;
-                      box-shadow: none;
-                      border: 1px solid g.$text6;
-                      color: g.$text1;
-                  }
-
-                  .addnum-box {
-                      display: flex;
-                      justify-content: space-between;
-                      gap: 12px;
-
-                      input {
-                          width: 404px;
-                      }
-
-
-                  }
-
-
-              }
-
-          }
-
-
-
-
-      }
-
-      .btn{
-        button{
-            width:100%;
-            height:46px;
-            background:g.$text4;
-            border:none;
-            outline:none;
-            font-size:16px;
-
-            &:hover{
-                background:g.$text1;
-            }
+        p {
+          @include g.myTitle16();
+          text-align: left;
         }
 
-        
-      }
+        input {
+          @include g.myTitle16();
+          text-align: left;
+          padding: 12px 24px;
+          border: 1px solid g.$text9;
+          border-radius: 4px;
+          color: g.$text6;
+        }
 
+        input:focus {
+          outline: none;
+          box-shadow: none;
+          border: 1px solid g.$text6;
+          color: g.$text1;
+        }
+
+        .addnum-box {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+
+          input {
+            width: 404px;
+          }
+        }
+      }
+    }
   }
+
+  .btn {
+    button {
+      width: 100%;
+      height: 46px;
+      background: g.$text4;
+      color: g.$text10;
+      border: none;
+      outline: none;
+      font-size: 16px;
+
+      &:hover {
+        background: g.$text1;
+      }
+    }
+  }
+}
